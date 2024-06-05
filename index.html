@@ -6,8 +6,15 @@
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js" integrity="sha512-qzgd5cYSZcosqpzpn7zF2ZId8f/8CHmFKZ8j7mU4OUXTNRd5g+ZHBPsgKEwoqxCtdQvExE5LprwwPAgoicguNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>        
         <style>
-            table.table tbody tr:hover td { color: var(--bs-primary); cursor: default; }
-            .table th, .table td { text-wrap: nowrap; overflow: hidden }
+            table.table tbody tr:hover td { 
+                color: var(--bs-primary); cursor: default; 
+            }
+            .table th, .table td { 
+                text-wrap: nowrap; overflow: hidden 
+            }
+            .small {
+                font-size: 50%;
+            }
         </style>
     </head>
     <body class="m-1 p-1">
@@ -39,10 +46,11 @@
                     </ul>
                 </li>
             </ul>
+            <div class="small text-muted fst-italic">
+                *&nbsp;Stats data via <a href="cricsheet.org" target="_blank">cricsheet.org</a> - may not be 100% complete!
+                Stats are combined white ball.
+                Active players only.
+            </div>        
         </div>
-        <div class="p-2 bg-light small text-muted">
-            Stats data via <a href="cricsheet.org" target="_blank">cricsheet.org</a> - may not be 100% complete!
-            Stats are combined white ball; active players only.
-        </div>        
     </body>
 </html>
