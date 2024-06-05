@@ -1,2 +1,17 @@
-/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net6.0/BBB -data="/Users/syd/Documents/Cricket/Data/Internationals" -teams="CHAMPO" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/Internationals"
+# CEC
+curl -o /Users/syd/Documents/Cricket/Data/cec_female_json.zip https://cricsheet.org/downloads/cec_female_json.zip
+unzip -o /Users/syd/Documents/Cricket/Data/cec_female_json.zip -d /Users/syd/Documents/Cricket/Data/England/Regionals/CEC 
+# RHF
+curl -o /Users/syd/Documents/Cricket/Data/rhf_female_json.zip https://cricsheet.org/downloads/rhf_female_json.zip
+unzip -o /Users/syd/Documents/Cricket/Data/rhf_female_json.zip -d /Users/syd/Documents/Cricket/Data/England/Regionals/RHF 
+# HTML
 /Users/syd/Documents/Src/BBB/BBB/bin/Debug/net6.0/BBB -data="/Users/syd/Documents/Cricket/Data/England/Regionals" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/England/Regionals"
+
+# ODI
+curl -o /Users/syd/Documents/Cricket/Data/odis_female_json.zip https://cricsheet.org/downloads/odis_female_json.zip
+unzip -o /Users/syd/Documents/Cricket/Data/odis_female_json.zip -d /Users/syd/Documents/Cricket/Data/Internationals/ODIs 
+# T20
+curl -o /Users/syd/Documents/Cricket/Data/t20s_female_json.zip https://cricsheet.org/downloads/t20s_female_json.zip
+unzip -o /Users/syd/Documents/Cricket/Data/t20s_female_json.zip -d /Users/syd/Documents/Cricket/Data/Internationals/T20s
+# HTML
+/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net6.0/BBB -data="/Users/syd/Documents/Cricket/Data/Internationals" -teams="CHAMPO" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/Internationals"
