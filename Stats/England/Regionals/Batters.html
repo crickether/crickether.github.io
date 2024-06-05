@@ -1,0 +1,1420 @@
+<html>
+<head>
+<title>Batters</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script><script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js" integrity="sha512-qzgd5cYSZcosqpzpn7zF2ZId8f/8CHmFKZ8j7mU4OUXTNRd5g+ZHBPsgKEwoqxCtdQvExE5LprwwPAgoicguNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+table.table tbody tr:hover td { color: var(--bs-primary); cursor: default; }
+.table th, .table td { text-wrap: nowrap; overflow: hidden }
+</style>
+</head>
+<body>
+<h1>Batters</h1>
+<div class='m-1'><input class='form-control form-control-sm table-filter' placeholder='Filter...' style='display: none;' /></div><script>$(document).ready(function(){  $('.table-filter').toggle();   $('.table-filter').on('keyup', function() {    var needles = $(this).val();    $('.table tbody tr').filter(function() {      $(this).toggle(filter_contains(needles, $(this).text()));    });  });});function filter_contains(needles, haystack) {  let result = false;  let ns = needles.split(',').map(n => n.trim().toLowerCase()).filter(n => n.length > 0);  if(ns.length == 0) {    return true;  }  ns.forEach(n => {    if(n.length > 0 && haystack.toLowerCase().indexOf(n) > -1) {      result = true;    }  });  return result;}</script>
+<table class="table table-sm" style="table-layout: fixed;">
+<thead class="sticky-top">
+<tr style="position: relative; top: -1px">
+<th>Batter</th><th></th><th class="text-end">Average</th><th class="text-end">Strike Rate</th><th class="text-end">Boundary %</th><th class="text-end">Dot %</th><th class="text-end">Bowled %</th><th class="text-end">LBW %</th><th class="text-end">Caught %</th><th class="text-end">Stumped %</th><th class="text-end">Run Out %</th>
+</tr>
+</thead>
+<tbody>
+<tr style="position: relative; cursor: default;" title="GL Adams
+Teams: Southern Vipers
+Matches: 67
+Runs: 2,394
+Overs: 465
+Dismissals: 59">
+<td colspan="2" data-text="Adams"><a href="https://www.google.com/search?q=GL+Adams+cricket" target="_blank">GL Adams</a></td>
+<td style="background-color: #2FA02FB9" class="text-end">41</td><td style="background-color: #2FA02F2D" class="text-end">86</td><td style="background-color: #2FA02F33" class="text-end">10</td><td style="background-color: #2FA02F31" class="text-end">51</td><td style="background-color: #A02F2F00" class="text-end">15</td><td style="background-color: #A02F2F00" class="text-end">12</td><td style="background-color: #A02F2F79" class="text-end">63</td><td style="background-color: #A02F2F00" class="text-end">3</td><td style="background-color: #A02F2F00" class="text-end">3</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="E Anderson
+Teams: Central Sparks; Western Storm
+Matches: 4
+Runs: 28
+Overs: 5
+Dismissals: 3">
+<td colspan="2" data-text="Anderson"><a href="https://www.google.com/search?q=E+Anderson+cricket" target="_blank">E Anderson</a></td>
+<td style="background-color: #2FA02F00" class="text-end">9</td><td style="background-color: #2FA02F48" class="text-end">90</td><td style="background-color: #2FA02F1F" class="text-end">10</td><td style="background-color: #2FA02F86" class="text-end">45</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FD7" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FFF" class="text-end">33</td><td style="background-color: #A02F2FFF" class="text-end">33</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="EL Arlott
+Teams: Central Sparks
+Matches: 37
+Runs: 462
+Overs: 90
+Dismissals: 26">
+<td colspan="2" data-text="Arlott"><a href="https://www.google.com/search?q=EL+Arlott+cricket" target="_blank">EL Arlott</a></td>
+<td style="background-color: #2FA02F00" class="text-end">18</td><td style="background-color: #2FA02F2C" class="text-end">86</td><td style="background-color: #2FA02F13" class="text-end">9</td><td style="background-color: #2FA02F44" class="text-end">50</td><td style="background-color: #A02F2F0D" class="text-end">27</td><td style="background-color: #A02F2F00" class="text-end">4</td><td style="background-color: #A02F2F36" class="text-end">54</td><td style="background-color: #A02F2F64" class="text-end">12</td><td style="background-color: #A02F2F00" class="text-end">4</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="HJ Armitage
+Teams: Northern Diamonds
+Matches: 67
+Runs: 1,888
+Overs: 356
+Dismissals: 56">
+<td colspan="2" data-text="Armitage"><a href="https://www.google.com/search?q=HJ+Armitage+cricket" target="_blank">HJ Armitage</a></td>
+<td style="background-color: #2FA02F75" class="text-end">34</td><td style="background-color: #2FA02F3C" class="text-end">88</td><td style="background-color: #2FA02F40" class="text-end">11</td><td style="background-color: #2FA02F2E" class="text-end">51</td><td style="background-color: #A02F2F0B" class="text-end">27</td><td style="background-color: #A02F2F00" class="text-end">11</td><td style="background-color: #A02F2F41" class="text-end">55</td><td style="background-color: #A02F2F00" class="text-end">5</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="HL Baker
+Teams: Central Sparks
+Matches: 16
+Runs: 35
+Overs: 14
+Dismissals: 10">
+<td colspan="2" data-text="Baker"><a href="https://www.google.com/search?q=HL+Baker+cricket" target="_blank">HL Baker</a></td>
+<td style="background-color: #2FA02F00" class="text-end">4</td><td style="background-color: #2FA02F00" class="text-end">43</td><td style="background-color: #2FA02F00" class="text-end">2</td><td style="background-color: #2FA02F00" class="text-end">67</td><td style="background-color: #A02F2F00" class="text-end">20</td><td style="background-color: #A02F2F4C" class="text-end">20</td><td style="background-color: #A02F2F00" class="text-end">40</td><td style="background-color: #A02F2F48" class="text-end">10</td><td style="background-color: #A02F2F4A" class="text-end">10</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="G Ballinger
+Teams: Lightning; The Blaze
+Matches: 24
+Runs: 109
+Overs: 38
+Dismissals: 10">
+<td colspan="2" data-text="Ballinger"><a href="https://www.google.com/search?q=G+Ballinger+cricket" target="_blank">G Ballinger</a></td>
+<td style="background-color: #2FA02F00" class="text-end">11</td><td style="background-color: #2FA02F00" class="text-end">48</td><td style="background-color: #2FA02F00" class="text-end">5</td><td style="background-color: #2FA02F00" class="text-end">68</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">10</td><td style="background-color: #A02F2FFC" class="text-end">80</td><td style="background-color: #A02F2F48" class="text-end">10</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="TT Beaumont
+Teams: Lightning; The Blaze
+Matches: 28
+Runs: 1,058
+Overs: 198
+Dismissals: 23">
+<td colspan="2" data-text="Beaumont"><a href="https://www.google.com/search?q=TT+Beaumont+cricket" target="_blank">TT Beaumont</a></td>
+<td style="background-color: #2FA02FEF" class="text-end">46</td><td style="background-color: #2FA02F42" class="text-end">89</td><td style="background-color: #2FA02F6F" class="text-end">12</td><td style="background-color: #2FA02F1E" class="text-end">52</td><td style="background-color: #A02F2F31" class="text-end">30</td><td style="background-color: #A02F2F8B" class="text-end">26</td><td style="background-color: #A02F2F00" class="text-end">39</td><td style="background-color: #A02F2F00" class="text-end">4</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="LK Bell
+Teams: Southern Vipers
+Matches: 8
+Runs: 36
+Overs: 6
+Dismissals: 4">
+<td colspan="2" data-text="Bell"><a href="https://www.google.com/search?q=LK+Bell+cricket" target="_blank">LK Bell</a></td>
+<td style="background-color: #2FA02F00" class="text-end">9</td><td style="background-color: #2FA02FBA" class="text-end">109</td><td style="background-color: #2FA02F6C" class="text-end">12</td><td style="background-color: #2FA02FDE" class="text-end">39</td><td style="background-color: #A02F2F00" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">25</td><td style="background-color: #A02F2FFF" class="text-end">50</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="O Bell
+Teams: Thunder
+Matches: 4
+Runs: 27
+Overs: 8
+Dismissals: 3">
+<td colspan="2" data-text="Bell"><a href="https://www.google.com/search?q=O+Bell+cricket" target="_blank">O Bell</a></td>
+<td style="background-color: #2FA02F00" class="text-end">9</td><td style="background-color: #2FA02F00" class="text-end">55</td><td style="background-color: #2FA02F00" class="text-end">2</td><td style="background-color: #2FA02F00" class="text-end">55</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FFF" class="text-end">67</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="M Blinkhorn-Jones
+Teams: South East Stars
+Matches: 6
+Runs: 113
+Overs: 23
+Dismissals: 5">
+<td colspan="2" data-text="Blinkhorn-Jones"><a href="https://www.google.com/search?q=M+Blinkhorn-Jones+cricket" target="_blank">M Blinkhorn-Jones</a></td>
+<td style="background-color: #2FA02F07" class="text-end">23</td><td style="background-color: #2FA02F19" class="text-end">82</td><td style="background-color: #2FA02F47" class="text-end">11</td><td style="background-color: #2FA02F00" class="text-end">55</td><td style="background-color: #A02F2F00" class="text-end">20</td><td style="background-color: #A02F2F4C" class="text-end">20</td><td style="background-color: #A02F2F00" class="text-end">20</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FDE" class="text-end">20</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="ME Bouchier
+Teams: Southern Vipers
+Matches: 47
+Runs: 1,397
+Overs: 252
+Dismissals: 41">
+<td colspan="2" data-text="Bouchier"><a href="https://www.google.com/search?q=ME+Bouchier+cricket" target="_blank">ME Bouchier</a></td>
+<td style="background-color: #2FA02F79" class="text-end">34</td><td style="background-color: #2FA02F55" class="text-end">92</td><td style="background-color: #2FA02F7E" class="text-end">13</td><td style="background-color: #2FA02F1E" class="text-end">52</td><td style="background-color: #A02F2F00" class="text-end">17</td><td style="background-color: #A02F2F60" class="text-end">22</td><td style="background-color: #A02F2F10" class="text-end">49</td><td style="background-color: #A02F2F00" class="text-end">2</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="GEB Boyce
+Teams: Thunder; Lightning; The Blaze
+Matches: 51
+Runs: 1,178
+Overs: 256
+Dismissals: 47">
+<td colspan="2" data-text="Boyce"><a href="https://www.google.com/search?q=GEB+Boyce+cricket" target="_blank">GEB Boyce</a></td>
+<td style="background-color: #2FA02F1F" class="text-end">25</td><td style="background-color: #2FA02F00" class="text-end">77</td><td style="background-color: #2FA02F26" class="text-end">10</td><td style="background-color: #2FA02F00" class="text-end">56</td><td style="background-color: #A02F2F00" class="text-end">26</td><td style="background-color: #A02F2F00" class="text-end">13</td><td style="background-color: #A02F2F11" class="text-end">49</td><td style="background-color: #A02F2F00" class="text-end">2</td><td style="background-color: #A02F2F14" class="text-end">6</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="C Brewer
+Teams: South East Stars; Central Sparks
+Matches: 24
+Runs: 481
+Overs: 110
+Dismissals: 24">
+<td colspan="2" data-text="Brewer"><a href="https://www.google.com/search?q=C+Brewer+cricket" target="_blank">C Brewer</a></td>
+<td style="background-color: #2FA02F00" class="text-end">20</td><td style="background-color: #2FA02F00" class="text-end">73</td><td style="background-color: #2FA02F1C" class="text-end">10</td><td style="background-color: #2FA02F00" class="text-end">61</td><td style="background-color: #A02F2F00" class="text-end">21</td><td style="background-color: #A02F2F29" class="text-end">17</td><td style="background-color: #A02F2F38" class="text-end">54</td><td style="background-color: #A02F2F00" class="text-end">4</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="T Brits
+Teams: South East Stars
+Matches: 3
+Runs: 214
+Overs: 26
+Dismissals: 2">
+<td colspan="2" data-text="Brits"><a href="https://www.google.com/search?q=T+Brits+cricket" target="_blank">T Brits</a></td>
+<td style="background-color: #2FA02FFF" class="text-end">107</td><td style="background-color: #2FA02FFF" class="text-end">135</td><td style="background-color: #2FA02FFF" class="text-end">19</td><td style="background-color: #2FA02FC7" class="text-end">41</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="position: relative; cursor: default;" title="M Brown
+Teams: Southern Vipers
+Matches: 3
+Runs: 38
+Overs: 8
+Dismissals: 3">
+<td colspan="2" data-text="Brown"><a href="https://www.google.com/search?q=M+Brown+cricket" target="_blank">M Brown</a></td>
+<td style="background-color: #2FA02F00" class="text-end">13</td><td style="background-color: #2FA02F0F" class="text-end">81</td><td style="background-color: #2FA02F00" class="text-end">6</td><td style="background-color: #2FA02F6D" class="text-end">47</td><td style="background-color: #A02F2F50" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F97" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="SJ Bryce
+Teams: Lightning; The Blaze
+Matches: 49
+Runs: 1,143
+Overs: 246
+Dismissals: 44">
+<td colspan="2" data-text="Bryce"><a href="https://www.google.com/search?q=SJ+Bryce+cricket" target="_blank">SJ Bryce</a></td>
+<td style="background-color: #2FA02F29" class="text-end">26</td><td style="background-color: #2FA02F00" class="text-end">77</td><td style="background-color: #2FA02F06" class="text-end">9</td><td style="background-color: #2FA02F00" class="text-end">57</td><td style="background-color: #A02F2F88" class="text-end">39</td><td style="background-color: #A02F2F00" class="text-end">2</td><td style="background-color: #A02F2F19" class="text-end">50</td><td style="background-color: #A02F2F00" class="text-end">2</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="KE Bryce
+Teams: Lightning; The Blaze
+Matches: 49
+Runs: 1,316
+Overs: 261
+Dismissals: 45">
+<td colspan="2" data-text="Bryce"><a href="https://www.google.com/search?q=KE+Bryce+cricket" target="_blank">KE Bryce</a></td>
+<td style="background-color: #2FA02F49" class="text-end">29</td><td style="background-color: #2FA02F22" class="text-end">84</td><td style="background-color: #2FA02F14" class="text-end">9</td><td style="background-color: #2FA02F1C" class="text-end">52</td><td style="background-color: #A02F2F00" class="text-end">22</td><td style="background-color: #A02F2F00" class="text-end">7</td><td style="background-color: #A02F2F43" class="text-end">56</td><td style="background-color: #A02F2F00" class="text-end">4</td><td style="background-color: #A02F2F18" class="text-end">7</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="EA Burns
+Teams: Central Sparks; Northern Diamonds
+Matches: 21
+Runs: 468
+Overs: 74
+Dismissals: 20">
+<td colspan="2" data-text="Burns"><a href="https://www.google.com/search?q=EA+Burns+cricket" target="_blank">EA Burns</a></td>
+<td style="background-color: #2FA02F0F" class="text-end">23</td><td style="background-color: #2FA02FA5" class="text-end">106</td><td style="background-color: #2FA02F67" class="text-end">12</td><td style="background-color: #2FA02FC8" class="text-end">41</td><td style="background-color: #A02F2F00" class="text-end">25</td><td style="background-color: #A02F2F00" class="text-end">5</td><td style="background-color: #A02F2F00" class="text-end">45</td><td style="background-color: #A02F2F00" class="text-end">5</td><td style="background-color: #A02F2F00" class="text-end">5</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="S Butler
+Teams: Central Sparks; Thunder
+Matches: 7
+Runs: 86
+Overs: 28
+Dismissals: 6">
+<td colspan="2" data-text="Butler"><a href="https://www.google.com/search?q=S+Butler+cricket" target="_blank">S Butler</a></td>
+<td style="background-color: #2FA02F00" class="text-end">14</td><td style="background-color: #2FA02F00" class="text-end">51</td><td style="background-color: #2FA02F00" class="text-end">5</td><td style="background-color: #2FA02F00" class="text-end">67</td><td style="background-color: #A02F2F00" class="text-end">17</td><td style="background-color: #A02F2F29" class="text-end">17</td><td style="background-color: #A02F2F19" class="text-end">50</td><td style="background-color: #A02F2FC0" class="text-end">17</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="A Campbell
+Teams: Northern Diamonds; Central Sparks
+Matches: 54
+Runs: 805
+Overs: 168
+Dismissals: 47">
+<td colspan="2" data-text="Campbell"><a href="https://www.google.com/search?q=A+Campbell+cricket" target="_blank">A Campbell</a></td>
+<td style="background-color: #2FA02F00" class="text-end">17</td><td style="background-color: #2FA02F08" class="text-end">80</td><td style="background-color: #2FA02F27" class="text-end">10</td><td style="background-color: #2FA02F00" class="text-end">56</td><td style="background-color: #A02F2F00" class="text-end">21</td><td style="background-color: #A02F2F00" class="text-end">2</td><td style="background-color: #A02F2F41" class="text-end">55</td><td style="background-color: #A02F2F07" class="text-end">6</td><td style="background-color: #A02F2F14" class="text-end">6</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="A Capsey
+Teams: South East Stars
+Matches: 34
+Runs: 733
+Overs: 128
+Dismissals: 30">
+<td colspan="2" data-text="Capsey"><a href="https://www.google.com/search?q=A+Capsey+cricket" target="_blank">A Capsey</a></td>
+<td style="background-color: #2FA02F19" class="text-end">24</td><td style="background-color: #2FA02F68" class="text-end">96</td><td style="background-color: #2FA02F64" class="text-end">12</td><td style="background-color: #2FA02F56" class="text-end">48</td><td style="background-color: #A02F2F2D" class="text-end">30</td><td style="background-color: #A02F2F00" class="text-end">7</td><td style="background-color: #A02F2F19" class="text-end">50</td><td style="background-color: #A02F2F00" class="text-end">3</td><td style="background-color: #A02F2F18" class="text-end">7</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="AD Carr
+Teams: Sunrisers
+Matches: 43
+Runs: 688
+Overs: 154
+Dismissals: 37">
+<td colspan="2" data-text="Carr"><a href="https://www.google.com/search?q=AD+Carr+cricket" target="_blank">AD Carr</a></td>
+<td style="background-color: #2FA02F00" class="text-end">19</td><td style="background-color: #2FA02F00" class="text-end">74</td><td style="background-color: #2FA02F00" class="text-end">7</td><td style="background-color: #2FA02F2A" class="text-end">51</td><td style="background-color: #A02F2F00" class="text-end">22</td><td style="background-color: #A02F2F40" class="text-end">19</td><td style="background-color: #A02F2F00" class="text-end">35</td><td style="background-color: #A02F2F88" class="text-end">14</td><td style="background-color: #A02F2F05" class="text-end">5</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="KS Castle
+Teams: Sunrisers
+Matches: 39
+Runs: 380
+Overs: 93
+Dismissals: 31">
+<td colspan="2" data-text="Castle"><a href="https://www.google.com/search?q=KS+Castle+cricket" target="_blank">KS Castle</a></td>
+<td style="background-color: #2FA02F00" class="text-end">12</td><td style="background-color: #2FA02F00" class="text-end">68</td><td style="background-color: #2FA02F00" class="text-end">4</td><td style="background-color: #2FA02F44" class="text-end">50</td><td style="background-color: #A02F2F01" class="text-end">26</td><td style="background-color: #A02F2FAA" class="text-end">29</td><td style="background-color: #A02F2F00" class="text-end">32</td><td style="background-color: #A02F2F43" class="text-end">10</td><td style="background-color: #A02F2F00" class="text-end">3</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="KM Chathli
+Teams: South East Stars
+Matches: 39
+Runs: 623
+Overs: 143
+Dismissals: 33">
+<td colspan="2" data-text="Chathli"><a href="https://www.google.com/search?q=KM+Chathli+cricket" target="_blank">KM Chathli</a></td>
+<td style="background-color: #2FA02F00" class="text-end">19</td><td style="background-color: #2FA02F00" class="text-end">73</td><td style="background-color: #2FA02F00" class="text-end">8</td><td style="background-color: #2FA02F00" class="text-end">58</td><td style="background-color: #A02F2F00" class="text-end">15</td><td style="background-color: #A02F2F00" class="text-end">9</td><td style="background-color: #A02F2F3B" class="text-end">55</td><td style="background-color: #A02F2F38" class="text-end">9</td><td style="background-color: #A02F2F3C" class="text-end">9</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="E Claridge
+Teams: Lightning; The Blaze
+Matches: 24
+Runs: 398
+Overs: 84
+Dismissals: 18">
+<td colspan="2" data-text="Claridge"><a href="https://www.google.com/search?q=E+Claridge+cricket" target="_blank">E Claridge</a></td>
+<td style="background-color: #2FA02F02" class="text-end">22</td><td style="background-color: #2FA02F05" class="text-end">79</td><td style="background-color: #2FA02F03" class="text-end">9</td><td style="background-color: #2FA02F34" class="text-end">51</td><td style="background-color: #A02F2F8A" class="text-end">39</td><td style="background-color: #A02F2F00" class="text-end">6</td><td style="background-color: #A02F2F00" class="text-end">44</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F07" class="text-end">6</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="P Cleary
+Teams: Thunder; Lightning; Western Storm
+Matches: 15
+Runs: 171
+Overs: 43
+Dismissals: 10">
+<td colspan="2" data-text="Cleary"><a href="https://www.google.com/search?q=P+Cleary+cricket" target="_blank">P Cleary</a></td>
+<td style="background-color: #2FA02F00" class="text-end">17</td><td style="background-color: #2FA02F00" class="text-end">66</td><td style="background-color: #2FA02F00" class="text-end">5</td><td style="background-color: #2FA02F00" class="text-end">54</td><td style="background-color: #A02F2F2D" class="text-end">30</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FB1" class="text-end">70</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="DL Collins
+Teams: Thunder
+Matches: 38
+Runs: 416
+Overs: 114
+Dismissals: 28">
+<td colspan="2" data-text="Collins"><a href="https://www.google.com/search?q=DL+Collins+cricket" target="_blank">DL Collins</a></td>
+<td style="background-color: #2FA02F00" class="text-end">15</td><td style="background-color: #2FA02F00" class="text-end">61</td><td style="background-color: #2FA02F00" class="text-end">6</td><td style="background-color: #2FA02F00" class="text-end">59</td><td style="background-color: #A02F2F00" class="text-end">25</td><td style="background-color: #A02F2F5B" class="text-end">21</td><td style="background-color: #A02F2F00" class="text-end">32</td><td style="background-color: #A02F2FD6" class="text-end">18</td><td style="background-color: #A02F2F00" class="text-end">4</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="KL Coppack
+Teams: Sunrisers
+Matches: 18
+Runs: 125
+Overs: 31
+Dismissals: 4">
+<td colspan="2" data-text="Coppack"><a href="https://www.google.com/search?q=KL+Coppack+cricket" target="_blank">KL Coppack</a></td>
+<td style="background-color: #2FA02F5D" class="text-end">31</td><td style="background-color: #2FA02F00" class="text-end">68</td><td style="background-color: #2FA02F00" class="text-end">5</td><td style="background-color: #2FA02F00" class="text-end">57</td><td style="background-color: #A02F2F00" class="text-end">25</td><td style="background-color: #A02F2FFF" class="text-end">50</td><td style="background-color: #A02F2F00" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="E Corney
+Teams: Western Storm
+Matches: 22
+Runs: 485
+Overs: 120
+Dismissals: 20">
+<td colspan="2" data-text="Corney"><a href="https://www.google.com/search?q=E+Corney+cricket" target="_blank">E Corney</a></td>
+<td style="background-color: #2FA02F17" class="text-end">24</td><td style="background-color: #2FA02F00" class="text-end">68</td><td style="background-color: #2FA02F00" class="text-end">8</td><td style="background-color: #2FA02F00" class="text-end">61</td><td style="background-color: #A02F2F2D" class="text-end">30</td><td style="background-color: #A02F2F00" class="text-end">5</td><td style="background-color: #A02F2F3F" class="text-end">55</td><td style="background-color: #A02F2F00" class="text-end">5</td><td style="background-color: #A02F2F00" class="text-end">5</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="A Cranstone
+Teams: South East Stars
+Matches: 45
+Runs: 901
+Overs: 164
+Dismissals: 36">
+<td colspan="2" data-text="Cranstone"><a href="https://www.google.com/search?q=A+Cranstone+cricket" target="_blank">A Cranstone</a></td>
+<td style="background-color: #2FA02F1F" class="text-end">25</td><td style="background-color: #2FA02F50" class="text-end">92</td><td style="background-color: #2FA02F55" class="text-end">11</td><td style="background-color: #2FA02F47" class="text-end">49</td><td style="background-color: #A02F2F00" class="text-end">17</td><td style="background-color: #A02F2F46" class="text-end">19</td><td style="background-color: #A02F2F00" class="text-end">44</td><td style="background-color: #A02F2F2A" class="text-end">8</td><td style="background-color: #A02F2F07" class="text-end">6</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="KL Cross
+Teams: Thunder
+Matches: 19
+Runs: 358
+Overs: 74
+Dismissals: 16">
+<td colspan="2" data-text="Cross"><a href="https://www.google.com/search?q=KL+Cross+cricket" target="_blank">KL Cross</a></td>
+<td style="background-color: #2FA02F05" class="text-end">22</td><td style="background-color: #2FA02F0B" class="text-end">80</td><td style="background-color: #2FA02F09" class="text-end">9</td><td style="background-color: #2FA02F07" class="text-end">54</td><td style="background-color: #A02F2F7C" class="text-end">38</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F48" class="text-end">56</td><td style="background-color: #A02F2F05" class="text-end">6</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="ND Dattani
+Teams: Sunrisers; Thunder
+Matches: 54
+Runs: 1,000
+Overs: 238
+Dismissals: 49">
+<td colspan="2" data-text="Dattani"><a href="https://www.google.com/search?q=ND+Dattani+cricket" target="_blank">ND Dattani</a></td>
+<td style="background-color: #2FA02F00" class="text-end">20</td><td style="background-color: #2FA02F00" class="text-end">70</td><td style="background-color: #2FA02F00" class="text-end">9</td><td style="background-color: #2FA02F00" class="text-end">59</td><td style="background-color: #A02F2F00" class="text-end">24</td><td style="background-color: #A02F2F00" class="text-end">12</td><td style="background-color: #A02F2F21" class="text-end">51</td><td style="background-color: #A02F2F00" class="text-end">4</td><td style="background-color: #A02F2F00" class="text-end">2</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="AN Davidson-Richards
+Teams: South East Stars
+Matches: 49
+Runs: 1,142
+Overs: 235
+Dismissals: 45">
+<td colspan="2" data-text="Davidson-Richards"><a href="https://www.google.com/search?q=AN+Davidson-Richards+cricket" target="_blank">AN Davidson-Richards</a></td>
+<td style="background-color: #2FA02F23" class="text-end">25</td><td style="background-color: #2FA02F10" class="text-end">81</td><td style="background-color: #2FA02F00" class="text-end">8</td><td style="background-color: #2FA02F47" class="text-end">49</td><td style="background-color: #A02F2F0A" class="text-end">27</td><td style="background-color: #A02F2F00" class="text-end">4</td><td style="background-color: #A02F2F32" class="text-end">53</td><td style="background-color: #A02F2F34" class="text-end">9</td><td style="background-color: #A02F2F00" class="text-end">2</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="FR Davies
+Teams: South East Stars; Southern Vipers
+Matches: 18
+Runs: 92
+Overs: 35
+Dismissals: 8">
+<td colspan="2" data-text="Davies"><a href="https://www.google.com/search?q=FR+Davies+cricket" target="_blank">FR Davies</a></td>
+<td style="background-color: #2FA02F00" class="text-end">12</td><td style="background-color: #2FA02F00" class="text-end">43</td><td style="background-color: #2FA02F00" class="text-end">2</td><td style="background-color: #2FA02F00" class="text-end">69</td><td style="background-color: #A02F2F7C" class="text-end">38</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">38</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F6F" class="text-end">12</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="GK Davis
+Teams: Central Sparks
+Matches: 25
+Runs: 144
+Overs: 45
+Dismissals: 13">
+<td colspan="2" data-text="Davis"><a href="https://www.google.com/search?q=GK+Davis+cricket" target="_blank">GK Davis</a></td>
+<td style="background-color: #2FA02F00" class="text-end">11</td><td style="background-color: #2FA02F00" class="text-end">53</td><td style="background-color: #2FA02F00" class="text-end">2</td><td style="background-color: #2FA02F00" class="text-end">55</td><td style="background-color: #A02F2FD6" class="text-end">46</td><td style="background-color: #A02F2F00" class="text-end">8</td><td style="background-color: #A02F2F00" class="text-end">38</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F27" class="text-end">8</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="CE Dean
+Teams: Southern Vipers
+Matches: 29
+Runs: 504
+Overs: 108
+Dismissals: 22">
+<td colspan="2" data-text="Dean"><a href="https://www.google.com/search?q=CE+Dean+cricket" target="_blank">CE Dean</a></td>
+<td style="background-color: #2FA02F0A" class="text-end">23</td><td style="background-color: #2FA02F00" class="text-end">78</td><td style="background-color: #2FA02F00" class="text-end">7</td><td style="background-color: #2FA02F35" class="text-end">51</td><td style="background-color: #A02F2F00" class="text-end">18</td><td style="background-color: #A02F2F09" class="text-end">14</td><td style="background-color: #A02F2F19" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F80" class="text-end">14</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="L Delany
+Teams: Thunder
+Matches: 4
+Runs: 52
+Overs: 11
+Dismissals: 2">
+<td colspan="2" data-text="Delany"><a href="https://www.google.com/search?q=L+Delany+cricket" target="_blank">L Delany</a></td>
+<td style="background-color: #2FA02F29" class="text-end">26</td><td style="background-color: #2FA02F00" class="text-end">78</td><td style="background-color: #2FA02F37" class="text-end">10</td><td style="background-color: #2FA02F00" class="text-end">64</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="position: relative; cursor: default;" title="L Dobson
+Teams: Northern Diamonds
+Matches: 42
+Runs: 698
+Overs: 142
+Dismissals: 37">
+<td colspan="2" data-text="Dobson"><a href="https://www.google.com/search?q=L+Dobson+cricket" target="_blank">L Dobson</a></td>
+<td style="background-color: #2FA02F00" class="text-end">19</td><td style="background-color: #2FA02F15" class="text-end">82</td><td style="background-color: #2FA02F37" class="text-end">10</td><td style="background-color: #2FA02F00" class="text-end">56</td><td style="background-color: #A02F2F0E" class="text-end">27</td><td style="background-color: #A02F2F00" class="text-end">11</td><td style="background-color: #A02F2F23" class="text-end">51</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F2D" class="text-end">8</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="DJS Dottin
+Teams: Thunder
+Matches: 20
+Runs: 445
+Overs: 80
+Dismissals: 18">
+<td colspan="2" data-text="Dottin"><a href="https://www.google.com/search?q=DJS+Dottin+cricket" target="_blank">DJS Dottin</a></td>
+<td style="background-color: #2FA02F1C" class="text-end">25</td><td style="background-color: #2FA02F56" class="text-end">93</td><td style="background-color: #2FA02F91" class="text-end">13</td><td style="background-color: #2FA02F00" class="text-end">55</td><td style="background-color: #A02F2F00" class="text-end">17</td><td style="background-color: #A02F2F9D" class="text-end">28</td><td style="background-color: #A02F2F19" class="text-end">50</td><td style="background-color: #A02F2F00" class="text-end">6</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="A Dowse
+Teams: Sunrisers
+Matches: 8
+Runs: 189
+Overs: 40
+Dismissals: 8">
+<td colspan="2" data-text="Dowse"><a href="https://www.google.com/search?q=A+Dowse+cricket" target="_blank">A Dowse</a></td>
+<td style="background-color: #2FA02F11" class="text-end">24</td><td style="background-color: #2FA02F00" class="text-end">78</td><td style="background-color: #2FA02F0D" class="text-end">9</td><td style="background-color: #2FA02F00" class="text-end">55</td><td style="background-color: #A02F2F00" class="text-end">12</td><td style="background-color: #A02F2F80" class="text-end">25</td><td style="background-color: #A02F2F78" class="text-end">62</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="R Duckworth
+Teams: Thunder; Northern Diamonds
+Matches: 12
+Runs: 157
+Overs: 63
+Dismissals: 11">
+<td colspan="2" data-text="Duckworth"><a href="https://www.google.com/search?q=R+Duckworth+cricket" target="_blank">R Duckworth</a></td>
+<td style="background-color: #2FA02F00" class="text-end">14</td><td style="background-color: #2FA02F00" class="text-end">41</td><td style="background-color: #2FA02F00" class="text-end">3</td><td style="background-color: #2FA02F00" class="text-end">71</td><td style="background-color: #A02F2FCF" class="text-end">45</td><td style="background-color: #A02F2F00" class="text-end">9</td><td style="background-color: #A02F2F00" class="text-end">27</td><td style="background-color: #A02F2FDC" class="text-end">18</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="SIR Dunkley
+Teams: South East Stars
+Matches: 21
+Runs: 904
+Overs: 160
+Dismissals: 17">
+<td colspan="2" data-text="Dunkley"><a href="https://www.google.com/search?q=SIR+Dunkley+cricket" target="_blank">SIR Dunkley</a></td>
+<td style="background-color: #2FA02FFF" class="text-end">53</td><td style="background-color: #2FA02F5E" class="text-end">94</td><td style="background-color: #2FA02F1B" class="text-end">10</td><td style="background-color: #2FA02FC0" class="text-end">41</td><td style="background-color: #A02F2F00" class="text-end">24</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FB5" class="text-end">71</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F0C" class="text-end">6</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="S Ecclestone
+Teams: Thunder
+Matches: 14
+Runs: 282
+Overs: 46
+Dismissals: 13">
+<td colspan="2" data-text="Ecclestone"><a href="https://www.google.com/search?q=S+Ecclestone+cricket" target="_blank">S Ecclestone</a></td>
+<td style="background-color: #2FA02F00" class="text-end">22</td><td style="background-color: #2FA02F95" class="text-end">103</td><td style="background-color: #2FA02F75" class="text-end">12</td><td style="background-color: #2FA02F7A" class="text-end">46</td><td style="background-color: #A02F2F35" class="text-end">31</td><td style="background-color: #A02F2F00" class="text-end">8</td><td style="background-color: #A02F2F70" class="text-end">62</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="B Ellis
+Teams: Lightning; Central Sparks
+Matches: 32
+Runs: 482
+Overs: 120
+Dismissals: 26">
+<td colspan="2" data-text="Ellis"><a href="https://www.google.com/search?q=B+Ellis+cricket" target="_blank">B Ellis</a></td>
+<td style="background-color: #2FA02F00" class="text-end">19</td><td style="background-color: #2FA02F00" class="text-end">67</td><td style="background-color: #2FA02F00" class="text-end">7</td><td style="background-color: #2FA02F00" class="text-end">57</td><td style="background-color: #A02F2F00" class="text-end">19</td><td style="background-color: #A02F2FBC" class="text-end">31</td><td style="background-color: #A02F2F00" class="text-end">42</td><td style="background-color: #A02F2F00" class="text-end">4</td><td style="background-color: #A02F2F00" class="text-end">4</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="GA Elwiss
+Teams: Southern Vipers
+Matches: 57
+Runs: 1,373
+Overs: 266
+Dismissals: 42">
+<td colspan="2" data-text="Elwiss"><a href="https://www.google.com/search?q=GA+Elwiss+cricket" target="_blank">GA Elwiss</a></td>
+<td style="background-color: #2FA02F6B" class="text-end">33</td><td style="background-color: #2FA02F2E" class="text-end">86</td><td style="background-color: #2FA02F07" class="text-end">9</td><td style="background-color: #2FA02F7A" class="text-end">46</td><td style="background-color: #A02F2F00" class="text-end">19</td><td style="background-color: #A02F2F10" class="text-end">14</td><td style="background-color: #A02F2F4F" class="text-end">57</td><td style="background-color: #A02F2F00" class="text-end">2</td><td style="background-color: #A02F2F00" class="text-end">5</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="RA Fackrell
+Teams: Lightning; Central Sparks
+Matches: 22
+Runs: 214
+Overs: 56
+Dismissals: 15">
+<td colspan="2" data-text="Fackrell"><a href="https://www.google.com/search?q=RA+Fackrell+cricket" target="_blank">RA Fackrell</a></td>
+<td style="background-color: #2FA02F00" class="text-end">14</td><td style="background-color: #2FA02F00" class="text-end">64</td><td style="background-color: #2FA02F00" class="text-end">4</td><td style="background-color: #2FA02F00" class="text-end">56</td><td style="background-color: #A02F2F00" class="text-end">20</td><td style="background-color: #A02F2F00" class="text-end">7</td><td style="background-color: #A02F2F32" class="text-end">53</td><td style="background-color: #A02F2F0C" class="text-end">7</td><td style="background-color: #A02F2F7B" class="text-end">13</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="N Faltum
+Teams: Southern Vipers
+Matches: 10
+Runs: 65
+Overs: 16
+Dismissals: 9">
+<td colspan="2" data-text="Faltum"><a href="https://www.google.com/search?q=N+Faltum+cricket" target="_blank">N Faltum</a></td>
+<td style="background-color: #2FA02F00" class="text-end">7</td><td style="background-color: #2FA02F00" class="text-end">68</td><td style="background-color: #2FA02F16" class="text-end">9</td><td style="background-color: #2FA02F00" class="text-end">64</td><td style="background-color: #A02F2F50" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F97" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="NE Farrant
+Teams: South East Stars
+Matches: 28
+Runs: 559
+Overs: 113
+Dismissals: 24">
+<td colspan="2" data-text="Farrant"><a href="https://www.google.com/search?q=NE+Farrant+cricket" target="_blank">NE Farrant</a></td>
+<td style="background-color: #2FA02F0E" class="text-end">23</td><td style="background-color: #2FA02F18" class="text-end">82</td><td style="background-color: #2FA02F05" class="text-end">9</td><td style="background-color: #2FA02F0D" class="text-end">53</td><td style="background-color: #A02F2F00" class="text-end">21</td><td style="background-color: #A02F2F29" class="text-end">17</td><td style="background-color: #A02F2F00" class="text-end">46</td><td style="background-color: #A02F2F00" class="text-end">4</td><td style="background-color: #A02F2F31" class="text-end">8</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="L Filer
+Teams: Western Storm
+Matches: 18
+Runs: 158
+Overs: 33
+Dismissals: 10">
+<td colspan="2" data-text="Filer"><a href="https://www.google.com/search?q=L+Filer+cricket" target="_blank">L Filer</a></td>
+<td style="background-color: #2FA02F00" class="text-end">16</td><td style="background-color: #2FA02F06" class="text-end">79</td><td style="background-color: #2FA02F00" class="text-end">6</td><td style="background-color: #2FA02F67" class="text-end">47</td><td style="background-color: #A02F2F00" class="text-end">20</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">40</td><td style="background-color: #A02F2F48" class="text-end">10</td><td style="background-color: #A02F2F4A" class="text-end">10</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="PA Franklin
+Teams: South East Stars
+Matches: 42
+Runs: 741
+Overs: 130
+Dismissals: 36">
+<td colspan="2" data-text="Franklin"><a href="https://www.google.com/search?q=PA+Franklin+cricket" target="_blank">PA Franklin</a></td>
+<td style="background-color: #2FA02F00" class="text-end">21</td><td style="background-color: #2FA02F66" class="text-end">95</td><td style="background-color: #2FA02F97" class="text-end">13</td><td style="background-color: #2FA02F1E" class="text-end">52</td><td style="background-color: #A02F2F00" class="text-end">25</td><td style="background-color: #A02F2F00" class="text-end">6</td><td style="background-color: #A02F2F2E" class="text-end">53</td><td style="background-color: #A02F2F5C" class="text-end">11</td><td style="background-color: #A02F2F00" class="text-end">3</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="K Fraser
+Teams: Northern Diamonds
+Matches: 13
+Runs: 109
+Overs: 18
+Dismissals: 6">
+<td colspan="2" data-text="Fraser"><a href="https://www.google.com/search?q=K+Fraser+cricket" target="_blank">K Fraser</a></td>
+<td style="background-color: #2FA02F00" class="text-end">18</td><td style="background-color: #2FA02F83" class="text-end">100</td><td style="background-color: #2FA02F2C" class="text-end">10</td><td style="background-color: #2FA02F8A" class="text-end">45</td><td style="background-color: #A02F2F50" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F19" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="AJ Freeborn
+Teams: Lightning; Central Sparks
+Matches: 60
+Runs: 1,621
+Overs: 356
+Dismissals: 55">
+<td colspan="2" data-text="Freeborn"><a href="https://www.google.com/search?q=AJ+Freeborn+cricket" target="_blank">AJ Freeborn</a></td>
+<td style="background-color: #2FA02F4B" class="text-end">29</td><td style="background-color: #2FA02F00" class="text-end">76</td><td style="background-color: #2FA02F01" class="text-end">9</td><td style="background-color: #2FA02F00" class="text-end">55</td><td style="background-color: #A02F2F10" class="text-end">27</td><td style="background-color: #A02F2F00" class="text-end">13</td><td style="background-color: #A02F2F04" class="text-end">47</td><td style="background-color: #A02F2F59" class="text-end">11</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="B Gammon
+Teams: Western Storm; The Blaze
+Matches: 5
+Runs: 66
+Overs: 17
+Dismissals: 4">
+<td colspan="2" data-text="Gammon"><a href="https://www.google.com/search?q=B+Gammon+cricket" target="_blank">B Gammon</a></td>
+<td style="background-color: #2FA02F00" class="text-end">16</td><td style="background-color: #2FA02F00" class="text-end">65</td><td style="background-color: #2FA02F00" class="text-end">6</td><td style="background-color: #2FA02F00" class="text-end">62</td><td style="background-color: #A02F2FFF" class="text-end">50</td><td style="background-color: #A02F2F80" class="text-end">25</td><td style="background-color: #A02F2F00" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="J Gardner
+Teams: Sunrisers
+Matches: 49
+Runs: 955
+Overs: 190
+Dismissals: 36">
+<td colspan="2" data-text="Gardner"><a href="https://www.google.com/search?q=J+Gardner+cricket" target="_blank">J Gardner</a></td>
+<td style="background-color: #2FA02F2E" class="text-end">27</td><td style="background-color: #2FA02F21" class="text-end">84</td><td style="background-color: #2FA02F00" class="text-end">8</td><td style="background-color: #2FA02F25" class="text-end">52</td><td style="background-color: #A02F2F16" class="text-end">28</td><td style="background-color: #A02F2F29" class="text-end">17</td><td style="background-color: #A02F2F04" class="text-end">47</td><td style="background-color: #A02F2F00" class="text-end">6</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="M Gaur
+Teams: Thunder
+Matches: 9
+Runs: 45
+Overs: 15
+Dismissals: 7">
+<td colspan="2" data-text="Gaur"><a href="https://www.google.com/search?q=M+Gaur+cricket" target="_blank">M Gaur</a></td>
+<td style="background-color: #2FA02F00" class="text-end">6</td><td style="background-color: #2FA02F00" class="text-end">50</td><td style="background-color: #2FA02F00" class="text-end">2</td><td style="background-color: #2FA02F00" class="text-end">60</td><td style="background-color: #A02F2F00" class="text-end">14</td><td style="background-color: #A02F2F10" class="text-end">14</td><td style="background-color: #A02F2F00" class="text-end">43</td><td style="background-color: #A02F2F96" class="text-end">14</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="KL George
+Teams: Western Storm; Central Sparks
+Matches: 41
+Runs: 810
+Overs: 146
+Dismissals: 35">
+<td colspan="2" data-text="George"><a href="https://www.google.com/search?q=KL+George+cricket" target="_blank">KL George</a></td>
+<td style="background-color: #2FA02F0C" class="text-end">23</td><td style="background-color: #2FA02F53" class="text-end">92</td><td style="background-color: #2FA02F63" class="text-end">12</td><td style="background-color: #2FA02F48" class="text-end">49</td><td style="background-color: #A02F2F00" class="text-end">26</td><td style="background-color: #A02F2F00" class="text-end">6</td><td style="background-color: #A02F2F39" class="text-end">54</td><td style="background-color: #A02F2F00" class="text-end">3</td><td style="background-color: #A02F2F00" class="text-end">3</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="DR Gibson
+Teams: Western Storm
+Matches: 42
+Runs: 806
+Overs: 103
+Dismissals: 37">
+<td colspan="2" data-text="Gibson"><a href="https://www.google.com/search?q=DR+Gibson+cricket" target="_blank">DR Gibson</a></td>
+<td style="background-color: #2FA02F00" class="text-end">22</td><td style="background-color: #2FA02FFF" class="text-end">130</td><td style="background-color: #2FA02FFF" class="text-end">19</td><td style="background-color: #2FA02FFF" class="text-end">37</td><td style="background-color: #A02F2F00" class="text-end">24</td><td style="background-color: #A02F2F24" class="text-end">16</td><td style="background-color: #A02F2F0F" class="text-end">49</td><td style="background-color: #A02F2F00" class="text-end">3</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="A Glen
+Teams: Northern Diamonds
+Matches: 16
+Runs: 193
+Overs: 32
+Dismissals: 10">
+<td colspan="2" data-text="Glen"><a href="https://www.google.com/search?q=A+Glen+cricket" target="_blank">A Glen</a></td>
+<td style="background-color: #2FA02F00" class="text-end">19</td><td style="background-color: #2FA02F83" class="text-end">100</td><td style="background-color: #2FA02F65" class="text-end">12</td><td style="background-color: #2FA02F90" class="text-end">45</td><td style="background-color: #A02F2FFF" class="text-end">50</td><td style="background-color: #A02F2F00" class="text-end">10</td><td style="background-color: #A02F2F00" class="text-end">30</td><td style="background-color: #A02F2F48" class="text-end">10</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="S Glenn
+Teams: Central Sparks; The Blaze
+Matches: 24
+Runs: 373
+Overs: 68
+Dismissals: 18">
+<td colspan="2" data-text="Glenn"><a href="https://www.google.com/search?q=S+Glenn+cricket" target="_blank">S Glenn</a></td>
+<td style="background-color: #2FA02F00" class="text-end">21</td><td style="background-color: #2FA02F4F" class="text-end">91</td><td style="background-color: #2FA02F60" class="text-end">12</td><td style="background-color: #2FA02F18" class="text-end">52</td><td style="background-color: #A02F2F00" class="text-end">17</td><td style="background-color: #A02F2F00" class="text-end">6</td><td style="background-color: #A02F2F97" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="KL Gordon
+Teams: Lightning; The Blaze
+Matches: 33
+Runs: 410
+Overs: 108
+Dismissals: 22">
+<td colspan="2" data-text="Gordon"><a href="https://www.google.com/search?q=KL+Gordon+cricket" target="_blank">KL Gordon</a></td>
+<td style="background-color: #2FA02F00" class="text-end">19</td><td style="background-color: #2FA02F00" class="text-end">64</td><td style="background-color: #2FA02F00" class="text-end">5</td><td style="background-color: #2FA02F00" class="text-end">57</td><td style="background-color: #A02F2F00" class="text-end">9</td><td style="background-color: #A02F2F00" class="text-end">5</td><td style="background-color: #A02F2FE8" class="text-end">77</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="PC Graham
+Teams: Northern Diamonds; Thunder
+Matches: 23
+Runs: 174
+Overs: 40
+Dismissals: 16">
+<td colspan="2" data-text="Graham"><a href="https://www.google.com/search?q=PC+Graham+cricket" target="_blank">PC Graham</a></td>
+<td style="background-color: #2FA02F00" class="text-end">11</td><td style="background-color: #2FA02F00" class="text-end">73</td><td style="background-color: #2FA02F00" class="text-end">7</td><td style="background-color: #2FA02F00" class="text-end">55</td><td style="background-color: #A02F2FBD" class="text-end">44</td><td style="background-color: #A02F2F3F" class="text-end">19</td><td style="background-color: #A02F2F00" class="text-end">25</td><td style="background-color: #A02F2F75" class="text-end">12</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="T Graves
+Teams: Lightning; The Blaze
+Matches: 42
+Runs: 592
+Overs: 145
+Dismissals: 37">
+<td colspan="2" data-text="Graves"><a href="https://www.google.com/search?q=T+Graves+cricket" target="_blank">T Graves</a></td>
+<td style="background-color: #2FA02F00" class="text-end">16</td><td style="background-color: #2FA02F00" class="text-end">68</td><td style="background-color: #2FA02F00" class="text-end">8</td><td style="background-color: #2FA02F00" class="text-end">60</td><td style="background-color: #A02F2F0E" class="text-end">27</td><td style="background-color: #A02F2F08" class="text-end">14</td><td style="background-color: #A02F2F0F" class="text-end">49</td><td style="background-color: #A02F2F00" class="text-end">5</td><td style="background-color: #A02F2F00" class="text-end">3</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="E Gray
+Teams: South East Stars; Sunrisers
+Matches: 25
+Runs: 189
+Overs: 33
+Dismissals: 17">
+<td colspan="2" data-text="Gray"><a href="https://www.google.com/search?q=E+Gray+cricket" target="_blank">E Gray</a></td>
+<td style="background-color: #2FA02F00" class="text-end">11</td><td style="background-color: #2FA02F67" class="text-end">95</td><td style="background-color: #2FA02F1D" class="text-end">10</td><td style="background-color: #2FA02F8A" class="text-end">45</td><td style="background-color: #A02F2F00" class="text-end">18</td><td style="background-color: #A02F2F00" class="text-end">6</td><td style="background-color: #A02F2F2F" class="text-end">53</td><td style="background-color: #A02F2FD2" class="text-end">18</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="ML Green
+Teams: Central Sparks
+Matches: 4
+Runs: 117
+Overs: 23
+Dismissals: 4">
+<td colspan="2" data-text="Green"><a href="https://www.google.com/search?q=ML+Green+cricket" target="_blank">ML Green</a></td>
+<td style="background-color: #2FA02F49" class="text-end">29</td><td style="background-color: #2FA02F27" class="text-end">85</td><td style="background-color: #2FA02F88" class="text-end">13</td><td style="background-color: #2FA02F00" class="text-end">56</td><td style="background-color: #A02F2F00" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F19" class="text-end">50</td><td style="background-color: #A02F2FFF" class="text-end">25</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="D Gregory
+Teams: South East Stars
+Matches: 22
+Runs: 85
+Overs: 33
+Dismissals: 9">
+<td colspan="2" data-text="Gregory"><a href="https://www.google.com/search?q=D+Gregory+cricket" target="_blank">D Gregory</a></td>
+<td style="background-color: #2FA02F00" class="text-end">9</td><td style="background-color: #2FA02F00" class="text-end">42</td><td style="background-color: #2FA02F00" class="text-end">2</td><td style="background-color: #2FA02F00" class="text-end">70</td><td style="background-color: #A02F2F00" class="text-end">22</td><td style="background-color: #A02F2FFF" class="text-end">44</td><td style="background-color: #A02F2F00" class="text-end">11</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FFF" class="text-end">22</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="J Grewcock
+Teams: Sunrisers
+Matches: 20
+Runs: 482
+Overs: 127
+Dismissals: 19">
+<td colspan="2" data-text="Grewcock"><a href="https://www.google.com/search?q=J+Grewcock+cricket" target="_blank">J Grewcock</a></td>
+<td style="background-color: #2FA02F22" class="text-end">25</td><td style="background-color: #2FA02F00" class="text-end">63</td><td style="background-color: #2FA02F00" class="text-end">5</td><td style="background-color: #2FA02F00" class="text-end">59</td><td style="background-color: #A02F2F75" class="text-end">37</td><td style="background-color: #A02F2F20" class="text-end">16</td><td style="background-color: #A02F2F00" class="text-end">32</td><td style="background-color: #A02F2F00" class="text-end">5</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="CL Griffith
+Teams: Sunrisers
+Matches: 45
+Runs: 1,273
+Overs: 257
+Dismissals: 42">
+<td colspan="2" data-text="Griffith"><a href="https://www.google.com/search?q=CL+Griffith+cricket" target="_blank">CL Griffith</a></td>
+<td style="background-color: #2FA02F54" class="text-end">30</td><td style="background-color: #2FA02F19" class="text-end">83</td><td style="background-color: #2FA02F37" class="text-end">10</td><td style="background-color: #2FA02F00" class="text-end">55</td><td style="background-color: #A02F2F00" class="text-end">19</td><td style="background-color: #A02F2F00" class="text-end">12</td><td style="background-color: #A02F2F2B" class="text-end">52</td><td style="background-color: #A02F2F00" class="text-end">5</td><td style="background-color: #A02F2F1F" class="text-end">7</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="A Griffiths
+Teams: Western Storm
+Matches: 46
+Runs: 828
+Overs: 187
+Dismissals: 42">
+<td colspan="2" data-text="Griffiths"><a href="https://www.google.com/search?q=A+Griffiths+cricket" target="_blank">A Griffiths</a></td>
+<td style="background-color: #2FA02F00" class="text-end">20</td><td style="background-color: #2FA02F00" class="text-end">74</td><td style="background-color: #2FA02F00" class="text-end">8</td><td style="background-color: #2FA02F00" class="text-end">57</td><td style="background-color: #A02F2F05" class="text-end">26</td><td style="background-color: #A02F2F00" class="text-end">10</td><td style="background-color: #A02F2F2B" class="text-end">52</td><td style="background-color: #A02F2F00" class="text-end">5</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="J Groves
+Teams: Lightning; The Blaze
+Matches: 14
+Runs: 128
+Overs: 19
+Dismissals: 9">
+<td colspan="2" data-text="Groves"><a href="https://www.google.com/search?q=J+Groves+cricket" target="_blank">J Groves</a></td>
+<td style="background-color: #2FA02F00" class="text-end">14</td><td style="background-color: #2FA02FCE" class="text-end">112</td><td style="background-color: #2FA02F71" class="text-end">12</td><td style="background-color: #2FA02FFF" class="text-end">33</td><td style="background-color: #A02F2F00" class="text-end">11</td><td style="background-color: #A02F2F00" class="text-end">11</td><td style="background-color: #A02F2F97" class="text-end">67</td><td style="background-color: #A02F2F5C" class="text-end">11</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="GE Hall
+Teams: Northern Diamonds
+Matches: 10
+Runs: 57
+Overs: 20
+Dismissals: 6">
+<td colspan="2" data-text="Hall"><a href="https://www.google.com/search?q=GE+Hall+cricket" target="_blank">GE Hall</a></td>
+<td style="background-color: #2FA02F00" class="text-end">10</td><td style="background-color: #2FA02F00" class="text-end">49</td><td style="background-color: #2FA02F00" class="text-end">3</td><td style="background-color: #2FA02F00" class="text-end">69</td><td style="background-color: #A02F2F50" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">33</td><td style="background-color: #A02F2FC0" class="text-end">17</td><td style="background-color: #A02F2FAD" class="text-end">17</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="NM Hancock
+Teams: Sunrisers
+Matches: 6
+Runs: 43
+Overs: 10
+Dismissals: 5">
+<td colspan="2" data-text="Hancock"><a href="https://www.google.com/search?q=NM+Hancock+cricket" target="_blank">NM Hancock</a></td>
+<td style="background-color: #2FA02F00" class="text-end">9</td><td style="background-color: #2FA02F00" class="text-end">68</td><td style="background-color: #2FA02F00" class="text-end">6</td><td style="background-color: #2FA02F00" class="text-end">59</td><td style="background-color: #A02F2F00" class="text-end">20</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FFC" class="text-end">80</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="N Harman
+Teams: Lightning; Southern Vipers
+Matches: 23
+Runs: 220
+Overs: 41
+Dismissals: 14">
+<td colspan="2" data-text="Harman"><a href="https://www.google.com/search?q=N+Harman+cricket" target="_blank">N Harman</a></td>
+<td style="background-color: #2FA02F00" class="text-end">16</td><td style="background-color: #2FA02F41" class="text-end">89</td><td style="background-color: #2FA02F00" class="text-end">7</td><td style="background-color: #2FA02FC1" class="text-end">41</td><td style="background-color: #A02F2F00" class="text-end">21</td><td style="background-color: #A02F2F5B" class="text-end">21</td><td style="background-color: #A02F2F00" class="text-end">29</td><td style="background-color: #A02F2F15" class="text-end">7</td><td style="background-color: #A02F2F89" class="text-end">14</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="B Harmer
+Teams: Lightning; The Blaze
+Matches: 20
+Runs: 241
+Overs: 48
+Dismissals: 18">
+<td colspan="2" data-text="Harmer"><a href="https://www.google.com/search?q=B+Harmer+cricket" target="_blank">B Harmer</a></td>
+<td style="background-color: #2FA02F00" class="text-end">13</td><td style="background-color: #2FA02F22" class="text-end">84</td><td style="background-color: #2FA02F79" class="text-end">13</td><td style="background-color: #2FA02F00" class="text-end">60</td><td style="background-color: #A02F2F50" class="text-end">33</td><td style="background-color: #A02F2F00" class="text-end">11</td><td style="background-color: #A02F2F19" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F07" class="text-end">6</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="A Hartley
+Teams: Thunder
+Matches: 21
+Runs: 90
+Overs: 23
+Dismissals: 10">
+<td colspan="2" data-text="Hartley"><a href="https://www.google.com/search?q=A+Hartley+cricket" target="_blank">A Hartley</a></td>
+<td style="background-color: #2FA02F00" class="text-end">9</td><td style="background-color: #2FA02F00" class="text-end">66</td><td style="background-color: #2FA02F00" class="text-end">7</td><td style="background-color: #2FA02F00" class="text-end">60</td><td style="background-color: #A02F2F00" class="text-end">10</td><td style="background-color: #A02F2F00" class="text-end">10</td><td style="background-color: #A02F2F19" class="text-end">50</td><td style="background-color: #A02F2F48" class="text-end">10</td><td style="background-color: #A02F2FDE" class="text-end">20</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="N Harvey
+Teams: Western Storm
+Matches: 8
+Runs: 71
+Overs: 18
+Dismissals: 3">
+<td colspan="2" data-text="Harvey"><a href="https://www.google.com/search?q=N+Harvey+cricket" target="_blank">N Harvey</a></td>
+<td style="background-color: #2FA02F12" class="text-end">24</td><td style="background-color: #2FA02F00" class="text-end">66</td><td style="background-color: #2FA02F00" class="text-end">6</td><td style="background-color: #2FA02F00" class="text-end">55</td><td style="background-color: #A02F2F50" class="text-end">33</td><td style="background-color: #A02F2FD7" class="text-end">33</td><td style="background-color: #A02F2F00" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="L Heap
+Teams: Thunder
+Matches: 25
+Runs: 349
+Overs: 69
+Dismissals: 22">
+<td colspan="2" data-text="Heap"><a href="https://www.google.com/search?q=L+Heap+cricket" target="_blank">L Heap</a></td>
+<td style="background-color: #2FA02F00" class="text-end">16</td><td style="background-color: #2FA02F21" class="text-end">84</td><td style="background-color: #2FA02F1D" class="text-end">10</td><td style="background-color: #2FA02F2B" class="text-end">51</td><td style="background-color: #A02F2F9F" class="text-end">41</td><td style="background-color: #A02F2F00" class="text-end">5</td><td style="background-color: #A02F2F00" class="text-end">41</td><td style="background-color: #A02F2F00" class="text-end">5</td><td style="background-color: #A02F2F3C" class="text-end">9</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="BAM Heath
+Teams: Northern Diamonds
+Matches: 51
+Runs: 1,276
+Overs: 197
+Dismissals: 41">
+<td colspan="2" data-text="Heath"><a href="https://www.google.com/search?q=BAM+Heath+cricket" target="_blank">BAM Heath</a></td>
+<td style="background-color: #2FA02F5C" class="text-end">31</td><td style="background-color: #2FA02FB3" class="text-end">108</td><td style="background-color: #2FA02FB0" class="text-end">14</td><td style="background-color: #2FA02F82" class="text-end">45</td><td style="background-color: #A02F2F00" class="text-end">15</td><td style="background-color: #A02F2F14" class="text-end">15</td><td style="background-color: #A02F2F35" class="text-end">54</td><td style="background-color: #A02F2F44" class="text-end">10</td><td style="background-color: #A02F2F22" class="text-end">7</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="LF Higham
+Teams: Lightning; The Blaze
+Matches: 43
+Runs: 475
+Overs: 116
+Dismissals: 36">
+<td colspan="2" data-text="Higham"><a href="https://www.google.com/search?q=LF+Higham+cricket" target="_blank">LF Higham</a></td>
+<td style="background-color: #2FA02F00" class="text-end">13</td><td style="background-color: #2FA02F00" class="text-end">68</td><td style="background-color: #2FA02F00" class="text-end">6</td><td style="background-color: #2FA02F00" class="text-end">55</td><td style="background-color: #A02F2F00" class="text-end">25</td><td style="background-color: #A02F2F46" class="text-end">19</td><td style="background-color: #A02F2F00" class="text-end">39</td><td style="background-color: #A02F2F2A" class="text-end">8</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="CAE Hill
+Teams: Central Sparks; Southern Vipers; South East Stars
+Matches: 26
+Runs: 412
+Overs: 108
+Dismissals: 19">
+<td colspan="2" data-text="Hill"><a href="https://www.google.com/search?q=CAE+Hill+cricket" target="_blank">CAE Hill</a></td>
+<td style="background-color: #2FA02F00" class="text-end">22</td><td style="background-color: #2FA02F00" class="text-end">63</td><td style="background-color: #2FA02F00" class="text-end">6</td><td style="background-color: #2FA02F00" class="text-end">58</td><td style="background-color: #A02F2F00" class="text-end">16</td><td style="background-color: #A02F2F20" class="text-end">16</td><td style="background-color: #A02F2F05" class="text-end">47</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F51" class="text-end">11</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="N Holland
+Teams: Western Storm
+Matches: 31
+Runs: 346
+Overs: 73
+Dismissals: 27">
+<td colspan="2" data-text="Holland"><a href="https://www.google.com/search?q=N+Holland+cricket" target="_blank">N Holland</a></td>
+<td style="background-color: #2FA02F00" class="text-end">13</td><td style="background-color: #2FA02F06" class="text-end">79</td><td style="background-color: #2FA02F10" class="text-end">9</td><td style="background-color: #2FA02F1A" class="text-end">52</td><td style="background-color: #A02F2F9E" class="text-end">41</td><td style="background-color: #A02F2F00" class="text-end">4</td><td style="background-color: #A02F2F00" class="text-end">26</td><td style="background-color: #A02F2F00" class="text-end">4</td><td style="background-color: #A02F2F91" class="text-end">15</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="S Horley
+Teams: Sunrisers
+Matches: 4
+Runs: 49
+Overs: 12
+Dismissals: 4">
+<td colspan="2" data-text="Horley"><a href="https://www.google.com/search?q=S+Horley+cricket" target="_blank">S Horley</a></td>
+<td style="background-color: #2FA02F00" class="text-end">12</td><td style="background-color: #2FA02F00" class="text-end">67</td><td style="background-color: #2FA02F00" class="text-end">7</td><td style="background-color: #2FA02F00" class="text-end">58</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F80" class="text-end">25</td><td style="background-color: #A02F2FD6" class="text-end">75</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="L Jackson
+Teams: Thunder
+Matches: 22
+Runs: 172
+Overs: 66
+Dismissals: 15">
+<td colspan="2" data-text="Jackson"><a href="https://www.google.com/search?q=L+Jackson+cricket" target="_blank">L Jackson</a></td>
+<td style="background-color: #2FA02F00" class="text-end">11</td><td style="background-color: #2FA02F00" class="text-end">44</td><td style="background-color: #2FA02F00" class="text-end">2</td><td style="background-color: #2FA02F00" class="text-end">65</td><td style="background-color: #A02F2F50" class="text-end">33</td><td style="background-color: #A02F2F91" class="text-end">27</td><td style="background-color: #A02F2F00" class="text-end">20</td><td style="background-color: #A02F2F0C" class="text-end">7</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="HE Jones
+Teams: Thunder
+Matches: 20
+Runs: 89
+Overs: 28
+Dismissals: 5">
+<td colspan="2" data-text="Jones"><a href="https://www.google.com/search?q=HE+Jones+cricket" target="_blank">HE Jones</a></td>
+<td style="background-color: #2FA02F00" class="text-end">18</td><td style="background-color: #2FA02F00" class="text-end">53</td><td style="background-color: #2FA02F00" class="text-end">2</td><td style="background-color: #2FA02F00" class="text-end">59</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FFC" class="text-end">80</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FDE" class="text-end">20</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="E Jones
+Teams: Central Sparks
+Matches: 62
+Runs: 2,213
+Overs: 499
+Dismissals: 54">
+<td colspan="2" data-text="Jones"><a href="https://www.google.com/search?q=E+Jones+cricket" target="_blank">E Jones</a></td>
+<td style="background-color: #2FA02FBD" class="text-end">41</td><td style="background-color: #2FA02F00" class="text-end">74</td><td style="background-color: #2FA02F0A" class="text-end">9</td><td style="background-color: #2FA02F00" class="text-end">58</td><td style="background-color: #A02F2F00" class="text-end">22</td><td style="background-color: #A02F2F00" class="text-end">4</td><td style="background-color: #A02F2F35" class="text-end">54</td><td style="background-color: #A02F2F00" class="text-end">6</td><td style="background-color: #A02F2F3F" class="text-end">9</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="AE Jones
+Teams: Central Sparks
+Matches: 17
+Runs: 790
+Overs: 107
+Dismissals: 15">
+<td colspan="2" data-text="Jones"><a href="https://www.google.com/search?q=AE+Jones+cricket" target="_blank">AE Jones</a></td>
+<td style="background-color: #2FA02FFF" class="text-end">53</td><td style="background-color: #2FA02FFF" class="text-end">123</td><td style="background-color: #2FA02FFF" class="text-end">18</td><td style="background-color: #2FA02FBE" class="text-end">41</td><td style="background-color: #A02F2F50" class="text-end">33</td><td style="background-color: #A02F2F00" class="text-end">7</td><td style="background-color: #A02F2F32" class="text-end">53</td><td style="background-color: #A02F2F0C" class="text-end">7</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="E Jones
+Teams: South East Stars
+Matches: 11
+Runs: 155
+Overs: 21
+Dismissals: 5">
+<td colspan="2" data-text="Jones"><a href="https://www.google.com/search?q=E+Jones+cricket" target="_blank">E Jones</a></td>
+<td style="background-color: #2FA02F5A" class="text-end">31</td><td style="background-color: #2FA02FFF" class="text-end">122</td><td style="background-color: #2FA02FF5" class="text-end">17</td><td style="background-color: #2FA02FD2" class="text-end">40</td><td style="background-color: #A02F2FFF" class="text-end">60</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">20</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="KA Jones
+Teams: Western Storm
+Matches: 5
+Runs: 59
+Overs: 12
+Dismissals: 4">
+<td colspan="2" data-text="Jones"><a href="https://www.google.com/search?q=KA+Jones+cricket" target="_blank">KA Jones</a></td>
+<td style="background-color: #2FA02F00" class="text-end">15</td><td style="background-color: #2FA02F24" class="text-end">84</td><td style="background-color: #2FA02F00" class="text-end">9</td><td style="background-color: #2FA02F3D" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FFF" class="text-end">75</td><td style="background-color: #A02F2F00" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="SL Kalis
+Teams: Northern Diamonds
+Matches: 59
+Runs: 1,339
+Overs: 309
+Dismissals: 51">
+<td colspan="2" data-text="Kalis"><a href="https://www.google.com/search?q=SL+Kalis+cricket" target="_blank">SL Kalis</a></td>
+<td style="background-color: #2FA02F2B" class="text-end">26</td><td style="background-color: #2FA02F00" class="text-end">72</td><td style="background-color: #2FA02F00" class="text-end">8</td><td style="background-color: #2FA02F00" class="text-end">57</td><td style="background-color: #A02F2F00" class="text-end">22</td><td style="background-color: #A02F2F48" class="text-end">20</td><td style="background-color: #A02F2F00" class="text-end">41</td><td style="background-color: #A02F2F45" class="text-end">10</td><td style="background-color: #A02F2F0C" class="text-end">6</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="M Kelly
+Teams: Central Sparks; Lightning; The Blaze
+Matches: 58
+Runs: 1,186
+Overs: 244
+Dismissals: 53">
+<td colspan="2" data-text="Kelly"><a href="https://www.google.com/search?q=M+Kelly+cricket" target="_blank">M Kelly</a></td>
+<td style="background-color: #2FA02F05" class="text-end">22</td><td style="background-color: #2FA02F0F" class="text-end">81</td><td style="background-color: #2FA02F39" class="text-end">11</td><td style="background-color: #2FA02F00" class="text-end">56</td><td style="background-color: #A02F2F00" class="text-end">25</td><td style="background-color: #A02F2F00" class="text-end">11</td><td style="background-color: #A02F2F76" class="text-end">62</td><td style="background-color: #A02F2F00" class="text-end">2</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="FG Kemp
+Teams: Southern Vipers
+Matches: 29
+Runs: 578
+Overs: 82
+Dismissals: 21">
+<td colspan="2" data-text="Kemp"><a href="https://www.google.com/search?q=FG+Kemp+cricket" target="_blank">FG Kemp</a></td>
+<td style="background-color: #2FA02F38" class="text-end">28</td><td style="background-color: #2FA02FED" class="text-end">117</td><td style="background-color: #2FA02FAD" class="text-end">14</td><td style="background-color: #2FA02FFF" class="text-end">37</td><td style="background-color: #A02F2F82" class="text-end">38</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">43</td><td style="background-color: #A02F2F96" class="text-end">14</td><td style="background-color: #A02F2F00" class="text-end">5</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="ML Kirk
+Teams: Lightning; The Blaze
+Matches: 16
+Runs: 206
+Overs: 52
+Dismissals: 14">
+<td colspan="2" data-text="Kirk"><a href="https://www.google.com/search?q=ML+Kirk+cricket" target="_blank">ML Kirk</a></td>
+<td style="background-color: #2FA02F00" class="text-end">15</td><td style="background-color: #2FA02F00" class="text-end">66</td><td style="background-color: #2FA02F00" class="text-end">6</td><td style="background-color: #2FA02F00" class="text-end">58</td><td style="background-color: #A02F2F1E" class="text-end">29</td><td style="background-color: #A02F2FFF" class="text-end">43</td><td style="background-color: #A02F2F00" class="text-end">29</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="N de Klerk
+Teams: The Blaze
+Matches: 25
+Runs: 424
+Overs: 92
+Dismissals: 18">
+<td colspan="2" data-text="Klerk"><a href="https://www.google.com/search?q=N+de+Klerk+cricket" target="_blank">N de Klerk</a></td>
+<td style="background-color: #2FA02F10" class="text-end">24</td><td style="background-color: #2FA02F00" class="text-end">77</td><td style="background-color: #2FA02F00" class="text-end">8</td><td style="background-color: #2FA02F15" class="text-end">53</td><td style="background-color: #A02F2FFF" class="text-end">50</td><td style="background-color: #A02F2F00" class="text-end">6</td><td style="background-color: #A02F2F00" class="text-end">39</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="HC Knight
+Teams: Western Storm
+Matches: 13
+Runs: 618
+Overs: 100
+Dismissals: 9">
+<td colspan="2" data-text="Knight"><a href="https://www.google.com/search?q=HC+Knight+cricket" target="_blank">HC Knight</a></td>
+<td style="background-color: #2FA02FFF" class="text-end">69</td><td style="background-color: #2FA02F98" class="text-end">104</td><td style="background-color: #2FA02F99" class="text-end">14</td><td style="background-color: #2FA02F92" class="text-end">44</td><td style="background-color: #A02F2F50" class="text-end">33</td><td style="background-color: #A02F2F63" class="text-end">22</td><td style="background-color: #A02F2F00" class="text-end">33</td><td style="background-color: #A02F2F5C" class="text-end">11</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="CR Knott
+Teams: Southern Vipers
+Matches: 11
+Runs: 356
+Overs: 71
+Dismissals: 10">
+<td colspan="2" data-text="Knott"><a href="https://www.google.com/search?q=CR+Knott+cricket" target="_blank">CR Knott</a></td>
+<td style="background-color: #2FA02F88" class="text-end">36</td><td style="background-color: #2FA02F1E" class="text-end">83</td><td style="background-color: #2FA02F50" class="text-end">11</td><td style="background-color: #2FA02F00" class="text-end">58</td><td style="background-color: #A02F2F00" class="text-end">20</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FFC" class="text-end">80</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="EL Lamb
+Teams: Thunder
+Matches: 42
+Runs: 1,682
+Overs: 279
+Dismissals: 38">
+<td colspan="2" data-text="Lamb"><a href="https://www.google.com/search?q=EL+Lamb+cricket" target="_blank">EL Lamb</a></td>
+<td style="background-color: #2FA02FDE" class="text-end">44</td><td style="background-color: #2FA02F86" class="text-end">101</td><td style="background-color: #2FA02F5F" class="text-end">12</td><td style="background-color: #2FA02F90" class="text-end">45</td><td style="background-color: #A02F2F00" class="text-end">16</td><td style="background-color: #A02F2F04" class="text-end">13</td><td style="background-color: #A02F2F55" class="text-end">58</td><td style="background-color: #A02F2F00" class="text-end">5</td><td style="background-color: #A02F2F03" class="text-end">5</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="BA Langston
+Teams: Northern Diamonds
+Matches: 17
+Runs: 307
+Overs: 52
+Dismissals: 12">
+<td colspan="2" data-text="Langston"><a href="https://www.google.com/search?q=BA+Langston+cricket" target="_blank">BA Langston</a></td>
+<td style="background-color: #2FA02F25" class="text-end">26</td><td style="background-color: #2FA02F7D" class="text-end">99</td><td style="background-color: #2FA02F52" class="text-end">11</td><td style="background-color: #2FA02FAE" class="text-end">43</td><td style="background-color: #A02F2F50" class="text-end">33</td><td style="background-color: #A02F2FD7" class="text-end">33</td><td style="background-color: #A02F2F00" class="text-end">25</td><td style="background-color: #A02F2F2A" class="text-end">8</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="L Lee
+Teams: The Blaze
+Matches: 6
+Runs: 75
+Overs: 12
+Dismissals: 5">
+<td colspan="2" data-text="Lee"><a href="https://www.google.com/search?q=L+Lee+cricket" target="_blank">L Lee</a></td>
+<td style="background-color: #2FA02F00" class="text-end">15</td><td style="background-color: #2FA02F9C" class="text-end">104</td><td style="background-color: #2FA02FFF" class="text-end">21</td><td style="background-color: #2FA02F00" class="text-end">62</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FFF" class="text-end">40</td><td style="background-color: #A02F2F65" class="text-end">60</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="KA Levick
+Teams: Northern Diamonds
+Matches: 29
+Runs: 122
+Overs: 32
+Dismissals: 15">
+<td colspan="2" data-text="Levick"><a href="https://www.google.com/search?q=KA+Levick+cricket" target="_blank">KA Levick</a></td>
+<td style="background-color: #2FA02F00" class="text-end">8</td><td style="background-color: #2FA02F00" class="text-end">63</td><td style="background-color: #2FA02F00" class="text-end">5</td><td style="background-color: #2FA02F00" class="text-end">56</td><td style="background-color: #A02F2F00" class="text-end">7</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FCA" class="text-end">73</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F18" class="text-end">7</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="A Lister
+Teams: Thunder
+Matches: 4
+Runs: 75
+Overs: 10
+Dismissals: 4">
+<td colspan="2" data-text="Lister"><a href="https://www.google.com/search?q=A+Lister+cricket" target="_blank">A Lister</a></td>
+<td style="background-color: #2FA02F00" class="text-end">19</td><td style="background-color: #2FA02FF7" class="text-end">119</td><td style="background-color: #2FA02F7E" class="text-end">13</td><td style="background-color: #2FA02FFF" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FFF" class="text-end">100</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="SN Luff
+Teams: Western Storm
+Matches: 57
+Runs: 2,058
+Overs: 426
+Dismissals: 43">
+<td colspan="2" data-text="Luff"><a href="https://www.google.com/search?q=SN+Luff+cricket" target="_blank">SN Luff</a></td>
+<td style="background-color: #2FA02FFF" class="text-end">48</td><td style="background-color: #2FA02F0D" class="text-end">81</td><td style="background-color: #2FA02F00" class="text-end">9</td><td style="background-color: #2FA02F34" class="text-end">51</td><td style="background-color: #A02F2F00" class="text-end">21</td><td style="background-color: #A02F2F00" class="text-end">12</td><td style="background-color: #A02F2F45" class="text-end">56</td><td style="background-color: #A02F2F66" class="text-end">12</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="R MacDonald-Gay
+Teams: South East Stars
+Matches: 29
+Runs: 276
+Overs: 67
+Dismissals: 17">
+<td colspan="2" data-text="MacDonald-Gay"><a href="https://www.google.com/search?q=R+MacDonald-Gay+cricket" target="_blank">R MacDonald-Gay</a></td>
+<td style="background-color: #2FA02F00" class="text-end">16</td><td style="background-color: #2FA02F00" class="text-end">68</td><td style="background-color: #2FA02F00" class="text-end">6</td><td style="background-color: #2FA02F00" class="text-end">57</td><td style="background-color: #A02F2F00" class="text-end">12</td><td style="background-color: #A02F2F71" class="text-end">24</td><td style="background-color: #A02F2F2F" class="text-end">53</td><td style="background-color: #A02F2F00" class="text-end">6</td><td style="background-color: #A02F2F0C" class="text-end">6</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="EI MacGregor
+Teams: Sunrisers
+Matches: 3
+Runs: 22
+Overs: 8
+Dismissals: 1">
+<td colspan="2" data-text="MacGregor"><a href="https://www.google.com/search?q=EI+MacGregor+cricket" target="_blank">EI MacGregor</a></td>
+<td style="background-color: #2FA02F01" class="text-end">22</td><td style="background-color: #2FA02F00" class="text-end">44</td><td style="background-color: " class="text-end">0</td><td style="background-color: #2FA02F3D" class="text-end">50</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="position: relative; cursor: default;" title="KM Mack
+Teams: Thunder
+Matches: 6
+Runs: 227
+Overs: 43
+Dismissals: 6">
+<td colspan="2" data-text="Mack"><a href="https://www.google.com/search?q=KM+Mack+cricket" target="_blank">KM Mack</a></td>
+<td style="background-color: #2FA02F9E" class="text-end">38</td><td style="background-color: #2FA02F3C" class="text-end">88</td><td style="background-color: #2FA02F00" class="text-end">8</td><td style="background-color: #2FA02F81" class="text-end">46</td><td style="background-color: #A02F2F50" class="text-end">33</td><td style="background-color: #A02F2F29" class="text-end">17</td><td style="background-color: #A02F2F00" class="text-end">17</td><td style="background-color: #A02F2FC0" class="text-end">17</td><td style="background-color: #A02F2FAD" class="text-end">17</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="AJ Macleod
+Teams: Sunrisers
+Matches: 31
+Runs: 537
+Overs: 107
+Dismissals: 31">
+<td colspan="2" data-text="Macleod"><a href="https://www.google.com/search?q=AJ+Macleod+cricket" target="_blank">AJ Macleod</a></td>
+<td style="background-color: #2FA02F00" class="text-end">17</td><td style="background-color: #2FA02F20" class="text-end">84</td><td style="background-color: #2FA02F59" class="text-end">12</td><td style="background-color: #2FA02F00" class="text-end">56</td><td style="background-color: #A02F2F00" class="text-end">10</td><td style="background-color: #A02F2F88" class="text-end">26</td><td style="background-color: #A02F2F00" class="text-end">39</td><td style="background-color: #A02F2F43" class="text-end">10</td><td style="background-color: #A02F2F15" class="text-end">6</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="AH Maqsood
+Teams: Sunrisers
+Matches: 10
+Runs: 30
+Overs: 11
+Dismissals: 8">
+<td colspan="2" data-text="Maqsood"><a href="https://www.google.com/search?q=AH+Maqsood+cricket" target="_blank">AH Maqsood</a></td>
+<td style="background-color: #2FA02F00" class="text-end">4</td><td style="background-color: #2FA02F00" class="text-end">45</td><td style="background-color: #2FA02F00" class="text-end">6</td><td style="background-color: #2FA02F00" class="text-end">73</td><td style="background-color: #A02F2F00" class="text-end">12</td><td style="background-color: #A02F2F00" class="text-end">12</td><td style="background-color: #A02F2FD6" class="text-end">75</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="EK Marlow
+Teams: Northern Diamonds
+Matches: 24
+Runs: 339
+Overs: 89
+Dismissals: 15">
+<td colspan="2" data-text="Marlow"><a href="https://www.google.com/search?q=EK+Marlow+cricket" target="_blank">EK Marlow</a></td>
+<td style="background-color: #2FA02F07" class="text-end">23</td><td style="background-color: #2FA02F00" class="text-end">63</td><td style="background-color: #2FA02F00" class="text-end">6</td><td style="background-color: #2FA02F00" class="text-end">59</td><td style="background-color: #A02F2F96" class="text-end">40</td><td style="background-color: #A02F2F06" class="text-end">13</td><td style="background-color: #A02F2F00" class="text-end">33</td><td style="background-color: #A02F2F0C" class="text-end">7</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="CM McCarthy
+Teams: The Blaze
+Matches: 5
+Runs: 33
+Overs: 6
+Dismissals: 5">
+<td colspan="2" data-text="McCarthy"><a href="https://www.google.com/search?q=CM+McCarthy+cricket" target="_blank">CM McCarthy</a></td>
+<td style="background-color: #2FA02F00" class="text-end">7</td><td style="background-color: #2FA02F33" class="text-end">87</td><td style="background-color: #2FA02F3A" class="text-end">11</td><td style="background-color: #2FA02F15" class="text-end">53</td><td style="background-color: #A02F2FFF" class="text-end">60</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">20</td><td style="background-color: #A02F2FFC" class="text-end">20</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="EM McCaughan
+Teams: Southern Vipers
+Matches: 51
+Runs: 1,120
+Overs: 278
+Dismissals: 45">
+<td colspan="2" data-text="McCaughan"><a href="https://www.google.com/search?q=EM+McCaughan+cricket" target="_blank">EM McCaughan</a></td>
+<td style="background-color: #2FA02F1E" class="text-end">25</td><td style="background-color: #2FA02F00" class="text-end">67</td><td style="background-color: #2FA02F00" class="text-end">8</td><td style="background-color: #2FA02F00" class="text-end">61</td><td style="background-color: #A02F2F21" class="text-end">29</td><td style="background-color: #A02F2F1D" class="text-end">16</td><td style="background-color: #A02F2F00" class="text-end">42</td><td style="background-color: #A02F2F34" class="text-end">9</td><td style="background-color: #A02F2F00" class="text-end">2</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="B Miles
+Teams: South East Stars
+Matches: 8
+Runs: 86
+Overs: 23
+Dismissals: 8">
+<td colspan="2" data-text="Miles"><a href="https://www.google.com/search?q=B+Miles+cricket" target="_blank">B Miles</a></td>
+<td style="background-color: #2FA02F00" class="text-end">11</td><td style="background-color: #2FA02F00" class="text-end">63</td><td style="background-color: #2FA02F00" class="text-end">6</td><td style="background-color: #2FA02F00" class="text-end">58</td><td style="background-color: #A02F2F00" class="text-end">25</td><td style="background-color: #A02F2F80" class="text-end">25</td><td style="background-color: #A02F2F19" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="F Miller
+Teams: Sunrisers
+Matches: 25
+Runs: 322
+Overs: 60
+Dismissals: 14">
+<td colspan="2" data-text="Miller"><a href="https://www.google.com/search?q=F+Miller+cricket" target="_blank">F Miller</a></td>
+<td style="background-color: #2FA02F0B" class="text-end">23</td><td style="background-color: #2FA02F3E" class="text-end">89</td><td style="background-color: #2FA02F00" class="text-end">6</td><td style="background-color: #2FA02FC1" class="text-end">41</td><td style="background-color: #A02F2F69" class="text-end">36</td><td style="background-color: #A02F2F00" class="text-end">7</td><td style="background-color: #A02F2F00" class="text-end">29</td><td style="background-color: #A02F2FFF" class="text-end">21</td><td style="background-color: #A02F2F1F" class="text-end">7</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="AZ Monaghan
+Teams: Southern Vipers
+Matches: 25
+Runs: 245
+Overs: 43
+Dismissals: 14">
+<td colspan="2" data-text="Monaghan"><a href="https://www.google.com/search?q=AZ+Monaghan+cricket" target="_blank">AZ Monaghan</a></td>
+<td style="background-color: #2FA02F00" class="text-end">18</td><td style="background-color: #2FA02F64" class="text-end">95</td><td style="background-color: #2FA02F44" class="text-end">11</td><td style="background-color: #2FA02F5A" class="text-end">48</td><td style="background-color: #A02F2F1E" class="text-end">29</td><td style="background-color: #A02F2F10" class="text-end">14</td><td style="background-color: #A02F2F00" class="text-end">36</td><td style="background-color: #A02F2F15" class="text-end">7</td><td style="background-color: #A02F2F89" class="text-end">14</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="K Moore
+Teams: South East Stars
+Matches: 22
+Runs: 329
+Overs: 74
+Dismissals: 15">
+<td colspan="2" data-text="Moore"><a href="https://www.google.com/search?q=K+Moore+cricket" target="_blank">K Moore</a></td>
+<td style="background-color: #2FA02F00" class="text-end">22</td><td style="background-color: #2FA02F00" class="text-end">74</td><td style="background-color: #2FA02F00" class="text-end">8</td><td style="background-color: #2FA02F00" class="text-end">61</td><td style="background-color: #A02F2F00" class="text-end">13</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F32" class="text-end">53</td><td style="background-color: #A02F2F0C" class="text-end">7</td><td style="background-color: #A02F2F7B" class="text-end">13</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="FMK Morris
+Teams: Western Storm; Thunder
+Matches: 56
+Runs: 1,037
+Overs: 196
+Dismissals: 52">
+<td colspan="2" data-text="Morris"><a href="https://www.google.com/search?q=FMK+Morris+cricket" target="_blank">FMK Morris</a></td>
+<td style="background-color: #2FA02F00" class="text-end">20</td><td style="background-color: #2FA02F3A" class="text-end">88</td><td style="background-color: #2FA02F5F" class="text-end">12</td><td style="background-color: #2FA02F00" class="text-end">54</td><td style="background-color: #A02F2F0D" class="text-end">27</td><td style="background-color: #A02F2F00" class="text-end">12</td><td style="background-color: #A02F2F27" class="text-end">52</td><td style="background-color: #A02F2F00" class="text-end">4</td><td style="background-color: #A02F2F00" class="text-end">4</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="D Mullan
+Teams: Thunder; The Blaze
+Matches: 19
+Runs: 187
+Overs: 63
+Dismissals: 18">
+<td colspan="2" data-text="Mullan"><a href="https://www.google.com/search?q=D+Mullan+cricket" target="_blank">D Mullan</a></td>
+<td style="background-color: #2FA02F00" class="text-end">10</td><td style="background-color: #2FA02F00" class="text-end">49</td><td style="background-color: #2FA02F00" class="text-end">3</td><td style="background-color: #2FA02F00" class="text-end">64</td><td style="background-color: #A02F2F16" class="text-end">28</td><td style="background-color: #A02F2F00" class="text-end">6</td><td style="background-color: #A02F2F00" class="text-end">39</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F07" class="text-end">6</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="S Munro
+Teams: Lightning; The Blaze; Sunrisers
+Matches: 36
+Runs: 470
+Overs: 115
+Dismissals: 28">
+<td colspan="2" data-text="Munro"><a href="https://www.google.com/search?q=S+Munro+cricket" target="_blank">S Munro</a></td>
+<td style="background-color: #2FA02F00" class="text-end">17</td><td style="background-color: #2FA02F00" class="text-end">68</td><td style="background-color: #2FA02F00" class="text-end">7</td><td style="background-color: #2FA02F00" class="text-end">58</td><td style="background-color: #A02F2F8E" class="text-end">39</td><td style="background-color: #A02F2F00" class="text-end">11</td><td style="background-color: #A02F2F00" class="text-end">43</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F1F" class="text-end">7</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="C Nicholas
+Teams: Western Storm
+Matches: 6
+Runs: 60
+Overs: 16
+Dismissals: 2">
+<td colspan="2" data-text="Nicholas"><a href="https://www.google.com/search?q=C+Nicholas+cricket" target="_blank">C Nicholas</a></td>
+<td style="background-color: #2FA02F50" class="text-end">30</td><td style="background-color: #2FA02F00" class="text-end">65</td><td style="background-color: #2FA02F00" class="text-end">6</td><td style="background-color: #2FA02F00" class="text-end">55</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="position: relative; cursor: default;" title="D van Niekerk
+Teams: Sunrisers
+Matches: 9
+Runs: 144
+Overs: 22
+Dismissals: 9">
+<td colspan="2" data-text="Niekerk"><a href="https://www.google.com/search?q=D+van+Niekerk+cricket" target="_blank">D van Niekerk</a></td>
+<td style="background-color: #2FA02F00" class="text-end">16</td><td style="background-color: #2FA02FBF" class="text-end">110</td><td style="background-color: #2FA02FFF" class="text-end">19</td><td style="background-color: #2FA02F00" class="text-end">56</td><td style="background-color: #A02F2F50" class="text-end">33</td><td style="background-color: #A02F2F00" class="text-end">11</td><td style="background-color: #A02F2F00" class="text-end">44</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="A Norgrove
+Teams: Southern Vipers
+Matches: 7
+Runs: 136
+Overs: 48
+Dismissals: 7">
+<td colspan="2" data-text="Norgrove"><a href="https://www.google.com/search?q=A+Norgrove+cricket" target="_blank">A Norgrove</a></td>
+<td style="background-color: #2FA02F00" class="text-end">19</td><td style="background-color: #2FA02F00" class="text-end">47</td><td style="background-color: #2FA02F00" class="text-end">6</td><td style="background-color: #2FA02F00" class="text-end">73</td><td style="background-color: #A02F2FB4" class="text-end">43</td><td style="background-color: #A02F2F10" class="text-end">14</td><td style="background-color: #A02F2F00" class="text-end">29</td><td style="background-color: #A02F2F96" class="text-end">14</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="TG Norris
+Teams: Southern Vipers; Thunder
+Matches: 37
+Runs: 344
+Overs: 78
+Dismissals: 24">
+<td colspan="2" data-text="Norris"><a href="https://www.google.com/search?q=TG+Norris+cricket" target="_blank">TG Norris</a></td>
+<td style="background-color: #2FA02F00" class="text-end">14</td><td style="background-color: #2FA02F00" class="text-end">74</td><td style="background-color: #2FA02F00" class="text-end">7</td><td style="background-color: #2FA02F00" class="text-end">54</td><td style="background-color: #A02F2F00" class="text-end">17</td><td style="background-color: #A02F2F80" class="text-end">25</td><td style="background-color: #A02F2F00" class="text-end">38</td><td style="background-color: #A02F2F2A" class="text-end">8</td><td style="background-color: #A02F2F6F" class="text-end">12</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="S Pai
+Teams: Lightning; Thunder
+Matches: 19
+Runs: 167
+Overs: 47
+Dismissals: 17">
+<td colspan="2" data-text="Pai"><a href="https://www.google.com/search?q=S+Pai+cricket" target="_blank">S Pai</a></td>
+<td style="background-color: #2FA02F00" class="text-end">10</td><td style="background-color: #2FA02F00" class="text-end">59</td><td style="background-color: #2FA02F00" class="text-end">4</td><td style="background-color: #2FA02F00" class="text-end">57</td><td style="background-color: #A02F2F00" class="text-end">12</td><td style="background-color: #A02F2FEB" class="text-end">35</td><td style="background-color: #A02F2F00" class="text-end">35</td><td style="background-color: #A02F2F00" class="text-end">6</td><td style="background-color: #A02F2F64" class="text-end">12</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="C Pavely
+Teams: Central Sparks
+Matches: 12
+Runs: 170
+Overs: 34
+Dismissals: 8">
+<td colspan="2" data-text="Pavely"><a href="https://www.google.com/search?q=C+Pavely+cricket" target="_blank">C Pavely</a></td>
+<td style="background-color: #2FA02F00" class="text-end">21</td><td style="background-color: #2FA02F25" class="text-end">85</td><td style="background-color: #2FA02F09" class="text-end">9</td><td style="background-color: #2FA02F50" class="text-end">49</td><td style="background-color: #A02F2F7C" class="text-end">38</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">38</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="D Perrin
+Teams: Central Sparks
+Matches: 33
+Runs: 554
+Overs: 120
+Dismissals: 29">
+<td colspan="2" data-text="Perrin"><a href="https://www.google.com/search?q=D+Perrin+cricket" target="_blank">D Perrin</a></td>
+<td style="background-color: #2FA02F00" class="text-end">19</td><td style="background-color: #2FA02F00" class="text-end">77</td><td style="background-color: #2FA02F2D" class="text-end">10</td><td style="background-color: #2FA02F00" class="text-end">61</td><td style="background-color: #A02F2F5C" class="text-end">34</td><td style="background-color: #A02F2F00" class="text-end">7</td><td style="background-color: #A02F2F00" class="text-end">45</td><td style="background-color: #A02F2F11" class="text-end">7</td><td style="background-color: #A02F2F00" class="text-end">3</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="G Potts
+Teams: Central Sparks
+Matches: 18
+Runs: 117
+Overs: 40
+Dismissals: 7">
+<td colspan="2" data-text="Potts"><a href="https://www.google.com/search?q=G+Potts+cricket" target="_blank">G Potts</a></td>
+<td style="background-color: #2FA02F00" class="text-end">17</td><td style="background-color: #2FA02F00" class="text-end">49</td><td style="background-color: #2FA02F00" class="text-end">3</td><td style="background-color: #2FA02F00" class="text-end">62</td><td style="background-color: #A02F2F1E" class="text-end">29</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">43</td><td style="background-color: #A02F2F96" class="text-end">14</td><td style="background-color: #A02F2F89" class="text-end">14</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="O Prendergast
+Teams: Western Storm
+Matches: 9
+Runs: 248
+Overs: 42
+Dismissals: 6">
+<td colspan="2" data-text="Prendergast"><a href="https://www.google.com/search?q=O+Prendergast+cricket" target="_blank">O Prendergast</a></td>
+<td style="background-color: #2FA02FC1" class="text-end">41</td><td style="background-color: #2FA02F7C" class="text-end">99</td><td style="background-color: #2FA02F66" class="text-end">12</td><td style="background-color: #2FA02F5E" class="text-end">48</td><td style="background-color: #A02F2F00" class="text-end">17</td><td style="background-color: #A02F2FD7" class="text-end">33</td><td style="background-color: #A02F2F19" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="MJ Robbins
+Teams: Western Storm
+Matches: 14
+Runs: 50
+Overs: 19
+Dismissals: 8">
+<td colspan="2" data-text="Robbins"><a href="https://www.google.com/search?q=MJ+Robbins+cricket" target="_blank">MJ Robbins</a></td>
+<td style="background-color: #2FA02F00" class="text-end">6</td><td style="background-color: #2FA02F00" class="text-end">43</td><td style="background-color: #2FA02F00" class="text-end">3</td><td style="background-color: #2FA02F00" class="text-end">69</td><td style="background-color: #A02F2F7C" class="text-end">38</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F19" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F6F" class="text-end">12</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="PJ Scholfield
+Teams: Southern Vipers; South East Stars
+Matches: 54
+Runs: 1,203
+Overs: 220
+Dismissals: 46">
+<td colspan="2" data-text="Scholfield"><a href="https://www.google.com/search?q=PJ+Scholfield+cricket" target="_blank">PJ Scholfield</a></td>
+<td style="background-color: #2FA02F2A" class="text-end">26</td><td style="background-color: #2FA02F4D" class="text-end">91</td><td style="background-color: #2FA02F54" class="text-end">11</td><td style="background-color: #2FA02F1A" class="text-end">52</td><td style="background-color: #A02F2F00" class="text-end">20</td><td style="background-color: #A02F2F00" class="text-end">9</td><td style="background-color: #A02F2F9D" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="NR Sciver-Brunt
+Teams: Northern Diamonds; The Blaze
+Matches: 12
+Runs: 446
+Overs: 66
+Dismissals: 8">
+<td colspan="2" data-text="Sciver-Brunt"><a href="https://www.google.com/search?q=NR+Sciver-Brunt+cricket" target="_blank">NR Sciver-Brunt</a></td>
+<td style="background-color: #2FA02FFF" class="text-end">56</td><td style="background-color: #2FA02FD0" class="text-end">113</td><td style="background-color: #2FA02FEA" class="text-end">16</td><td style="background-color: #2FA02FBF" class="text-end">41</td><td style="background-color: #A02F2F7C" class="text-end">38</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F78" class="text-end">62</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="LE Scott
+Teams: Northern Diamonds
+Matches: 15
+Runs: 69
+Overs: 22
+Dismissals: 10">
+<td colspan="2" data-text="Scott"><a href="https://www.google.com/search?q=LE+Scott+cricket" target="_blank">LE Scott</a></td>
+<td style="background-color: #2FA02F00" class="text-end">7</td><td style="background-color: #2FA02F00" class="text-end">51</td><td style="background-color: #2FA02F00" class="text-end">5</td><td style="background-color: #2FA02F00" class="text-end">67</td><td style="background-color: #A02F2FFF" class="text-end">50</td><td style="background-color: #A02F2F00" class="text-end">10</td><td style="background-color: #A02F2F00" class="text-end">30</td><td style="background-color: #A02F2F48" class="text-end">10</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="G Scrivens
+Teams: Sunrisers
+Matches: 58
+Runs: 1,684
+Overs: 380
+Dismissals: 51">
+<td colspan="2" data-text="Scrivens"><a href="https://www.google.com/search?q=G+Scrivens+cricket" target="_blank">G Scrivens</a></td>
+<td style="background-color: #2FA02F6E" class="text-end">33</td><td style="background-color: #2FA02F00" class="text-end">74</td><td style="background-color: #2FA02F00" class="text-end">9</td><td style="background-color: #2FA02F00" class="text-end">57</td><td style="background-color: #A02F2F00" class="text-end">18</td><td style="background-color: #A02F2F33" class="text-end">18</td><td style="background-color: #A02F2F03" class="text-end">47</td><td style="background-color: #A02F2F45" class="text-end">10</td><td style="background-color: #A02F2F0C" class="text-end">6</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="C Skelton
+Teams: Western Storm
+Matches: 18
+Runs: 211
+Overs: 53
+Dismissals: 8">
+<td colspan="2" data-text="Skelton"><a href="https://www.google.com/search?q=C+Skelton+cricket" target="_blank">C Skelton</a></td>
+<td style="background-color: #2FA02F2C" class="text-end">26</td><td style="background-color: #2FA02F00" class="text-end">66</td><td style="background-color: #2FA02F00" class="text-end">7</td><td style="background-color: #2FA02F00" class="text-end">61</td><td style="background-color: #A02F2F00" class="text-end">25</td><td style="background-color: #A02F2F00" class="text-end">12</td><td style="background-color: #A02F2F00" class="text-end">38</td><td style="background-color: #A02F2F75" class="text-end">12</td><td style="background-color: #A02F2F6F" class="text-end">12</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="R Slater
+Teams: Northern Diamonds
+Matches: 7
+Runs: 32
+Overs: 12
+Dismissals: 4">
+<td colspan="2" data-text="Slater"><a href="https://www.google.com/search?q=R+Slater+cricket" target="_blank">R Slater</a></td>
+<td style="background-color: #2FA02F00" class="text-end">8</td><td style="background-color: #2FA02F00" class="text-end">44</td><td style="background-color: #2FA02F00" class="text-end">1</td><td style="background-color: #2FA02F00" class="text-end">65</td><td style="background-color: #A02F2FFF" class="text-end">50</td><td style="background-color: #A02F2FFF" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="S Smale
+Teams: Thunder
+Matches: 26
+Runs: 643
+Overs: 153
+Dismissals: 24">
+<td colspan="2" data-text="Smale"><a href="https://www.google.com/search?q=S+Smale+cricket" target="_blank">S Smale</a></td>
+<td style="background-color: #2FA02F31" class="text-end">27</td><td style="background-color: #2FA02F00" class="text-end">70</td><td style="background-color: #2FA02F00" class="text-end">7</td><td style="background-color: #2FA02F00" class="text-end">57</td><td style="background-color: #A02F2F50" class="text-end">33</td><td style="background-color: #A02F2F00" class="text-end">8</td><td style="background-color: #A02F2F00" class="text-end">25</td><td style="background-color: #A02F2F75" class="text-end">12</td><td style="background-color: #A02F2F6F" class="text-end">12</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="Sophia Smale
+Teams: Western Storm
+Matches: 28
+Runs: 420
+Overs: 116
+Dismissals: 19">
+<td colspan="2" data-text="Smale"><a href="https://www.google.com/search?q=Sophia+Smale+cricket" target="_blank">Sophia Smale</a></td>
+<td style="background-color: #2FA02F02" class="text-end">22</td><td style="background-color: #2FA02F00" class="text-end">61</td><td style="background-color: #2FA02F00" class="text-end">5</td><td style="background-color: #2FA02F00" class="text-end">59</td><td style="background-color: #A02F2F3D" class="text-end">32</td><td style="background-color: #A02F2F20" class="text-end">16</td><td style="background-color: #A02F2F00" class="text-end">16</td><td style="background-color: #A02F2F00" class="text-end">5</td><td style="background-color: #A02F2FA0" class="text-end">16</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="BF Smith
+Teams: South East Stars
+Matches: 56
+Runs: 1,665
+Overs: 243
+Dismissals: 55">
+<td colspan="2" data-text="Smith"><a href="https://www.google.com/search?q=BF+Smith+cricket" target="_blank">BF Smith</a></td>
+<td style="background-color: #2FA02F53" class="text-end">30</td><td style="background-color: #2FA02FDA" class="text-end">114</td><td style="background-color: #2FA02FFF" class="text-end">18</td><td style="background-color: #2FA02F4D" class="text-end">49</td><td style="background-color: #A02F2F00" class="text-end">13</td><td style="background-color: #A02F2F00" class="text-end">4</td><td style="background-color: #A02F2FFF" class="text-end">82</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">2</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="LCN Smith
+Teams: Northern Diamonds; Southern Vipers
+Matches: 39
+Runs: 462
+Overs: 112
+Dismissals: 30">
+<td colspan="2" data-text="Smith"><a href="https://www.google.com/search?q=LCN+Smith+cricket" target="_blank">LCN Smith</a></td>
+<td style="background-color: #2FA02F00" class="text-end">15</td><td style="background-color: #2FA02F00" class="text-end">69</td><td style="background-color: #2FA02F00" class="text-end">6</td><td style="background-color: #2FA02F00" class="text-end">55</td><td style="background-color: #A02F2F00" class="text-end">10</td><td style="background-color: #A02F2F00" class="text-end">7</td><td style="background-color: #A02F2F7E" class="text-end">63</td><td style="background-color: #A02F2F0C" class="text-end">7</td><td style="background-color: #A02F2F18" class="text-end">7</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="R Southby
+Teams: South East Stars; Southern Vipers
+Matches: 28
+Runs: 271
+Overs: 58
+Dismissals: 19">
+<td colspan="2" data-text="Southby"><a href="https://www.google.com/search?q=R+Southby+cricket" target="_blank">R Southby</a></td>
+<td style="background-color: #2FA02F00" class="text-end">14</td><td style="background-color: #2FA02F00" class="text-end">78</td><td style="background-color: #2FA02F00" class="text-end">7</td><td style="background-color: #2FA02F53" class="text-end">49</td><td style="background-color: #A02F2FAC" class="text-end">42</td><td style="background-color: #A02F2F00" class="text-end">11</td><td style="background-color: #A02F2F00" class="text-end">32</td><td style="background-color: #A02F2F00" class="text-end">5</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="J Spence
+Teams: South East Stars
+Matches: 10
+Runs: 168
+Overs: 62
+Dismissals: 9">
+<td colspan="2" data-text="Spence"><a href="https://www.google.com/search?q=J+Spence+cricket" target="_blank">J Spence</a></td>
+<td style="background-color: #2FA02F00" class="text-end">19</td><td style="background-color: #2FA02F00" class="text-end">45</td><td style="background-color: #2FA02F00" class="text-end">4</td><td style="background-color: #2FA02F00" class="text-end">69</td><td style="background-color: #A02F2F00" class="text-end">11</td><td style="background-color: #A02F2F63" class="text-end">22</td><td style="background-color: #A02F2F43" class="text-end">56</td><td style="background-color: #A02F2F5C" class="text-end">11</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="A Stonehouse
+Teams: South East Stars
+Matches: 24
+Runs: 321
+Overs: 81
+Dismissals: 21">
+<td colspan="2" data-text="Stonehouse"><a href="https://www.google.com/search?q=A+Stonehouse+cricket" target="_blank">A Stonehouse</a></td>
+<td style="background-color: #2FA02F00" class="text-end">15</td><td style="background-color: #2FA02F00" class="text-end">66</td><td style="background-color: #2FA02F00" class="text-end">7</td><td style="background-color: #2FA02F00" class="text-end">62</td><td style="background-color: #A02F2F00" class="text-end">19</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FE0" class="text-end">76</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">5</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="A Surenkumar
+Teams: Sunrisers
+Matches: 7
+Runs: 75
+Overs: 16
+Dismissals: 4">
+<td colspan="2" data-text="Surenkumar"><a href="https://www.google.com/search?q=A+Surenkumar+cricket" target="_blank">A Surenkumar</a></td>
+<td style="background-color: #2FA02F00" class="text-end">19</td><td style="background-color: #2FA02F00" class="text-end">78</td><td style="background-color: #2FA02F00" class="text-end">6</td><td style="background-color: #2FA02F8C" class="text-end">45</td><td style="background-color: #A02F2F00" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FD6" class="text-end">75</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="MLL Taylor
+Teams: Southern Vipers
+Matches: 14
+Runs: 66
+Overs: 14
+Dismissals: 6">
+<td colspan="2" data-text="Taylor"><a href="https://www.google.com/search?q=MLL+Taylor+cricket" target="_blank">MLL Taylor</a></td>
+<td style="background-color: #2FA02F00" class="text-end">11</td><td style="background-color: #2FA02F00" class="text-end">78</td><td style="background-color: #2FA02F00" class="text-end">8</td><td style="background-color: #2FA02F22" class="text-end">52</td><td style="background-color: #A02F2F00" class="text-end">17</td><td style="background-color: #A02F2F29" class="text-end">17</td><td style="background-color: #A02F2F00" class="text-end">17</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FFF" class="text-end">50</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="Olivia Thomas
+Teams: Thunder
+Matches: 4
+Runs: 25
+Overs: 15
+Dismissals: 2">
+<td colspan="2" data-text="Thomas"><a href="https://www.google.com/search?q=Olivia+Thomas+cricket" target="_blank">Olivia Thomas</a></td>
+<td style="background-color: #2FA02F00" class="text-end">12</td><td style="background-color: #2FA02F00" class="text-end">27</td><td style="background-color: #2FA02F00" class="text-end">1</td><td style="background-color: #2FA02F00" class="text-end">77</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="position: relative; cursor: default;" title="E Threlkeld
+Teams: Thunder
+Matches: 59
+Runs: 1,080
+Overs: 260
+Dismissals: 48">
+<td colspan="2" data-text="Threlkeld"><a href="https://www.google.com/search?q=E+Threlkeld+cricket" target="_blank">E Threlkeld</a></td>
+<td style="background-color: #2FA02F06" class="text-end">22</td><td style="background-color: #2FA02F00" class="text-end">69</td><td style="background-color: #2FA02F00" class="text-end">6</td><td style="background-color: #2FA02F00" class="text-end">55</td><td style="background-color: #A02F2F24" class="text-end">29</td><td style="background-color: #A02F2F96" class="text-end">27</td><td style="background-color: #A02F2F00" class="text-end">31</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F12" class="text-end">6</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="CL Tryon
+Teams: Northern Diamonds
+Matches: 16
+Runs: 279
+Overs: 39
+Dismissals: 11">
+<td colspan="2" data-text="Tryon"><a href="https://www.google.com/search?q=CL+Tryon+cricket" target="_blank">CL Tryon</a></td>
+<td style="background-color: #2FA02F22" class="text-end">25</td><td style="background-color: #2FA02FF8" class="text-end">119</td><td style="background-color: #2FA02FFA" class="text-end">17</td><td style="background-color: #2FA02F98" class="text-end">44</td><td style="background-color: #A02F2FCF" class="text-end">45</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">36</td><td style="background-color: #A02F2F38" class="text-end">9</td><td style="background-color: #A02F2F3C" class="text-end">9</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="S Turner
+Teams: Thunder; Northern Diamonds
+Matches: 12
+Runs: 45
+Overs: 17
+Dismissals: 6">
+<td colspan="2" data-text="Turner"><a href="https://www.google.com/search?q=S+Turner+cricket" target="_blank">S Turner</a></td>
+<td style="background-color: #2FA02F00" class="text-end">8</td><td style="background-color: #2FA02F00" class="text-end">45</td><td style="background-color: #2FA02F00" class="text-end">1</td><td style="background-color: #2FA02F00" class="text-end">61</td><td style="background-color: #A02F2F00" class="text-end">17</td><td style="background-color: #A02F2F29" class="text-end">17</td><td style="background-color: #A02F2F97" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="PE Turner
+Teams: Northern Diamonds
+Matches: 22
+Runs: 152
+Overs: 45
+Dismissals: 19">
+<td colspan="2" data-text="Turner"><a href="https://www.google.com/search?q=PE+Turner+cricket" target="_blank">PE Turner</a></td>
+<td style="background-color: #2FA02F00" class="text-end">8</td><td style="background-color: #2FA02F00" class="text-end">57</td><td style="background-color: #2FA02F00" class="text-end">5</td><td style="background-color: #2FA02F00" class="text-end">64</td><td style="background-color: #A02F2FAC" class="text-end">42</td><td style="background-color: #A02F2F57" class="text-end">21</td><td style="background-color: #A02F2F00" class="text-end">32</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="MK Villiers
+Teams: Sunrisers
+Matches: 47
+Runs: 728
+Overs: 121
+Dismissals: 44">
+<td colspan="2" data-text="Villiers"><a href="https://www.google.com/search?q=MK+Villiers+cricket" target="_blank">MK Villiers</a></td>
+<td style="background-color: #2FA02F00" class="text-end">17</td><td style="background-color: #2FA02F86" class="text-end">101</td><td style="background-color: #2FA02F6D" class="text-end">12</td><td style="background-color: #2FA02F91" class="text-end">44</td><td style="background-color: #A02F2F28" class="text-end">30</td><td style="background-color: #A02F2F00" class="text-end">7</td><td style="background-color: #A02F2F19" class="text-end">50</td><td style="background-color: #A02F2F00" class="text-end">5</td><td style="background-color: #A02F2F00" class="text-end">2</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="C Webb
+Teams: Central Sparks
+Matches: 8
+Runs: 155
+Overs: 28
+Dismissals: 6">
+<td colspan="2" data-text="Webb"><a href="https://www.google.com/search?q=C+Webb+cricket" target="_blank">C Webb</a></td>
+<td style="background-color: #2FA02F27" class="text-end">26</td><td style="background-color: #2FA02F4A" class="text-end">91</td><td style="background-color: #2FA02F15" class="text-end">9</td><td style="background-color: #2FA02F9A" class="text-end">44</td><td style="background-color: #A02F2F00" class="text-end">17</td><td style="background-color: #A02F2FD7" class="text-end">33</td><td style="background-color: #A02F2F19" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="A Wellington
+Teams: Western Storm
+Matches: 10
+Runs: 202
+Overs: 23
+Dismissals: 5">
+<td colspan="2" data-text="Wellington"><a href="https://www.google.com/search?q=A+Wellington+cricket" target="_blank">A Wellington</a></td>
+<td style="background-color: #2FA02FB8" class="text-end">40</td><td style="background-color: #2FA02FFF" class="text-end">144</td><td style="background-color: #2FA02FFF" class="text-end">19</td><td style="background-color: #2FA02FFF" class="text-end">30</td><td style="background-color: #A02F2F96" class="text-end">40</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">40</td><td style="background-color: #A02F2FFC" class="text-end">20</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="FC Wilson
+Teams: Sunrisers; Western Storm
+Matches: 46
+Runs: 1,245
+Overs: 214
+Dismissals: 40">
+<td colspan="2" data-text="Wilson"><a href="https://www.google.com/search?q=FC+Wilson+cricket" target="_blank">FC Wilson</a></td>
+<td style="background-color: #2FA02F5C" class="text-end">31</td><td style="background-color: #2FA02F70" class="text-end">97</td><td style="background-color: #2FA02F5B" class="text-end">12</td><td style="background-color: #2FA02F7D" class="text-end">46</td><td style="background-color: #A02F2F00" class="text-end">18</td><td style="background-color: #A02F2F00" class="text-end">2</td><td style="background-color: #A02F2F9E" class="text-end">68</td><td style="background-color: #A02F2F75" class="text-end">12</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="E Windsor
+Teams: Southern Vipers; Lightning
+Matches: 47
+Runs: 1,107
+Overs: 236
+Dismissals: 34">
+<td colspan="2" data-text="Windsor"><a href="https://www.google.com/search?q=E+Windsor+cricket" target="_blank">E Windsor</a></td>
+<td style="background-color: #2FA02F6A" class="text-end">33</td><td style="background-color: #2FA02F00" class="text-end">78</td><td style="background-color: #2FA02F00" class="text-end">8</td><td style="background-color: #2FA02F17" class="text-end">53</td><td style="background-color: #A02F2F00" class="text-end">24</td><td style="background-color: #A02F2F00" class="text-end">3</td><td style="background-color: #A02F2F03" class="text-end">47</td><td style="background-color: #A02F2F68" class="text-end">12</td><td style="background-color: #A02F2F0C" class="text-end">6</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="L Winfield-Hill
+Teams: Northern Diamonds
+Matches: 50
+Runs: 1,946
+Overs: 336
+Dismissals: 46">
+<td colspan="2" data-text="Winfield-Hill"><a href="https://www.google.com/search?q=L+Winfield-Hill+cricket" target="_blank">L Winfield-Hill</a></td>
+<td style="background-color: #2FA02FCB" class="text-end">42</td><td style="background-color: #2FA02F6E" class="text-end">97</td><td style="background-color: #2FA02F98" class="text-end">14</td><td style="background-color: #2FA02F3F" class="text-end">50</td><td style="background-color: #A02F2F8D" class="text-end">39</td><td style="background-color: #A02F2F00" class="text-end">9</td><td style="background-color: #A02F2F29" class="text-end">52</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="IECM Wong
+Teams: Central Sparks; Western Storm
+Matches: 36
+Runs: 342
+Overs: 60
+Dismissals: 30">
+<td colspan="2" data-text="Wong"><a href="https://www.google.com/search?q=IECM+Wong+cricket" target="_blank">IECM Wong</a></td>
+<td style="background-color: #2FA02F00" class="text-end">11</td><td style="background-color: #2FA02F66" class="text-end">95</td><td style="background-color: #2FA02F56" class="text-end">11</td><td style="background-color: #2FA02F2A" class="text-end">51</td><td style="background-color: #A02F2F0A" class="text-end">27</td><td style="background-color: #A02F2F00" class="text-end">3</td><td style="background-color: #A02F2F65" class="text-end">60</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="JA Woolston
+Teams: Northern Diamonds
+Matches: 8
+Runs: 61
+Overs: 17
+Dismissals: 5">
+<td colspan="2" data-text="Woolston"><a href="https://www.google.com/search?q=JA+Woolston+cricket" target="_blank">JA Woolston</a></td>
+<td style="background-color: #2FA02F00" class="text-end">12</td><td style="background-color: #2FA02F00" class="text-end">59</td><td style="background-color: #2FA02F00" class="text-end">8</td><td style="background-color: #2FA02F00" class="text-end">68</td><td style="background-color: #A02F2F96" class="text-end">40</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">40</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="NAJ Wraith
+Teams: Western Storm
+Matches: 51
+Runs: 903
+Overs: 171
+Dismissals: 46">
+<td colspan="2" data-text="Wraith"><a href="https://www.google.com/search?q=NAJ+Wraith+cricket" target="_blank">NAJ Wraith</a></td>
+<td style="background-color: #2FA02F00" class="text-end">20</td><td style="background-color: #2FA02F3A" class="text-end">88</td><td style="background-color: #2FA02F3D" class="text-end">11</td><td style="background-color: #2FA02F4F" class="text-end">49</td><td style="background-color: #A02F2F48" class="text-end">33</td><td style="background-color: #A02F2F00" class="text-end">4</td><td style="background-color: #A02F2F29" class="text-end">52</td><td style="background-color: #A02F2F0A" class="text-end">7</td><td style="background-color: #A02F2F00" class="text-end">2</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="DN Wyatt
+Teams: Southern Vipers
+Matches: 25
+Runs: 965
+Overs: 141
+Dismissals: 23">
+<td colspan="2" data-text="Wyatt"><a href="https://www.google.com/search?q=DN+Wyatt+cricket" target="_blank">DN Wyatt</a></td>
+<td style="background-color: #2FA02FC7" class="text-end">42</td><td style="background-color: #2FA02FDA" class="text-end">114</td><td style="background-color: #2FA02FEC" class="text-end">16</td><td style="background-color: #2FA02F87" class="text-end">45</td><td style="background-color: #A02F2F00" class="text-end">22</td><td style="background-color: #A02F2F00" class="text-end">4</td><td style="background-color: #A02F2F8C" class="text-end">65</td><td style="background-color: #A02F2F31" class="text-end">9</td><td style="background-color: " class="text-end">0</td>
+</tr>
+</tbody>
+</table>
+<script>$(function() {  $('.table').tablesorter();});</script><style>.table th { cursor: ns-resize; } </style>
+<div class="m-2"><small class="float-start">&copy; 2024 CRICKETher.com/cricsheet.org</small><small class="float-end">Matches: 257; Date: 03/06/2024 11:21</small></div>
+</body>
+</html>
