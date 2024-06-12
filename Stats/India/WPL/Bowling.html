@@ -1,0 +1,476 @@
+<html>
+<head>
+<title>Bowling</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script><script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js" integrity="sha512-qzgd5cYSZcosqpzpn7zF2ZId8f/8CHmFKZ8j7mU4OUXTNRd5g+ZHBPsgKEwoqxCtdQvExE5LprwwPAgoicguNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+table.table tbody tr:hover td { color: var(--bs-primary); cursor: default; }
+.table th, .table td { text-wrap: nowrap; overflow: hidden }
+</style>
+</head>
+<body>
+<h1>Bowling</h1>
+<div class='m-1'><input class='form-control form-control-sm table-filter' placeholder='Filter...' style='display: none;' /></div><script>$(document).ready(function(){  $('.table-filter').toggle();   $('.table-filter').on('keyup', function() {    var needles = $(this).val();    $('.table tbody tr').filter(function() {      $(this).toggle(filter_contains(needles, $(this).text()));    });  });});function filter_contains(needles, haystack) {  let result = false;  let ns = needles.split(',').map(n => n.trim().toLowerCase()).filter(n => n.length > 0);  if(ns.length == 0) {    return true;  }  ns.forEach(n => {    if(n.length > 0 && haystack.toLowerCase().indexOf(n) > -1) {      result = true;    }  });  return result;}</script>
+<table class="table table-sm" style="table-layout: fixed;">
+<thead class="sticky-top">
+<tr style="position: relative; top: -1px">
+<th>Bowler</th><th></th><th class="text-end">Average</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Boundary %</th><th class="text-end">LBW %</th><th class="text-end">Bowled %</th><th class="text-end">Stumped %</th><th class="text-end">Caught %</th>
+</tr>
+</thead>
+<tbody>
+<tr style="cursor: default;" title="S Asha
+Teams: Royal Challengers Bangalore
+Matches: 13
+Overs: 38
+Runs: 297
+Wickets: 14">
+<td colspan="2" data-text="Asha"><a class="chart" data-title="Bowling Average - S Asha" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[28,17]">📊</a>&nbsp;<a href="https://www.google.com/search?q=S+Asha+cricket" target="_blank">S Asha</a></td>
+<td style="background-color: #2FA02F58" class="text-end">21</td><td style="background-color: #2FA02F59" class="text-end">16</td><td style="background-color: #2FA02F16" class="text-end">7.82</td><td style="background-color: #2FA02F00" class="text-end">38</td><td style="background-color: #2FA02F19" class="text-end">20</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">14</td><td style="background-color: #A02F2F42" class="text-end">14</td><td style="background-color: #A02F2F2C" class="text-end">64</td>
+</tr>
+<tr style="cursor: default;" title="Preeti Bose
+Teams: Royal Challengers Bangalore
+Matches: 6
+Overs: 17
+Runs: 162
+Wickets: 3">
+<td colspan="2" data-text="Bose"><a class="chart" data-title="Bowling Average - Preeti Bose" data-x="[&quot;2022&quot;]" data-y="[54]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Preeti+Bose+cricket" target="_blank">Preeti Bose</a></td>
+<td style="background-color: #2FA02F00" class="text-end">54</td><td style="background-color: #2FA02F00" class="text-end">34</td><td style="background-color: #2FA02F00" class="text-end">9.53</td><td style="background-color: #2FA02F00" class="text-end">26</td><td style="background-color: #2FA02F00" class="text-end">25</td><td style="background-color: #A02F2FFF" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FFF" class="text-end">33</td><td style="background-color: #A02F2F00" class="text-end">33</td>
+</tr>
+<tr style="cursor: default;" title="KE Bryce
+Teams: Gujarat Giants
+Matches: 8
+Overs: 21
+Runs: 178
+Wickets: 4">
+<td colspan="2" data-text="Bryce"><a class="chart" data-title="Bowling Average - KE Bryce" data-x="[&quot;2023&quot;]" data-y="[44]">📊</a>&nbsp;<a href="https://www.google.com/search?q=KE+Bryce+cricket" target="_blank">KE Bryce</a></td>
+<td style="background-color: #2FA02F00" class="text-end">44</td><td style="background-color: #2FA02F00" class="text-end">32</td><td style="background-color: #2FA02F00" class="text-end">8.48</td><td style="background-color: #2FA02F00" class="text-end">38</td><td style="background-color: #2FA02F00" class="text-end">24</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F0E" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F73" class="text-end">75</td>
+</tr>
+<tr style="cursor: default;" title="A Capsey
+Teams: Delhi Capitals
+Matches: 12
+Overs: 26
+Runs: 181
+Wickets: 10">
+<td colspan="2" data-text="Capsey"><a class="chart" data-title="Bowling Average - A Capsey" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[24,8]">📊</a>&nbsp;<a href="https://www.google.com/search?q=A+Capsey+cricket" target="_blank">A Capsey</a></td>
+<td style="background-color: #2FA02F6E" class="text-end">18</td><td style="background-color: #2FA02F5D" class="text-end">16</td><td style="background-color: #2FA02F74" class="text-end">6.83</td><td style="background-color: #2FA02F21" class="text-end">41</td><td style="background-color: #2FA02F7C" class="text-end">16</td><td style="background-color: #A02F2F12" class="text-end">10</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FE9" class="text-end">30</td><td style="background-color: #A02F2F0F" class="text-end">60</td>
+</tr>
+<tr style="cursor: default;" title="PG Chopra
+Teams: UP Warriorz
+Matches: 4
+Overs: 12
+Runs: 98
+Wickets: 3">
+<td colspan="2" data-text="Chopra"><a class="chart" data-title="Bowling Average - PG Chopra" data-x="[&quot;2022&quot;]" data-y="[32]">📊</a>&nbsp;<a href="https://www.google.com/search?q=PG+Chopra+cricket" target="_blank">PG Chopra</a></td>
+<td style="background-color: #2FA02F09" class="text-end">33</td><td style="background-color: #2FA02F09" class="text-end">24</td><td style="background-color: #2FA02F00" class="text-end">8.17</td><td style="background-color: #2FA02F00" class="text-end">32</td><td style="background-color: #2FA02F43" class="text-end">18</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FFF" class="text-end">33</td><td style="background-color: #A02F2F3C" class="text-end">67</td>
+</tr>
+<tr style="cursor: default;" title="H Deol
+Teams: Gujarat Giants
+Matches: 3
+Overs: 5
+Runs: 53
+Wickets: 1">
+<td colspan="2" data-text="Deol"><a class="chart" data-title="Bowling Average - H Deol" data-x="[&quot;2022&quot;]" data-y="[53]">📊</a>&nbsp;<a href="https://www.google.com/search?q=H+Deol+cricket" target="_blank">H Deol</a></td>
+<td style="background-color: #2FA02F00" class="text-end">53</td><td style="background-color: #2FA02F00" class="text-end">30</td><td style="background-color: #2FA02F00" class="text-end">10.60</td><td style="background-color: #2FA02F00" class="text-end">27</td><td style="background-color: #2FA02F00" class="text-end">23</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="SFM Devine
+Teams: Royal Challengers Bangalore
+Matches: 12
+Overs: 30
+Runs: 233
+Wickets: 9">
+<td colspan="2" data-text="Devine"><a class="chart" data-title="Bowling Average - SFM Devine" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[28,24]">📊</a>&nbsp;<a href="https://www.google.com/search?q=SFM+Devine+cricket" target="_blank">SFM Devine</a></td>
+<td style="background-color: #2FA02F38" class="text-end">26</td><td style="background-color: #2FA02F33" class="text-end">20</td><td style="background-color: #2FA02F1A" class="text-end">7.77</td><td style="background-color: #2FA02F7F" class="text-end">47</td><td style="background-color: #2FA02F00" class="text-end">22</td><td style="background-color: #A02F2F21" class="text-end">11</td><td style="background-color: #A02F2F00" class="text-end">11</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F86" class="text-end">78</td>
+</tr>
+<tr style="cursor: default;" title="S Ecclestone
+Teams: UP Warriorz
+Matches: 17
+Overs: 67
+Runs: 435
+Wickets: 27">
+<td colspan="2" data-text="Ecclestone"><a class="chart" data-title="Bowling Average - S Ecclestone" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[14,18]">📊</a>&nbsp;<a href="https://www.google.com/search?q=S+Ecclestone+cricket" target="_blank">S Ecclestone</a></td>
+<td style="background-color: #2FA02F7C" class="text-end">16</td><td style="background-color: #2FA02F67" class="text-end">15</td><td style="background-color: #2FA02F94" class="text-end">6.49</td><td style="background-color: #2FA02F6C" class="text-end">46</td><td style="background-color: #2FA02F8A" class="text-end">15</td><td style="background-color: #A02F2F21" class="text-end">11</td><td style="background-color: #A02F2F00" class="text-end">19</td><td style="background-color: #A02F2F21" class="text-end">11</td><td style="background-color: #A02F2F00" class="text-end">56</td>
+</tr>
+<tr style="cursor: default;" title="A Gardner
+Teams: Gujarat Giants
+Matches: 16
+Overs: 54
+Runs: 454
+Wickets: 17">
+<td colspan="2" data-text="Gardner"><a class="chart" data-title="Bowling Average - A Gardner" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[25,28]">📊</a>&nbsp;<a href="https://www.google.com/search?q=A+Gardner+cricket" target="_blank">A Gardner</a></td>
+<td style="background-color: #2FA02F32" class="text-end">27</td><td style="background-color: #2FA02F3B" class="text-end">19</td><td style="background-color: #2FA02F00" class="text-end">8.33</td><td style="background-color: #2FA02F00" class="text-end">37</td><td style="background-color: #2FA02F00" class="text-end">21</td><td style="background-color: #A02F2F00" class="text-end">6</td><td style="background-color: #A02F2F00" class="text-end">18</td><td style="background-color: #A02F2F00" class="text-end">6</td><td style="background-color: #A02F2F2F" class="text-end">65</td>
+</tr>
+<tr style="cursor: default;" title="KJ Garth
+Teams: Gujarat Giants
+Matches: 7
+Overs: 25
+Runs: 183
+Wickets: 11">
+<td colspan="2" data-text="Garth"><a class="chart" data-title="Bowling Average - KJ Garth" data-x="[&quot;2022&quot;]" data-y="[16]">📊</a>&nbsp;<a href="https://www.google.com/search?q=KJ+Garth+cricket" target="_blank">KJ Garth</a></td>
+<td style="background-color: #2FA02F78" class="text-end">17</td><td style="background-color: #2FA02F74" class="text-end">14</td><td style="background-color: #2FA02F45" class="text-end">7.32</td><td style="background-color: #2FA02F3E" class="text-end">43</td><td style="background-color: #2FA02F13" class="text-end">20</td><td style="background-color: #A02F2F05" class="text-end">9</td><td style="background-color: #A02F2F00" class="text-end">9</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F64" class="text-end">73</td>
+</tr>
+<tr style="cursor: default;" title="RS Gayakwad
+Teams: UP Warriorz
+Matches: 16
+Overs: 57
+Runs: 482
+Wickets: 13">
+<td colspan="2" data-text="Gayakwad"><a class="chart" data-title="Bowling Average - RS Gayakwad" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[35,39]">📊</a>&nbsp;<a href="https://www.google.com/search?q=RS+Gayakwad+cricket" target="_blank">RS Gayakwad</a></td>
+<td style="background-color: #2FA02F00" class="text-end">37</td><td style="background-color: #2FA02F00" class="text-end">26</td><td style="background-color: #2FA02F00" class="text-end">8.46</td><td style="background-color: #2FA02F00" class="text-end">35</td><td style="background-color: #2FA02F00" class="text-end">21</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">23</td><td style="background-color: #A02F2F00" class="text-end">8</td><td style="background-color: #A02F2F4D" class="text-end">69</td>
+</tr>
+<tr style="cursor: default;" title="GM Harris
+Teams: UP Warriorz
+Matches: 12
+Overs: 31
+Runs: 229
+Wickets: 5">
+<td colspan="2" data-text="Harris"><a class="chart" data-title="Bowling Average - GM Harris" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[108,30]">📊</a>&nbsp;<a href="https://www.google.com/search?q=GM+Harris+cricket" target="_blank">GM Harris</a></td>
+<td style="background-color: #2FA02F00" class="text-end">46</td><td style="background-color: #2FA02F00" class="text-end">37</td><td style="background-color: #2FA02F3B" class="text-end">7.43</td><td style="background-color: #2FA02F73" class="text-end">46</td><td style="background-color: #2FA02F2E" class="text-end">19</td><td style="background-color: #A02F2F9F" class="text-end">20</td><td style="background-color: #A02F2F00" class="text-end">20</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F0F" class="text-end">60</td>
+</tr>
+<tr style="cursor: default;" title="S Ishaque
+Teams: Mumbai Indians
+Matches: 18
+Overs: 57
+Runs: 400
+Wickets: 22">
+<td colspan="2" data-text="Ishaque"><a class="chart" data-title="Bowling Average - S Ishaque" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[16,22]">📊</a>&nbsp;<a href="https://www.google.com/search?q=S+Ishaque+cricket" target="_blank">S Ishaque</a></td>
+<td style="background-color: #2FA02F6D" class="text-end">18</td><td style="background-color: #2FA02F61" class="text-end">16</td><td style="background-color: #2FA02F60" class="text-end">7.04</td><td style="background-color: #2FA02F32" class="text-end">42</td><td style="background-color: #2FA02F55" class="text-end">17</td><td style="background-color: #A02F2FFF" class="text-end">27</td><td style="background-color: #A02F2F85" class="text-end">41</td><td style="background-color: #A02F2F00" class="text-end">5</td><td style="background-color: #A02F2F00" class="text-end">27</td>
+</tr>
+<tr style="cursor: default;" title="S Ismail
+Teams: UP Warriorz; Mumbai Indians
+Matches: 9
+Overs: 34
+Runs: 215
+Wickets: 11">
+<td colspan="2" data-text="Ismail"><a class="chart" data-title="Bowling Average - S Ismail" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[29,16]">📊</a>&nbsp;<a href="https://www.google.com/search?q=S+Ismail+cricket" target="_blank">S Ismail</a></td>
+<td style="background-color: #2FA02F64" class="text-end">20</td><td style="background-color: #2FA02F3F" class="text-end">19</td><td style="background-color: #2FA02FAD" class="text-end">6.23</td><td style="background-color: #2FA02FFF" class="text-end">57</td><td style="background-color: #2FA02F6B" class="text-end">16</td><td style="background-color: #A02F2FFF" class="text-end">27</td><td style="background-color: #A02F2F1F" class="text-end">27</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">45</td>
+</tr>
+<tr style="cursor: default;" title="AC Jayangani
+Teams: UP Warriorz
+Matches: 4
+Overs: 15
+Runs: 102
+Wickets: 3">
+<td colspan="2" data-text="Jayangani"><a class="chart" data-title="Bowling Average - AC Jayangani" data-x="[&quot;2023&quot;]" data-y="[34]">📊</a>&nbsp;<a href="https://www.google.com/search?q=AC+Jayangani+cricket" target="_blank">AC Jayangani</a></td>
+<td style="background-color: #2FA02F00" class="text-end">34</td><td style="background-color: #2FA02F00" class="text-end">30</td><td style="background-color: #2FA02F77" class="text-end">6.80</td><td style="background-color: #2FA02F6D" class="text-end">46</td><td style="background-color: #2FA02F2E" class="text-end">19</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FFF" class="text-end">100</td>
+</tr>
+<tr style="cursor: default;" title="JL Jonassen
+Teams: Delhi Capitals
+Matches: 15
+Overs: 58
+Runs: 421
+Wickets: 20">
+<td colspan="2" data-text="Jonassen"><a class="chart" data-title="Bowling Average - JL Jonassen" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[29,14]">📊</a>&nbsp;<a href="https://www.google.com/search?q=JL+Jonassen+cricket" target="_blank">JL Jonassen</a></td>
+<td style="background-color: #2FA02F59" class="text-end">21</td><td style="background-color: #2FA02F4D" class="text-end">17</td><td style="background-color: #2FA02F4B" class="text-end">7.26</td><td style="background-color: #2FA02F00" class="text-end">38</td><td style="background-color: #2FA02F81" class="text-end">16</td><td style="background-color: #A02F2F00" class="text-end">5</td><td style="background-color: #A02F2F00" class="text-end">15</td><td style="background-color: #A02F2F4A" class="text-end">15</td><td style="background-color: #A02F2F31" class="text-end">65</td>
+</tr>
+<tr style="cursor: default;" title="M Joshi
+Teams: Gujarat Giants
+Matches: 5
+Overs: 8
+Runs: 79
+Wickets: 2">
+<td colspan="2" data-text="Joshi"><a class="chart" data-title="Bowling Average - M Joshi" data-x="[&quot;2022&quot;]" data-y="[39]">📊</a>&nbsp;<a href="https://www.google.com/search?q=M+Joshi+cricket" target="_blank">M Joshi</a></td>
+<td style="background-color: #2FA02F00" class="text-end">40</td><td style="background-color: #2FA02F09" class="text-end">24</td><td style="background-color: #2FA02F00" class="text-end">9.88</td><td style="background-color: #2FA02F00" class="text-end">31</td><td style="background-color: #2FA02F00" class="text-end">27</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="JN Kalita
+Teams: Mumbai Indians
+Matches: 4
+Overs: 5
+Runs: 33
+Wickets: 1">
+<td colspan="2" data-text="Kalita"><a class="chart" data-title="Bowling Average - JN Kalita" data-x="[&quot;2022&quot;]" data-y="[33]">📊</a>&nbsp;<a href="https://www.google.com/search?q=JN+Kalita+cricket" target="_blank">JN Kalita</a></td>
+<td style="background-color: #2FA02F07" class="text-end">33</td><td style="background-color: #2FA02F00" class="text-end">30</td><td style="background-color: #2FA02F8A" class="text-end">6.60</td><td style="background-color: #2FA02F49" class="text-end">43</td><td style="background-color: #2FA02FB7" class="text-end">13</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="TP Kanwar
+Teams: Gujarat Giants
+Matches: 16
+Overs: 56
+Runs: 438
+Wickets: 15">
+<td colspan="2" data-text="Kanwar"><a class="chart" data-title="Bowling Average - TP Kanwar" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[46,20]">📊</a>&nbsp;<a href="https://www.google.com/search?q=TP+Kanwar+cricket" target="_blank">TP Kanwar</a></td>
+<td style="background-color: #2FA02F21" class="text-end">29</td><td style="background-color: #2FA02F1A" class="text-end">22</td><td style="background-color: #2FA02F15" class="text-end">7.82</td><td style="background-color: #2FA02F00" class="text-end">39</td><td style="background-color: #2FA02F23" class="text-end">19</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">20</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F68" class="text-end">73</td>
+</tr>
+<tr style="cursor: default;" title="M Kapp
+Teams: Delhi Capitals
+Matches: 15
+Overs: 60
+Runs: 354
+Wickets: 20">
+<td colspan="2" data-text="Kapp"><a class="chart" data-title="Bowling Average - M Kapp" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[22,13]">📊</a>&nbsp;<a href="https://www.google.com/search?q=M+Kapp+cricket" target="_blank">M Kapp</a></td>
+<td style="background-color: #2FA02F71" class="text-end">18</td><td style="background-color: #2FA02F47" class="text-end">18</td><td style="background-color: #2FA02FCD" class="text-end">5.90</td><td style="background-color: #2FA02FDD" class="text-end">52</td><td style="background-color: #2FA02F81" class="text-end">16</td><td style="background-color: #A02F2F12" class="text-end">10</td><td style="background-color: #A02F2F7E" class="text-end">40</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="MS Kashyap
+Teams: Gujarat Giants
+Matches: 5
+Overs: 10
+Runs: 82
+Wickets: 1">
+<td colspan="2" data-text="Kashyap"><a class="chart" data-title="Bowling Average - MS Kashyap" data-x="[&quot;2023&quot;]" data-y="[82]">📊</a>&nbsp;<a href="https://www.google.com/search?q=MS+Kashyap+cricket" target="_blank">MS Kashyap</a></td>
+<td style="background-color: #2FA02F00" class="text-end">82</td><td style="background-color: #2FA02F00" class="text-end">61</td><td style="background-color: #2FA02F00" class="text-end">8.07</td><td style="background-color: #2FA02F08" class="text-end">39</td><td style="background-color: #2FA02F1B" class="text-end">20</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="AC Kerr
+Teams: Mumbai Indians
+Matches: 18
+Overs: 55
+Runs: 408
+Wickets: 22">
+<td colspan="2" data-text="Kerr"><a class="chart" data-title="Bowling Average - AC Kerr" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[14,28]">📊</a>&nbsp;<a href="https://www.google.com/search?q=AC+Kerr+cricket" target="_blank">AC Kerr</a></td>
+<td style="background-color: #2FA02F6B" class="text-end">19</td><td style="background-color: #2FA02F67" class="text-end">15</td><td style="background-color: #2FA02F37" class="text-end">7.46</td><td style="background-color: #2FA02F43" class="text-end">43</td><td style="background-color: #2FA02F1F" class="text-end">20</td><td style="background-color: #A02F2F05" class="text-end">9</td><td style="background-color: #A02F2F00" class="text-end">9</td><td style="background-color: #A02F2FFC" class="text-end">32</td><td style="background-color: #A02F2F00" class="text-end">45</td>
+</tr>
+<tr style="cursor: default;" title="HC Knight
+Teams: Royal Challengers Bangalore
+Matches: 4
+Overs: 7
+Runs: 77
+Wickets: 4">
+<td colspan="2" data-text="Knight"><a class="chart" data-title="Bowling Average - HC Knight" data-x="[&quot;2022&quot;]" data-y="[19]">📊</a>&nbsp;<a href="https://www.google.com/search?q=HC+Knight+cricket" target="_blank">HC Knight</a></td>
+<td style="background-color: #2FA02F66" class="text-end">19</td><td style="background-color: #2FA02F95" class="text-end">10</td><td style="background-color: #2FA02F00" class="text-end">11.00</td><td style="background-color: #2FA02F00" class="text-end">17</td><td style="background-color: #2FA02F00" class="text-end">29</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F0E" class="text-end">25</td><td style="background-color: #A02F2FB4" class="text-end">25</td><td style="background-color: #A02F2F00" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="M Mani
+Teams: Delhi Capitals
+Matches: 4
+Overs: 9
+Runs: 69
+Wickets: 2">
+<td colspan="2" data-text="Mani"><a class="chart" data-title="Bowling Average - M Mani" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[0,25]">📊</a>&nbsp;<a href="https://www.google.com/search?q=M+Mani+cricket" target="_blank">M Mani</a></td>
+<td style="background-color: #2FA02F00" class="text-end">34</td><td style="background-color: #2FA02F00" class="text-end">27</td><td style="background-color: #2FA02F24" class="text-end">7.67</td><td style="background-color: #2FA02F00" class="text-end">37</td><td style="background-color: #2FA02FC0" class="text-end">13</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="HK Matthews
+Teams: Mumbai Indians
+Matches: 18
+Overs: 58
+Runs: 382
+Wickets: 21">
+<td colspan="2" data-text="Matthews"><a class="chart" data-title="Bowling Average - HK Matthews" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[12,37]">📊</a>&nbsp;<a href="https://www.google.com/search?q=HK+Matthews+cricket" target="_blank">HK Matthews</a></td>
+<td style="background-color: #2FA02F6D" class="text-end">18</td><td style="background-color: #2FA02F56" class="text-end">17</td><td style="background-color: #2FA02F8B" class="text-end">6.59</td><td style="background-color: #2FA02F4A" class="text-end">43</td><td style="background-color: #2FA02FAC" class="text-end">14</td><td style="background-color: #A02F2F0B" class="text-end">10</td><td style="background-color: #A02F2F00" class="text-end">19</td><td style="background-color: #A02F2F75" class="text-end">19</td><td style="background-color: #A02F2F00" class="text-end">48</td>
+</tr>
+<tr style="cursor: default;" title="TM McGrath
+Teams: UP Warriorz
+Matches: 6
+Overs: 14
+Runs: 146
+Wickets: 3">
+<td colspan="2" data-text="McGrath"><a class="chart" data-title="Bowling Average - TM McGrath" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[31,83]">📊</a>&nbsp;<a href="https://www.google.com/search?q=TM+McGrath+cricket" target="_blank">TM McGrath</a></td>
+<td style="background-color: #2FA02F00" class="text-end">49</td><td style="background-color: #2FA02F00" class="text-end">28</td><td style="background-color: #2FA02F00" class="text-end">10.43</td><td style="background-color: #2FA02F00" class="text-end">36</td><td style="background-color: #2FA02F00" class="text-end">31</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FFF" class="text-end">100</td>
+</tr>
+<tr style="cursor: default;" title="S Molineux
+Teams: Royal Challengers Bangalore
+Matches: 8
+Overs: 30
+Runs: 234
+Wickets: 8">
+<td colspan="2" data-text="Molineux"><a class="chart" data-title="Bowling Average - S Molineux" data-x="[&quot;2023&quot;]" data-y="[29]">📊</a>&nbsp;<a href="https://www.google.com/search?q=S+Molineux+cricket" target="_blank">S Molineux</a></td>
+<td style="background-color: #2FA02F21" class="text-end">29</td><td style="background-color: #2FA02F19" class="text-end">22</td><td style="background-color: #2FA02F17" class="text-end">7.80</td><td style="background-color: #2FA02F0A" class="text-end">39</td><td style="background-color: #2FA02F3C" class="text-end">18</td><td style="background-color: #A02F2F35" class="text-end">12</td><td style="background-color: #A02F2F6B" class="text-end">38</td><td style="background-color: #A02F2FFF" class="text-end">38</td><td style="background-color: #A02F2F00" class="text-end">12</td>
+</tr>
+<tr style="cursor: default;" title="TG Norris
+Teams: Delhi Capitals
+Matches: 5
+Overs: 11
+Runs: 88
+Wickets: 7">
+<td colspan="2" data-text="Norris"><a class="chart" data-title="Bowling Average - TG Norris" data-x="[&quot;2022&quot;]" data-y="[12]">📊</a>&nbsp;<a href="https://www.google.com/search?q=TG+Norris+cricket" target="_blank">TG Norris</a></td>
+<td style="background-color: #2FA02F94" class="text-end">13</td><td style="background-color: #2FA02FA0" class="text-end">9</td><td style="background-color: #2FA02F04" class="text-end">8.00</td><td style="background-color: #2FA02F09" class="text-end">39</td><td style="background-color: #2FA02F1A" class="text-end">20</td><td style="background-color: #A02F2F4E" class="text-end">14</td><td style="background-color: #A02F2F00" class="text-end">14</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F5C" class="text-end">71</td>
+</tr>
+<tr style="cursor: default;" title="S Pandey
+Teams: Delhi Capitals
+Matches: 17
+Overs: 62
+Runs: 431
+Wickets: 18">
+<td colspan="2" data-text="Pandey"><a class="chart" data-title="Bowling Average - S Pandey" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[20,28]">📊</a>&nbsp;<a href="https://www.google.com/search?q=S+Pandey+cricket" target="_blank">S Pandey</a></td>
+<td style="background-color: #2FA02F45" class="text-end">24</td><td style="background-color: #2FA02F2C" class="text-end">21</td><td style="background-color: #2FA02F68" class="text-end">6.95</td><td style="background-color: #2FA02F44" class="text-end">43</td><td style="background-color: #2FA02F4B" class="text-end">18</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F4C" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F17" class="text-end">61</td>
+</tr>
+<tr style="cursor: default;" title="MC Patel
+Teams: Gujarat Giants
+Matches: 2
+Overs: 5
+Runs: 59
+Wickets: 1">
+<td colspan="2" data-text="Patel"><a class="chart" data-title="Bowling Average - MC Patel" data-x="[&quot;2022&quot;]" data-y="[59]">📊</a>&nbsp;<a href="https://www.google.com/search?q=MC+Patel+cricket" target="_blank">MC Patel</a></td>
+<td style="background-color: #2FA02F00" class="text-end">59</td><td style="background-color: #2FA02F00" class="text-end">30</td><td style="background-color: #2FA02F00" class="text-end">11.80</td><td style="background-color: #2FA02F00" class="text-end">23</td><td style="background-color: #2FA02F00" class="text-end">40</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="SR Patil
+Teams: Royal Challengers Bangalore
+Matches: 13
+Overs: 34
+Runs: 315
+Wickets: 13">
+<td colspan="2" data-text="Patil"><a class="chart" data-title="Bowling Average - SR Patil" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[32,17]">📊</a>&nbsp;<a href="https://www.google.com/search?q=SR+Patil+cricket" target="_blank">SR Patil</a></td>
+<td style="background-color: #2FA02F43" class="text-end">24</td><td style="background-color: #2FA02F61" class="text-end">15</td><td style="background-color: #2FA02F00" class="text-end">9.40</td><td style="background-color: #2FA02F00" class="text-end">33</td><td style="background-color: #2FA02F00" class="text-end">27</td><td style="background-color: #A02F2F5E" class="text-end">15</td><td style="background-color: #A02F2F00" class="text-end">23</td><td style="background-color: #A02F2F4E" class="text-end">15</td><td style="background-color: #A02F2F00" class="text-end">46</td>
+</tr>
+<tr style="cursor: default;" title="EA Perry
+Teams: Royal Challengers Bangalore
+Matches: 13
+Overs: 33
+Runs: 247
+Wickets: 10">
+<td colspan="2" data-text="Perry"><a class="chart" data-title="Bowling Average - EA Perry" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[45,10]">📊</a>&nbsp;<a href="https://www.google.com/search?q=EA+Perry+cricket" target="_blank">EA Perry</a></td>
+<td style="background-color: #2FA02F40" class="text-end">25</td><td style="background-color: #2FA02F33" class="text-end">20</td><td style="background-color: #2FA02F3D" class="text-end">7.41</td><td style="background-color: #2FA02F3B" class="text-end">42</td><td style="background-color: #2FA02F1F" class="text-end">20</td><td style="background-color: #A02F2F9F" class="text-end">20</td><td style="background-color: #A02F2FFF" class="text-end">60</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">20</td>
+</tr>
+<tr style="cursor: default;" title="S Rana
+Teams: Gujarat Giants
+Matches: 11
+Overs: 35
+Runs: 302
+Wickets: 6">
+<td colspan="2" data-text="Rana"><a class="chart" data-title="Bowling Average - S Rana" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[33,0]">📊</a>&nbsp;<a href="https://www.google.com/search?q=S+Rana+cricket" target="_blank">S Rana</a></td>
+<td style="background-color: #2FA02F00" class="text-end">50</td><td style="background-color: #2FA02F00" class="text-end">35</td><td style="background-color: #2FA02F00" class="text-end">8.71</td><td style="background-color: #2FA02F00" class="text-end">31</td><td style="background-color: #2FA02F00" class="text-end">23</td><td style="background-color: #A02F2F70" class="text-end">17</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="A Reddy
+Teams: Delhi Capitals
+Matches: 12
+Overs: 35
+Runs: 249
+Wickets: 10">
+<td colspan="2" data-text="Reddy"><a class="chart" data-title="Bowling Average - A Reddy" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[31,23]">📊</a>&nbsp;<a href="https://www.google.com/search?q=A+Reddy+cricket" target="_blank">A Reddy</a></td>
+<td style="background-color: #2FA02F3F" class="text-end">25</td><td style="background-color: #2FA02F28" class="text-end">21</td><td style="background-color: #2FA02F59" class="text-end">7.11</td><td style="background-color: #2FA02F00" class="text-end">34</td><td style="background-color: #2FA02FA0" class="text-end">14</td><td style="background-color: #A02F2F12" class="text-end">10</td><td style="background-color: #A02F2F34" class="text-end">30</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F0F" class="text-end">60</td>
+</tr>
+<tr style="cursor: default;" title="TR Sadhu
+Teams: Delhi Capitals
+Matches: 4
+Overs: 9
+Runs: 65
+Wickets: 3">
+<td colspan="2" data-text="Sadhu"><a class="chart" data-title="Bowling Average - TR Sadhu" data-x="[&quot;2023&quot;]" data-y="[21]">📊</a>&nbsp;<a href="https://www.google.com/search?q=TR+Sadhu+cricket" target="_blank">TR Sadhu</a></td>
+<td style="background-color: #2FA02F55" class="text-end">22</td><td style="background-color: #2FA02F47" class="text-end">18</td><td style="background-color: #2FA02F4F" class="text-end">7.22</td><td style="background-color: #2FA02F97" class="text-end">48</td><td style="background-color: #2FA02F0A" class="text-end">20</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FFF" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">33</td>
+</tr>
+<tr style="cursor: default;" title="K Anjali Sarvani
+Teams: UP Warriorz
+Matches: 13
+Overs: 32
+Runs: 267
+Wickets: 6">
+<td colspan="2" data-text="Sarvani"><a class="chart" data-title="Bowling Average - K Anjali Sarvani" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[42,49]">📊</a>&nbsp;<a href="https://www.google.com/search?q=K+Anjali+Sarvani+cricket" target="_blank">K Anjali Sarvani</a></td>
+<td style="background-color: #2FA02F00" class="text-end">44</td><td style="background-color: #2FA02F00" class="text-end">32</td><td style="background-color: #2FA02F00" class="text-end">8.34</td><td style="background-color: #2FA02F00" class="text-end">37</td><td style="background-color: #2FA02F00" class="text-end">23</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FC8" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="ML Schutt
+Teams: Royal Challengers Bangalore
+Matches: 7
+Overs: 26
+Runs: 219
+Wickets: 4">
+<td colspan="2" data-text="Schutt"><a class="chart" data-title="Bowling Average - ML Schutt" data-x="[&quot;2022&quot;]" data-y="[54]">📊</a>&nbsp;<a href="https://www.google.com/search?q=ML+Schutt+cricket" target="_blank">ML Schutt</a></td>
+<td style="background-color: #2FA02F00" class="text-end">55</td><td style="background-color: #2FA02F00" class="text-end">39</td><td style="background-color: #2FA02F00" class="text-end">8.42</td><td style="background-color: #2FA02F00" class="text-end">38</td><td style="background-color: #2FA02F00" class="text-end">23</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F0E" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F73" class="text-end">75</td>
+</tr>
+<tr style="cursor: default;" title="NR Sciver-Brunt
+Teams: Mumbai Indians
+Matches: 18
+Overs: 55
+Runs: 405
+Wickets: 19">
+<td colspan="2" data-text="Sciver-Brunt"><a class="chart" data-title="Bowling Average - NR Sciver-Brunt" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[20,23]">📊</a>&nbsp;<a href="https://www.google.com/search?q=NR+Sciver-Brunt+cricket" target="_blank">NR Sciver-Brunt</a></td>
+<td style="background-color: #2FA02F58" class="text-end">21</td><td style="background-color: #2FA02F4E" class="text-end">17</td><td style="background-color: #2FA02F41" class="text-end">7.36</td><td style="background-color: #2FA02F53" class="text-end">44</td><td style="background-color: #2FA02F4F" class="text-end">18</td><td style="background-color: #A02F2FAE" class="text-end">21</td><td style="background-color: #A02F2F00" class="text-end">16</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F01" class="text-end">58</td>
+</tr>
+<tr style="cursor: default;" title="SM Shakil
+Teams: Gujarat Giants
+Matches: 4
+Overs: 12
+Runs: 79
+Wickets: 4">
+<td colspan="2" data-text="Shakil"><a class="chart" data-title="Bowling Average - SM Shakil" data-x="[&quot;2023&quot;]" data-y="[19]">📊</a>&nbsp;<a href="https://www.google.com/search?q=SM+Shakil+cricket" target="_blank">SM Shakil</a></td>
+<td style="background-color: #2FA02F62" class="text-end">20</td><td style="background-color: #2FA02F47" class="text-end">18</td><td style="background-color: #2FA02F8C" class="text-end">6.58</td><td style="background-color: #2FA02FB5" class="text-end">50</td><td style="background-color: #2FA02F21" class="text-end">19</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F0E" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F73" class="text-end">75</td>
+</tr>
+<tr style="cursor: default;" title="DB Sharma
+Teams: UP Warriorz
+Matches: 17
+Overs: 65
+Runs: 516
+Wickets: 19">
+<td colspan="2" data-text="Sharma"><a class="chart" data-title="Bowling Average - DB Sharma" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[33,21]">📊</a>&nbsp;<a href="https://www.google.com/search?q=DB+Sharma+cricket" target="_blank">DB Sharma</a></td>
+<td style="background-color: #2FA02F2F" class="text-end">27</td><td style="background-color: #2FA02F2E" class="text-end">20</td><td style="background-color: #2FA02F08" class="text-end">7.96</td><td style="background-color: #2FA02F00" class="text-end">32</td><td style="background-color: #2FA02F64" class="text-end">17</td><td style="background-color: #A02F2F19" class="text-end">11</td><td style="background-color: #A02F2F3F" class="text-end">32</td><td style="background-color: #A02F2F00" class="text-end">5</td><td style="background-color: #A02F2F00" class="text-end">47</td>
+</tr>
+<tr style="cursor: default;" title="Renuka Singh
+Teams: Royal Challengers Bangalore
+Matches: 14
+Overs: 42
+Runs: 324
+Wickets: 3">
+<td colspan="2" data-text="Singh"><a class="chart" data-title="Bowling Average - Renuka Singh" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[158,83]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Renuka+Singh+cricket" target="_blank">Renuka Singh</a></td>
+<td style="background-color: #2FA02F00" class="text-end">108</td><td style="background-color: #2FA02F00" class="text-end">83</td><td style="background-color: #2FA02F1A" class="text-end">7.78</td><td style="background-color: #2FA02F47" class="text-end">43</td><td style="background-color: #2FA02F00" class="text-end">22</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F4C" class="text-end">33</td><td style="background-color: #A02F2FFF" class="text-end">33</td><td style="background-color: #A02F2F00" class="text-end">33</td>
+</tr>
+<tr style="cursor: default;" title="Meghna Singh
+Teams: Gujarat Giants
+Matches: 8
+Overs: 24
+Runs: 232
+Wickets: 5">
+<td colspan="2" data-text="Singh"><a class="chart" data-title="Bowling Average - Meghna Singh" data-x="[&quot;2023&quot;]" data-y="[46]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Meghna+Singh+cricket" target="_blank">Meghna Singh</a></td>
+<td style="background-color: #2FA02F00" class="text-end">46</td><td style="background-color: #2FA02F00" class="text-end">29</td><td style="background-color: #2FA02F00" class="text-end">9.67</td><td style="background-color: #2FA02F00" class="text-end">33</td><td style="background-color: #2FA02F00" class="text-end">26</td><td style="background-color: #A02F2F9F" class="text-end">20</td><td style="background-color: #A02F2F00" class="text-end">20</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F0F" class="text-end">60</td>
+</tr>
+<tr style="cursor: default;" title="A Sutherland
+Teams: Gujarat Giants; Delhi Capitals
+Matches: 8
+Overs: 28
+Runs: 266
+Wickets: 4">
+<td colspan="2" data-text="Sutherland"><a class="chart" data-title="Bowling Average - A Sutherland" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[55,101]">📊</a>&nbsp;<a href="https://www.google.com/search?q=A+Sutherland+cricket" target="_blank">A Sutherland</a></td>
+<td style="background-color: #2FA02F00" class="text-end">66</td><td style="background-color: #2FA02F00" class="text-end">42</td><td style="background-color: #2FA02F00" class="text-end">9.56</td><td style="background-color: #2FA02F00" class="text-end">32</td><td style="background-color: #2FA02F00" class="text-end">26</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FFF" class="text-end">100</td>
+</tr>
+<tr style="cursor: default;" title="LMM Tahuhu
+Teams: Gujarat Giants
+Matches: 2
+Overs: 5
+Runs: 37
+Wickets: 1">
+<td colspan="2" data-text="Tahuhu"><a class="chart" data-title="Bowling Average - LMM Tahuhu" data-x="[&quot;2023&quot;]" data-y="[37]">📊</a>&nbsp;<a href="https://www.google.com/search?q=LMM+Tahuhu+cricket" target="_blank">LMM Tahuhu</a></td>
+<td style="background-color: #2FA02F00" class="text-end">37</td><td style="background-color: #2FA02F00" class="text-end">30</td><td style="background-color: #2FA02F3E" class="text-end">7.40</td><td style="background-color: #2FA02FB5" class="text-end">50</td><td style="background-color: #2FA02F00" class="text-end">23</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="SZ Thakor
+Teams: UP Warriorz
+Matches: 4
+Overs: 10
+Runs: 89
+Wickets: 3">
+<td colspan="2" data-text="Thakor"><a class="chart" data-title="Bowling Average - SZ Thakor" data-x="[&quot;2023&quot;]" data-y="[29]">📊</a>&nbsp;<a href="https://www.google.com/search?q=SZ+Thakor+cricket" target="_blank">SZ Thakor</a></td>
+<td style="background-color: #2FA02F1E" class="text-end">30</td><td style="background-color: #2FA02F33" class="text-end">20</td><td style="background-color: #2FA02F00" class="text-end">8.90</td><td style="background-color: #2FA02F64" class="text-end">45</td><td style="background-color: #2FA02F00" class="text-end">28</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2FFF" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">33</td>
+</tr>
+<tr style="cursor: default;" title="DP Vaidya
+Teams: UP Warriorz
+Matches: 3
+Overs: 5
+Runs: 54
+Wickets: 1">
+<td colspan="2" data-text="Vaidya"><a class="chart" data-title="Bowling Average - DP Vaidya" data-x="[&quot;2022&quot;]" data-y="[54]">📊</a>&nbsp;<a href="https://www.google.com/search?q=DP+Vaidya+cricket" target="_blank">DP Vaidya</a></td>
+<td style="background-color: #2FA02F00" class="text-end">54</td><td style="background-color: #2FA02F00" class="text-end">30</td><td style="background-color: #2FA02F00" class="text-end">10.80</td><td style="background-color: #2FA02F00" class="text-end">23</td><td style="background-color: #2FA02F00" class="text-end">30</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="P Vastrakar
+Teams: Mumbai Indians
+Matches: 11
+Overs: 26
+Runs: 177
+Wickets: 7">
+<td colspan="2" data-text="Vastrakar"><a class="chart" data-title="Bowling Average - P Vastrakar" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[11,31]">📊</a>&nbsp;<a href="https://www.google.com/search?q=P+Vastrakar+cricket" target="_blank">P Vastrakar</a></td>
+<td style="background-color: #2FA02F3C" class="text-end">25</td><td style="background-color: #2FA02F1F" class="text-end">22</td><td style="background-color: #2FA02F69" class="text-end">6.94</td><td style="background-color: #2FA02F46" class="text-end">43</td><td style="background-color: #2FA02F5D" class="text-end">17</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F93" class="text-end">43</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">57</td>
+</tr>
+<tr style="cursor: default;" title="G Wareham
+Teams: Gujarat Giants; Royal Challengers Bangalore
+Matches: 10
+Overs: 24
+Runs: 207
+Wickets: 7">
+<td colspan="2" data-text="Wareham"><a class="chart" data-title="Bowling Average - G Wareham" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[34,28]">📊</a>&nbsp;<a href="https://www.google.com/search?q=G+Wareham+cricket" target="_blank">G Wareham</a></td>
+<td style="background-color: #2FA02F1E" class="text-end">30</td><td style="background-color: #2FA02F2A" class="text-end">21</td><td style="background-color: #2FA02F00" class="text-end">8.51</td><td style="background-color: #2FA02F00" class="text-end">32</td><td style="background-color: #2FA02F27" class="text-end">19</td><td style="background-color: #A02F2F4E" class="text-end">14</td><td style="background-color: #A02F2F29" class="text-end">29</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F00" class="text-end">57</td>
+</tr>
+<tr style="cursor: default;" title="IECM Wong
+Teams: Mumbai Indians
+Matches: 12
+Overs: 38
+Runs: 252
+Wickets: 18">
+<td colspan="2" data-text="Wong"><a class="chart" data-title="Bowling Average - IECM Wong" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[13,16]">📊</a>&nbsp;<a href="https://www.google.com/search?q=IECM+Wong+cricket" target="_blank">IECM Wong</a></td>
+<td style="background-color: #2FA02F8A" class="text-end">14</td><td style="background-color: #2FA02F7D" class="text-end">13</td><td style="background-color: #2FA02F8F" class="text-end">6.55</td><td style="background-color: #2FA02FB1" class="text-end">50</td><td style="background-color: #2FA02F4A" class="text-end">18</td><td style="background-color: #A02F2F70" class="text-end">17</td><td style="background-color: #A02F2F00" class="text-end">22</td><td style="background-color: " class="text-end">0</td><td style="background-color: #A02F2F17" class="text-end">61</td>
+</tr>
+<tr style="cursor: default;" title="RP Yadav
+Teams: Delhi Capitals
+Matches: 17
+Overs: 48
+Runs: 336
+Wickets: 14">
+<td colspan="2" data-text="Yadav"><a class="chart" data-title="Bowling Average - RP Yadav" data-x="[&quot;2022&quot;,&quot;2023&quot;]" data-y="[42,16]">📊</a>&nbsp;<a href="https://www.google.com/search?q=RP+Yadav+cricket" target="_blank">RP Yadav</a></td>
+<td style="background-color: #2FA02F45" class="text-end">24</td><td style="background-color: #2FA02F2D" class="text-end">21</td><td style="background-color: #2FA02F64" class="text-end">7.00</td><td style="background-color: #2FA02F01" class="text-end">39</td><td style="background-color: #2FA02F76" class="text-end">16</td><td style="background-color: #A02F2F00" class="text-end">7</td><td style="background-color: #A02F2F00" class="text-end">7</td><td style="background-color: #A02F2F42" class="text-end">14</td><td style="background-color: #A02F2F00" class="text-end">57</td>
+</tr>
+</tbody>
+</table>
+<script>$(function() {  $('.table').tablesorter();});</script><style>.table th { cursor: ns-resize; } </style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><style>a.chart { text-decoration: none; cursor: pointer; } </style><div class="modal modal-lg fade" id="pop_chart_modal" tabindex="-1">  <div class="modal-dialog">    <div class="modal-content">      <div class="modal-body">        <canvas id="pop_chart" style="width:600px; max-width: 100%;"></canvas>      </div>    </div>  </div></div><script>const pcm = new bootstrap.Modal('#pop_chart_modal');$('a.chart').on('click', function() {  let existing = Chart.getChart('pop_chart');  if (existing != undefined) {    existing.destroy();  }  new Chart('pop_chart', {    type: 'bar',    data: {      labels: JSON.parse($(this).attr('data-x')),      datasets: [{        backgroundColor: '#4e78a8',        label: $(this).attr('data-label'),        data: JSON.parse($(this).attr('data-y')),      }]    },    options: {      legend: {display: false},      plugins: {        title: {          display: true,          text: $(this).attr('data-title')        },        legend: {          display: false        }      }    }  });  pcm.show();});</script>
+<div class="m-2"><small class="float-start">&copy; 2024 CRICKETher.com/cricsheet.org</small><small class="float-end">Matches: 42; Date: 12/06/2024 16:37</small></div>
+</body>
+</html>

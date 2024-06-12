@@ -19,6 +19,12 @@ unzip -o /Users/syd/Documents/Cricket/Data/wbb_female_json.zip -d /Users/syd/Doc
 # HTML
 /Users/syd/Documents/Src/BBB/BBB/bin/Debug/net6.0/BBB -data="/Users/syd/Documents/Cricket/Data/Australia/WBBL" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/Australia/WBBL"
 
+# WPL
+curl -o /Users/syd/Documents/Cricket/Data/wpl_female_json.zip https://cricsheet.org/downloads/wpl_female_json.zip
+unzip -o /Users/syd/Documents/Cricket/Data/wpl_female_json.zip -d /Users/syd/Documents/Cricket/Data/India/WPL 
+# HTML
+/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net6.0/BBB -data="/Users/syd/Documents/Cricket/Data/India/WPL" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/India/WPL"
+
 # ODI
 curl -o /Users/syd/Documents/Cricket/Data/odis_female_json.zip https://cricsheet.org/downloads/odis_female_json.zip
 unzip -o /Users/syd/Documents/Cricket/Data/odis_female_json.zip -d /Users/syd/Documents/Cricket/Data/Internationals/ODIs 
