@@ -35,6 +35,9 @@ unzip -q -o /Users/syd/Documents/Cricket/Data/odis_female_json.zip -d /Users/syd
 # T20
 curl -o /Users/syd/Documents/Cricket/Data/t20s_female_json.zip -z /Users/syd/Documents/Cricket/Data/t20s_female_json.zip https://cricsheet.org/downloads/t20s_female_json.zip
 unzip -q -o /Users/syd/Documents/Cricket/Data/t20s_female_json.zip -d /Users/syd/Documents/Cricket/Data/Internationals/T20s
+# Tests
+curl -o /Users/syd/Documents/Cricket/Data/tests_female_json.zip -z /Users/syd/Documents/Cricket/Data/tests_female_json.zip https://cricsheet.org/downloads/tests_female_json.zip
+unzip -q -o /Users/syd/Documents/Cricket/Data/tests_female_json.zip -d /Users/syd/Documents/Cricket/Data/Internationals/Tests
 # HTML
 echo "Internationals"
 /Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/Internationals" -teams="CHAMPO" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/Internationals"
