@@ -1,0 +1,978 @@
+<html>
+<head>
+<title>ODI - Bowling</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script><script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js" integrity="sha512-qzgd5cYSZcosqpzpn7zF2ZId8f/8CHmFKZ8j7mU4OUXTNRd5g+ZHBPsgKEwoqxCtdQvExE5LprwwPAgoicguNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+table.table tbody tr:hover td { color: var(--bs-primary); cursor: default; }
+.table th, .table td { text-wrap: nowrap; overflow: hidden }
+</style>
+</head>
+<body>
+<h1>ODI - Bowling</h1>
+<div class='m-1'><input class='form-control form-control-sm table-filter' placeholder='Filter...' style='display: none;' /></div><script>$(document).ready(function(){  $('.table-filter').toggle();   $('.table-filter').on('keyup', function() {    var needles = $(this).val();    $('.table tbody tr').filter(function() {      $(this).toggle(filter_contains(needles, $(this).text()));    });  });});function filter_contains(needles, haystack) {  let result = false;  let ns = needles.split(',').map(n => n.trim().toLowerCase()).filter(n => n.length > 0);  if(ns.length == 0) {    return true;  }  ns.forEach(n => {    if(n.length > 0 && haystack.toLowerCase().indexOf(n) > -1) {      result = true;    }  });  return result;}</script>
+<table class="table table-sm table-sort" style="table-layout: fixed;">
+<thead class="sticky-top">
+<tr style="position: relative; top: -1px">
+<th>Bowler</th><th></th><th class="text-end">Average</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Boundary %</th><th class="text-end">LBW %</th><th class="text-end">Bowled %</th><th class="text-end">Stumped %</th><th class="text-end">Caught %</th>
+</tr>
+</thead>
+<tbody>
+<tr style="cursor: default;" title="Waheeda Akhtar
+Teams: Pakistan
+Matches: 1
+Overs: 5
+Wickets: 1">
+<td colspan="2" data-text="Akhtar"><a class="chart" data-title="Bowling Average - Waheeda Akhtar" data-x="[2023]" data-y="[33]" data-tooltips="[[&quot;Overs: 5&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 6.60&quot;,&quot;Average: 33.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Waheeda+Akhtar+cricket" target="_blank">Waheeda Akhtar</a></td>
+<td style="background-color: #19875418" class="text-end">33</td><td style="background-color: #19875454" class="text-end">30</td><td style="background-color: #19875400" class="text-end">6.60</td><td style="background-color: #19875400" class="text-end">50</td><td style="background-color: #19875400" class="text-end">17</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="Nahida Akter
+Teams: Bangladesh
+Matches: 31
+Overs: 243
+Wickets: 37">
+<td colspan="2" data-text="Akter"><a class="chart" data-title="Bowling Average - Nahida Akter" data-x="[2015,2016,2018,2021,2022,2023]" data-y="[11,null,25,38.285714285714285,null,20.043478260869566]" data-tooltips="[[&quot;Overs: 8&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 2.59&quot;,&quot;Average: 11.00&quot;],[&quot;Overs: 5&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 6.20&quot;,&quot;Average: &quot;],[&quot;Overs: 33&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 3.75&quot;,&quot;Average: 25.00&quot;],[&quot;Overs: 62&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 4.32&quot;,&quot;Average: 38.29&quot;],[&quot;Overs: 14&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 3.79&quot;,&quot;Average: &quot;],[&quot;Overs: 120&quot;,&quot;Wickets: 23&quot;,&quot;Economy: 3.84&quot;,&quot;Average: 20.04&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Nahida+Akter+cricket" target="_blank">Nahida Akter</a></td>
+<td style="background-color: #1987543E" class="text-end">26</td><td style="background-color: #19875427" class="text-end">39</td><td style="background-color: #19875474" class="text-end">3.95</td><td style="background-color: #19875434" class="text-end">57</td><td style="background-color: #1987547D" class="text-end">6</td><td style="background-color: #dc35454E" class="text-end">22</td><td style="background-color: #dc354500" class="text-end">11</td><td style="background-color: #dc35456E" class="text-end">11</td><td style="background-color: #dc354500" class="text-end">51</td>
+</tr>
+<tr style="cursor: default;" title="Marufa Akter
+Teams: Bangladesh
+Matches: 14
+Overs: 76
+Wickets: 11">
+<td colspan="2" data-text="Akter"><a class="chart" data-title="Bowling Average - Marufa Akter" data-x="[2022,2023]" data-y="[null,25.09090909090909]" data-tooltips="[[&quot;Overs: 11&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 5.27&quot;,&quot;Average: &quot;],[&quot;Overs: 64&quot;,&quot;Wickets: 11&quot;,&quot;Economy: 4.28&quot;,&quot;Average: 25.09&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Marufa+Akter+cricket" target="_blank">Marufa Akter</a></td>
+<td style="background-color: #19875426" class="text-end">30</td><td style="background-color: #1987541E" class="text-end">41</td><td style="background-color: #19875423" class="text-end">4.42</td><td style="background-color: #1987545C" class="text-end">60</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #dc354528" class="text-end">18</td><td style="background-color: #dc35453F" class="text-end">27</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">45</td>
+</tr>
+<tr style="cursor: default;" title="Shorna Akter
+Teams: Bangladesh
+Matches: 6
+Overs: 26
+Wickets: 2">
+<td colspan="2" data-text="Akter"><a class="chart" data-title="Bowling Average - Shorna Akter" data-x="[2023]" data-y="[65.5]" data-tooltips="[[&quot;Overs: 26&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 5.07&quot;,&quot;Average: 65.50&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Shorna+Akter+cricket" target="_blank">Shorna Akter</a></td>
+<td style="background-color: #19875400" class="text-end">66</td><td style="background-color: #19875400" class="text-end">78</td><td style="background-color: #19875400" class="text-end">5.07</td><td style="background-color: #19875400" class="text-end">41</td><td style="background-color: #1987547E" class="text-end">6</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="Jahanara Alam
+Teams: Bangladesh
+Matches: 28
+Overs: 181
+Wickets: 22">
+<td colspan="2" data-text="Alam"><a class="chart" data-title="Bowling Average - Jahanara Alam" data-x="[2013,2015,2016,2018,2021,2022,2023]" data-y="[20,null,30.833333333333332,44.75,38.166666666666664,34.5,40.5]" data-tooltips="[[&quot;Overs: 10&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 4.00&quot;,&quot;Average: 20.00&quot;],[&quot;Overs: 9&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 3.22&quot;,&quot;Average: &quot;],[&quot;Overs: 51&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 3.63&quot;,&quot;Average: 30.83&quot;],[&quot;Overs: 31&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 5.77&quot;,&quot;Average: 44.75&quot;],[&quot;Overs: 51&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 4.49&quot;,&quot;Average: 38.17&quot;],[&quot;Overs: 17&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 4.14&quot;,&quot;Average: 34.50&quot;],[&quot;Overs: 12&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 6.75&quot;,&quot;Average: 40.50&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Jahanara+Alam+cricket" target="_blank">Jahanara Alam</a></td>
+<td style="background-color: #19875404" class="text-end">37</td><td style="background-color: #19875400" class="text-end">49</td><td style="background-color: #19875417" class="text-end">4.49</td><td style="background-color: #1987545D" class="text-end">60</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #dc354500" class="text-end">9</td><td style="background-color: #dc354500" class="text-end">18</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35457C" class="text-end">73</td>
+</tr>
+<tr style="cursor: default;" title="AA Alleyne
+Teams: West Indies
+Matches: 25
+Overs: 131
+Wickets: 20">
+<td colspan="2" data-text="Alleyne"><a class="chart" data-title="Bowling Average - AA Alleyne" data-x="[2019,2021,2022,2023,2024]" data-y="[43,32.5,34.75,21.333333333333332,20.8]" data-tooltips="[[&quot;Overs: 21&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 4.10&quot;,&quot;Average: 43.00&quot;],[&quot;Overs: 45&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 4.33&quot;,&quot;Average: 32.50&quot;],[&quot;Overs: 29&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 4.79&quot;,&quot;Average: 34.75&quot;],[&quot;Overs: 13&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 4.92&quot;,&quot;Average: 21.33&quot;],[&quot;Overs: 23&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 4.55&quot;,&quot;Average: 20.80&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=AA+Alleyne+cricket" target="_blank">AA Alleyne</a></td>
+<td style="background-color: #1987542B" class="text-end">29</td><td style="background-color: #19875427" class="text-end">39</td><td style="background-color: #19875417" class="text-end">4.49</td><td style="background-color: #19875452" class="text-end">59</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354559" class="text-end">30</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354521" class="text-end">60</td>
+</tr>
+<tr style="cursor: default;" title="S Asha
+Teams: India
+Matches: 2
+Overs: 18
+Wickets: 4">
+<td colspan="2" data-text="Asha"><a class="chart" data-title="Bowling Average - S Asha" data-x="[2024]" data-y="[18.25]" data-tooltips="[[&quot;Overs: 18&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 4.13&quot;,&quot;Average: 18.25&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=S+Asha+cricket" target="_blank">S Asha</a></td>
+<td style="background-color: #19875467" class="text-end">18</td><td style="background-color: #19875464" class="text-end">26</td><td style="background-color: #19875455" class="text-end">4.13</td><td style="background-color: #19875424" class="text-end">57</td><td style="background-color: #1987542E" class="text-end">8</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354529" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35458D" class="text-end">75</td>
+</tr>
+<tr style="cursor: default;" title="Diana Baig
+Teams: Pakistan
+Matches: 48
+Overs: 336
+Wickets: 38">
+<td colspan="2" data-text="Baig"><a class="chart" data-title="Bowling Average - Diana Baig" data-x="[2016,2017,2018,2019,2020,2021,2022,2023,2024]" data-y="[null,36.875,22,null,12.555555555555555,51.625,56,87.5,117]" data-tooltips="[[&quot;Overs: 3&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 64&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 4.61&quot;,&quot;Average: 36.88&quot;],[&quot;Overs: 31&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 4.97&quot;,&quot;Average: 22.00&quot;],[&quot;Overs: 16&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 5.81&quot;,&quot;Average: &quot;],[&quot;Overs: 29&quot;,&quot;Wickets: 9&quot;,&quot;Economy: 3.90&quot;,&quot;Average: 12.56&quot;],[&quot;Overs: 97&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 4.27&quot;,&quot;Average: 51.62&quot;],[&quot;Overs: 41&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 4.10&quot;,&quot;Average: 56.00&quot;],[&quot;Overs: 36&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 4.91&quot;,&quot;Average: 87.50&quot;],[&quot;Overs: 20&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 5.85&quot;,&quot;Average: 117.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Diana+Baig+cricket" target="_blank">Diana Baig</a></td>
+<td style="background-color: #19875400" class="text-end">41</td><td style="background-color: #19875400" class="text-end">53</td><td style="background-color: #19875404" class="text-end">4.60</td><td style="background-color: #19875465" class="text-end">60</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #dc354565" class="text-end">24</td><td style="background-color: #dc35451D" class="text-end">24</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">45</td>
+</tr>
+<tr style="cursor: default;" title="HL Baker
+Teams: England
+Matches: 2
+Overs: 13
+Wickets: 1">
+<td colspan="2" data-text="Baker"><a class="chart" data-title="Bowling Average - HL Baker" data-x="[2024]" data-y="[73]" data-tooltips="[[&quot;Overs: 13&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 5.62&quot;,&quot;Average: 73.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=HL+Baker+cricket" target="_blank">HL Baker</a></td>
+<td style="background-color: #19875400" class="text-end">73</td><td style="background-color: #19875400" class="text-end">78</td><td style="background-color: #19875400" class="text-end">5.62</td><td style="background-color: #19875400" class="text-end">33</td><td style="background-color: #1987549E" class="text-end">5</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="SW Bates
+Teams: New Zealand
+Matches: 41
+Overs: 206
+Wickets: 22">
+<td colspan="2" data-text="Bates"><a class="chart" data-title="Bowling Average - SW Bates" data-x="[2006,2012,2015,2016,2017,2018,2019,2022,2023]" data-y="[null,61.333333333333336,32.75,37.875,98,null,null,null,23.333333333333332]" data-tooltips="[[&quot;Overs: 2&quot;,&quot;Wickets: 1&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 33&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 5.58&quot;,&quot;Average: 61.33&quot;],[&quot;Overs: 38&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 3.48&quot;,&quot;Average: 32.75&quot;],[&quot;Overs: 65&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 4.66&quot;,&quot;Average: 37.88&quot;],[&quot;Overs: 38&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 5.16&quot;,&quot;Average: 98.00&quot;],[&quot;Overs: 7&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 6.14&quot;,&quot;Average: &quot;],[&quot;Overs: 4&quot;,&quot;Wickets: 1&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 7&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 5.29&quot;,&quot;Average: &quot;],[&quot;Overs: 13&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 5.38&quot;,&quot;Average: 23.33&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=SW+Bates+cricket" target="_blank">SW Bates</a></td>
+<td style="background-color: #19875400" class="text-end">45</td><td style="background-color: #19875400" class="text-end">56</td><td style="background-color: #19875400" class="text-end">4.83</td><td style="background-color: #19875410" class="text-end">56</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #dc354500" class="text-end">9</td><td style="background-color: #dc354513" class="text-end">23</td><td style="background-color: #dc354500" class="text-end">5</td><td style="background-color: #dc354500" class="text-end">55</td>
+</tr>
+<tr style="cursor: default;" title="LK Bell
+Teams: England
+Matches: 14
+Overs: 111
+Wickets: 27">
+<td colspan="2" data-text="Bell"><a class="chart" data-title="Bowling Average - LK Bell" data-x="[2022,2023,2024]" data-y="[30,22.636363636363637,12.88888888888889]" data-tooltips="[[&quot;Overs: 42&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 5.00&quot;,&quot;Average: 30.00&quot;],[&quot;Overs: 42&quot;,&quot;Wickets: 11&quot;,&quot;Economy: 5.88&quot;,&quot;Average: 22.64&quot;],[&quot;Overs: 27&quot;,&quot;Wickets: 9&quot;,&quot;Economy: 4.30&quot;,&quot;Average: 12.89&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=LK+Bell+cricket" target="_blank">LK Bell</a></td>
+<td style="background-color: #19875456" class="text-end">21</td><td style="background-color: #1987546D" class="text-end">25</td><td style="background-color: #19875400" class="text-end">5.16</td><td style="background-color: #1987542C" class="text-end">57</td><td style="background-color: #19875400" class="text-end">12</td><td style="background-color: #dc354503" class="text-end">15</td><td style="background-color: #dc354500" class="text-end">19</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354536" class="text-end">63</td>
+</tr>
+<tr style="cursor: default;" title="A Bosch
+Teams: South Africa
+Matches: 7
+Overs: 26
+Wickets: 1">
+<td colspan="2" data-text="Bosch"><a class="chart" data-title="Bowling Average - A Bosch" data-x="[2016,2020,2024]" data-y="[null,78,null]" data-tooltips="[[&quot;Overs: 6&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 5.17&quot;,&quot;Average: &quot;],[&quot;Overs: 17&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.59&quot;,&quot;Average: 78.00&quot;],[&quot;Overs: 3&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=A+Bosch+cricket" target="_blank">A Bosch</a></td>
+<td style="background-color: #19875400" class="text-end">130</td><td style="background-color: #19875400" class="text-end">156</td><td style="background-color: #19875400" class="text-end">5.00</td><td style="background-color: #19875400" class="text-end">46</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="D Brown
+Teams: Australia
+Matches: 19
+Overs: 119
+Wickets: 23">
+<td colspan="2" data-text="Brown"><a class="chart" data-title="Bowling Average - D Brown" data-x="[2020,2021,2022,2023]" data-y="[null,20.666666666666668,8,48]" data-tooltips="[[&quot;Overs: 1&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 69&quot;,&quot;Wickets: 15&quot;,&quot;Economy: 4.49&quot;,&quot;Average: 20.67&quot;],[&quot;Overs: 12&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 3.33&quot;,&quot;Average: 8.00&quot;],[&quot;Overs: 37&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 3.89&quot;,&quot;Average: 48.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=D+Brown+cricket" target="_blank">D Brown</a></td>
+<td style="background-color: #19875455" class="text-end">22</td><td style="background-color: #1987544F" class="text-end">31</td><td style="background-color: #1987544B" class="text-end">4.18</td><td style="background-color: #19875494" class="text-end">63</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #dc354500" class="text-end">13</td><td style="background-color: #dc354500" class="text-end">9</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354546" class="text-end">65</td>
+</tr>
+<tr style="cursor: default;" title="A Canning
+Teams: Ireland
+Matches: 5
+Overs: 27
+Wickets: 2">
+<td colspan="2" data-text="Canning"><a class="chart" data-title="Bowling Average - A Canning" data-x="[2023,2024]" data-y="[107,null]" data-tooltips="[[&quot;Overs: 24&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.43&quot;,&quot;Average: 107.00&quot;],[&quot;Overs: 3&quot;,&quot;Wickets: 1&quot;,&quot;Economy: &quot;,&quot;Average: &quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=A+Canning+cricket" target="_blank">A Canning</a></td>
+<td style="background-color: #19875400" class="text-end">60</td><td style="background-color: #19875400" class="text-end">82</td><td style="background-color: #19875424" class="text-end">4.42</td><td style="background-color: #19875488" class="text-end">62</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="A Capsey
+Teams: England
+Matches: 8
+Overs: 28
+Wickets: 3">
+<td colspan="2" data-text="Capsey"><a class="chart" data-title="Bowling Average - A Capsey" data-x="[2023,2024]" data-y="[47,18]" data-tooltips="[[&quot;Overs: 21&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 4.48&quot;,&quot;Average: 47.00&quot;],[&quot;Overs: 7&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 2.63&quot;,&quot;Average: 18.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=A+Capsey+cricket" target="_blank">A Capsey</a></td>
+<td style="background-color: #19875401" class="text-end">37</td><td style="background-color: #19875400" class="text-end">56</td><td style="background-color: #19875467" class="text-end">4.02</td><td style="background-color: #19875400" class="text-end">53</td><td style="background-color: #198754AD" class="text-end">5</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354578" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354551" class="text-end">67</td>
+</tr>
+<tr style="cursor: default;" title="EJ Carson
+Teams: New Zealand
+Matches: 8
+Overs: 56
+Wickets: 6">
+<td colspan="2" data-text="Carson"><a class="chart" data-title="Bowling Average - EJ Carson" data-x="[2022,2023,2024]" data-y="[10,75.33333333333333,null]" data-tooltips="[[&quot;Overs: 8&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 3.75&quot;,&quot;Average: 10.00&quot;],[&quot;Overs: 44&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 5.14&quot;,&quot;Average: 75.33&quot;],[&quot;Overs: 4&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 6.50&quot;,&quot;Average: &quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=EJ+Carson+cricket" target="_blank">EJ Carson</a></td>
+<td style="background-color: #19875400" class="text-end">47</td><td style="background-color: #19875400" class="text-end">56</td><td style="background-color: #19875400" class="text-end">5.04</td><td style="background-color: #19875400" class="text-end">49</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #dc354518" class="text-end">17</td><td style="background-color: #dc354500" class="text-end">17</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354551" class="text-end">67</td>
+</tr>
+<tr style="cursor: default;" title="SS Connell
+Teams: West Indies
+Matches: 52
+Overs: 314
+Wickets: 38">
+<td colspan="2" data-text="Connell"><a class="chart" data-title="Bowling Average - SS Connell" data-x="[2014,2015,2017,2018,2019,2021,2022,2023,2024]" data-y="[null,23,100,21,67.33333333333333,27,null,16,50.333333333333336]" data-tooltips="[[&quot;Overs: 14&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 6.21&quot;,&quot;Average: &quot;],[&quot;Overs: 7&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 3.29&quot;,&quot;Average: 23.00&quot;],[&quot;Overs: 33&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 6.06&quot;,&quot;Average: 100.00&quot;],[&quot;Overs: 31&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 2.71&quot;,&quot;Average: 21.00&quot;],[&quot;Overs: 35&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 5.77&quot;,&quot;Average: 67.33&quot;],[&quot;Overs: 134&quot;,&quot;Wickets: 20&quot;,&quot;Economy: 4.02&quot;,&quot;Average: 27.00&quot;],[&quot;Overs: 11&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 4.73&quot;,&quot;Average: &quot;],[&quot;Overs: 15&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 5.39&quot;,&quot;Average: 16.00&quot;],[&quot;Overs: 34&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 4.44&quot;,&quot;Average: 50.33&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=SS+Connell+cricket" target="_blank">SS Connell</a></td>
+<td style="background-color: #19875401" class="text-end">37</td><td style="background-color: #19875400" class="text-end">50</td><td style="background-color: #19875413" class="text-end">4.52</td><td style="background-color: #19875432" class="text-end">57</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35451D" class="text-end">24</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354570" class="text-end">71</td>
+</tr>
+<tr style="cursor: default;" title="KL Cross
+Teams: England
+Matches: 64
+Overs: 481
+Wickets: 86">
+<td colspan="2" data-text="Cross"><a class="chart" data-title="Bowling Average - KL Cross" data-x="[2013,2014,2015,2016,2018,2019,2020,2021,2022,2023,2024]" data-y="[117,40,79,51,25.2,15.416666666666666,31.5,22.51851851851852,23.333333333333332,30.666666666666668,13.266666666666667]" data-tooltips="[[&quot;Overs: 23&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 5.09&quot;,&quot;Average: 117.00&quot;],[&quot;Overs: 10&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.00&quot;,&quot;Average: 40.00&quot;],[&quot;Overs: 16&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.94&quot;,&quot;Average: 79.00&quot;],[&quot;Overs: 11&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.64&quot;,&quot;Average: 51.00&quot;],[&quot;Overs: 33&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 3.82&quot;,&quot;Average: 25.20&quot;],[&quot;Overs: 49&quot;,&quot;Wickets: 12&quot;,&quot;Economy: 3.78&quot;,&quot;Average: 15.42&quot;],[&quot;Overs: 14&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 4.50&quot;,&quot;Average: 31.50&quot;],[&quot;Overs: 144&quot;,&quot;Wickets: 27&quot;,&quot;Economy: 4.24&quot;,&quot;Average: 22.52&quot;],[&quot;Overs: 64&quot;,&quot;Wickets: 12&quot;,&quot;Economy: 4.38&quot;,&quot;Average: 23.33&quot;],[&quot;Overs: 63&quot;,&quot;Wickets: 9&quot;,&quot;Economy: 4.38&quot;,&quot;Average: 30.67&quot;],[&quot;Overs: 55&quot;,&quot;Wickets: 15&quot;,&quot;Economy: 3.64&quot;,&quot;Average: 13.27&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=KL+Cross+cricket" target="_blank">KL Cross</a></td>
+<td style="background-color: #1987544B" class="text-end">24</td><td style="background-color: #19875443" class="text-end">34</td><td style="background-color: #19875448" class="text-end">4.21</td><td style="background-color: #19875499" class="text-end">63</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #dc35453A" class="text-end">20</td><td style="background-color: #dc354524" class="text-end">24</td><td style="background-color: #dc354500" class="text-end">3</td><td style="background-color: #dc354500" class="text-end">49</td>
+</tr>
+<tr style="cursor: default;" title="A Dalzell
+Teams: Ireland
+Matches: 4
+Overs: 22
+Wickets: 3">
+<td colspan="2" data-text="Dalzell"><a class="chart" data-title="Bowling Average - A Dalzell" data-x="[2022,2024]" data-y="[null,32.333333333333336]" data-tooltips="[[&quot;Overs: 4&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 3.25&quot;,&quot;Average: &quot;],[&quot;Overs: 18&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 5.39&quot;,&quot;Average: 32.33&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=A+Dalzell+cricket" target="_blank">A Dalzell</a></td>
+<td style="background-color: #19875405" class="text-end">37</td><td style="background-color: #19875411" class="text-end">44</td><td style="background-color: #19875400" class="text-end">5.00</td><td style="background-color: #19875400" class="text-end">55</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354578" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354551" class="text-end">67</td>
+</tr>
+<tr style="cursor: default;" title="Nida Dar
+Teams: Pakistan
+Matches: 63
+Overs: 473
+Wickets: 56">
+<td colspan="2" data-text="Dar"><a class="chart" data-title="Bowling Average - Nida Dar" data-x="[2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024]" data-y="[18.333333333333332,null,null,null,10.25,169,39.8,36.333333333333336,31.307692307692307,38.285714285714285,30,25.1]" data-tooltips="[[&quot;Overs: 28&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 3.93&quot;,&quot;Average: 18.33&quot;],[&quot;Overs: 26&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 4.12&quot;,&quot;Average: &quot;],[&quot;Overs: 6&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 2.33&quot;,&quot;Average: &quot;],[&quot;Overs: 33&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 7.33&quot;,&quot;Average: &quot;],[&quot;Overs: 14&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 2.93&quot;,&quot;Average: 10.25&quot;],[&quot;Overs: 34&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.97&quot;,&quot;Average: 169.00&quot;],[&quot;Overs: 43&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 4.66&quot;,&quot;Average: 39.80&quot;],[&quot;Overs: 26&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 4.19&quot;,&quot;Average: 36.33&quot;],[&quot;Overs: 103&quot;,&quot;Wickets: 13&quot;,&quot;Economy: 3.96&quot;,&quot;Average: 31.31&quot;],[&quot;Overs: 58&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 4.58&quot;,&quot;Average: 38.29&quot;],[&quot;Overs: 53&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 3.94&quot;,&quot;Average: 30.00&quot;],[&quot;Overs: 49&quot;,&quot;Wickets: 10&quot;,&quot;Economy: 5.12&quot;,&quot;Average: 25.10&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Nida+Dar+cricket" target="_blank">Nida Dar</a></td>
+<td style="background-color: #19875400" class="text-end">38</td><td style="background-color: #19875400" class="text-end">51</td><td style="background-color: #19875417" class="text-end">4.49</td><td style="background-color: #1987540B" class="text-end">55</td><td style="background-color: #1987542A" class="text-end">8</td><td style="background-color: #dc354500" class="text-end">11</td><td style="background-color: #dc354500" class="text-end">20</td><td style="background-color: #dc3545CD" class="text-end">16</td><td style="background-color: #dc354500" class="text-end">48</td>
+</tr>
+<tr style="cursor: default;" title="AN Davidson-Richards
+Teams: England
+Matches: 4
+Overs: 23
+Wickets: 6">
+<td colspan="2" data-text="Davidson-Richards"><a class="chart" data-title="Bowling Average - AN Davidson-Richards" data-x="[2022,2023]" data-y="[24,8]" data-tooltips="[[&quot;Overs: 18&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 5.33&quot;,&quot;Average: 24.00&quot;],[&quot;Overs: 5&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 3.20&quot;,&quot;Average: 8.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=AN+Davidson-Richards+cricket" target="_blank">AN Davidson-Richards</a></td>
+<td style="background-color: #19875464" class="text-end">19</td><td style="background-color: #19875475" class="text-end">23</td><td style="background-color: #19875400" class="text-end">4.87</td><td style="background-color: #1987544B" class="text-end">59</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #dc354518" class="text-end">17</td><td style="background-color: #dc354578" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="CE Dean
+Teams: England
+Matches: 33
+Overs: 264
+Wickets: 61">
+<td colspan="2" data-text="Dean"><a class="chart" data-title="Bowling Average - CE Dean" data-x="[2021,2022,2023,2024]" data-y="[19.61904761904762,17.61111111111111,16.307692307692307,20.444444444444443]" data-tooltips="[[&quot;Overs: 96&quot;,&quot;Wickets: 21&quot;,&quot;Economy: 4.29&quot;,&quot;Average: 19.62&quot;],[&quot;Overs: 80&quot;,&quot;Wickets: 18&quot;,&quot;Economy: 3.99&quot;,&quot;Average: 17.61&quot;],[&quot;Overs: 44&quot;,&quot;Wickets: 13&quot;,&quot;Economy: 4.76&quot;,&quot;Average: 16.31&quot;],[&quot;Overs: 44&quot;,&quot;Wickets: 9&quot;,&quot;Economy: 4.18&quot;,&quot;Average: 20.44&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=CE+Dean+cricket" target="_blank">CE Dean</a></td>
+<td style="background-color: #19875466" class="text-end">18</td><td style="background-color: #19875467" class="text-end">26</td><td style="background-color: #1987543E" class="text-end">4.26</td><td style="background-color: #1987543B" class="text-end">58</td><td style="background-color: #19875438" class="text-end">7</td><td style="background-color: #dc3545A5" class="text-end">30</td><td style="background-color: #dc354516" class="text-end">23</td><td style="background-color: #dc354504" class="text-end">5</td><td style="background-color: #dc354500" class="text-end">34</td>
+</tr>
+<tr style="cursor: default;" title="L Delany
+Teams: Ireland
+Matches: 8
+Overs: 56
+Wickets: 3">
+<td colspan="2" data-text="Delany"><a class="chart" data-title="Bowling Average - L Delany" data-x="[2013,2022,2023]" data-y="[18,null,null]" data-tooltips="[[&quot;Overs: 9&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 5.89&quot;,&quot;Average: 18.00&quot;],[&quot;Overs: 21&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 4.67&quot;,&quot;Average: &quot;],[&quot;Overs: 26&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 5.31&quot;,&quot;Average: &quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=L+Delany+cricket" target="_blank">L Delany</a></td>
+<td style="background-color: #19875400" class="text-end">97</td><td style="background-color: #19875400" class="text-end">112</td><td style="background-color: #19875400" class="text-end">5.16</td><td style="background-color: #19875400" class="text-end">42</td><td style="background-color: #19875434" class="text-end">7</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545FF" class="text-end">100</td>
+</tr>
+<tr style="cursor: default;" title="G Dempsey
+Teams: Ireland
+Matches: 5
+Overs: 39
+Wickets: 6">
+<td colspan="2" data-text="Dempsey"><a class="chart" data-title="Bowling Average - G Dempsey" data-x="[2022,2023]" data-y="[69.5,19.5]" data-tooltips="[[&quot;Overs: 23&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 6.13&quot;,&quot;Average: 69.50&quot;],[&quot;Overs: 16&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 4.88&quot;,&quot;Average: 19.50&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=G+Dempsey+cricket" target="_blank">G Dempsey</a></td>
+<td style="background-color: #19875408" class="text-end">36</td><td style="background-color: #1987542A" class="text-end">39</td><td style="background-color: #19875400" class="text-end">5.61</td><td style="background-color: #19875400" class="text-end">50</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545FF" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="A Dercksen
+Teams: South Africa
+Matches: 1
+Overs: 10
+Wickets: 1">
+<td colspan="2" data-text="Dercksen"><a class="chart" data-title="Bowling Average - A Dercksen" data-x="[2024]" data-y="[55]" data-tooltips="[[&quot;Overs: 10&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 5.50&quot;,&quot;Average: 55.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=A+Dercksen+cricket" target="_blank">A Dercksen</a></td>
+<td style="background-color: #19875400" class="text-end">55</td><td style="background-color: #19875400" class="text-end">60</td><td style="background-color: #19875400" class="text-end">5.50</td><td style="background-color: #19875400" class="text-end">47</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="SFM Devine
+Teams: New Zealand
+Matches: 60
+Overs: 353
+Wickets: 48">
+<td colspan="2" data-text="Devine"><a class="chart" data-title="Bowling Average - SFM Devine" data-x="[2015,2016,2017,2018,2019,2020,2021,2022,2023,2024]" data-y="[56,null,26.857142857142858,34.57142857142857,32,43.25,31.916666666666668,37.5,18.166666666666668,null]" data-tooltips="[[&quot;Overs: 33&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 3.39&quot;,&quot;Average: 56.00&quot;],[&quot;Overs: 2&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 46&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 4.12&quot;,&quot;Average: 26.86&quot;],[&quot;Overs: 57&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 4.25&quot;,&quot;Average: 34.57&quot;],[&quot;Overs: 18&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 3.59&quot;,&quot;Average: 32.00&quot;],[&quot;Overs: 36&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 4.81&quot;,&quot;Average: 43.25&quot;],[&quot;Overs: 77&quot;,&quot;Wickets: 12&quot;,&quot;Economy: 4.97&quot;,&quot;Average: 31.92&quot;],[&quot;Overs: 24&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 3.17&quot;,&quot;Average: 37.50&quot;],[&quot;Overs: 49&quot;,&quot;Wickets: 12&quot;,&quot;Economy: 4.45&quot;,&quot;Average: 18.17&quot;],[&quot;Overs: 12&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 6.09&quot;,&quot;Average: &quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=SFM+Devine+cricket" target="_blank">SFM Devine</a></td>
+<td style="background-color: #1987541D" class="text-end">32</td><td style="background-color: #19875410" class="text-end">44</td><td style="background-color: #1987542D" class="text-end">4.36</td><td style="background-color: #19875463" class="text-end">60</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #dc354500" class="text-end">8</td><td style="background-color: #dc354500" class="text-end">17</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35456F" class="text-end">71</td>
+</tr>
+<tr style="cursor: default;" title="WK Dilhari
+Teams: Sri Lanka
+Matches: 23
+Overs: 160
+Wickets: 28">
+<td colspan="2" data-text="Dilhari"><a class="chart" data-title="Bowling Average - WK Dilhari" data-x="[2018,2022,2023,2024]" data-y="[35,57,34.111111111111114,11.615384615384615]" data-tooltips="[[&quot;Overs: 27&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 3.84&quot;,&quot;Average: 35.00&quot;],[&quot;Overs: 40&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 4.28&quot;,&quot;Average: 57.00&quot;],[&quot;Overs: 55&quot;,&quot;Wickets: 9&quot;,&quot;Economy: 5.58&quot;,&quot;Average: 34.11&quot;],[&quot;Overs: 38&quot;,&quot;Wickets: 13&quot;,&quot;Economy: 3.96&quot;,&quot;Average: 11.62&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=WK+Dilhari+cricket" target="_blank">WK Dilhari</a></td>
+<td style="background-color: #1987543C" class="text-end">26</td><td style="background-color: #1987543F" class="text-end">34</td><td style="background-color: #19875409" class="text-end">4.57</td><td style="background-color: #19875400" class="text-end">49</td><td style="background-color: #1987546B" class="text-end">6</td><td style="background-color: #dc354500" class="text-end">11</td><td style="background-color: #dc354500" class="text-end">7</td><td style="background-color: #dc354500" class="text-end">4</td><td style="background-color: #dc354573" class="text-end">71</td>
+</tr>
+<tr style="cursor: default;" title="S Ecclestone
+Teams: England
+Matches: 61
+Overs: 560
+Wickets: 100">
+<td colspan="2" data-text="Ecclestone"><a class="chart" data-title="Bowling Average - S Ecclestone" data-x="[2017,2018,2019,2020,2021,2022,2023,2024]" data-y="[18.8,21.166666666666668,25.166666666666668,54.5,18.027027027027028,22.181818181818183,25.75,7.076923076923077]" data-tooltips="[[&quot;Overs: 29&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 3.24&quot;,&quot;Average: 18.80&quot;],[&quot;Overs: 73&quot;,&quot;Wickets: 12&quot;,&quot;Economy: 3.48&quot;,&quot;Average: 21.17&quot;],[&quot;Overs: 77&quot;,&quot;Wickets: 12&quot;,&quot;Economy: 3.91&quot;,&quot;Average: 25.17&quot;],[&quot;Overs: 30&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 3.63&quot;,&quot;Average: 54.50&quot;],[&quot;Overs: 192&quot;,&quot;Wickets: 37&quot;,&quot;Economy: 3.46&quot;,&quot;Average: 18.03&quot;],[&quot;Overs: 72&quot;,&quot;Wickets: 11&quot;,&quot;Economy: 3.40&quot;,&quot;Average: 22.18&quot;],[&quot;Overs: 56&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 3.68&quot;,&quot;Average: 25.75&quot;],[&quot;Overs: 30&quot;,&quot;Wickets: 13&quot;,&quot;Economy: 3.05&quot;,&quot;Average: 7.08&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=S+Ecclestone+cricket" target="_blank">S Ecclestone</a></td>
+<td style="background-color: #1987545F" class="text-end">20</td><td style="background-color: #19875443" class="text-end">34</td><td style="background-color: #198754BE" class="text-end">3.52</td><td style="background-color: #198754B0" class="text-end">64</td><td style="background-color: #1987546E" class="text-end">6</td><td style="background-color: #dc354574" class="text-end">25</td><td style="background-color: #dc35453C" class="text-end">27</td><td style="background-color: #dc354505" class="text-end">5</td><td style="background-color: #dc354500" class="text-end">38</td>
+</tr>
+<tr style="cursor: default;" title="Ghulam Fatima
+Teams: Pakistan
+Matches: 15
+Overs: 130
+Wickets: 27">
+<td colspan="2" data-text="Fatima"><a class="chart" data-title="Bowling Average - Ghulam Fatima" data-x="[2016,2021,2022,2023]" data-y="[17.166666666666668,26.333333333333332,16.083333333333332,34.5]" data-tooltips="[[&quot;Overs: 24&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 4.20&quot;,&quot;Average: 17.17&quot;],[&quot;Overs: 16&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 4.94&quot;,&quot;Average: 26.33&quot;],[&quot;Overs: 55&quot;,&quot;Wickets: 12&quot;,&quot;Economy: 3.51&quot;,&quot;Average: 16.08&quot;],[&quot;Overs: 35&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 5.91&quot;,&quot;Average: 34.50&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Ghulam+Fatima+cricket" target="_blank">Ghulam Fatima</a></td>
+<td style="background-color: #19875455" class="text-end">22</td><td style="background-color: #19875458" class="text-end">29</td><td style="background-color: #1987541D" class="text-end">4.46</td><td style="background-color: #19875400" class="text-end">51</td><td style="background-color: #19875475" class="text-end">6</td><td style="background-color: #dc354500" class="text-end">4</td><td style="background-color: #dc354500" class="text-end">19</td><td style="background-color: #dc3545B7" class="text-end">15</td><td style="background-color: #dc35451B" class="text-end">59</td>
+</tr>
+<tr style="cursor: default;" title="SIP Fernando
+Teams: Sri Lanka
+Matches: 11
+Overs: 76
+Wickets: 14">
+<td colspan="2" data-text="Fernando"><a class="chart" data-title="Bowling Average - SIP Fernando" data-x="[2016,2018,2023,2024]" data-y="[15.7,21.666666666666668,null,7]" data-tooltips="[[&quot;Overs: 47&quot;,&quot;Wickets: 10&quot;,&quot;Economy: 3.34&quot;,&quot;Average: 15.70&quot;],[&quot;Overs: 12&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 5.42&quot;,&quot;Average: 21.67&quot;],[&quot;Overs: 7&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 3.71&quot;,&quot;Average: &quot;],[&quot;Overs: 10&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 0.70&quot;,&quot;Average: 7.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=SIP+Fernando+cricket" target="_blank">SIP Fernando</a></td>
+<td style="background-color: #19875467" class="text-end">18</td><td style="background-color: #19875447" class="text-end">33</td><td style="background-color: #198754D9" class="text-end">3.36</td><td style="background-color: #198754AE" class="text-end">64</td><td style="background-color: #1987548D" class="text-end">5</td><td style="background-color: #dc35454C" class="text-end">21</td><td style="background-color: #dc354500" class="text-end">7</td><td style="background-color: #dc3545AD" class="text-end">14</td><td style="background-color: #dc35450C" class="text-end">57</td>
+</tr>
+<tr style="cursor: default;" title="L Filer
+Teams: England
+Matches: 10
+Overs: 62
+Wickets: 16">
+<td colspan="2" data-text="Filer"><a class="chart" data-title="Bowling Average - L Filer" data-x="[2023,2024]" data-y="[14.75,16.625]" data-tooltips="[[&quot;Overs: 26&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 4.57&quot;,&quot;Average: 14.75&quot;],[&quot;Overs: 36&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 3.69&quot;,&quot;Average: 16.62&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=L+Filer+cricket" target="_blank">L Filer</a></td>
+<td style="background-color: #19875474" class="text-end">16</td><td style="background-color: #19875474" class="text-end">23</td><td style="background-color: #19875461" class="text-end">4.06</td><td style="background-color: #198754A6" class="text-end">64</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354565" class="text-end">31</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354560" class="text-end">69</td>
+</tr>
+<tr style="cursor: default;" title="ASS Fletcher
+Teams: West Indies
+Matches: 38
+Overs: 285
+Wickets: 53">
+<td colspan="2" data-text="Fletcher"><a class="chart" data-title="Bowling Average - ASS Fletcher" data-x="[2015,2017,2018,2019,2021,2022,2023,2024]" data-y="[53,26.9,20.5,25.727272727272727,18.6,23.375,18,21.428571428571427]" data-tooltips="[[&quot;Overs: 15&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 3.53&quot;,&quot;Average: 53.00&quot;],[&quot;Overs: 51&quot;,&quot;Wickets: 10&quot;,&quot;Economy: 5.31&quot;,&quot;Average: 26.90&quot;],[&quot;Overs: 33&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 3.75&quot;,&quot;Average: 20.50&quot;],[&quot;Overs: 59&quot;,&quot;Wickets: 11&quot;,&quot;Economy: 4.80&quot;,&quot;Average: 25.73&quot;],[&quot;Overs: 24&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 3.90&quot;,&quot;Average: 18.60&quot;],[&quot;Overs: 41&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 4.54&quot;,&quot;Average: 23.38&quot;],[&quot;Overs: 22&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 4.15&quot;,&quot;Average: 18.00&quot;],[&quot;Overs: 41&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 3.64&quot;,&quot;Average: 21.43&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=ASS+Fletcher+cricket" target="_blank">ASS Fletcher</a></td>
+<td style="background-color: #1987544A" class="text-end">24</td><td style="background-color: #19875449" class="text-end">32</td><td style="background-color: #1987542B" class="text-end">4.37</td><td style="background-color: #19875400" class="text-end">53</td><td style="background-color: #19875457" class="text-end">7</td><td style="background-color: #dc35455A" class="text-end">23</td><td style="background-color: #dc354501" class="text-end">21</td><td style="background-color: #dc354578" class="text-end">11</td><td style="background-color: #dc354500" class="text-end">42</td>
+</tr>
+<tr style="cursor: default;" title="CS Fraser
+Teams: West Indies
+Matches: 11
+Overs: 48
+Wickets: 7">
+<td colspan="2" data-text="Fraser"><a class="chart" data-title="Bowling Average - CS Fraser" data-x="[2021,2022,2023]" data-y="[66,34,27.333333333333332]" data-tooltips="[[&quot;Overs: 11&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 6.00&quot;,&quot;Average: 66.00&quot;],[&quot;Overs: 19&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 5.37&quot;,&quot;Average: 34.00&quot;],[&quot;Overs: 18&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 4.56&quot;,&quot;Average: 27.33&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=CS+Fraser+cricket" target="_blank">CS Fraser</a></td>
+<td style="background-color: #1987540A" class="text-end">36</td><td style="background-color: #1987541E" class="text-end">41</td><td style="background-color: #19875400" class="text-end">5.21</td><td style="background-color: #19875400" class="text-end">55</td><td style="background-color: #19875400" class="text-end">12</td><td style="background-color: #dc354500" class="text-end">14</td><td style="background-color: #dc354500" class="text-end">14</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354573" class="text-end">71</td>
+</tr>
+<tr style="cursor: default;" title="A Gardner
+Teams: Australia
+Matches: 62
+Overs: 437
+Wickets: 84">
+<td colspan="2" data-text="Gardner"><a class="chart" data-title="Bowling Average - A Gardner" data-x="[2016,2017,2018,2019,2020,2021,2022,2023]" data-y="[34,31.692307692307693,18.77777777777778,20.75,26,23.454545454545453,11.4,15.064516129032258]" data-tooltips="[[&quot;Overs: 20&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 5.10&quot;,&quot;Average: 34.00&quot;],[&quot;Overs: 100&quot;,&quot;Wickets: 13&quot;,&quot;Economy: 4.12&quot;,&quot;Average: 31.69&quot;],[&quot;Overs: 45&quot;,&quot;Wickets: 9&quot;,&quot;Economy: 3.74&quot;,&quot;Average: 18.78&quot;],[&quot;Overs: 51&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 3.25&quot;,&quot;Average: 20.75&quot;],[&quot;Overs: 23&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 4.52&quot;,&quot;Average: 26.00&quot;],[&quot;Overs: 62&quot;,&quot;Wickets: 11&quot;,&quot;Economy: 4.14&quot;,&quot;Average: 23.45&quot;],[&quot;Overs: 19&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 3.00&quot;,&quot;Average: 11.40&quot;],[&quot;Overs: 117&quot;,&quot;Wickets: 31&quot;,&quot;Economy: 4.00&quot;,&quot;Average: 15.06&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=A+Gardner+cricket" target="_blank">A Gardner</a></td>
+<td style="background-color: #1987545A" class="text-end">21</td><td style="background-color: #1987544E" class="text-end">31</td><td style="background-color: #19875471" class="text-end">3.97</td><td style="background-color: #1987544B" class="text-end">59</td><td style="background-color: #1987545C" class="text-end">7</td><td style="background-color: #dc354525" class="text-end">18</td><td style="background-color: #dc354500" class="text-end">14</td><td style="background-color: #dc354500" class="text-end">4</td><td style="background-color: #dc35452E" class="text-end">62</td>
+</tr>
+<tr style="cursor: default;" title="KJ Garth
+Teams: Ireland; Australia
+Matches: 22
+Overs: 154
+Wickets: 32">
+<td colspan="2" data-text="Garth"><a class="chart" data-title="Bowling Average - KJ Garth" data-x="[2013,2016,2022,2023]" data-y="[19.75,38.8,null,9.956521739130435]" data-tooltips="[[&quot;Overs: 19&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 4.16&quot;,&quot;Average: 19.75&quot;],[&quot;Overs: 45&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 4.31&quot;,&quot;Average: 38.80&quot;],[&quot;Overs: 16&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 2.62&quot;,&quot;Average: &quot;],[&quot;Overs: 74&quot;,&quot;Wickets: 23&quot;,&quot;Economy: 3.09&quot;,&quot;Average: 9.96&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=KJ+Garth+cricket" target="_blank">KJ Garth</a></td>
+<td style="background-color: #1987546D" class="text-end">17</td><td style="background-color: #19875459" class="text-end">29</td><td style="background-color: #198754BB" class="text-end">3.53</td><td style="background-color: #198754E3" class="text-end">67</td><td style="background-color: #19875432" class="text-end">7</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: #dc354500" class="text-end">19</td><td style="background-color: #dc354500" class="text-end">3</td><td style="background-color: #dc354506" class="text-end">56</td>
+</tr>
+<tr style="cursor: default;" title="M Gaur
+Teams: England
+Matches: 2
+Overs: 12
+Wickets: 4">
+<td colspan="2" data-text="Gaur"><a class="chart" data-title="Bowling Average - M Gaur" data-x="[2023]" data-y="[11.25]" data-tooltips="[[&quot;Overs: 12&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 3.65&quot;,&quot;Average: 11.25&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=M+Gaur+cricket" target="_blank">M Gaur</a></td>
+<td style="background-color: #1987548C" class="text-end">11</td><td style="background-color: #1987548B" class="text-end">18</td><td style="background-color: #198754A7" class="text-end">3.65</td><td style="background-color: #198754FF" class="text-end">70</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545FF" class="text-end">75</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">25</td>
+</tr>
+<tr style="cursor: default;" title="S Glenn
+Teams: England
+Matches: 17
+Overs: 122
+Wickets: 20">
+<td colspan="2" data-text="Glenn"><a class="chart" data-title="Bowling Average - S Glenn" data-x="[2019,2020,2021,2023,2024]" data-y="[11.5,31,82,19.571428571428573,98]" data-tooltips="[[&quot;Overs: 28&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 3.33&quot;,&quot;Average: 11.50&quot;],[&quot;Overs: 19&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 4.85&quot;,&quot;Average: 31.00&quot;],[&quot;Overs: 20&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.10&quot;,&quot;Average: 82.00&quot;],[&quot;Overs: 36&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 3.82&quot;,&quot;Average: 19.57&quot;],[&quot;Overs: 20&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 5.03&quot;,&quot;Average: 98.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=S+Glenn+cricket" target="_blank">S Glenn</a></td>
+<td style="background-color: #19875442" class="text-end">25</td><td style="background-color: #19875434" class="text-end">37</td><td style="background-color: #19875458" class="text-end">4.11</td><td style="background-color: #19875424" class="text-end">57</td><td style="background-color: #19875449" class="text-end">7</td><td style="background-color: #dc3545FF" class="text-end">40</td><td style="background-color: #dc354500" class="text-end">20</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">40</td>
+</tr>
+<tr style="cursor: default;" title="BM Halliday
+Teams: New Zealand
+Matches: 12
+Overs: 34
+Wickets: 7">
+<td colspan="2" data-text="Halliday"><a class="chart" data-title="Bowling Average - BM Halliday" data-x="[2020,2021,2022,2023,2024]" data-y="[19,null,16,null,18.666666666666668]" data-tooltips="[[&quot;Overs: 8&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 4.75&quot;,&quot;Average: 19.00&quot;],[&quot;Overs: 4&quot;,&quot;Wickets: 1&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 4&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.00&quot;,&quot;Average: 16.00&quot;],[&quot;Overs: 9&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 6.22&quot;,&quot;Average: &quot;],[&quot;Overs: 9&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 6.00&quot;,&quot;Average: 18.67&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=BM+Halliday+cricket" target="_blank">BM Halliday</a></td>
+<td style="background-color: #1987543C" class="text-end">26</td><td style="background-color: #19875458" class="text-end">29</td><td style="background-color: #19875400" class="text-end">5.41</td><td style="background-color: #19875400" class="text-end">50</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545FF" class="text-end">100</td>
+</tr>
+<tr style="cursor: default;" title="Tuba Hassan
+Teams: Pakistan
+Matches: 4
+Overs: 34
+Wickets: 2">
+<td colspan="2" data-text="Hassan"><a class="chart" data-title="Bowling Average - Tuba Hassan" data-x="[2022,2024]" data-y="[null,60.5]" data-tooltips="[[&quot;Overs: 6&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 11.50&quot;,&quot;Average: &quot;],[&quot;Overs: 28&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 4.32&quot;,&quot;Average: 60.50&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Tuba+Hassan+cricket" target="_blank">Tuba Hassan</a></td>
+<td style="background-color: #19875400" class="text-end">95</td><td style="background-color: #19875400" class="text-end">102</td><td style="background-color: #19875400" class="text-end">5.59</td><td style="background-color: #19875400" class="text-end">51</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="CA Henry
+Teams: West Indies
+Matches: 40
+Overs: 216
+Wickets: 31">
+<td colspan="2" data-text="Henry"><a class="chart" data-title="Bowling Average - CA Henry" data-x="[2018,2019,2021,2022,2023,2024]" data-y="[null,72,30,24.75,null,25.8]" data-tooltips="[[&quot;Overs: 3&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 26&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 5.54&quot;,&quot;Average: 72.00&quot;],[&quot;Overs: 102&quot;,&quot;Wickets: 16&quot;,&quot;Economy: 4.71&quot;,&quot;Average: 30.00&quot;],[&quot;Overs: 42&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 4.77&quot;,&quot;Average: 24.75&quot;],[&quot;Overs: 13&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 4.31&quot;,&quot;Average: &quot;],[&quot;Overs: 31&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 4.18&quot;,&quot;Average: 25.80&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=CA+Henry+cricket" target="_blank">CA Henry</a></td>
+<td style="background-color: #1987541A" class="text-end">33</td><td style="background-color: #1987541B" class="text-end">42</td><td style="background-color: #19875400" class="text-end">4.69</td><td style="background-color: #19875437" class="text-end">58</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #dc354500" class="text-end">3</td><td style="background-color: #dc354500" class="text-end">16</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354587" class="text-end">74</td>
+</tr>
+<tr style="cursor: default;" title="A Hlubi
+Teams: South Africa
+Matches: 2
+Overs: 12
+Wickets: 2">
+<td colspan="2" data-text="Hlubi"><a class="chart" data-title="Bowling Average - A Hlubi" data-x="[2023]" data-y="[40]" data-tooltips="[[&quot;Overs: 12&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 6.67&quot;,&quot;Average: 40.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=A+Hlubi+cricket" target="_blank">A Hlubi</a></td>
+<td style="background-color: #19875400" class="text-end">40</td><td style="background-color: #19875437" class="text-end">36</td><td style="background-color: #19875400" class="text-end">6.67</td><td style="background-color: #19875400" class="text-end">53</td><td style="background-color: #19875400" class="text-end">21</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="Kainat Imtiaz
+Teams: Pakistan
+Matches: 12
+Overs: 71
+Wickets: 7">
+<td colspan="2" data-text="Imtiaz"><a class="chart" data-title="Bowling Average - Kainat Imtiaz" data-x="[2014,2017,2018,2021,2022]" data-y="[null,60.666666666666664,28.333333333333332,null,104]" data-tooltips="[[&quot;Overs: 3&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 29&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 6.28&quot;,&quot;Average: 60.67&quot;],[&quot;Overs: 12&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 7.08&quot;,&quot;Average: 28.33&quot;],[&quot;Overs: 7&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 5.57&quot;,&quot;Average: &quot;],[&quot;Overs: 20&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 5.20&quot;,&quot;Average: 104.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Kainat+Imtiaz+cricket" target="_blank">Kainat Imtiaz</a></td>
+<td style="background-color: #19875400" class="text-end">62</td><td style="background-color: #19875400" class="text-end">61</td><td style="background-color: #19875400" class="text-end">6.11</td><td style="background-color: #19875400" class="text-end">46</td><td style="background-color: #19875400" class="text-end">13</td><td style="background-color: #dc354500" class="text-end">14</td><td style="background-color: #dc354500" class="text-end">14</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354573" class="text-end">71</td>
+</tr>
+<tr style="cursor: default;" title="Sadia Iqbal
+Teams: Pakistan
+Matches: 20
+Overs: 178
+Wickets: 24">
+<td colspan="2" data-text="Iqbal"><a class="chart" data-title="Bowling Average - Sadia Iqbal" data-x="[2020,2021,2022,2023,2024]" data-y="[87,36.4,55.5,15.23076923076923,24.666666666666668]" data-tooltips="[[&quot;Overs: 20&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.35&quot;,&quot;Average: 87.00&quot;],[&quot;Overs: 41&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 4.42&quot;,&quot;Average: 36.40&quot;],[&quot;Overs: 27&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 4.06&quot;,&quot;Average: 55.50&quot;],[&quot;Overs: 70&quot;,&quot;Wickets: 13&quot;,&quot;Economy: 2.84&quot;,&quot;Average: 15.23&quot;],[&quot;Overs: 20&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 3.70&quot;,&quot;Average: 24.67&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Sadia+Iqbal+cricket" target="_blank">Sadia Iqbal</a></td>
+<td style="background-color: #19875437" class="text-end">27</td><td style="background-color: #1987540E" class="text-end">45</td><td style="background-color: #198754A6" class="text-end">3.66</td><td style="background-color: #198754A7" class="text-end">64</td><td style="background-color: #1987546E" class="text-end">6</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: #dc354500" class="text-end">8</td><td style="background-color: #dc354542" class="text-end">8</td><td style="background-color: #dc354515" class="text-end">58</td>
+</tr>
+<tr style="cursor: default;" title="Z James
+Teams: West Indies
+Matches: 6
+Overs: 25
+Wickets: 4">
+<td colspan="2" data-text="James"><a class="chart" data-title="Bowling Average - Z James" data-x="[2023,2024]" data-y="[null,18.25]" data-tooltips="[[&quot;Overs: 9&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 3.11&quot;,&quot;Average: &quot;],[&quot;Overs: 16&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 4.61&quot;,&quot;Average: 18.25&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Z+James+cricket" target="_blank">Z James</a></td>
+<td style="background-color: #19875441" class="text-end">25</td><td style="background-color: #19875431" class="text-end">37</td><td style="background-color: #19875460" class="text-end">4.07</td><td style="background-color: #19875400" class="text-end">54</td><td style="background-color: #19875473" class="text-end">6</td><td style="background-color: #dc354574" class="text-end">25</td><td style="background-color: #dc354529" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="AC Jayangani
+Teams: Sri Lanka
+Matches: 46
+Overs: 231
+Wickets: 30">
+<td colspan="2" data-text="Jayangani"><a class="chart" data-title="Bowling Average - AC Jayangani" data-x="[2013,2014,2015,2016,2017,2018,2019,2022,2023,2024]" data-y="[null,null,43,38.333333333333336,80.5,41.833333333333336,60,26,111.5,18.25]" data-tooltips="[[&quot;Overs: 2&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 2&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 6&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 7.17&quot;,&quot;Average: 43.00&quot;],[&quot;Overs: 48&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 4.83&quot;,&quot;Average: 38.33&quot;],[&quot;Overs: 27&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 5.96&quot;,&quot;Average: 80.50&quot;],[&quot;Overs: 39&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 6.44&quot;,&quot;Average: 41.83&quot;],[&quot;Overs: 8&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 7.66&quot;,&quot;Average: 60.00&quot;],[&quot;Overs: 22&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 4.73&quot;,&quot;Average: 26.00&quot;],[&quot;Overs: 39&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 5.72&quot;,&quot;Average: 111.50&quot;],[&quot;Overs: 39&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 3.76&quot;,&quot;Average: 18.25&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=AC+Jayangani+cricket" target="_blank">AC Jayangani</a></td>
+<td style="background-color: #19875400" class="text-end">41</td><td style="background-color: #19875406" class="text-end">46</td><td style="background-color: #19875400" class="text-end">5.36</td><td style="background-color: #19875400" class="text-end">46</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #dc3545CF" class="text-end">33</td><td style="background-color: #dc354500" class="text-end">13</td><td style="background-color: #dc35459C" class="text-end">13</td><td style="background-color: #dc354500" class="text-end">40</td>
+</tr>
+<tr style="cursor: default;" title="FC Jonas
+Teams: New Zealand
+Matches: 22
+Overs: 156
+Wickets: 16">
+<td colspan="2" data-text="Jonas"><a class="chart" data-title="Bowling Average - FC Jonas" data-x="[2020,2021,2022,2023,2024]" data-y="[null,67.5,22.333333333333332,39,null]" data-tooltips="[[&quot;Overs: 11&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 6.27&quot;,&quot;Average: &quot;],[&quot;Overs: 24&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 5.62&quot;,&quot;Average: 67.50&quot;],[&quot;Overs: 42&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 3.19&quot;,&quot;Average: 22.33&quot;],[&quot;Overs: 73&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 4.27&quot;,&quot;Average: 39.00&quot;],[&quot;Overs: 6&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 7.67&quot;,&quot;Average: &quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=FC+Jonas+cricket" target="_blank">FC Jonas</a></td>
+<td style="background-color: #19875400" class="text-end">44</td><td style="background-color: #19875400" class="text-end">58</td><td style="background-color: #1987541C" class="text-end">4.46</td><td style="background-color: #19875400" class="text-end">54</td><td style="background-color: #1987543B" class="text-end">7</td><td style="background-color: #dc35452F" class="text-end">19</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: #dc35451C" class="text-end">6</td><td style="background-color: #dc354506" class="text-end">56</td>
+</tr>
+<tr style="cursor: default;" title="JL Jonassen
+Teams: Australia
+Matches: 74
+Overs: 582
+Wickets: 119">
+<td colspan="2" data-text="Jonassen"><a class="chart" data-title="Bowling Average - JL Jonassen" data-x="[2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023]" data-y="[81,24.11111111111111,14.181818181818182,18.90909090909091,41.5,22.894736842105264,12,12.538461538461538,12.916666666666666,17.72222222222222,14.5,21.166666666666668]" data-tooltips="[[&quot;Overs: 14&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 5.79&quot;,&quot;Average: 81.00&quot;],[&quot;Overs: 50&quot;,&quot;Wickets: 9&quot;,&quot;Economy: 4.30&quot;,&quot;Average: 24.11&quot;],[&quot;Overs: 41&quot;,&quot;Wickets: 11&quot;,&quot;Economy: 3.80&quot;,&quot;Average: 14.18&quot;],[&quot;Overs: 47&quot;,&quot;Wickets: 11&quot;,&quot;Economy: 4.43&quot;,&quot;Average: 18.91&quot;],[&quot;Overs: 69&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 3.61&quot;,&quot;Average: 41.50&quot;],[&quot;Overs: 105&quot;,&quot;Wickets: 19&quot;,&quot;Economy: 4.14&quot;,&quot;Average: 22.89&quot;],[&quot;Overs: 28&quot;,&quot;Wickets: 9&quot;,&quot;Economy: 3.86&quot;,&quot;Average: 12.00&quot;],[&quot;Overs: 59&quot;,&quot;Wickets: 13&quot;,&quot;Economy: 2.77&quot;,&quot;Average: 12.54&quot;],[&quot;Overs: 45&quot;,&quot;Wickets: 12&quot;,&quot;Economy: 3.43&quot;,&quot;Average: 12.92&quot;],[&quot;Overs: 82&quot;,&quot;Wickets: 18&quot;,&quot;Economy: 3.89&quot;,&quot;Average: 17.72&quot;],[&quot;Overs: 19&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 3.05&quot;,&quot;Average: 14.50&quot;],[&quot;Overs: 22&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 5.64&quot;,&quot;Average: 21.17&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=JL+Jonassen+cricket" target="_blank">JL Jonassen</a></td>
+<td style="background-color: #19875462" class="text-end">19</td><td style="background-color: #19875457" class="text-end">29</td><td style="background-color: #1987547A" class="text-end">3.91</td><td style="background-color: #19875444" class="text-end">58</td><td style="background-color: #19875464" class="text-end">6</td><td style="background-color: #dc354500" class="text-end">14</td><td style="background-color: #dc35453B" class="text-end">27</td><td style="background-color: #dc354506" class="text-end">5</td><td style="background-color: #dc354500" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="Q Joseph
+Teams: West Indies
+Matches: 11
+Overs: 76
+Wickets: 12">
+<td colspan="2" data-text="Joseph"><a class="chart" data-title="Bowling Average - Q Joseph" data-x="[2017,2021,2023,2024]" data-y="[42,28.333333333333332,21.75,38]" data-tooltips="[[&quot;Overs: 7&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 6.00&quot;,&quot;Average: 42.00&quot;],[&quot;Overs: 45&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 3.81&quot;,&quot;Average: 28.33&quot;],[&quot;Overs: 18&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 4.83&quot;,&quot;Average: 21.75&quot;],[&quot;Overs: 6&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 6.33&quot;,&quot;Average: 38.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Q+Joseph+cricket" target="_blank">Q Joseph</a></td>
+<td style="background-color: #19875432" class="text-end">28</td><td style="background-color: #1987542E" class="text-end">38</td><td style="background-color: #1987541E" class="text-end">4.45</td><td style="background-color: #19875400" class="text-end">54</td><td style="background-color: #1987544F" class="text-end">7</td><td style="background-color: #dc354518" class="text-end">17</td><td style="background-color: #dc354500" class="text-end">17</td><td style="background-color: #dc354542" class="text-end">8</td><td style="background-color: #dc354500" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="KADA Kanchana
+Teams: Sri Lanka
+Matches: 20
+Overs: 106
+Wickets: 17">
+<td colspan="2" data-text="Kanchana"><a class="chart" data-title="Bowling Average - KADA Kanchana" data-x="[2014,2015,2016,2017,2022,2024]" data-y="[16.25,null,80,24.4,98,13]" data-tooltips="[[&quot;Overs: 11&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 6.00&quot;,&quot;Average: 16.25&quot;],[&quot;Overs: 9&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 6.89&quot;,&quot;Average: &quot;],[&quot;Overs: 16&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 5.00&quot;,&quot;Average: 80.00&quot;],[&quot;Overs: 48&quot;,&quot;Wickets: 10&quot;,&quot;Economy: 5.08&quot;,&quot;Average: 24.40&quot;],[&quot;Overs: 17&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 5.88&quot;,&quot;Average: 98.00&quot;],[&quot;Overs: 5&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 2.60&quot;,&quot;Average: 13.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=KADA+Kanchana+cricket" target="_blank">KADA Kanchana</a></td>
+<td style="background-color: #19875418" class="text-end">33</td><td style="background-color: #19875431" class="text-end">37</td><td style="background-color: #19875400" class="text-end">5.33</td><td style="background-color: #19875400" class="text-end">51</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: #dc354563" class="text-end">24</td><td style="background-color: #dc354500" class="text-end">6</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35456D" class="text-end">71</td>
+</tr>
+<tr style="cursor: default;" title="M Kapp
+Teams: South Africa
+Matches: 93
+Overs: 748
+Wickets: 117">
+<td colspan="2" data-text="Kapp"><a class="chart" data-title="Bowling Average - M Kapp" data-x="[2011,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023]" data-y="[50.666666666666664,19,15.6,31.75,20.25,26.266666666666666,18.894736842105264,16.714285714285715,36.833333333333336,21.176470588235293,134,30]" data-tooltips="[[&quot;Overs: 28&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 5.43&quot;,&quot;Average: 50.67&quot;],[&quot;Overs: 38&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 3.50&quot;,&quot;Average: 19.00&quot;],[&quot;Overs: 21&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 3.77&quot;,&quot;Average: 15.60&quot;],[&quot;Overs: 34&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 3.72&quot;,&quot;Average: 31.75&quot;],[&quot;Overs: 104&quot;,&quot;Wickets: 16&quot;,&quot;Economy: 3.12&quot;,&quot;Average: 20.25&quot;],[&quot;Overs: 99&quot;,&quot;Wickets: 15&quot;,&quot;Economy: 3.99&quot;,&quot;Average: 26.27&quot;],[&quot;Overs: 94&quot;,&quot;Wickets: 19&quot;,&quot;Economy: 3.82&quot;,&quot;Average: 18.89&quot;],[&quot;Overs: 68&quot;,&quot;Wickets: 14&quot;,&quot;Economy: 3.43&quot;,&quot;Average: 16.71&quot;],[&quot;Overs: 64&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 3.45&quot;,&quot;Average: 36.83&quot;],[&quot;Overs: 92&quot;,&quot;Wickets: 17&quot;,&quot;Economy: 3.93&quot;,&quot;Average: 21.18&quot;],[&quot;Overs: 20&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 6.70&quot;,&quot;Average: 134.00&quot;],[&quot;Overs: 87&quot;,&quot;Wickets: 10&quot;,&quot;Economy: 3.45&quot;,&quot;Average: 30.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=M+Kapp+cricket" target="_blank">M Kapp</a></td>
+<td style="background-color: #19875448" class="text-end">24</td><td style="background-color: #1987542C" class="text-end">38</td><td style="background-color: #19875493" class="text-end">3.76</td><td style="background-color: #19875495" class="text-end">63</td><td style="background-color: #19875434" class="text-end">7</td><td style="background-color: #dc35452F" class="text-end">19</td><td style="background-color: #dc354537" class="text-end">26</td><td style="background-color: #dc354500" class="text-end">1</td><td style="background-color: #dc354500" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="H Kaur
+Teams: India
+Matches: 45
+Overs: 185
+Wickets: 20">
+<td colspan="2" data-text="Kaur"><a class="chart" data-title="Bowling Average - H Kaur" data-x="[2012,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024]" data-y="[null,null,18.666666666666668,null,48.285714285714285,null,66,39,48,22,null,null]" data-tooltips="[[&quot;Overs: 1&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 8&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 4.00&quot;,&quot;Average: &quot;],[&quot;Overs: 16&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 3.50&quot;,&quot;Average: 18.67&quot;],[&quot;Overs: 4&quot;,&quot;Wickets: 1&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 63&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 5.35&quot;,&quot;Average: 48.29&quot;],[&quot;Overs: 7&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 5.00&quot;,&quot;Average: &quot;],[&quot;Overs: 21&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 3.14&quot;,&quot;Average: 66.00&quot;],[&quot;Overs: 16&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 4.82&quot;,&quot;Average: 39.00&quot;],[&quot;Overs: 29&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 6.66&quot;,&quot;Average: 48.00&quot;],[&quot;Overs: 15&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 2.93&quot;,&quot;Average: 22.00&quot;],[&quot;Overs: 3&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 2&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=H+Kaur+cricket" target="_blank">H Kaur</a></td>
+<td style="background-color: #19875400" class="text-end">46</td><td style="background-color: #19875400" class="text-end">55</td><td style="background-color: #19875400" class="text-end">4.94</td><td style="background-color: #19875400" class="text-end">49</td><td style="background-color: #1987541C" class="text-end">8</td><td style="background-color: #dc354574" class="text-end">25</td><td style="background-color: #dc354529" class="text-end">25</td><td style="background-color: #dc354505" class="text-end">5</td><td style="background-color: #dc354500" class="text-end">45</td>
+</tr>
+<tr style="cursor: default;" title="AB Kaur
+Teams: India
+Matches: 6
+Overs: 36
+Wickets: 6">
+<td colspan="2" data-text="Kaur"><a class="chart" data-title="Bowling Average - AB Kaur" data-x="[2023]" data-y="[29.5]" data-tooltips="[[&quot;Overs: 36&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 4.94&quot;,&quot;Average: 29.50&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=AB+Kaur+cricket" target="_blank">AB Kaur</a></td>
+<td style="background-color: #1987542B" class="text-end">30</td><td style="background-color: #19875438" class="text-end">36</td><td style="background-color: #19875400" class="text-end">4.94</td><td style="background-color: #19875440" class="text-end">58</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: #dc3545CF" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354551" class="text-end">67</td>
+</tr>
+<tr style="cursor: default;" title="K Kavindi
+Teams: Sri Lanka
+Matches: 4
+Overs: 16
+Wickets: 1">
+<td colspan="2" data-text="Kavindi"><a class="chart" data-title="Bowling Average - K Kavindi" data-x="[2023,2024]" data-y="[null,27]" data-tooltips="[[&quot;Overs: 10&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 7.24&quot;,&quot;Average: &quot;],[&quot;Overs: 6&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.50&quot;,&quot;Average: 27.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=K+Kavindi+cricket" target="_blank">K Kavindi</a></td>
+<td style="background-color: #19875400" class="text-end">97</td><td style="background-color: #19875400" class="text-end">94</td><td style="background-color: #19875400" class="text-end">6.19</td><td style="background-color: #19875433" class="text-end">57</td><td style="background-color: #19875400" class="text-end">16</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="AN Kelly
+Teams: Ireland
+Matches: 14
+Overs: 112
+Wickets: 13">
+<td colspan="2" data-text="Kelly"><a class="chart" data-title="Bowling Average - AN Kelly" data-x="[2022,2023,2024]" data-y="[53.25,174,23.75]" data-tooltips="[[&quot;Overs: 45&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 4.75&quot;,&quot;Average: 53.25&quot;],[&quot;Overs: 32&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 5.44&quot;,&quot;Average: 174.00&quot;],[&quot;Overs: 35&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 5.45&quot;,&quot;Average: 23.75&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=AN+Kelly+cricket" target="_blank">AN Kelly</a></td>
+<td style="background-color: #19875400" class="text-end">44</td><td style="background-color: #19875400" class="text-end">52</td><td style="background-color: #19875400" class="text-end">5.17</td><td style="background-color: #19875400" class="text-end">50</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354560" class="text-end">31</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354563" class="text-end">69</td>
+</tr>
+<tr style="cursor: default;" title="FG Kemp
+Teams: England
+Matches: 4
+Overs: 23
+Wickets: 6">
+<td colspan="2" data-text="Kemp"><a class="chart" data-title="Bowling Average - FG Kemp" data-x="[2022,2024]" data-y="[32.666666666666664,8.333333333333334]" data-tooltips="[[&quot;Overs: 17&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 5.76&quot;,&quot;Average: 32.67&quot;],[&quot;Overs: 6&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 4.17&quot;,&quot;Average: 8.33&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=FG+Kemp+cricket" target="_blank">FG Kemp</a></td>
+<td style="background-color: #1987545B" class="text-end">20</td><td style="background-color: #19875475" class="text-end">23</td><td style="background-color: #19875400" class="text-end">5.35</td><td style="background-color: #19875407" class="text-end">55</td><td style="background-color: #19875400" class="text-end">12</td><td style="background-color: #dc354518" class="text-end">17</td><td style="background-color: #dc3545FF" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">33</td>
+</tr>
+<tr style="cursor: default;" title="AC Kerr
+Teams: New Zealand
+Matches: 69
+Overs: 581
+Wickets: 80">
+<td colspan="2" data-text="Kerr"><a class="chart" data-title="Bowling Average - AC Kerr" data-x="[2016,2017,2018,2019,2020,2021,2022,2023,2024]" data-y="[32.6,19.72222222222222,29.76923076923077,100,31.083333333333332,31.9375,135,37.92307692307692,102]" data-tooltips="[[&quot;Overs: 39&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 4.18&quot;,&quot;Average: 32.60&quot;],[&quot;Overs: 90&quot;,&quot;Wickets: 18&quot;,&quot;Economy: 3.97&quot;,&quot;Average: 19.72&quot;],[&quot;Overs: 83&quot;,&quot;Wickets: 13&quot;,&quot;Economy: 4.64&quot;,&quot;Average: 29.77&quot;],[&quot;Overs: 24&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.17&quot;,&quot;Average: 100.00&quot;],[&quot;Overs: 73&quot;,&quot;Wickets: 12&quot;,&quot;Economy: 5.11&quot;,&quot;Average: 31.08&quot;],[&quot;Overs: 106&quot;,&quot;Wickets: 16&quot;,&quot;Economy: 4.83&quot;,&quot;Average: 31.94&quot;],[&quot;Overs: 45&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 3.00&quot;,&quot;Average: 135.00&quot;],[&quot;Overs: 105&quot;,&quot;Wickets: 13&quot;,&quot;Economy: 4.68&quot;,&quot;Average: 37.92&quot;],[&quot;Overs: 16&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 6.38&quot;,&quot;Average: 102.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=AC+Kerr+cricket" target="_blank">AC Kerr</a></td>
+<td style="background-color: #1987541A" class="text-end">33</td><td style="background-color: #19875413" class="text-end">44</td><td style="background-color: #19875414" class="text-end">4.51</td><td style="background-color: #19875400" class="text-end">51</td><td style="background-color: #1987545A" class="text-end">7</td><td style="background-color: #dc354513" class="text-end">16</td><td style="background-color: #dc354535" class="text-end">26</td><td style="background-color: #dc35451C" class="text-end">6</td><td style="background-color: #dc354500" class="text-end">42</td>
+</tr>
+<tr style="cursor: default;" title="JM Kerr
+Teams: New Zealand
+Matches: 33
+Overs: 252
+Wickets: 43">
+<td colspan="2" data-text="Kerr"><a class="chart" data-title="Bowling Average - JM Kerr" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[19,29.8,27.266666666666666,9.8,26.272727272727273,null]" data-tooltips="[[&quot;Overs: 7&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 5.43&quot;,&quot;Average: 19.00&quot;],[&quot;Overs: 37&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 4.03&quot;,&quot;Average: 29.80&quot;],[&quot;Overs: 103&quot;,&quot;Wickets: 15&quot;,&quot;Economy: 3.96&quot;,&quot;Average: 27.27&quot;],[&quot;Overs: 34&quot;,&quot;Wickets: 10&quot;,&quot;Economy: 2.88&quot;,&quot;Average: 9.80&quot;],[&quot;Overs: 60&quot;,&quot;Wickets: 11&quot;,&quot;Economy: 4.78&quot;,&quot;Average: 26.27&quot;],[&quot;Overs: 10&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 5.62&quot;,&quot;Average: &quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=JM+Kerr+cricket" target="_blank">JM Kerr</a></td>
+<td style="background-color: #19875447" class="text-end">24</td><td style="background-color: #1987543B" class="text-end">35</td><td style="background-color: #19875454" class="text-end">4.13</td><td style="background-color: #19875468" class="text-end">60</td><td style="background-color: #19875413" class="text-end">8</td><td style="background-color: #dc354500" class="text-end">9</td><td style="background-color: #dc354518" class="text-end">23</td><td style="background-color: #dc354500" class="text-end">2</td><td style="background-color: #dc354524" class="text-end">60</td>
+</tr>
+<tr style="cursor: default;" title="A Khaka
+Teams: South Africa
+Matches: 86
+Overs: 692
+Wickets: 117">
+<td colspan="2" data-text="Khaka"><a class="chart" data-title="Bowling Average - A Khaka" data-x="[2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024]" data-y="[73,27,22.869565217391305,38.666666666666664,15.285714285714286,17.6,21.75,17.392857142857142,36.2,28.214285714285715,32]" data-tooltips="[[&quot;Overs: 23&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 3.17&quot;,&quot;Average: 73.00&quot;],[&quot;Overs: 10&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 2.70&quot;,&quot;Average: 27.00&quot;],[&quot;Overs: 133&quot;,&quot;Wickets: 23&quot;,&quot;Economy: 3.94&quot;,&quot;Average: 22.87&quot;],[&quot;Overs: 84&quot;,&quot;Wickets: 9&quot;,&quot;Economy: 4.14&quot;,&quot;Average: 38.67&quot;],[&quot;Overs: 52&quot;,&quot;Wickets: 14&quot;,&quot;Economy: 4.13&quot;,&quot;Average: 15.29&quot;],[&quot;Overs: 42&quot;,&quot;Wickets: 10&quot;,&quot;Economy: 4.19&quot;,&quot;Average: 17.60&quot;],[&quot;Overs: 53&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 3.28&quot;,&quot;Average: 21.75&quot;],[&quot;Overs: 127&quot;,&quot;Wickets: 28&quot;,&quot;Economy: 3.84&quot;,&quot;Average: 17.39&quot;],[&quot;Overs: 41&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 4.38&quot;,&quot;Average: 36.20&quot;],[&quot;Overs: 98&quot;,&quot;Wickets: 14&quot;,&quot;Economy: 4.02&quot;,&quot;Average: 28.21&quot;],[&quot;Overs: 29&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 4.41&quot;,&quot;Average: 32.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=A+Khaka+cricket" target="_blank">A Khaka</a></td>
+<td style="background-color: #1987544C" class="text-end">23</td><td style="background-color: #19875439" class="text-end">36</td><td style="background-color: #19875475" class="text-end">3.94</td><td style="background-color: #1987548B" class="text-end">62</td><td style="background-color: #1987541D" class="text-end">8</td><td style="background-color: #dc354500" class="text-end">9</td><td style="background-color: #dc354550" class="text-end">29</td><td style="background-color: #dc354500" class="text-end">1</td><td style="background-color: #dc354501" class="text-end">56</td>
+</tr>
+<tr style="cursor: default;" title="Rabeya Khan
+Teams: Bangladesh
+Matches: 13
+Overs: 104
+Wickets: 16">
+<td colspan="2" data-text="Khan"><a class="chart" data-title="Bowling Average - Rabeya Khan" data-x="[2022,2023]" data-y="[null,23.3125]" data-tooltips="[[&quot;Overs: 3&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 101&quot;,&quot;Wickets: 16&quot;,&quot;Economy: 3.69&quot;,&quot;Average: 23.31&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Rabeya+Khan+cricket" target="_blank">Rabeya Khan</a></td>
+<td style="background-color: #19875444" class="text-end">25</td><td style="background-color: #19875429" class="text-end">39</td><td style="background-color: #1987548E" class="text-end">3.80</td><td style="background-color: #19875405" class="text-end">55</td><td style="background-color: #198754C2" class="text-end">4</td><td style="background-color: #dc3545B9" class="text-end">31</td><td style="background-color: #dc354500" class="text-end">19</td><td style="background-color: #dc35458D" class="text-end">12</td><td style="background-color: #dc354500" class="text-end">38</td>
+</tr>
+<tr style="cursor: default;" title="Fahima Khatun
+Teams: Bangladesh
+Matches: 23
+Overs: 145
+Wickets: 16">
+<td colspan="2" data-text="Khatun"><a class="chart" data-title="Bowling Average - Fahima Khatun" data-x="[2013,2018,2021,2023]" data-y="[null,30,29.5,44.2]" data-tooltips="[[&quot;Overs: 9&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 3.67&quot;,&quot;Average: &quot;],[&quot;Overs: 11&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 5.37&quot;,&quot;Average: 30.00&quot;],[&quot;Overs: 28&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 4.21&quot;,&quot;Average: 29.50&quot;],[&quot;Overs: 97&quot;,&quot;Wickets: 10&quot;,&quot;Economy: 4.56&quot;,&quot;Average: 44.20&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Fahima+Khatun+cricket" target="_blank">Fahima Khatun</a></td>
+<td style="background-color: #19875400" class="text-end">41</td><td style="background-color: #19875400" class="text-end">54</td><td style="background-color: #19875415" class="text-end">4.50</td><td style="background-color: #19875400" class="text-end">48</td><td style="background-color: #1987547C" class="text-end">6</td><td style="background-color: #dc3545FD" class="text-end">38</td><td style="background-color: #dc354529" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">38</td>
+</tr>
+<tr style="cursor: default;" title="Sultana Khatun
+Teams: Bangladesh
+Matches: 12
+Overs: 92
+Wickets: 12">
+<td colspan="2" data-text="Khatun"><a class="chart" data-title="Bowling Average - Sultana Khatun" data-x="[2023]" data-y="[30.916666666666668]" data-tooltips="[[&quot;Overs: 92&quot;,&quot;Wickets: 12&quot;,&quot;Economy: 4.03&quot;,&quot;Average: 30.92&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Sultana+Khatun+cricket" target="_blank">Sultana Khatun</a></td>
+<td style="background-color: #19875423" class="text-end">31</td><td style="background-color: #19875407" class="text-end">46</td><td style="background-color: #19875466" class="text-end">4.03</td><td style="background-color: #1987545C" class="text-end">60</td><td style="background-color: #19875433" class="text-end">7</td><td style="background-color: #dc354518" class="text-end">17</td><td style="background-color: #dc354500" class="text-end">8</td><td style="background-color: #dc354542" class="text-end">8</td><td style="background-color: #dc354515" class="text-end">58</td>
+</tr>
+<tr style="cursor: default;" title="A King
+Teams: Australia
+Matches: 27
+Overs: 196
+Wickets: 40">
+<td colspan="2" data-text="King"><a class="chart" data-title="Bowling Average - A King" data-x="[2021,2022,2023]" data-y="[25.285714285714285,30.666666666666668,15.608695652173912]" data-tooltips="[[&quot;Overs: 85&quot;,&quot;Wickets: 14&quot;,&quot;Economy: 4.16&quot;,&quot;Average: 25.29&quot;],[&quot;Overs: 22&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 4.18&quot;,&quot;Average: 30.67&quot;],[&quot;Overs: 89&quot;,&quot;Wickets: 23&quot;,&quot;Economy: 4.05&quot;,&quot;Average: 15.61&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=A+King+cricket" target="_blank">A King</a></td>
+<td style="background-color: #1987545D" class="text-end">20</td><td style="background-color: #19875457" class="text-end">29</td><td style="background-color: #19875458" class="text-end">4.11</td><td style="background-color: #1987541B" class="text-end">56</td><td style="background-color: #19875454" class="text-end">7</td><td style="background-color: #dc354574" class="text-end">25</td><td style="background-color: #dc354541" class="text-end">28</td><td style="background-color: #dc354560" class="text-end">10</td><td style="background-color: #dc354500" class="text-end">35</td>
+</tr>
+<tr style="cursor: default;" title="M Klaas
+Teams: South Africa
+Matches: 62
+Overs: 440
+Wickets: 66">
+<td colspan="2" data-text="Klaas"><a class="chart" data-title="Bowling Average - M Klaas" data-x="[2011,2015,2016,2017,2018,2019,2020,2021,2023,2024]" data-y="[22,27,31,78,35.75,13.8,34,26.5,31.5625,37.666666666666664]" data-tooltips="[[&quot;Overs: 6&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 3.67&quot;,&quot;Average: 22.00&quot;],[&quot;Overs: 26&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 4.15&quot;,&quot;Average: 27.00&quot;],[&quot;Overs: 35&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 4.43&quot;,&quot;Average: 31.00&quot;],[&quot;Overs: 64&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 4.85&quot;,&quot;Average: 78.00&quot;],[&quot;Overs: 67&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 4.25&quot;,&quot;Average: 35.75&quot;],[&quot;Overs: 32&quot;,&quot;Wickets: 10&quot;,&quot;Economy: 4.31&quot;,&quot;Average: 13.80&quot;],[&quot;Overs: 10&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 3.40&quot;,&quot;Average: 34.00&quot;],[&quot;Overs: 82&quot;,&quot;Wickets: 14&quot;,&quot;Economy: 4.55&quot;,&quot;Average: 26.50&quot;],[&quot;Overs: 97&quot;,&quot;Wickets: 16&quot;,&quot;Economy: 5.19&quot;,&quot;Average: 31.56&quot;],[&quot;Overs: 20&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 5.65&quot;,&quot;Average: 37.67&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=M+Klaas+cricket" target="_blank">M Klaas</a></td>
+<td style="background-color: #19875423" class="text-end">31</td><td style="background-color: #19875424" class="text-end">40</td><td style="background-color: #19875400" class="text-end">4.65</td><td style="background-color: #1987544D" class="text-end">59</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #dc354500" class="text-end">11</td><td style="background-color: #dc354500" class="text-end">17</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354571" class="text-end">71</td>
+</tr>
+<tr style="cursor: default;" title="N de Klerk
+Teams: South Africa
+Matches: 37
+Overs: 260
+Wickets: 47">
+<td colspan="2" data-text="Klerk"><a class="chart" data-title="Bowling Average - N de Klerk" data-x="[2017,2018,2019,2020,2021,2022,2023,2024]" data-y="[37.5,22,29,39.5,20.333333333333332,28.25,17.208333333333332,null]" data-tooltips="[[&quot;Overs: 20&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 3.75&quot;,&quot;Average: 37.50&quot;],[&quot;Overs: 12&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 3.67&quot;,&quot;Average: 22.00&quot;],[&quot;Overs: 8&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 3.78&quot;,&quot;Average: 29.00&quot;],[&quot;Overs: 37&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 4.31&quot;,&quot;Average: 39.50&quot;],[&quot;Overs: 32&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 3.77&quot;,&quot;Average: 20.33&quot;],[&quot;Overs: 40&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 5.65&quot;,&quot;Average: 28.25&quot;],[&quot;Overs: 96&quot;,&quot;Wickets: 24&quot;,&quot;Economy: 4.32&quot;,&quot;Average: 17.21&quot;],[&quot;Overs: 16&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 5.81&quot;,&quot;Average: &quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=N+de+Klerk+cricket" target="_blank">N de Klerk</a></td>
+<td style="background-color: #19875444" class="text-end">25</td><td style="background-color: #19875444" class="text-end">33</td><td style="background-color: #1987541D" class="text-end">4.46</td><td style="background-color: #1987543D" class="text-end">58</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #dc354591" class="text-end">28</td><td style="background-color: #dc35451A" class="text-end">23</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">47</td>
+</tr>
+<tr style="cursor: default;" title="WGAKK Kulasuriya
+Teams: Sri Lanka
+Matches: 22
+Overs: 144
+Wickets: 17">
+<td colspan="2" data-text="Kulasuriya"><a class="chart" data-title="Bowling Average - WGAKK Kulasuriya" data-x="[2016,2018,2019,2022,2023,2024]" data-y="[null,83,33,131,66.5,16.444444444444443]" data-tooltips="[[&quot;Overs: 6&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 6.33&quot;,&quot;Average: &quot;],[&quot;Overs: 20&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.15&quot;,&quot;Average: 83.00&quot;],[&quot;Overs: 24&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 5.50&quot;,&quot;Average: 33.00&quot;],[&quot;Overs: 31&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.23&quot;,&quot;Average: 131.00&quot;],[&quot;Overs: 23&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 5.78&quot;,&quot;Average: 66.50&quot;],[&quot;Overs: 40&quot;,&quot;Wickets: 9&quot;,&quot;Economy: 3.70&quot;,&quot;Average: 16.44&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=WGAKK+Kulasuriya+cricket" target="_blank">WGAKK Kulasuriya</a></td>
+<td style="background-color: #19875400" class="text-end">39</td><td style="background-color: #19875400" class="text-end">51</td><td style="background-color: #19875401" class="text-end">4.62</td><td style="background-color: #19875428" class="text-end">57</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #dc354523" class="text-end">18</td><td style="background-color: #dc354500" class="text-end">18</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">47</td>
+</tr>
+<tr style="cursor: default;" title="BMSM Kumari
+Teams: Sri Lanka
+Matches: 26
+Overs: 164
+Wickets: 17">
+<td colspan="2" data-text="Kumari"><a class="chart" data-title="Bowling Average - BMSM Kumari" data-x="[2014,2015,2016,2017,2018,2019,2022,2023,2024]" data-y="[20,null,90,53,null,49.5,52,47.6,30.25]" data-tooltips="[[&quot;Overs: 18&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 3.33&quot;,&quot;Average: 20.00&quot;],[&quot;Overs: 2&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 18&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.95&quot;,&quot;Average: 90.00&quot;],[&quot;Overs: 12&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.42&quot;,&quot;Average: 53.00&quot;],[&quot;Overs: 16&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 5.44&quot;,&quot;Average: &quot;],[&quot;Overs: 14&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 7.07&quot;,&quot;Average: 49.50&quot;],[&quot;Overs: 14&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 3.71&quot;,&quot;Average: 52.00&quot;],[&quot;Overs: 42&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 5.67&quot;,&quot;Average: 47.60&quot;],[&quot;Overs: 28&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 4.32&quot;,&quot;Average: 30.25&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=BMSM+Kumari+cricket" target="_blank">BMSM Kumari</a></td>
+<td style="background-color: #19875400" class="text-end">48</td><td style="background-color: #19875400" class="text-end">58</td><td style="background-color: #19875400" class="text-end">4.98</td><td style="background-color: #19875400" class="text-end">49</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: #dc354553" class="text-end">29</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">47</td>
+</tr>
+<tr style="cursor: default;" title="S Luus
+Teams: South Africa
+Matches: 70
+Overs: 427
+Wickets: 77">
+<td colspan="2" data-text="Luus"><a class="chart" data-title="Bowling Average - S Luus" data-x="[2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2024]" data-y="[null,15,18.714285714285715,29.72222222222222,22.066666666666666,15.25,24,25.5,35.22222222222222,13,null]" data-tooltips="[[&quot;Overs: 8&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 3.75&quot;,&quot;Average: &quot;],[&quot;Overs: 6&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 2.50&quot;,&quot;Average: 15.00&quot;],[&quot;Overs: 30&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 4.30&quot;,&quot;Average: 18.71&quot;],[&quot;Overs: 113&quot;,&quot;Wickets: 18&quot;,&quot;Economy: 4.74&quot;,&quot;Average: 29.72&quot;],[&quot;Overs: 72&quot;,&quot;Wickets: 15&quot;,&quot;Economy: 4.60&quot;,&quot;Average: 22.07&quot;],[&quot;Overs: 32&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 3.81&quot;,&quot;Average: 15.25&quot;],[&quot;Overs: 42&quot;,&quot;Wickets: 9&quot;,&quot;Economy: 5.18&quot;,&quot;Average: 24.00&quot;],[&quot;Overs: 22&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 4.64&quot;,&quot;Average: 25.50&quot;],[&quot;Overs: 76&quot;,&quot;Wickets: 9&quot;,&quot;Economy: 4.17&quot;,&quot;Average: 35.22&quot;],[&quot;Overs: 21&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 3.71&quot;,&quot;Average: 13.00&quot;],[&quot;Overs: 5&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 7.20&quot;,&quot;Average: &quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=S+Luus+cricket" target="_blank">S Luus</a></td>
+<td style="background-color: #19875444" class="text-end">25</td><td style="background-color: #19875444" class="text-end">33</td><td style="background-color: #19875419" class="text-end">4.48</td><td style="background-color: #19875400" class="text-end">52</td><td style="background-color: #1987543F" class="text-end">7</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: #dc354500" class="text-end">16</td><td style="background-color: #dc354567" class="text-end">10</td><td style="background-color: #dc354503" class="text-end">56</td>
+</tr>
+<tr style="cursor: default;" title="R MacDonald-Gay
+Teams: England
+Matches: 2
+Overs: 11
+Wickets: 1">
+<td colspan="2" data-text="MacDonald-Gay"><a class="chart" data-title="Bowling Average - R MacDonald-Gay" data-x="[2024]" data-y="[48]" data-tooltips="[[&quot;Overs: 11&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.36&quot;,&quot;Average: 48.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=R+MacDonald-Gay+cricket" target="_blank">R MacDonald-Gay</a></td>
+<td style="background-color: #19875400" class="text-end">48</td><td style="background-color: #19875400" class="text-end">66</td><td style="background-color: #1987542D" class="text-end">4.36</td><td style="background-color: #19875400" class="text-end">47</td><td style="background-color: #19875473" class="text-end">6</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="S MacMahon
+Teams: Ireland
+Matches: 4
+Overs: 20
+Wickets: 3">
+<td colspan="2" data-text="MacMahon"><a class="chart" data-title="Bowling Average - S MacMahon" data-x="[2017,2022,2023]" data-y="[46,null,19]" data-tooltips="[[&quot;Overs: 10&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.60&quot;,&quot;Average: 46.00&quot;],[&quot;Overs: 3&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 7&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 5.43&quot;,&quot;Average: 19.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=S+MacMahon+cricket" target="_blank">S MacMahon</a></td>
+<td style="background-color: #1987541A" class="text-end">33</td><td style="background-color: #19875424" class="text-end">40</td><td style="background-color: #19875400" class="text-end">4.90</td><td style="background-color: #19875400" class="text-end">49</td><td style="background-color: #19875430" class="text-end">8</td><td style="background-color: #dc3545FF" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">33</td>
+</tr>
+<tr style="cursor: default;" title="J Maguire
+Teams: Ireland
+Matches: 11
+Overs: 66
+Wickets: 6">
+<td colspan="2" data-text="Maguire"><a class="chart" data-title="Bowling Average - J Maguire" data-x="[2022,2024]" data-y="[83,37]" data-tooltips="[[&quot;Overs: 37&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 4.49&quot;,&quot;Average: 83.00&quot;],[&quot;Overs: 29&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 5.10&quot;,&quot;Average: 37.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=J+Maguire+cricket" target="_blank">J Maguire</a></td>
+<td style="background-color: #19875400" class="text-end">52</td><td style="background-color: #19875400" class="text-end">66</td><td style="background-color: #19875400" class="text-end">4.76</td><td style="background-color: #1987540B" class="text-end">55</td><td style="background-color: #1987540A" class="text-end">8</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354578" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354551" class="text-end">67</td>
+</tr>
+<tr style="cursor: default;" title="AK Maguire
+Teams: Ireland
+Matches: 7
+Overs: 43
+Wickets: 10">
+<td colspan="2" data-text="Maguire"><a class="chart" data-title="Bowling Average - AK Maguire" data-x="[2023,2024]" data-y="[25.5,23.375]" data-tooltips="[[&quot;Overs: 10&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 5.10&quot;,&quot;Average: 25.50&quot;],[&quot;Overs: 33&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 5.70&quot;,&quot;Average: 23.38&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=AK+Maguire+cricket" target="_blank">AK Maguire</a></td>
+<td style="background-color: #19875449" class="text-end">24</td><td style="background-color: #19875468" class="text-end">26</td><td style="background-color: #19875400" class="text-end">5.56</td><td style="background-color: #19875400" class="text-end">39</td><td style="background-color: #19875423" class="text-end">8</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545B8" class="text-end">40</td><td style="background-color: #dc3545FF" class="text-end">30</td><td style="background-color: #dc354500" class="text-end">30</td>
+</tr>
+<tr style="cursor: default;" title="Bismah Maroof
+Teams: Pakistan
+Matches: 31
+Overs: 107
+Wickets: 9">
+<td colspan="2" data-text="Maroof"><a class="chart" data-title="Bowling Average - Bismah Maroof" data-x="[2013,2014,2015,2016,2017,2018,2019,2022,2023,2024]" data-y="[null,21.333333333333332,null,159,20.75,null,66,null,null,null]" data-tooltips="[[&quot;Overs: 8&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 3.62&quot;,&quot;Average: &quot;],[&quot;Overs: 18&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 3.56&quot;,&quot;Average: 21.33&quot;],[&quot;Overs: 3&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 31&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 5.13&quot;,&quot;Average: 159.00&quot;],[&quot;Overs: 20&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 4.15&quot;,&quot;Average: 20.75&quot;],[&quot;Overs: 2&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 14&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.71&quot;,&quot;Average: 66.00&quot;],[&quot;Overs: 5&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 6.00&quot;,&quot;Average: &quot;],[&quot;Overs: 5&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 3.40&quot;,&quot;Average: &quot;],[&quot;Overs: 1&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Bismah+Maroof+cricket" target="_blank">Bismah Maroof</a></td>
+<td style="background-color: #19875400" class="text-end">52</td><td style="background-color: #19875400" class="text-end">71</td><td style="background-color: #19875428" class="text-end">4.39</td><td style="background-color: #19875400" class="text-end">51</td><td style="background-color: #19875479" class="text-end">6</td><td style="background-color: #dc354555" class="text-end">22</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354501" class="text-end">56</td>
+</tr>
+<tr style="cursor: default;" title="E Marx
+Teams: South Africa
+Matches: 7
+Overs: 40
+Wickets: 6">
+<td colspan="2" data-text="Marx"><a class="chart" data-title="Bowling Average - E Marx" data-x="[2023]" data-y="[32]" data-tooltips="[[&quot;Overs: 40&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 4.80&quot;,&quot;Average: 32.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=E+Marx+cricket" target="_blank">E Marx</a></td>
+<td style="background-color: #1987541E" class="text-end">32</td><td style="background-color: #19875424" class="text-end">40</td><td style="background-color: #19875400" class="text-end">4.80</td><td style="background-color: #1987544C" class="text-end">59</td><td style="background-color: #19875400" class="text-end">12</td><td style="background-color: #dc354518" class="text-end">17</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545C9" class="text-end">83</td>
+</tr>
+<tr style="cursor: default;" title="HK Matthews
+Teams: West Indies
+Matches: 59
+Overs: 440
+Wickets: 74">
+<td colspan="2" data-text="Matthews"><a class="chart" data-title="Bowling Average - HK Matthews" data-x="[2014,2015,2017,2018,2019,2021,2022,2023,2024]" data-y="[40.666666666666664,32.333333333333336,49.6,null,19.2,25,20.636363636363637,16,18.333333333333332]" data-tooltips="[[&quot;Overs: 24&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 5.08&quot;,&quot;Average: 40.67&quot;],[&quot;Overs: 24&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 4.13&quot;,&quot;Average: 32.33&quot;],[&quot;Overs: 48&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 5.11&quot;,&quot;Average: 49.60&quot;],[&quot;Overs: 3&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 33&quot;,&quot;Wickets: 10&quot;,&quot;Economy: 5.79&quot;,&quot;Average: 19.20&quot;],[&quot;Overs: 201&quot;,&quot;Wickets: 31&quot;,&quot;Economy: 3.85&quot;,&quot;Average: 25.00&quot;],[&quot;Overs: 54&quot;,&quot;Wickets: 11&quot;,&quot;Economy: 4.19&quot;,&quot;Average: 20.64&quot;],[&quot;Overs: 23&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 3.48&quot;,&quot;Average: 16.00&quot;],[&quot;Overs: 29&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 3.79&quot;,&quot;Average: 18.33&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=HK+Matthews+cricket" target="_blank">HK Matthews</a></td>
+<td style="background-color: #19875441" class="text-end">25</td><td style="background-color: #19875439" class="text-end">36</td><td style="background-color: #19875440" class="text-end">4.25</td><td style="background-color: #19875429" class="text-end">57</td><td style="background-color: #19875441" class="text-end">7</td><td style="background-color: #dc354500" class="text-end">8</td><td style="background-color: #dc354516" class="text-end">23</td><td style="background-color: #dc35450D" class="text-end">5</td><td style="background-color: #dc354500" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="TM McGrath
+Teams: Australia
+Matches: 27
+Overs: 138
+Wickets: 25">
+<td colspan="2" data-text="McGrath"><a class="chart" data-title="Bowling Average - TM McGrath" data-x="[2017,2021,2022,2023]" data-y="[41,24.6,27,26.5]" data-tooltips="[[&quot;Overs: 9&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.39&quot;,&quot;Average: 41.00&quot;],[&quot;Overs: 79&quot;,&quot;Wickets: 15&quot;,&quot;Economy: 4.65&quot;,&quot;Average: 24.60&quot;],[&quot;Overs: 6&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.50&quot;,&quot;Average: 27.00&quot;],[&quot;Overs: 44&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 4.85&quot;,&quot;Average: 26.50&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=TM+McGrath+cricket" target="_blank">TM McGrath</a></td>
+<td style="background-color: #1987543E" class="text-end">26</td><td style="background-color: #19875444" class="text-end">33</td><td style="background-color: #19875400" class="text-end">4.69</td><td style="background-color: #19875400" class="text-end">50</td><td style="background-color: #1987541B" class="text-end">8</td><td style="background-color: #dc354510" class="text-end">16</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354577" class="text-end">72</td>
+</tr>
+<tr style="cursor: default;" title="N Mlaba
+Teams: South Africa
+Matches: 25
+Overs: 207
+Wickets: 21">
+<td colspan="2" data-text="Mlaba"><a class="chart" data-title="Bowling Average - N Mlaba" data-x="[2020,2021,2022,2023,2024]" data-y="[56.333333333333336,107,149,30.5,33.75]" data-tooltips="[[&quot;Overs: 43&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 3.93&quot;,&quot;Average: 56.33&quot;],[&quot;Overs: 24&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.46&quot;,&quot;Average: 107.00&quot;],[&quot;Overs: 22&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 6.77&quot;,&quot;Average: 149.00&quot;],[&quot;Overs: 90&quot;,&quot;Wickets: 12&quot;,&quot;Economy: 4.07&quot;,&quot;Average: 30.50&quot;],[&quot;Overs: 28&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 4.82&quot;,&quot;Average: 33.75&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=N+Mlaba+cricket" target="_blank">N Mlaba</a></td>
+<td style="background-color: #19875400" class="text-end">44</td><td style="background-color: #19875400" class="text-end">59</td><td style="background-color: #1987541A" class="text-end">4.47</td><td style="background-color: #19875418" class="text-end">56</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #dc354500" class="text-end">5</td><td style="background-color: #dc35454B" class="text-end">29</td><td style="background-color: #dc354557" class="text-end">10</td><td style="background-color: #dc354500" class="text-end">43</td>
+</tr>
+<tr style="cursor: default;" title="S Molineux
+Teams: Australia
+Matches: 11
+Overs: 90
+Wickets: 22">
+<td colspan="2" data-text="Molineux"><a class="chart" data-title="Bowling Average - S Molineux" data-x="[2018,2020,2021,2023]" data-y="[6,13.166666666666666,21,6.4]" data-tooltips="[[&quot;Overs: 26&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 1.38&quot;,&quot;Average: 6.00&quot;],[&quot;Overs: 20&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 3.95&quot;,&quot;Average: 13.17&quot;],[&quot;Overs: 26&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 3.96&quot;,&quot;Average: 21.00&quot;],[&quot;Overs: 17&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 1.88&quot;,&quot;Average: 6.40&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=S+Molineux+cricket" target="_blank">S Molineux</a></td>
+<td style="background-color: #1987548B" class="text-end">11</td><td style="background-color: #1987546E" class="text-end">24</td><td style="background-color: #198754FF" class="text-end">2.82</td><td style="background-color: #198754FF" class="text-end">71</td><td style="background-color: #198754B3" class="text-end">5</td><td style="background-color: #dc354500" class="text-end">14</td><td style="background-color: #dc3545EC" class="text-end">45</td><td style="background-color: #dc3545A1" class="text-end">14</td><td style="background-color: #dc354500" class="text-end">23</td>
+</tr>
+<tr style="cursor: default;" title="Ritu Moni
+Teams: Bangladesh
+Matches: 18
+Overs: 90
+Wickets: 13">
+<td colspan="2" data-text="Moni"><a class="chart" data-title="Bowling Average - Ritu Moni" data-x="[2013,2015,2021,2022,2023]" data-y="[null,null,23.88888888888889,42,38.333333333333336]" data-tooltips="[[&quot;Overs: 5&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 2.40&quot;,&quot;Average: &quot;],[&quot;Overs: 1&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 55&quot;,&quot;Wickets: 9&quot;,&quot;Economy: 3.92&quot;,&quot;Average: 23.89&quot;],[&quot;Overs: 8&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 5.25&quot;,&quot;Average: 42.00&quot;],[&quot;Overs: 22&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 5.31&quot;,&quot;Average: 38.33&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Ritu+Moni+cricket" target="_blank">Ritu Moni</a></td>
+<td style="background-color: #19875429" class="text-end">30</td><td style="background-color: #1987541B" class="text-end">42</td><td style="background-color: #19875438" class="text-end">4.30</td><td style="background-color: #19875400" class="text-end">52</td><td style="background-color: #1987547A" class="text-end">6</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">8</td><td style="background-color: #dc3545FF" class="text-end">23</td><td style="background-color: #dc354563" class="text-end">69</td>
+</tr>
+<tr style="cursor: default;" title="C Murray
+Teams: Ireland
+Matches: 10
+Overs: 72
+Wickets: 7">
+<td colspan="2" data-text="Murray"><a class="chart" data-title="Bowling Average - C Murray" data-x="[2018,2022,2023]" data-y="[47,null,41]" data-tooltips="[[&quot;Overs: 8&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 11.75&quot;,&quot;Average: 47.00&quot;],[&quot;Overs: 35&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 6.20&quot;,&quot;Average: &quot;],[&quot;Overs: 29&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 7.11&quot;,&quot;Average: 41.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=C+Murray+cricket" target="_blank">C Murray</a></td>
+<td style="background-color: #19875400" class="text-end">74</td><td style="background-color: #19875400" class="text-end">62</td><td style="background-color: #19875400" class="text-end">7.18</td><td style="background-color: #19875400" class="text-end">39</td><td style="background-color: #19875400" class="text-end">15</td><td style="background-color: #dc354500" class="text-end">14</td><td style="background-color: #dc354500" class="text-end">14</td><td style="background-color: #dc3545AD" class="text-end">14</td><td style="background-color: #dc35450C" class="text-end">57</td>
+</tr>
+<tr style="cursor: default;" title="S Nisansala
+Teams: Sri Lanka
+Matches: 6
+Overs: 44
+Wickets: 8">
+<td colspan="2" data-text="Nisansala"><a class="chart" data-title="Bowling Average - S Nisansala" data-x="[2022,2024]" data-y="[null,22.125]" data-tooltips="[[&quot;Overs: 4&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 5.50&quot;,&quot;Average: &quot;],[&quot;Overs: 40&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 4.44&quot;,&quot;Average: 22.12&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=S+Nisansala+cricket" target="_blank">S Nisansala</a></td>
+<td style="background-color: #19875443" class="text-end">25</td><td style="background-color: #19875446" class="text-end">33</td><td style="background-color: #1987540F" class="text-end">4.54</td><td style="background-color: #19875400" class="text-end">51</td><td style="background-color: #1987544E" class="text-end">7</td><td style="background-color: #dc354574" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35458D" class="text-end">12</td><td style="background-color: #dc354500" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="Nishita Akter Nishi
+Teams: Bangladesh
+Matches: 2
+Overs: 17
+Wickets: 2">
+<td colspan="2" data-text="Nishi"><a class="chart" data-title="Bowling Average - Nishita Akter Nishi" data-x="[2023]" data-y="[27.5]" data-tooltips="[[&quot;Overs: 17&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 3.24&quot;,&quot;Average: 27.50&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Nishita+Akter+Nishi+cricket" target="_blank">Nishita Akter Nishi</a></td>
+<td style="background-color: #19875436" class="text-end">28</td><td style="background-color: #19875400" class="text-end">51</td><td style="background-color: #198754EE" class="text-end">3.24</td><td style="background-color: #19875496" class="text-end">63</td><td style="background-color: #198754D5" class="text-end">4</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="SR Patil
+Teams: India
+Matches: 3
+Overs: 30
+Wickets: 5">
+<td colspan="2" data-text="Patil"><a class="chart" data-title="Bowling Average - SR Patil" data-x="[2023,2024]" data-y="[24.5,34]" data-tooltips="[[&quot;Overs: 20&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 4.90&quot;,&quot;Average: 24.50&quot;],[&quot;Overs: 10&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 3.40&quot;,&quot;Average: 34.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=SR+Patil+cricket" target="_blank">SR Patil</a></td>
+<td style="background-color: #1987543B" class="text-end">26</td><td style="background-color: #19875437" class="text-end">36</td><td style="background-color: #19875427" class="text-end">4.40</td><td style="background-color: #19875400" class="text-end">54</td><td style="background-color: #1987543D" class="text-end">7</td><td style="background-color: #dc3545FF" class="text-end">40</td><td style="background-color: #dc354500" class="text-end">20</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">20</td>
+</tr>
+<tr style="cursor: default;" title="MM Penfold
+Teams: New Zealand
+Matches: 10
+Overs: 58
+Wickets: 5">
+<td colspan="2" data-text="Penfold"><a class="chart" data-title="Bowling Average - MM Penfold" data-x="[2021,2022,2023,2024]" data-y="[38,null,38,86]" data-tooltips="[[&quot;Overs: 17&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 4.47&quot;,&quot;Average: 38.00&quot;],[&quot;Overs: 11&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 3.27&quot;,&quot;Average: &quot;],[&quot;Overs: 14&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 5.43&quot;,&quot;Average: 38.00&quot;],[&quot;Overs: 16&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 5.38&quot;,&quot;Average: 86.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=MM+Penfold+cricket" target="_blank">MM Penfold</a></td>
+<td style="background-color: #19875400" class="text-end">55</td><td style="background-color: #19875400" class="text-end">70</td><td style="background-color: #19875400" class="text-end">4.72</td><td style="background-color: #1987543F" class="text-end">58</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #dc35453C" class="text-end">20</td><td style="background-color: #dc354500" class="text-end">20</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354521" class="text-end">60</td>
+</tr>
+<tr style="cursor: default;" title="EA Perry
+Teams: Australia
+Matches: 75
+Overs: 493
+Wickets: 75">
+<td colspan="2" data-text="Perry"><a class="chart" data-title="Bowling Average - EA Perry" data-x="[2009,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023]" data-y="[null,18.2,62.25,19.714285714285715,41,21.142857142857142,35.46153846153846,40.25,9.705882352941176,null,26.22222222222222,null,18.5]" data-tooltips="[[&quot;Overs: 3&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 26&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 3.50&quot;,&quot;Average: 18.20&quot;],[&quot;Overs: 49&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 5.05&quot;,&quot;Average: 62.25&quot;],[&quot;Overs: 36&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 3.85&quot;,&quot;Average: 19.71&quot;],[&quot;Overs: 51&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 4.02&quot;,&quot;Average: 41.00&quot;],[&quot;Overs: 34&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 4.35&quot;,&quot;Average: 21.14&quot;],[&quot;Overs: 101&quot;,&quot;Wickets: 13&quot;,&quot;Economy: 4.56&quot;,&quot;Average: 35.46&quot;],[&quot;Overs: 45&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 3.58&quot;,&quot;Average: 40.25&quot;],[&quot;Overs: 49&quot;,&quot;Wickets: 17&quot;,&quot;Economy: 3.37&quot;,&quot;Average: 9.71&quot;],[&quot;Overs: 6&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 4.83&quot;,&quot;Average: &quot;],[&quot;Overs: 63&quot;,&quot;Wickets: 9&quot;,&quot;Economy: 3.75&quot;,&quot;Average: 26.22&quot;],[&quot;Overs: 11&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 3.00&quot;,&quot;Average: &quot;],[&quot;Overs: 19&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 3.89&quot;,&quot;Average: 18.50&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=EA+Perry+cricket" target="_blank">EA Perry</a></td>
+<td style="background-color: #19875439" class="text-end">27</td><td style="background-color: #19875426" class="text-end">39</td><td style="background-color: #1987545E" class="text-end">4.08</td><td style="background-color: #19875486" class="text-end">62</td><td style="background-color: #19875403" class="text-end">8</td><td style="background-color: #dc35453C" class="text-end">20</td><td style="background-color: #dc354585" class="text-end">35</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">44</td>
+</tr>
+<tr style="cursor: default;" title="KDU Prabodhani
+Teams: Sri Lanka
+Matches: 37
+Overs: 243
+Wickets: 23">
+<td colspan="2" data-text="Prabodhani"><a class="chart" data-title="Bowling Average - KDU Prabodhani" data-x="[2012,2013,2014,2016,2017,2018,2019,2023,2024]" data-y="[22.5,null,null,30.833333333333332,null,40.8,53,49.25,63.5]" data-tooltips="[[&quot;Overs: 26&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 3.46&quot;,&quot;Average: 22.50&quot;],[&quot;Overs: 6&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 6.50&quot;,&quot;Average: &quot;],[&quot;Overs: 2&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 48&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 3.84&quot;,&quot;Average: 30.83&quot;],[&quot;Overs: 24&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 4.62&quot;,&quot;Average: &quot;],[&quot;Overs: 36&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 5.67&quot;,&quot;Average: 40.80&quot;],[&quot;Overs: 20&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 5.30&quot;,&quot;Average: 53.00&quot;],[&quot;Overs: 43&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 4.60&quot;,&quot;Average: 49.25&quot;],[&quot;Overs: 38&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 3.34&quot;,&quot;Average: 63.50&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=KDU+Prabodhani+cricket" target="_blank">KDU Prabodhani</a></td>
+<td style="background-color: #19875400" class="text-end">47</td><td style="background-color: #19875400" class="text-end">63</td><td style="background-color: #19875423" class="text-end">4.42</td><td style="background-color: #1987545A" class="text-end">60</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #dc354550" class="text-end">22</td><td style="background-color: #dc35455D" class="text-end">30</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">48</td>
+</tr>
+<tr style="cursor: default;" title="O Prendergast
+Teams: Ireland
+Matches: 13
+Overs: 72
+Wickets: 10">
+<td colspan="2" data-text="Prendergast"><a class="chart" data-title="Bowling Average - O Prendergast" data-x="[2022,2023,2024]" data-y="[50,58.5,21.428571428571427]" data-tooltips="[[&quot;Overs: 12&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.17&quot;,&quot;Average: 50.00&quot;],[&quot;Overs: 25&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 4.68&quot;,&quot;Average: 58.50&quot;],[&quot;Overs: 35&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 4.29&quot;,&quot;Average: 21.43&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=O+Prendergast+cricket" target="_blank">O Prendergast</a></td>
+<td style="background-color: #1987541F" class="text-end">32</td><td style="background-color: #19875415" class="text-end">43</td><td style="background-color: #19875426" class="text-end">4.40</td><td style="background-color: #19875489" class="text-end">62</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354559" class="text-end">30</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="K Ramharack
+Teams: West Indies
+Matches: 23
+Overs: 149
+Wickets: 22">
+<td colspan="2" data-text="Ramharack"><a class="chart" data-title="Bowling Average - K Ramharack" data-x="[2019,2021,2022,2023,2024]" data-y="[72,38.42857142857143,14.8,19,25.5]" data-tooltips="[[&quot;Overs: 14&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 5.14&quot;,&quot;Average: 72.00&quot;],[&quot;Overs: 65&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 4.13&quot;,&quot;Average: 38.43&quot;],[&quot;Overs: 21&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 3.50&quot;,&quot;Average: 14.80&quot;],[&quot;Overs: 5&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 3.80&quot;,&quot;Average: 19.00&quot;],[&quot;Overs: 43&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 4.71&quot;,&quot;Average: 25.50&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=K+Ramharack+cricket" target="_blank">K Ramharack</a></td>
+<td style="background-color: #1987542E" class="text-end">29</td><td style="background-color: #19875421" class="text-end">41</td><td style="background-color: #19875439" class="text-end">4.29</td><td style="background-color: #19875422" class="text-end">57</td><td style="background-color: #19875449" class="text-end">7</td><td style="background-color: #dc354528" class="text-end">18</td><td style="background-color: #dc354500" class="text-end">9</td><td style="background-color: #dc354500" class="text-end">5</td><td style="background-color: #dc35453B" class="text-end">64</td>
+</tr>
+<tr style="cursor: default;" title="S Rana
+Teams: India
+Matches: 21
+Overs: 170
+Wickets: 22">
+<td colspan="2" data-text="Rana"><a class="chart" data-title="Bowling Average - S Rana" data-x="[2015,2021,2022,2023]" data-y="[null,33.125,45,36.4]" data-tooltips="[[&quot;Overs: 7&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 5.71&quot;,&quot;Average: &quot;],[&quot;Overs: 114&quot;,&quot;Wickets: 16&quot;,&quot;Economy: 4.67&quot;,&quot;Average: 33.12&quot;],[&quot;Overs: 6&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 7.50&quot;,&quot;Average: 45.00&quot;],[&quot;Overs: 44&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 4.18&quot;,&quot;Average: 36.40&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=S+Rana+cricket" target="_blank">S Rana</a></td>
+<td style="background-color: #19875407" class="text-end">36</td><td style="background-color: #19875405" class="text-end">46</td><td style="background-color: #19875400" class="text-end">4.69</td><td style="background-color: #19875400" class="text-end">52</td><td style="background-color: #19875437" class="text-end">7</td><td style="background-color: #dc354500" class="text-end">9</td><td style="background-color: #dc354500" class="text-end">14</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35455C" class="text-end">68</td>
+</tr>
+<tr style="cursor: default;" title="OU Ranasinghe
+Teams: Sri Lanka
+Matches: 29
+Overs: 189
+Wickets: 33">
+<td colspan="2" data-text="Ranasinghe"><a class="chart" data-title="Bowling Average - OU Ranasinghe" data-x="[2016,2017,2018,2019,2022,2023,2024]" data-y="[24,null,31.571428571428573,50,30.428571428571427,26.46153846153846,7]" data-tooltips="[[&quot;Overs: 10&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 4.80&quot;,&quot;Average: 24.00&quot;],[&quot;Overs: 10&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 5.40&quot;,&quot;Average: &quot;],[&quot;Overs: 40&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 5.59&quot;,&quot;Average: 31.57&quot;],[&quot;Overs: 14&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 7.14&quot;,&quot;Average: 50.00&quot;],[&quot;Overs: 48&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 4.45&quot;,&quot;Average: 30.43&quot;],[&quot;Overs: 60&quot;,&quot;Wickets: 13&quot;,&quot;Economy: 5.73&quot;,&quot;Average: 26.46&quot;],[&quot;Overs: 8&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 1.75&quot;,&quot;Average: 7.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=OU+Ranasinghe+cricket" target="_blank">OU Ranasinghe</a></td>
+<td style="background-color: #19875428" class="text-end">30</td><td style="background-color: #1987543F" class="text-end">34</td><td style="background-color: #19875400" class="text-end">5.25</td><td style="background-color: #19875400" class="text-end">46</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354505" class="text-end">21</td><td style="background-color: #dc354500" class="text-end">3</td><td style="background-color: #dc354592" class="text-end">76</td>
+</tr>
+<tr style="cursor: default;" title="I Ranaweera
+Teams: Sri Lanka
+Matches: 55
+Overs: 421
+Wickets: 55">
+<td colspan="2" data-text="Ranaweera"><a class="chart" data-title="Bowling Average - I Ranaweera" data-x="[2012,2014,2015,2016,2017,2018,2019,2022,2023,2024]" data-y="[35.5,23.8,16.5,22.615384615384617,37.875,42.285714285714285,115,29.571428571428573,51,null]" data-tooltips="[[&quot;Overs: 37&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 3.84&quot;,&quot;Average: 35.50&quot;],[&quot;Overs: 31&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 3.80&quot;,&quot;Average: 23.80&quot;],[&quot;Overs: 9&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 7.33&quot;,&quot;Average: 16.50&quot;],[&quot;Overs: 71&quot;,&quot;Wickets: 13&quot;,&quot;Economy: 4.14&quot;,&quot;Average: 22.62&quot;],[&quot;Overs: 72&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 4.23&quot;,&quot;Average: 37.88&quot;],[&quot;Overs: 66&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 4.48&quot;,&quot;Average: 42.29&quot;],[&quot;Overs: 19&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 6.05&quot;,&quot;Average: 115.00&quot;],[&quot;Overs: 53&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 3.93&quot;,&quot;Average: 29.57&quot;],[&quot;Overs: 56&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 5.46&quot;,&quot;Average: 51.00&quot;],[&quot;Overs: 7&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 6.29&quot;,&quot;Average: &quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=I+Ranaweera+cricket" target="_blank">I Ranaweera</a></td>
+<td style="background-color: #19875411" class="text-end">34</td><td style="background-color: #19875408" class="text-end">46</td><td style="background-color: #19875416" class="text-end">4.50</td><td style="background-color: #19875401" class="text-end">55</td><td style="background-color: #19875419" class="text-end">8</td><td style="background-color: #dc35453C" class="text-end">20</td><td style="background-color: #dc35452D" class="text-end">25</td><td style="background-color: #dc354570" class="text-end">11</td><td style="background-color: #dc354500" class="text-end">42</td>
+</tr>
+<tr style="cursor: default;" title="A Reddy
+Teams: India
+Matches: 2
+Overs: 18
+Wickets: 3">
+<td colspan="2" data-text="Reddy"><a class="chart" data-title="Bowling Average - A Reddy" data-x="[2024]" data-y="[31.333333333333332]" data-tooltips="[[&quot;Overs: 18&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 5.22&quot;,&quot;Average: 31.33&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=A+Reddy+cricket" target="_blank">A Reddy</a></td>
+<td style="background-color: #19875421" class="text-end">31</td><td style="background-color: #19875437" class="text-end">36</td><td style="background-color: #19875400" class="text-end">5.22</td><td style="background-color: #19875400" class="text-end">44</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354578" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="cursor: default;" title="Aliya Riaz
+Teams: Pakistan
+Matches: 33
+Overs: 141
+Wickets: 10">
+<td colspan="2" data-text="Riaz"><a class="chart" data-title="Bowling Average - Aliya Riaz" data-x="[2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024]" data-y="[null,null,121,null,59.5,87.5,null,null,92,45.5,31.5]" data-tooltips="[[&quot;Overs: 2&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 1&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 22&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 5.50&quot;,&quot;Average: 121.00&quot;],[&quot;Overs: 1&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 21&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 5.67&quot;,&quot;Average: 59.50&quot;],[&quot;Overs: 35&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 5.00&quot;,&quot;Average: 87.50&quot;],[&quot;Overs: 7&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 5.00&quot;,&quot;Average: &quot;],[&quot;Overs: 4&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 7.25&quot;,&quot;Average: &quot;],[&quot;Overs: 19&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.88&quot;,&quot;Average: 92.00&quot;],[&quot;Overs: 17&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 5.30&quot;,&quot;Average: 45.50&quot;],[&quot;Overs: 12&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 5.25&quot;,&quot;Average: 31.50&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Aliya+Riaz+cricket" target="_blank">Aliya Riaz</a></td>
+<td style="background-color: #19875400" class="text-end">75</td><td style="background-color: #19875400" class="text-end">85</td><td style="background-color: #19875400" class="text-end">5.30</td><td style="background-color: #19875400" class="text-end">48</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #dc354500" class="text-end">10</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545F9" class="text-end">90</td>
+</tr>
+<tr style="cursor: default;" title="EAJ Richardson
+Teams: Ireland
+Matches: 6
+Overs: 35
+Wickets: 5">
+<td colspan="2" data-text="Richardson"><a class="chart" data-title="Bowling Average - EAJ Richardson" data-x="[2007,2013,2022,2023]" data-y="[null,45,32.25,null]" data-tooltips="[[&quot;Overs: 2&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 10&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.50&quot;,&quot;Average: 45.00&quot;],[&quot;Overs: 22&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 5.86&quot;,&quot;Average: 32.25&quot;],[&quot;Overs: 1&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=EAJ+Richardson+cricket" target="_blank">EAJ Richardson</a></td>
+<td style="background-color: #19875400" class="text-end">40</td><td style="background-color: #1987541A" class="text-end">42</td><td style="background-color: #19875400" class="text-end">5.66</td><td style="background-color: #19875400" class="text-end">47</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545FF" class="text-end">20</td><td style="background-color: #dc3545B1" class="text-end">80</td>
+</tr>
+<tr style="cursor: default;" title="JI Rodrigues
+Teams: India
+Matches: 3
+Overs: 6
+Wickets: 5">
+<td colspan="2" data-text="Rodrigues"><a class="chart" data-title="Bowling Average - JI Rodrigues" data-x="[2019,2023]" data-y="[null,2.75]" data-tooltips="[[&quot;Overs: 1&quot;,&quot;Wickets: 1&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 5&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 2.06&quot;,&quot;Average: 2.75&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=JI+Rodrigues+cricket" target="_blank">JI Rodrigues</a></td>
+<td style="background-color: #198754BB" class="text-end">2</td><td style="background-color: #198754BF" class="text-end">8</td><td style="background-color: #198754FF" class="text-end">1.89</td><td style="background-color: #198754FF" class="text-end">76</td><td style="background-color: #198754FF" class="text-end">3</td><td style="background-color: #dc35453C" class="text-end">20</td><td style="background-color: #dc354500" class="text-end">20</td><td style="background-color: #dc3545FF" class="text-end">20</td><td style="background-color: #dc354500" class="text-end">40</td>
+</tr>
+<tr style="cursor: default;" title="HM Rowe
+Teams: New Zealand
+Matches: 48
+Overs: 318
+Wickets: 54">
+<td colspan="2" data-text="Rowe"><a class="chart" data-title="Bowling Average - HM Rowe" data-x="[2015,2016,2017,2018,2020,2021,2022,2023,2024]" data-y="[null,25.5,11.6,null,162,23.695652173913043,19,28.5,24.5]" data-tooltips="[[&quot;Overs: 4&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 4.75&quot;,&quot;Average: &quot;],[&quot;Overs: 27&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 3.73&quot;,&quot;Average: 25.50&quot;],[&quot;Overs: 38&quot;,&quot;Wickets: 10&quot;,&quot;Economy: 3.05&quot;,&quot;Average: 11.60&quot;],[&quot;Overs: 7&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 6.29&quot;,&quot;Average: &quot;],[&quot;Overs: 30&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 5.40&quot;,&quot;Average: 162.00&quot;],[&quot;Overs: 114&quot;,&quot;Wickets: 23&quot;,&quot;Economy: 4.78&quot;,&quot;Average: 23.70&quot;],[&quot;Overs: 12&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 3.17&quot;,&quot;Average: 19.00&quot;],[&quot;Overs: 75&quot;,&quot;Wickets: 12&quot;,&quot;Economy: 4.56&quot;,&quot;Average: 28.50&quot;],[&quot;Overs: 11&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 4.45&quot;,&quot;Average: 24.50&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=HM+Rowe+cricket" target="_blank">HM Rowe</a></td>
+<td style="background-color: #1987543C" class="text-end">26</td><td style="background-color: #1987543A" class="text-end">35</td><td style="background-color: #1987541E" class="text-end">4.45</td><td style="background-color: #1987544E" class="text-end">59</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #dc35452C" class="text-end">19</td><td style="background-color: #dc354500" class="text-end">9</td><td style="background-color: #dc354500" class="text-end">2</td><td style="background-color: #dc354551" class="text-end">67</td>
+</tr>
+<tr style="cursor: default;" title="Fatima Sana
+Teams: Pakistan
+Matches: 39
+Overs: 279
+Wickets: 49">
+<td colspan="2" data-text="Sana"><a class="chart" data-title="Bowling Average - Fatima Sana" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[38,64.5,26.217391304347824,18.1875,64.66666666666667,63]" data-tooltips="[[&quot;Overs: 4&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 9.50&quot;,&quot;Average: 38.00&quot;],[&quot;Overs: 25&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 5.16&quot;,&quot;Average: 64.50&quot;],[&quot;Overs: 108&quot;,&quot;Wickets: 23&quot;,&quot;Economy: 5.58&quot;,&quot;Average: 26.22&quot;],[&quot;Overs: 71&quot;,&quot;Wickets: 16&quot;,&quot;Economy: 4.10&quot;,&quot;Average: 18.19&quot;],[&quot;Overs: 33&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 5.91&quot;,&quot;Average: 64.67&quot;],[&quot;Overs: 38&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 6.63&quot;,&quot;Average: 63.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Fatima+Sana+cricket" target="_blank">Fatima Sana</a></td>
+<td style="background-color: #19875424" class="text-end">31</td><td style="background-color: #19875440" class="text-end">34</td><td style="background-color: #19875400" class="text-end">5.40</td><td style="background-color: #19875400" class="text-end">53</td><td style="background-color: #19875400" class="text-end">12</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: #dc3545C0" class="text-end">41</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">47</td>
+</tr>
+<tr style="cursor: default;" title="Nashra Sandhu
+Teams: Pakistan
+Matches: 61
+Overs: 540
+Wickets: 82">
+<td colspan="2" data-text="Sandhu"><a class="chart" data-title="Bowling Average - Nashra Sandhu" data-x="[2016,2017,2018,2019,2020,2021,2022,2023,2024]" data-y="[17.333333333333332,32.38461538461539,31.333333333333332,52.25,16.5,28.38888888888889,27,27.615384615384617,33.666666666666664]" data-tooltips="[[&quot;Overs: 44&quot;,&quot;Wickets: 9&quot;,&quot;Economy: 3.59&quot;,&quot;Average: 17.33&quot;],[&quot;Overs: 94&quot;,&quot;Wickets: 13&quot;,&quot;Economy: 4.50&quot;,&quot;Average: 32.38&quot;],[&quot;Overs: 42&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 4.48&quot;,&quot;Average: 31.33&quot;],[&quot;Overs: 46&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 4.56&quot;,&quot;Average: 52.25&quot;],[&quot;Overs: 29&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 3.41&quot;,&quot;Average: 16.50&quot;],[&quot;Overs: 123&quot;,&quot;Wickets: 18&quot;,&quot;Economy: 4.17&quot;,&quot;Average: 28.39&quot;],[&quot;Overs: 40&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 4.72&quot;,&quot;Average: 27.00&quot;],[&quot;Overs: 83&quot;,&quot;Wickets: 13&quot;,&quot;Economy: 4.33&quot;,&quot;Average: 27.62&quot;],[&quot;Overs: 40&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 5.05&quot;,&quot;Average: 33.67&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Nashra+Sandhu+cricket" target="_blank">Nashra Sandhu</a></td>
+<td style="background-color: #19875430" class="text-end">28</td><td style="background-color: #19875426" class="text-end">39</td><td style="background-color: #19875433" class="text-end">4.33</td><td style="background-color: #19875423" class="text-end">57</td><td style="background-color: #19875431" class="text-end">7</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: #dc354500" class="text-end">20</td><td style="background-color: #dc354545" class="text-end">9</td><td style="background-color: #dc354500" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="FA Sargent
+Teams: Ireland
+Matches: 6
+Overs: 49
+Wickets: 7">
+<td colspan="2" data-text="Sargent"><a class="chart" data-title="Bowling Average - FA Sargent" data-x="[2024]" data-y="[39.857142857142854]" data-tooltips="[[&quot;Overs: 49&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 5.67&quot;,&quot;Average: 39.86&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=FA+Sargent+cricket" target="_blank">FA Sargent</a></td>
+<td style="background-color: #19875400" class="text-end">40</td><td style="background-color: #1987541A" class="text-end">42</td><td style="background-color: #19875400" class="text-end">5.67</td><td style="background-color: #19875400" class="text-end">41</td><td style="background-color: #19875451" class="text-end">7</td><td style="background-color: #dc354500" class="text-end">14</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545DA" class="text-end">86</td>
+</tr>
+<tr style="cursor: default;" title="ML Schutt
+Teams: Australia
+Matches: 75
+Overs: 578
+Wickets: 100">
+<td colspan="2" data-text="Schutt"><a class="chart" data-title="Bowling Average - ML Schutt" data-x="[2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023]" data-y="[18.25,76,15.833333333333334,21.714285714285715,37.75,22.88888888888889,18.666666666666668,14.181818181818182,16.75,30.153846153846153,null,24.636363636363637]" data-tooltips="[[&quot;Overs: 35&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 4.17&quot;,&quot;Average: 18.25&quot;],[&quot;Overs: 20&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 3.80&quot;,&quot;Average: 76.00&quot;],[&quot;Overs: 18&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 5.28&quot;,&quot;Average: 15.83&quot;],[&quot;Overs: 39&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 3.90&quot;,&quot;Average: 21.71&quot;],[&quot;Overs: 32&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 4.77&quot;,&quot;Average: 37.75&quot;],[&quot;Overs: 102&quot;,&quot;Wickets: 18&quot;,&quot;Economy: 4.05&quot;,&quot;Average: 22.89&quot;],[&quot;Overs: 42&quot;,&quot;Wickets: 9&quot;,&quot;Economy: 3.97&quot;,&quot;Average: 18.67&quot;],[&quot;Overs: 55&quot;,&quot;Wickets: 11&quot;,&quot;Economy: 2.84&quot;,&quot;Average: 14.18&quot;],[&quot;Overs: 47&quot;,&quot;Wickets: 12&quot;,&quot;Economy: 4.28&quot;,&quot;Average: 16.75&quot;],[&quot;Overs: 101&quot;,&quot;Wickets: 13&quot;,&quot;Economy: 3.88&quot;,&quot;Average: 30.15&quot;],[&quot;Overs: 13&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 3.62&quot;,&quot;Average: &quot;],[&quot;Overs: 74&quot;,&quot;Wickets: 11&quot;,&quot;Economy: 3.66&quot;,&quot;Average: 24.64&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=ML+Schutt+cricket" target="_blank">ML Schutt</a></td>
+<td style="background-color: #1987544F" class="text-end">23</td><td style="background-color: #1987543D" class="text-end">35</td><td style="background-color: #19875478" class="text-end">3.92</td><td style="background-color: #1987548B" class="text-end">62</td><td style="background-color: #19875429" class="text-end">8</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: #dc354546" class="text-end">28</td><td style="background-color: #dc354505" class="text-end">5</td><td style="background-color: #dc354500" class="text-end">54</td>
+</tr>
+<tr style="cursor: default;" title="NR Sciver-Brunt
+Teams: England
+Matches: 83
+Overs: 467
+Wickets: 67">
+<td colspan="2" data-text="Sciver-Brunt"><a class="chart" data-title="Bowling Average - NR Sciver-Brunt" data-x="[2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024]" data-y="[19,null,27,15.5,42.857142857142854,32,22.333333333333332,15.6,53.2,22.5,24.75,24]" data-tooltips="[[&quot;Overs: 34&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 3.87&quot;,&quot;Average: 19.00&quot;],[&quot;Overs: 7&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 4.14&quot;,&quot;Average: &quot;],[&quot;Overs: 14&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 5.79&quot;,&quot;Average: 27.00&quot;],[&quot;Overs: 28&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 3.32&quot;,&quot;Average: 15.50&quot;],[&quot;Overs: 64&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 4.69&quot;,&quot;Average: 42.86&quot;],[&quot;Overs: 49&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 3.92&quot;,&quot;Average: 32.00&quot;],[&quot;Overs: 28&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 4.79&quot;,&quot;Average: 22.33&quot;],[&quot;Overs: 24&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 3.30&quot;,&quot;Average: 15.60&quot;],[&quot;Overs: 122&quot;,&quot;Wickets: 10&quot;,&quot;Economy: 4.35&quot;,&quot;Average: 53.20&quot;],[&quot;Overs: 27&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 5.06&quot;,&quot;Average: 22.50&quot;],[&quot;Overs: 48&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 4.12&quot;,&quot;Average: 24.75&quot;],[&quot;Overs: 22&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 3.27&quot;,&quot;Average: 24.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=NR+Sciver-Brunt+cricket" target="_blank">NR Sciver-Brunt</a></td>
+<td style="background-color: #1987542B" class="text-end">30</td><td style="background-color: #1987541B" class="text-end">42</td><td style="background-color: #19875443" class="text-end">4.23</td><td style="background-color: #19875425" class="text-end">57</td><td style="background-color: #19875427" class="text-end">8</td><td style="background-color: #dc354500" class="text-end">9</td><td style="background-color: #dc354500" class="text-end">15</td><td style="background-color: #dc354532" class="text-end">7</td><td style="background-color: #dc354554" class="text-end">67</td>
+</tr>
+<tr style="cursor: default;" title="TS Sekhukhune
+Teams: South Africa
+Matches: 23
+Overs: 184
+Wickets: 23">
+<td colspan="2" data-text="Sekhukhune"><a class="chart" data-title="Bowling Average - TS Sekhukhune" data-x="[2018,2019,2020,2021,2022,2024]" data-y="[26.142857142857142,37.75,25.857142857142858,62,55,39]" data-tooltips="[[&quot;Overs: 43&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 4.26&quot;,&quot;Average: 26.14&quot;],[&quot;Overs: 43&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 3.51&quot;,&quot;Average: 37.75&quot;],[&quot;Overs: 36&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 4.96&quot;,&quot;Average: 25.86&quot;],[&quot;Overs: 44&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 4.23&quot;,&quot;Average: 62.00&quot;],[&quot;Overs: 9&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 6.00&quot;,&quot;Average: 55.00&quot;],[&quot;Overs: 9&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.50&quot;,&quot;Average: 39.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=TS+Sekhukhune+cricket" target="_blank">TS Sekhukhune</a></td>
+<td style="background-color: #19875410" class="text-end">35</td><td style="background-color: #19875400" class="text-end">48</td><td style="background-color: #19875436" class="text-end">4.31</td><td style="background-color: #1987545A" class="text-end">59</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #dc354500" class="text-end">4</td><td style="background-color: #dc354500" class="text-end">13</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354585" class="text-end">74</td>
+</tr>
+<tr style="cursor: default;" title="N Shangase
+Teams: South Africa
+Matches: 11
+Overs: 77
+Wickets: 6">
+<td colspan="2" data-text="Shangase"><a class="chart" data-title="Bowling Average - N Shangase" data-x="[2019,2020,2021,2023,2024]" data-y="[45.5,35.666666666666664,null,null,146]" data-tooltips="[[&quot;Overs: 19&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 4.83&quot;,&quot;Average: 45.50&quot;],[&quot;Overs: 23&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 4.65&quot;,&quot;Average: 35.67&quot;],[&quot;Overs: 10&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 3.20&quot;,&quot;Average: &quot;],[&quot;Overs: 4&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 5.00&quot;,&quot;Average: &quot;],[&quot;Overs: 21&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 6.95&quot;,&quot;Average: 146.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=N+Shangase+cricket" target="_blank">N Shangase</a></td>
+<td style="background-color: #19875400" class="text-end">66</td><td style="background-color: #19875400" class="text-end">77</td><td style="background-color: #19875400" class="text-end">5.15</td><td style="background-color: #19875400" class="text-end">48</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #dc354518" class="text-end">17</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545C9" class="text-end">83</td>
+</tr>
+<tr style="cursor: default;" title="DB Sharma
+Teams: India
+Matches: 77
+Overs: 631
+Wickets: 86">
+<td colspan="2" data-text="Sharma"><a class="chart" data-title="Bowling Average - DB Sharma" data-x="[2015,2016,2017,2018,2019,2020,2021,2022,2023,2024]" data-y="[32.5,34.5,33,31.88888888888889,24.625,127,41.25,19.2,23.666666666666668,15.5]" data-tooltips="[[&quot;Overs: 16&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 4.06&quot;,&quot;Average: 32.50&quot;],[&quot;Overs: 53&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 2.60&quot;,&quot;Average: 34.50&quot;],[&quot;Overs: 151&quot;,&quot;Wickets: 21&quot;,&quot;Economy: 4.58&quot;,&quot;Average: 33.00&quot;],[&quot;Overs: 72&quot;,&quot;Wickets: 9&quot;,&quot;Economy: 3.97&quot;,&quot;Average: 31.89&quot;],[&quot;Overs: 57&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 3.46&quot;,&quot;Average: 24.62&quot;],[&quot;Overs: 28&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.54&quot;,&quot;Average: 127.00&quot;],[&quot;Overs: 121&quot;,&quot;Wickets: 16&quot;,&quot;Economy: 5.47&quot;,&quot;Average: 41.25&quot;],[&quot;Overs: 51&quot;,&quot;Wickets: 10&quot;,&quot;Economy: 3.74&quot;,&quot;Average: 19.20&quot;],[&quot;Overs: 55&quot;,&quot;Wickets: 9&quot;,&quot;Economy: 3.87&quot;,&quot;Average: 23.67&quot;],[&quot;Overs: 26&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 3.58&quot;,&quot;Average: 15.50&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=DB+Sharma+cricket" target="_blank">DB Sharma</a></td>
+<td style="background-color: #19875423" class="text-end">31</td><td style="background-color: #19875411" class="text-end">44</td><td style="background-color: #19875445" class="text-end">4.23</td><td style="background-color: #19875426" class="text-end">57</td><td style="background-color: #1987544D" class="text-end">7</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: #dc35453A" class="text-end">27</td><td style="background-color: #dc35453E" class="text-end">8</td><td style="background-color: #dc354500" class="text-end">44</td>
+</tr>
+<tr style="cursor: default;" title="Meghna Singh
+Teams: India
+Matches: 17
+Overs: 120
+Wickets: 16">
+<td colspan="2" data-text="Singh"><a class="chart" data-title="Bowling Average - Meghna Singh" data-x="[2021,2022,2023]" data-y="[37.4,26,54]" data-tooltips="[[&quot;Overs: 74&quot;,&quot;Wickets: 10&quot;,&quot;Economy: 5.03&quot;,&quot;Average: 37.40&quot;],[&quot;Overs: 33&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 3.94&quot;,&quot;Average: 26.00&quot;],[&quot;Overs: 13&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.15&quot;,&quot;Average: 54.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Meghna+Singh+cricket" target="_blank">Meghna Singh</a></td>
+<td style="background-color: #1987540E" class="text-end">35</td><td style="background-color: #1987540B" class="text-end">45</td><td style="background-color: #19875400" class="text-end">4.64</td><td style="background-color: #19875477" class="text-end">61</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: #dc354500" class="text-end">6</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545BA" class="text-end">81</td>
+</tr>
+<tr style="cursor: default;" title="Renuka Singh
+Teams: India
+Matches: 11
+Overs: 86
+Wickets: 20">
+<td colspan="2" data-text="Singh"><a class="chart" data-title="Bowling Average - Renuka Singh" data-x="[2021,2022,2023,2024]" data-y="[29,11.2,100,30]" data-tooltips="[[&quot;Overs: 14&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 6.21&quot;,&quot;Average: 29.00&quot;],[&quot;Overs: 44&quot;,&quot;Wickets: 15&quot;,&quot;Economy: 3.82&quot;,&quot;Average: 11.20&quot;],[&quot;Overs: 21&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.76&quot;,&quot;Average: 100.00&quot;],[&quot;Overs: 7&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.29&quot;,&quot;Average: 30.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Renuka+Singh+cricket" target="_blank">Renuka Singh</a></td>
+<td style="background-color: #19875461" class="text-end">19</td><td style="background-color: #19875468" class="text-end">26</td><td style="background-color: #1987541A" class="text-end">4.48</td><td style="background-color: #19875427" class="text-end">57</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #dc354505" class="text-end">15</td><td style="background-color: #dc3545FF" class="text-end">50</td><td style="background-color: #dc354505" class="text-end">5</td><td style="background-color: #dc354500" class="text-end">30</td>
+</tr>
+<tr style="cursor: default;" title="Umaima Sohail
+Teams: Pakistan
+Matches: 25
+Overs: 113
+Wickets: 15">
+<td colspan="2" data-text="Sohail"><a class="chart" data-title="Bowling Average - Umaima Sohail" data-x="[2018,2019,2020,2021,2022,2023]" data-y="[null,37,11,35.25,31,null]" data-tooltips="[[&quot;Overs: 3&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 8&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.62&quot;,&quot;Average: 37.00&quot;],[&quot;Overs: 4&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 2.75&quot;,&quot;Average: 11.00&quot;],[&quot;Overs: 65&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 4.36&quot;,&quot;Average: 35.25&quot;],[&quot;Overs: 30&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 5.17&quot;,&quot;Average: 31.00&quot;],[&quot;Overs: 4&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Umaima+Sohail+cricket" target="_blank">Umaima Sohail</a></td>
+<td style="background-color: #19875405" class="text-end">37</td><td style="background-color: #1987540A" class="text-end">45</td><td style="background-color: #19875400" class="text-end">4.85</td><td style="background-color: #19875400" class="text-end">48</td><td style="background-color: #19875452" class="text-end">7</td><td style="background-color: #dc354500" class="text-end">7</td><td style="background-color: #dc354539" class="text-end">27</td><td style="background-color: #dc35459C" class="text-end">13</td><td style="background-color: #dc354500" class="text-end">53</td>
+</tr>
+<tr style="cursor: default;" title="A Sutherland
+Teams: Australia
+Matches: 28
+Overs: 142
+Wickets: 30">
+<td colspan="2" data-text="Sutherland"><a class="chart" data-title="Bowling Average - A Sutherland" data-x="[2020,2021,2022,2023]" data-y="[32.5,18.90909090909091,14.333333333333334,21.785714285714285]" data-tooltips="[[&quot;Overs: 15&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 4.33&quot;,&quot;Average: 32.50&quot;],[&quot;Overs: 49&quot;,&quot;Wickets: 11&quot;,&quot;Economy: 4.24&quot;,&quot;Average: 18.91&quot;],[&quot;Overs: 15&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 2.87&quot;,&quot;Average: 14.33&quot;],[&quot;Overs: 63&quot;,&quot;Wickets: 14&quot;,&quot;Economy: 4.84&quot;,&quot;Average: 21.79&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=A+Sutherland+cricket" target="_blank">A Sutherland</a></td>
+<td style="background-color: #1987545A" class="text-end">21</td><td style="background-color: #1987545B" class="text-end">28</td><td style="background-color: #1987542B" class="text-end">4.37</td><td style="background-color: #1987542C" class="text-end">57</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #dc354500" class="text-end">10</td><td style="background-color: #dc354500" class="text-end">17</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354569" class="text-end">70</td>
+</tr>
+<tr style="cursor: default;" title="LMM Tahuhu
+Teams: New Zealand
+Matches: 66
+Overs: 507
+Wickets: 86">
+<td colspan="2" data-text="Tahuhu"><a class="chart" data-title="Bowling Average - LMM Tahuhu" data-x="[2012,2015,2016,2017,2018,2020,2021,2022,2023]" data-y="[32,34,26.307692307692307,26.384615384615383,28.1,54.666666666666664,21.85,31,21.77777777777778]" data-tooltips="[[&quot;Overs: 22&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 4.36&quot;,&quot;Average: 32.00&quot;],[&quot;Overs: 44&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 3.88&quot;,&quot;Average: 34.00&quot;],[&quot;Overs: 79&quot;,&quot;Wickets: 13&quot;,&quot;Economy: 4.33&quot;,&quot;Average: 26.31&quot;],[&quot;Overs: 77&quot;,&quot;Wickets: 13&quot;,&quot;Economy: 4.44&quot;,&quot;Average: 26.38&quot;],[&quot;Overs: 68&quot;,&quot;Wickets: 10&quot;,&quot;Economy: 4.13&quot;,&quot;Average: 28.10&quot;],[&quot;Overs: 25&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 6.65&quot;,&quot;Average: 54.67&quot;],[&quot;Overs: 99&quot;,&quot;Wickets: 20&quot;,&quot;Economy: 4.43&quot;,&quot;Average: 21.85&quot;],[&quot;Overs: 9&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 3.44&quot;,&quot;Average: 31.00&quot;],[&quot;Overs: 84&quot;,&quot;Wickets: 18&quot;,&quot;Economy: 4.65&quot;,&quot;Average: 21.78&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=LMM+Tahuhu+cricket" target="_blank">LMM Tahuhu</a></td>
+<td style="background-color: #1987543C" class="text-end">26</td><td style="background-color: #1987543A" class="text-end">35</td><td style="background-color: #1987541E" class="text-end">4.45</td><td style="background-color: #19875469" class="text-end">60</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #dc354500" class="text-end">8</td><td style="background-color: #dc354500" class="text-end">20</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35453D" class="text-end">64</td>
+</tr>
+<tr style="cursor: default;" title="SR Taylor
+Teams: West Indies
+Matches: 53
+Overs: 320
+Wickets: 40">
+<td colspan="2" data-text="Taylor"><a class="chart" data-title="Bowling Average - SR Taylor" data-x="[2009,2012,2014,2015,2017,2018,2019,2021,2022,2023,2024]" data-y="[null,26.428571428571427,23.25,null,36.875,22,59.2,29.625,22,null,34.5]" data-tooltips="[[&quot;Overs: 8&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 2.50&quot;,&quot;Average: &quot;],[&quot;Overs: 59&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 3.14&quot;,&quot;Average: 26.43&quot;],[&quot;Overs: 24&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 3.96&quot;,&quot;Average: 23.25&quot;],[&quot;Overs: 2&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 66&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 4.46&quot;,&quot;Average: 36.88&quot;],[&quot;Overs: 23&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 4.78&quot;,&quot;Average: 22.00&quot;],[&quot;Overs: 61&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 4.85&quot;,&quot;Average: 59.20&quot;],[&quot;Overs: 54&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 4.40&quot;,&quot;Average: 29.62&quot;],[&quot;Overs: 5&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.40&quot;,&quot;Average: 22.00&quot;],[&quot;Overs: 4&quot;,&quot;Wickets: 0&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 15&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 4.60&quot;,&quot;Average: 34.50&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=SR+Taylor+cricket" target="_blank">SR Taylor</a></td>
+<td style="background-color: #19875412" class="text-end">34</td><td style="background-color: #19875400" class="text-end">48</td><td style="background-color: #1987543E" class="text-end">4.27</td><td style="background-color: #19875401" class="text-end">55</td><td style="background-color: #19875460" class="text-end">6</td><td style="background-color: #dc354521" class="text-end">18</td><td style="background-color: #dc354500" class="text-end">18</td><td style="background-color: #dc354505" class="text-end">5</td><td style="background-color: #dc354500" class="text-end">55</td>
+</tr>
+<tr style="cursor: default;" title="A Tector
+Teams: Ireland
+Matches: 5
+Overs: 25
+Wickets: 2">
+<td colspan="2" data-text="Tector"><a class="chart" data-title="Bowling Average - A Tector" data-x="[2024]" data-y="[80.5]" data-tooltips="[[&quot;Overs: 25&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 6.44&quot;,&quot;Average: 80.50&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=A+Tector+cricket" target="_blank">A Tector</a></td>
+<td style="background-color: #19875400" class="text-end">80</td><td style="background-color: #19875400" class="text-end">75</td><td style="background-color: #19875400" class="text-end">6.44</td><td style="background-color: #19875400" class="text-end">55</td><td style="background-color: #19875400" class="text-end">19</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="CL Tryon
+Teams: South Africa
+Matches: 49
+Overs: 302
+Wickets: 27">
+<td colspan="2" data-text="Tryon"><a class="chart" data-title="Bowling Average - CL Tryon" data-x="[2011,2014,2015,2016,2017,2018,2019,2021,2022,2023]" data-y="[49,null,36,91,42,16.666666666666668,53.5,59.57142857142857,59,44.333333333333336]" data-tooltips="[[&quot;Overs: 19&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 5.16&quot;,&quot;Average: 49.00&quot;],[&quot;Overs: 4&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 2.50&quot;,&quot;Average: &quot;],[&quot;Overs: 8&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.50&quot;,&quot;Average: 36.00&quot;],[&quot;Overs: 48&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 3.79&quot;,&quot;Average: 91.00&quot;],[&quot;Overs: 14&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 6.00&quot;,&quot;Average: 42.00&quot;],[&quot;Overs: 30&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 3.31&quot;,&quot;Average: 16.67&quot;],[&quot;Overs: 24&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 4.46&quot;,&quot;Average: 53.50&quot;],[&quot;Overs: 99&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 4.21&quot;,&quot;Average: 59.57&quot;],[&quot;Overs: 25&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 4.72&quot;,&quot;Average: 59.00&quot;],[&quot;Overs: 30&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 4.36&quot;,&quot;Average: 44.33&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=CL+Tryon+cricket" target="_blank">CL Tryon</a></td>
+<td style="background-color: #19875400" class="text-end">48</td><td style="background-color: #19875400" class="text-end">67</td><td style="background-color: #1987543F" class="text-end">4.26</td><td style="background-color: #1987541E" class="text-end">56</td><td style="background-color: #19875435" class="text-end">7</td><td style="background-color: #dc354500" class="text-end">4</td><td style="background-color: #dc35450F" class="text-end">22</td><td style="background-color: #dc354500" class="text-end">4</td><td style="background-color: #dc354551" class="text-end">67</td>
+</tr>
+<tr style="cursor: default;" title="D Tucker
+Teams: South Africa
+Matches: 8
+Overs: 50
+Wickets: 4">
+<td colspan="2" data-text="Tucker"><a class="chart" data-title="Bowling Average - D Tucker" data-x="[2022,2023]" data-y="[50,62.666666666666664]" data-tooltips="[[&quot;Overs: 11&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.55&quot;,&quot;Average: 50.00&quot;],[&quot;Overs: 39&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 4.84&quot;,&quot;Average: 62.67&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=D+Tucker+cricket" target="_blank">D Tucker</a></td>
+<td style="background-color: #19875400" class="text-end">60</td><td style="background-color: #19875400" class="text-end">75</td><td style="background-color: #19875400" class="text-end">4.78</td><td style="background-color: #19875400" class="text-end">54</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #dc3545FF" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545FF" class="text-end">25</td><td style="background-color: #dc354500" class="text-end">25</td>
+</tr>
+<tr style="cursor: default;" title="Umm-e-Hani
+Teams: Pakistan
+Matches: 13
+Overs: 118
+Wickets: 16">
+<td colspan="2" data-text="Umm-e-Hani"><a class="chart" data-title="Bowling Average - Umm-e-Hani" data-x="[2022,2023,2024]" data-y="[47,34.22222222222222,27.833333333333332]" data-tooltips="[[&quot;Overs: 10&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.70&quot;,&quot;Average: 47.00&quot;],[&quot;Overs: 70&quot;,&quot;Wickets: 9&quot;,&quot;Economy: 4.41&quot;,&quot;Average: 34.22&quot;],[&quot;Overs: 38&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 4.39&quot;,&quot;Average: 27.83&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Umm-e-Hani+cricket" target="_blank">Umm-e-Hani</a></td>
+<td style="background-color: #1987541A" class="text-end">33</td><td style="background-color: #19875410" class="text-end">44</td><td style="background-color: #19875422" class="text-end">4.43</td><td style="background-color: #19875400" class="text-end">50</td><td style="background-color: #1987547F" class="text-end">6</td><td style="background-color: #dc35452F" class="text-end">19</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: #dc35458D" class="text-end">12</td><td style="background-color: #dc354500" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="DP Vaidya
+Teams: India
+Matches: 9
+Overs: 51
+Wickets: 11">
+<td colspan="2" data-text="Vaidya"><a class="chart" data-title="Bowling Average - DP Vaidya" data-x="[2016,2017,2023]" data-y="[12.4,null,16.333333333333332]" data-tooltips="[[&quot;Overs: 21&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 2.93&quot;,&quot;Average: 12.40&quot;],[&quot;Overs: 5&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 2.40&quot;,&quot;Average: &quot;],[&quot;Overs: 25&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 3.92&quot;,&quot;Average: 16.33&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=DP+Vaidya+cricket" target="_blank">DP Vaidya</a></td>
+<td style="background-color: #19875474" class="text-end">16</td><td style="background-color: #1987545E" class="text-end">28</td><td style="background-color: #198754D8" class="text-end">3.36</td><td style="background-color: #1987544A" class="text-end">59</td><td style="background-color: #198754E5" class="text-end">4</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35453F" class="text-end">27</td><td style="background-color: #dc3545FF" class="text-end">36</td><td style="background-color: #dc354500" class="text-end">36</td>
+</tr>
+<tr style="cursor: default;" title="P Vastrakar
+Teams: India
+Matches: 30
+Overs: 188
+Wickets: 27">
+<td colspan="2" data-text="Vastrakar"><a class="chart" data-title="Bowling Average - P Vastrakar" data-x="[2017,2021,2022,2023,2024]" data-y="[null,26.5,36,66,28]" data-tooltips="[[&quot;Overs: 26&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 4.81&quot;,&quot;Average: &quot;],[&quot;Overs: 79&quot;,&quot;Wickets: 16&quot;,&quot;Economy: 5.37&quot;,&quot;Average: 26.50&quot;],[&quot;Overs: 26&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 5.54&quot;,&quot;Average: 36.00&quot;],[&quot;Overs: 37&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 5.35&quot;,&quot;Average: 66.00&quot;],[&quot;Overs: 20&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 5.60&quot;,&quot;Average: 28.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=P+Vastrakar+cricket" target="_blank">P Vastrakar</a></td>
+<td style="background-color: #19875402" class="text-end">37</td><td style="background-color: #1987541B" class="text-end">42</td><td style="background-color: #19875400" class="text-end">5.34</td><td style="background-color: #19875400" class="text-end">55</td><td style="background-color: #19875400" class="text-end">13</td><td style="background-color: #dc354500" class="text-end">11</td><td style="background-color: #dc354532" class="text-end">26</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354536" class="text-end">63</td>
+</tr>
+<tr style="cursor: default;" title="Shafali Verma
+Teams: India
+Matches: 4
+Overs: 13
+Wickets: 1">
+<td colspan="2" data-text="Verma"><a class="chart" data-title="Bowling Average - Shafali Verma" data-x="[2022,2023,2024]" data-y="[null,null,null]" data-tooltips="[[&quot;Overs: 3&quot;,&quot;Wickets: 1&quot;,&quot;Economy: &quot;,&quot;Average: &quot;],[&quot;Overs: 6&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 4.67&quot;,&quot;Average: &quot;],[&quot;Overs: 4&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 6.50&quot;,&quot;Average: &quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=Shafali+Verma+cricket" target="_blank">Shafali Verma</a></td>
+<td style="background-color: #19875400" class="text-end">63</td><td style="background-color: #19875400" class="text-end">78</td><td style="background-color: #19875400" class="text-end">4.85</td><td style="background-color: #19875400" class="text-end">41</td><td style="background-color: #198754D9" class="text-end">4</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="MK Villiers
+Teams: England
+Matches: 2
+Overs: 15
+Wickets: 3">
+<td colspan="2" data-text="Villiers"><a class="chart" data-title="Bowling Average - MK Villiers" data-x="[2024]" data-y="[25.333333333333332]" data-tooltips="[[&quot;Overs: 15&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 5.07&quot;,&quot;Average: 25.33&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=MK+Villiers+cricket" target="_blank">MK Villiers</a></td>
+<td style="background-color: #19875441" class="text-end">25</td><td style="background-color: #19875454" class="text-end">30</td><td style="background-color: #19875400" class="text-end">5.07</td><td style="background-color: #19875400" class="text-end">42</td><td style="background-color: #19875457" class="text-end">7</td><td style="background-color: #dc3545CF" class="text-end">33</td><td style="background-color: #dc3545FF" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="cursor: default;" title="G Wareham
+Teams: Australia
+Matches: 35
+Overs: 261
+Wickets: 41">
+<td colspan="2" data-text="Wareham"><a class="chart" data-title="Bowling Average - G Wareham" data-x="[2018,2019,2020,2021,2023]" data-y="[32.166666666666664,26.77777777777778,25.857142857142858,null,22.94736842105263]" data-tooltips="[[&quot;Overs: 43&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 4.49&quot;,&quot;Average: 32.17&quot;],[&quot;Overs: 59&quot;,&quot;Wickets: 9&quot;,&quot;Economy: 4.08&quot;,&quot;Average: 26.78&quot;],[&quot;Overs: 44&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 4.11&quot;,&quot;Average: 25.86&quot;],[&quot;Overs: 10&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 3.60&quot;,&quot;Average: &quot;],[&quot;Overs: 105&quot;,&quot;Wickets: 19&quot;,&quot;Economy: 4.17&quot;,&quot;Average: 22.95&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=G+Wareham+cricket" target="_blank">G Wareham</a></td>
+<td style="background-color: #1987543B" class="text-end">27</td><td style="background-color: #1987542D" class="text-end">38</td><td style="background-color: #1987544E" class="text-end">4.17</td><td style="background-color: #19875432" class="text-end">57</td><td style="background-color: #19875434" class="text-end">7</td><td style="background-color: #dc354500" class="text-end">7</td><td style="background-color: #dc354500" class="text-end">15</td><td style="background-color: #dc354500" class="text-end">2</td><td style="background-color: #dc35455C" class="text-end">68</td>
+</tr>
+<tr style="cursor: default;" title="RP Yadav
+Teams: India
+Matches: 4
+Overs: 40
+Wickets: 1">
+<td colspan="2" data-text="Yadav"><a class="chart" data-title="Bowling Average - RP Yadav" data-x="[2020,2024]" data-y="[null,129]" data-tooltips="[[&quot;Overs: 10&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 6.93&quot;,&quot;Average: &quot;],[&quot;Overs: 30&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 4.30&quot;,&quot;Average: 129.00&quot;]]">📊</a>&nbsp;<a href="https://www.google.com/search?q=RP+Yadav+cricket" target="_blank">RP Yadav</a></td>
+<td style="background-color: #19875400" class="text-end">196</td><td style="background-color: #19875400" class="text-end">238</td><td style="background-color: #19875400" class="text-end">4.94</td><td style="background-color: #19875400" class="text-end">50</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+</tbody>
+</table>
+<script>$(function() {  $('.table-sort').tablesorter();});</script><style>table.table-sort th { cursor: ns-resize; } </style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><style>a.chart { text-decoration: none; cursor: pointer; } </style><div class="modal modal-lg fade" id="pop_chart_modal" tabindex="-1">  <div class="modal-dialog">    <div class="modal-content">      <div class="modal-body">        <canvas id="pop_chart" style="width:600px; max-width: 100%;"></canvas>      </div>    </div>  </div></div><script>const pcm = new bootstrap.Modal('#pop_chart_modal');$('a.chart').on('click', function() {  let existing = Chart.getChart('pop_chart');  if (existing != undefined) {    existing.destroy();  }  new Chart('pop_chart', {    type: 'bar',    data: {      labels: JSON.parse($(this).attr('data-x')),      datasets: [{        backgroundColor: '#4e78a8',        label: $(this).attr('data-label'),        data: JSON.parse($(this).attr('data-y')),        tooltips: $(this).attr('data-tooltips') ? JSON.parse($(this).attr('data-tooltips')) : null,      }]    },    options: {      legend: {display: false},      plugins: {        title: {          display: true,          text: $(this).attr('data-title')        },        tooltip: {          displayColors: false,          callbacks: {            label: function(context) {              if (context.dataset.tooltips) {                return context.dataset.tooltips[context.dataIndex];               }              return context.parsed.y;            }          }        },        legend: {          display: false        }      },      scales: {        y: {          ticks: {             precision: 0          },        }      }    }  });  pcm.show();});</script>
+<div class="m-2 clearfix"><small class="float-start">&copy; 2024 CRICKETher.com/cricsheet.org</small><small class="float-end">Matches: 419; Latest: 11/09/2024</small></div>
+</body>
+</html>
