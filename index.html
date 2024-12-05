@@ -16,6 +16,12 @@
             .small {
                 font-size: 50%;
             }
+            a.toggle {
+                cursor: pointer;
+            }
+            a.toggle+ul {
+                display: none;
+            }
         </style>
     </head>
     <body class="m-1 p-1">
@@ -28,7 +34,7 @@
             <h5>Stats</h5>
             <ul>
                 <li>
-                    Internationals
+                    <a class="toggle">Internationals</a>
                     <ul>
                         <li><a href="Stats/Internationals/Batting.html" target="_blank">Batting</a></li>
                         <li><a href="Stats/Internationals/Bowling.html" target="_blank">Bowling</a></li>
@@ -55,7 +61,7 @@
                     </ul>   
                 </li>
                 <li>
-                    Australia
+                    <a class="toggle">Australia</a>
                     <ul>
                         <li>
                             WBBL
@@ -69,7 +75,7 @@
                     </ul>
                 </li>
                 <li>
-                    England
+                    <a class="toggle">England</a>
                     <ul>
                         <li>
                             Regionals
@@ -92,7 +98,7 @@
                     </ul>
                 </li>
                 <li>
-                    India
+                    <a class="toggle">India</a>
                     <ul>
                         <li>
                             WPL
@@ -114,4 +120,16 @@
             </ul>
         </div>
     </body>
+    <script>
+        $('a.toggle').on('click', function() {
+            var list = $(this).next('ul');
+            if(list.is(':visible')) {
+                list.hide('slow');
+            }
+            else {
+                $('a.toggle+ul').hide('slow');
+                list.show('slow');
+            }
+        });
+    </script>
 </html>
