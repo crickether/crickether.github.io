@@ -1,0 +1,818 @@
+<html>
+<head>
+<title>Super Smash - Batting</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script><script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js" integrity="sha512-qzgd5cYSZcosqpzpn7zF2ZId8f/8CHmFKZ8j7mU4OUXTNRd5g+ZHBPsgKEwoqxCtdQvExE5LprwwPAgoicguNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+table.table tbody tr:hover td { color: var(--bs-primary); cursor: default; }
+.table th, .table td { text-wrap: nowrap; overflow: hidden }
+</style>
+</head>
+<body>
+<h1>Super Smash - Batting</h1>
+<div class='m-1'><input class='form-control form-control-sm table-filter' placeholder='Filter...' style='display: none;' /></div><script>$(document).ready(function(){  $('.table-filter').toggle();   $('.table-filter').on('keyup', function() {    var fors = $(this).val().split(',').map(n => n.trim().toLowerCase()).filter(n => n.length > 0);    $('.table tbody tr').filter(function() {      $(this).toggle(filter_contains(fors, [$(this).text(), $(this).attr('data-filter')]));    });  });});function filter_contains(fors, ins) {  let result = false;  if(fors.length == 0) {    return true;  }  fors.forEach(f => {    if(f.length > 0) {      ins.forEach(i => {        if(i.toLowerCase().indexOf(f) > -1) {          result = true;        }      });    }  });  return result;}</script>
+<table class="table table-sm table-sort" style="table-layout: fixed;">
+<thead class="sticky-top">
+<tr style="position: relative; top: -1px">
+<th>Batter</th><th></th><th class="text-end">Average</th><th class="text-end">Strike Rate</th><th class="text-end">Impact</th><th class="text-end">Boundary %</th><th class="text-end">Dot %</th><th class="text-end">Bowled %</th><th class="text-end">LBW %</th><th class="text-end">Caught %</th><th class="text-end">Stumped %</th><th class="text-end">Run Out %</th>
+</tr>
+</thead>
+<tbody>
+<tr style="position: relative; cursor: default;" title="C Agafili
+Teams: Northern Districts
+Matches: 17
+Runs: 132
+Overs: 21
+Dismissals: 15" data-filter="Northern Districts">
+<td colspan="2" data-text="Agafili"><a class="chart" data-title="Batting Impact - C Agafili" data-x="[2022,2023,2024]" data-y="[4.056058653786462,6.66513340817698,9.975598672527003]" data-tooltips="[[&quot;Runs: 28&quot;,&quot;Strike Rate: 85&quot;,&quot;Dismissals: 5&quot;],[&quot;Runs: 50&quot;,&quot;Strike Rate: 100&quot;,&quot;Dismissals: 6&quot;],[&quot;Runs: 54&quot;,&quot;Strike Rate: 126&quot;,&quot;Dismissals: 4&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=C+Agafili+cricket" target="_blank">C Agafili</a></td>
+<td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #19875448" class="text-end">105</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875461" class="text-end">13</td><td style="background-color: #19875423" class="text-end">41</td><td style="background-color: #dc35456D" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">40</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35456B" class="text-end">27</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="KG Anderson
+Teams: Northern Districts; Canterbury
+Matches: 53
+Runs: 1,414
+Overs: 219
+Dismissals: 49" data-filter="Northern Districts; Canterbury">
+<td colspan="2" data-text="Anderson"><a class="chart" data-title="Batting Impact - KG Anderson" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[6.957217715924607,20.389463665501175,19.29545859354746,36.618793029760106,18.31880375212908,23.944822013361367]" data-tooltips="[[&quot;Runs: 29&quot;,&quot;Strike Rate: 97&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 203&quot;,&quot;Strike Rate: 107&quot;,&quot;Dismissals: 10&quot;],[&quot;Runs: 170&quot;,&quot;Strike Rate: 97&quot;,&quot;Dismissals: 8&quot;],[&quot;Runs: 536&quot;,&quot;Strike Rate: 116&quot;,&quot;Dismissals: 9&quot;],[&quot;Runs: 182&quot;,&quot;Strike Rate: 105&quot;,&quot;Dismissals: 9&quot;],[&quot;Runs: 294&quot;,&quot;Strike Rate: 105&quot;,&quot;Dismissals: 9&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=KG+Anderson+cricket" target="_blank">KG Anderson</a></td>
+<td style="background-color: #198754BD" class="text-end">29</td><td style="background-color: #1987545D" class="text-end">108</td><td style="background-color: #198754D7" class="text-end">23</td><td style="background-color: #1987546F" class="text-end">13</td><td style="background-color: #19875437" class="text-end">40</td><td style="background-color: #dc354500" class="text-end">20</td><td style="background-color: #dc35457A" class="text-end">12</td><td style="background-color: #dc354500" class="text-end">37</td><td style="background-color: #dc35451E" class="text-end">8</td><td style="background-color: #dc354531" class="text-end">20</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="HJ Armitage
+Teams: Central Districts
+Matches: 17
+Runs: 565
+Overs: 83
+Dismissals: 15" data-filter="Central Districts">
+<td colspan="2" data-text="Armitage"><a class="chart" data-title="Batting Impact - HJ Armitage" data-x="[2023,2024]" data-y="[30.79221333512181,35.13347058466804]" data-tooltips="[[&quot;Runs: 318&quot;,&quot;Strike Rate: 121&quot;,&quot;Dismissals: 10&quot;],[&quot;Runs: 247&quot;,&quot;Strike Rate: 104&quot;,&quot;Dismissals: 5&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=HJ+Armitage+cricket" target="_blank">HJ Armitage</a></td>
+<td style="background-color: #198754FF" class="text-end">38</td><td style="background-color: #19875480" class="text-end">113</td><td style="background-color: #198754FF" class="text-end">33</td><td style="background-color: #1987547B" class="text-end">14</td><td style="background-color: #19875446" class="text-end">39</td><td style="background-color: #dc354500" class="text-end">20</td><td style="background-color: #dc354518" class="text-end">7</td><td style="background-color: #dc35452D" class="text-end">53</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="BG Armstrong
+Teams: Auckland
+Matches: 45
+Runs: 592
+Overs: 100
+Dismissals: 38" data-filter="Auckland">
+<td colspan="2" data-text="Armstrong"><a class="chart" data-title="Batting Impact - BG Armstrong" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[13.53547357370417,11.948063283493743,8.724312993836723,19.84608373758812,4.270293121124427,11.283781491246515]" data-tooltips="[[&quot;Runs: 33&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 149&quot;,&quot;Strike Rate: 101&quot;,&quot;Dismissals: 8&quot;],[&quot;Runs: 120&quot;,&quot;Strike Rate: 66&quot;,&quot;Dismissals: 10&quot;],[&quot;Runs: 177&quot;,&quot;Strike Rate: 128&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 16&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 97&quot;,&quot;Strike Rate: 111&quot;,&quot;Dismissals: 5&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=BG+Armstrong+cricket" target="_blank">BG Armstrong</a></td>
+<td style="background-color: #19875401" class="text-end">16</td><td style="background-color: #19875420" class="text-end">99</td><td style="background-color: #19875410" class="text-end">12</td><td style="background-color: #19875414" class="text-end">10</td><td style="background-color: #1987541E" class="text-end">42</td><td style="background-color: #dc354500" class="text-end">16</td><td style="background-color: #dc354500" class="text-end">3</td><td style="background-color: #dc354581" class="text-end">66</td><td style="background-color: #dc354500" class="text-end">3</td><td style="background-color: #dc354500" class="text-end">8</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="SR Asmussen
+Teams: Canterbury
+Matches: 11
+Runs: 26
+Overs: 7
+Dismissals: 7" data-filter="Canterbury">
+<td colspan="2" data-text="Asmussen"><a class="chart" data-title="Batting Impact - SR Asmussen" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[0.24013065410534665,0.3424012854129641,2.561396618881222,0.2672764726403069,1.8313097197716,4.468323799911502]" data-tooltips="[[&quot;Runs: 1&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 1&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 7&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 1&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 6&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 10&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=SR+Asmussen+cricket" target="_blank">SR Asmussen</a></td>
+<td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875400" class="text-end">63</td><td style="background-color: #19875400" class="text-end">2</td><td style="background-color: #19875400" class="text-end">2</td><td style="background-color: #19875449" class="text-end">39</td><td style="background-color: #dc354500" class="text-end">14</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">29</td><td style="background-color: #dc35458A" class="text-end">14</td><td style="background-color: #dc35457D" class="text-end">29</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="GK Atkinson
+Teams: Central Districts
+Matches: 39
+Runs: 418
+Overs: 79
+Dismissals: 37" data-filter="Central Districts">
+<td colspan="2" data-text="Atkinson"><a class="chart" data-title="Batting Impact - GK Atkinson" data-x="[2020,2021,2022,2023,2024]" data-y="[7.638700005824032,13.127216865970254,9.050103774591221,9.59122069851876,2.6551410474736126]" data-tooltips="[[&quot;Runs: 51&quot;,&quot;Strike Rate: 82&quot;,&quot;Dismissals: 8&quot;],[&quot;Runs: 112&quot;,&quot;Strike Rate: 95&quot;,&quot;Dismissals: 8&quot;],[&quot;Runs: 141&quot;,&quot;Strike Rate: 89&quot;,&quot;Dismissals: 10&quot;],[&quot;Runs: 90&quot;,&quot;Strike Rate: 95&quot;,&quot;Dismissals: 5&quot;],[&quot;Runs: 24&quot;,&quot;Strike Rate: 60&quot;,&quot;Dismissals: 6&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=GK+Atkinson+cricket" target="_blank">GK Atkinson</a></td>
+<td style="background-color: #19875400" class="text-end">11</td><td style="background-color: #19875400" class="text-end">88</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #19875412" class="text-end">10</td><td style="background-color: #19875400" class="text-end">49</td><td style="background-color: #dc35459A" class="text-end">38</td><td style="background-color: #dc354561" class="text-end">11</td><td style="background-color: #dc354500" class="text-end">41</td><td style="background-color: #dc354500" class="text-end">3</td><td style="background-color: #dc354500" class="text-end">5</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="N Baird
+Teams: Wellington
+Matches: 9
+Runs: 36
+Overs: 8
+Dismissals: 6" data-filter="Wellington">
+<td colspan="2" data-text="Baird"><a class="chart" data-title="Batting Impact - N Baird" data-x="[2022,2023,2024]" data-y="[1.639097969847168,6.375888429425527,2.741486957710716]" data-tooltips="[[&quot;Runs: 8&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 21&quot;,&quot;Strike Rate: 81&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 7&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=N+Baird+cricket" target="_blank">N Baird</a></td>
+<td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">77</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875400" class="text-end">2</td><td style="background-color: #19875432" class="text-end">40</td><td style="background-color: #dc354500" class="text-end">17</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354516" class="text-end">50</td><td style="background-color: #dc3545B4" class="text-end">17</td><td style="background-color: #dc35450E" class="text-end">17</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="MJ Banks
+Teams: Canterbury
+Matches: 25
+Runs: 119
+Overs: 25
+Dismissals: 13" data-filter="Canterbury">
+<td colspan="2" data-text="Banks"><a class="chart" data-title="Batting Impact - MJ Banks" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[4.834655982078043,0.37495796629049766,2.8726428313554586,3.8494000940978905,6.717960238109447,6.543441655376898]" data-tooltips="[[&quot;Runs: 10&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 4&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 19&quot;,&quot;Strike Rate: 68&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 23&quot;,&quot;Strike Rate: 82&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 19&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 44&quot;,&quot;Strike Rate: 113&quot;,&quot;Dismissals: 3&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=MJ+Banks+cricket" target="_blank">MJ Banks</a></td>
+<td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #19875400" class="text-end">80</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875430" class="text-end">41</td><td style="background-color: #dc3545A0" class="text-end">38</td><td style="background-color: #dc35452A" class="text-end">8</td><td style="background-color: #dc354500" class="text-end">31</td><td style="background-color: #dc354515" class="text-end">8</td><td style="background-color: #dc354502" class="text-end">15</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="OJS Bartlett
+Teams: Central Districts
+Matches: 14
+Runs: 51
+Overs: 14
+Dismissals: 8" data-filter="Central Districts">
+<td colspan="2" data-text="Bartlett"><a class="chart" data-title="Batting Impact - OJS Bartlett" data-x="[2021,2022,2024]" data-y="[3.5272660827451716,4.65262951074771,2.382512611130283]" data-tooltips="[[&quot;Runs: 9&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 21&quot;,&quot;Strike Rate: 81&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 21&quot;,&quot;Strike Rate: 52&quot;,&quot;Dismissals: 3&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=OJS+Bartlett+cricket" target="_blank">OJS Bartlett</a></td>
+<td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">59</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875400" class="text-end">1</td><td style="background-color: #19875400" class="text-end">47</td><td style="background-color: #dc3545FF" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: #dc35456A" class="text-end">12</td><td style="background-color: #dc354500" class="text-end">12</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="SW Bates
+Teams: Otago
+Matches: 41
+Runs: 1,417
+Overs: 205
+Dismissals: 34" data-filter="Otago">
+<td colspan="2" data-text="Bates"><a class="chart" data-title="Batting Impact - SW Bates" data-x="[2019,2021,2022,2023,2024]" data-y="[6.395053254654022,35.45623448275102,42.986856121860036,37.18001694745921,15.924698783762727]" data-tooltips="[[&quot;Runs: 42&quot;,&quot;Strike Rate: 111&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 504&quot;,&quot;Strike Rate: 116&quot;,&quot;Dismissals: 9&quot;],[&quot;Runs: 293&quot;,&quot;Strike Rate: 129&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 398&quot;,&quot;Strike Rate: 116&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 180&quot;,&quot;Strike Rate: 97&quot;,&quot;Dismissals: 10&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=SW+Bates+cricket" target="_blank">SW Bates</a></td>
+<td style="background-color: #198754FF" class="text-end">42</td><td style="background-color: #1987548F" class="text-end">115</td><td style="background-color: #198754FF" class="text-end">29</td><td style="background-color: #1987547E" class="text-end">14</td><td style="background-color: #1987544F" class="text-end">39</td><td style="background-color: #dc354500" class="text-end">18</td><td style="background-color: #dc354500" class="text-end">3</td><td style="background-color: #dc35452A" class="text-end">53</td><td style="background-color: #dc354500" class="text-end">6</td><td style="background-color: #dc354500" class="text-end">6</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="EJ Black
+Teams: Otago
+Matches: 18
+Runs: 79
+Overs: 14
+Dismissals: 12" data-filter="Otago">
+<td colspan="2" data-text="Black"><a class="chart" data-title="Batting Impact - EJ Black" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[20.471654086334148,3.168663157007501,9.200278312743267,3.0906192930684275,4.970472611925322,4.291586507763094]" data-tooltips="[[&quot;Runs: 13&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 0&quot;],[&quot;Runs: 20&quot;,&quot;Strike Rate: 61&quot;,&quot;Dismissals: 5&quot;],[&quot;Runs: 17&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 10&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 12&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 7&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 0&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=EJ+Black+cricket" target="_blank">EJ Black</a></td>
+<td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875400" class="text-end">94</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #19875400" class="text-end">44</td><td style="background-color: #dc35451B" class="text-end">25</td><td style="background-color: #dc354535" class="text-end">8</td><td style="background-color: #dc354500" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545AA" class="text-end">33</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="CG Blakely
+Teams: Otago
+Matches: 48
+Runs: 637
+Overs: 104
+Dismissals: 34" data-filter="Otago">
+<td colspan="2" data-text="Blakely"><a class="chart" data-title="Batting Impact - CG Blakely" data-x="[2020,2021,2022,2023,2024]" data-y="[13.880792612896972,7.878838141309395,7.5202153886057035,15.668226060446017,16.623596724432026]" data-tooltips="[[&quot;Runs: 107&quot;,&quot;Strike Rate: 107&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 85&quot;,&quot;Strike Rate: 94&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 94&quot;,&quot;Strike Rate: 95&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 132&quot;,&quot;Strike Rate: 118&quot;,&quot;Dismissals: 5&quot;],[&quot;Runs: 219&quot;,&quot;Strike Rate: 100&quot;,&quot;Dismissals: 8&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=CG+Blakely+cricket" target="_blank">CG Blakely</a></td>
+<td style="background-color: #1987542E" class="text-end">19</td><td style="background-color: #19875439" class="text-end">103</td><td style="background-color: #19875413" class="text-end">12</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #198754C3" class="text-end">32</td><td style="background-color: #dc35450D" class="text-end">24</td><td style="background-color: #dc35453E" class="text-end">9</td><td style="background-color: #dc354500" class="text-end">41</td><td style="background-color: #dc354500" class="text-end">6</td><td style="background-color: #dc354500" class="text-end">15</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="SE Bowden
+Teams: Auckland
+Matches: 12
+Runs: 92
+Overs: 21
+Dismissals: 9" data-filter="Auckland">
+<td colspan="2" data-text="Bowden"><a class="chart" data-title="Batting Impact - SE Bowden" data-x="[2021,2022,2023]" data-y="[4.510471459388396,14.949072634201965,5.1071754076377935]" data-tooltips="[[&quot;Runs: 26&quot;,&quot;Strike Rate: 60&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 31&quot;,&quot;Strike Rate: 91&quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 35&quot;,&quot;Strike Rate: 70&quot;,&quot;Dismissals: 5&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=SE+Bowden+cricket" target="_blank">SE Bowden</a></td>
+<td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #19875400" class="text-end">72</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">48</td><td style="background-color: #dc35456D" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354586" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="M Brown
+Teams: Wellington
+Matches: 6
+Runs: 93
+Overs: 14
+Dismissals: 5" data-filter="Wellington">
+<td colspan="2" data-text="Brown"><a class="chart" data-title="Batting Impact - M Brown" data-x="[2024]" data-y="[15.516969147965787]" data-tooltips="[[&quot;Runs: 93&quot;,&quot;Strike Rate: 108&quot;,&quot;Dismissals: 5&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=M+Brown+cricket" target="_blank">M Brown</a></td>
+<td style="background-color: #1987542C" class="text-end">19</td><td style="background-color: #1987545F" class="text-end">108</td><td style="background-color: #1987544C" class="text-end">16</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #198754CB" class="text-end">31</td><td style="background-color: #dc354500" class="text-end">20</td><td style="background-color: #dc3545FF" class="text-end">40</td><td style="background-color: #dc354500" class="text-end">40</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="AS Browning
+Teams: Auckland; Otago
+Matches: 18
+Runs: 188
+Overs: 32
+Dismissals: 14" data-filter="Auckland; Otago">
+<td colspan="2" data-text="Browning"><a class="chart" data-title="Batting Impact - AS Browning" data-x="[2022,2023,2024]" data-y="[12.751541303943771,7.285578085080954,8.151076625140806]" data-tooltips="[[&quot;Runs: 71&quot;,&quot;Strike Rate: 95&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 68&quot;,&quot;Strike Rate: 94&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 49&quot;,&quot;Strike Rate: 102&quot;,&quot;Dismissals: 3&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=AS+Browning+cricket" target="_blank">AS Browning</a></td>
+<td style="background-color: #19875400" class="text-end">13</td><td style="background-color: #1987540F" class="text-end">96</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #19875447" class="text-end">12</td><td style="background-color: #19875400" class="text-end">46</td><td style="background-color: #dc354500" class="text-end">14</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">43</td><td style="background-color: #dc35450C" class="text-end">7</td><td style="background-color: #dc35457D" class="text-end">29</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="RM Burns
+Teams: Wellington
+Matches: 52
+Runs: 1,022
+Overs: 153
+Dismissals: 46" data-filter="Wellington">
+<td colspan="2" data-text="Burns"><a class="chart" data-title="Batting Impact - RM Burns" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[19.428948625545747,11.713066289763823,12.491217592518502,25.613165846318253,12.936257163575515,22.641246241274104]" data-tooltips="[[&quot;Runs: 75&quot;,&quot;Strike Rate: 134&quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 96&quot;,&quot;Strike Rate: 91&quot;,&quot;Dismissals: 8&quot;],[&quot;Runs: 140&quot;,&quot;Strike Rate: 107&quot;,&quot;Dismissals: 8&quot;],[&quot;Runs: 281&quot;,&quot;Strike Rate: 122&quot;,&quot;Dismissals: 9&quot;],[&quot;Runs: 161&quot;,&quot;Strike Rate: 103&quot;,&quot;Dismissals: 10&quot;],[&quot;Runs: 269&quot;,&quot;Strike Rate: 113&quot;,&quot;Dismissals: 10&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=RM+Burns+cricket" target="_blank">RM Burns</a></td>
+<td style="background-color: #1987545F" class="text-end">22</td><td style="background-color: #19875475" class="text-end">111</td><td style="background-color: #19875471" class="text-end">18</td><td style="background-color: #198754DC" class="text-end">17</td><td style="background-color: #19875400" class="text-end">48</td><td style="background-color: #dc354500" class="text-end">9</td><td style="background-color: #dc35453C" class="text-end">9</td><td style="background-color: #dc35459A" class="text-end">70</td><td style="background-color: #dc354501" class="text-end">7</td><td style="background-color: #dc354500" class="text-end">4</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="EJ Carson
+Teams: Otago
+Matches: 22
+Runs: 88
+Overs: 19
+Dismissals: 14" data-filter="Otago">
+<td colspan="2" data-text="Carson"><a class="chart" data-title="Batting Impact - EJ Carson" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[11.055075735192593,3.298048541914415,2.2293810047202256,3.810385561732737,1.3207518283647937,4.1067981396939395]" data-tooltips="[[&quot;Runs: 17&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 0&quot;],[&quot;Runs: 25&quot;,&quot;Strike Rate: 66&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 11&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 9&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 9&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 17&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 3&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=EJ+Carson+cricket" target="_blank">EJ Carson</a></td>
+<td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">77</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875400" class="text-end">45</td><td style="background-color: #dc354585" class="text-end">36</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354546" class="text-end">57</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">7</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="P Catton
+Teams: Auckland
+Matches: 22
+Runs: 297
+Overs: 51
+Dismissals: 22" data-filter="Auckland">
+<td colspan="2" data-text="Catton"><a class="chart" data-title="Batting Impact - P Catton" data-x="[2022,2023,2024]" data-y="[14.582971527867986,23.147975798115603,1.1282584267799254]" data-tooltips="[[&quot;Runs: 98&quot;,&quot;Strike Rate: 92&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 186&quot;,&quot;Strike Rate: 106&quot;,&quot;Dismissals: 8&quot;],[&quot;Runs: 13&quot;,&quot;Strike Rate: 52&quot;,&quot;Dismissals: 7&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=P+Catton+cricket" target="_blank">P Catton</a></td>
+<td style="background-color: #19875400" class="text-end">14</td><td style="background-color: #19875410" class="text-end">96</td><td style="background-color: #19875426" class="text-end">13</td><td style="background-color: #1987543B" class="text-end">11</td><td style="background-color: #19875400" class="text-end">47</td><td style="background-color: #dc35455E" class="text-end">32</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354535" class="text-end">55</td><td style="background-color: #dc354500" class="text-end">5</td><td style="background-color: #dc354500" class="text-end">5</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="KM Chandler
+Teams: Wellington
+Matches: 8
+Runs: 60
+Overs: 14
+Dismissals: 7" data-filter="Wellington">
+<td colspan="2" data-text="Chandler"><a class="chart" data-title="Batting Impact - KM Chandler" data-x="[2022,2023,2024]" data-y="[8.187022199748204,5.713991454598692,3.6147039584842124]" data-tooltips="[[&quot;Runs: 16&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 34&quot;,&quot;Strike Rate: 71&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 10&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=KM+Chandler+cricket" target="_blank">KM Chandler</a></td>
+<td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #19875400" class="text-end">71</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">50</td><td style="background-color: #dc35453E" class="text-end">29</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">14</td><td style="background-color: #dc35458A" class="text-end">14</td><td style="background-color: #dc354500" class="text-end">14</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="NB Cox
+Teams: Canterbury
+Matches: 51
+Runs: 704
+Overs: 125
+Dismissals: 45" data-filter="Canterbury">
+<td colspan="2" data-text="Cox"><a class="chart" data-title="Batting Impact - NB Cox" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[12.144002154769723,11.943692221543252,12.615297358340982,13.55270553354684,5.9866996252803375,13.015033122858288]" data-tooltips="[[&quot;Runs: 45&quot;,&quot;Strike Rate: 94&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 157&quot;,&quot;Strike Rate: 95&quot;,&quot;Dismissals: 9&quot;],[&quot;Runs: 162&quot;,&quot;Strike Rate: 99&quot;,&quot;Dismissals: 8&quot;],[&quot;Runs: 168&quot;,&quot;Strike Rate: 88&quot;,&quot;Dismissals: 10&quot;],[&quot;Runs: 56&quot;,&quot;Strike Rate: 93&quot;,&quot;Dismissals: 6&quot;],[&quot;Runs: 116&quot;,&quot;Strike Rate: 94&quot;,&quot;Dismissals: 8&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=NB+Cox+cricket" target="_blank">NB Cox</a></td>
+<td style="background-color: #19875402" class="text-end">16</td><td style="background-color: #19875400" class="text-end">94</td><td style="background-color: #19875409" class="text-end">12</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #19875400" class="text-end">44</td><td style="background-color: #dc354500" class="text-end">22</td><td style="background-color: #dc35458D" class="text-end">13</td><td style="background-color: #dc354500" class="text-end">47</td><td style="background-color: #dc354500" class="text-end">4</td><td style="background-color: #dc354500" class="text-end">13</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="EG Cunningham
+Teams: Central Districts
+Matches: 23
+Runs: 176
+Overs: 41
+Dismissals: 20" data-filter="Central Districts">
+<td colspan="2" data-text="Cunningham"><a class="chart" data-title="Batting Impact - EG Cunningham" data-x="[2019,2020,2021,2022,2024]" data-y="[10.073610867015653,5.93487417733175,5.848815311997749,0.5205049043371763,1.08588686416234]" data-tooltips="[[&quot;Runs: 35&quot;,&quot;Strike Rate: 81&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 68&quot;,&quot;Strike Rate: 69&quot;,&quot;Dismissals: 8&quot;],[&quot;Runs: 69&quot;,&quot;Strike Rate: 75&quot;,&quot;Dismissals: 6&quot;],[&quot;Runs: 2&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 2&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=EG+Cunningham+cricket" target="_blank">EG Cunningham</a></td>
+<td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #19875400" class="text-end">72</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #19875400" class="text-end">61</td><td style="background-color: #dc35451B" class="text-end">25</td><td style="background-color: #dc354500" class="text-end">5</td><td style="background-color: #dc354538" class="text-end">55</td><td style="background-color: #dc35453E" class="text-end">10</td><td style="background-color: #dc354500" class="text-end">5</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="SRH Curtis
+Teams: Northern Districts
+Matches: 27
+Runs: 375
+Overs: 76
+Dismissals: 25" data-filter="Northern Districts">
+<td colspan="2" data-text="Curtis"><a class="chart" data-title="Batting Impact - SRH Curtis" data-x="[2021,2022,2023,2024]" data-y="[16.05396521171482,21.729258272882767,5.796191875719216,2.7196586684182367]" data-tooltips="[[&quot;Runs: 137&quot;,&quot;Strike Rate: 81&quot;,&quot;Dismissals: 9&quot;],[&quot;Runs: 155&quot;,&quot;Strike Rate: 97&quot;,&quot;Dismissals: 8&quot;],[&quot;Runs: 72&quot;,&quot;Strike Rate: 64&quot;,&quot;Dismissals: 6&quot;],[&quot;Runs: 11&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=SRH+Curtis+cricket" target="_blank">SRH Curtis</a></td>
+<td style="background-color: #19875400" class="text-end">15</td><td style="background-color: #19875400" class="text-end">82</td><td style="background-color: #19875423" class="text-end">13</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875400" class="text-end">44</td><td style="background-color: #dc354500" class="text-end">16</td><td style="background-color: #dc354575" class="text-end">12</td><td style="background-color: #dc35453F" class="text-end">56</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">12</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="HJ Darlington
+Teams: Otago; Wellington
+Matches: 6
+Runs: 112
+Overs: 22
+Dismissals: 6" data-filter="Otago; Wellington">
+<td colspan="2" data-text="Darlington"><a class="chart" data-title="Batting Impact - HJ Darlington" data-x="[2019,2024]" data-y="[19.867218299623175,14.399964460684336]" data-tooltips="[[&quot;Runs: 51&quot;,&quot;Strike Rate: 100&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 61&quot;,&quot;Strike Rate: 75&quot;,&quot;Dismissals: 4&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=HJ+Darlington+cricket" target="_blank">HJ Darlington</a></td>
+<td style="background-color: #1987542D" class="text-end">19</td><td style="background-color: #19875400" class="text-end">85</td><td style="background-color: #1987545F" class="text-end">17</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #19875400" class="text-end">48</td><td style="background-color: #dc35456D" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354516" class="text-end">50</td><td style="background-color: #dc3545B4" class="text-end">17</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="J Dean
+Teams: Canterbury
+Matches: 19
+Runs: 168
+Overs: 33
+Dismissals: 16" data-filter="Canterbury">
+<td colspan="2" data-text="Dean"><a class="chart" data-title="Batting Impact - J Dean" data-x="[2021,2022,2023,2024]" data-y="[14.229592397491027,0.0564528094319617,11.874717363285354,5.4844284174080835]" data-tooltips="[[&quot;Runs: 29&quot;,&quot;Strike Rate: 121&quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 1&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 62&quot;,&quot;Strike Rate: 86&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 76&quot;,&quot;Strike Rate: 78&quot;,&quot;Dismissals: 10&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=J+Dean+cricket" target="_blank">J Dean</a></td>
+<td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #19875400" class="text-end">84</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #19875413" class="text-end">10</td><td style="background-color: #19875400" class="text-end">50</td><td style="background-color: #dc354500" class="text-end">19</td><td style="background-color: #dc3545EB" class="text-end">19</td><td style="background-color: #dc354500" class="text-end">31</td><td style="background-color: #dc3545D9" class="text-end">19</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="SFM Devine
+Teams: Wellington
+Matches: 23
+Runs: 821
+Overs: 90
+Dismissals: 20" data-filter="Wellington">
+<td colspan="2" data-text="Devine"><a class="chart" data-title="Batting Impact - SFM Devine" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[55.45524377828172,44.052487062942085,37.70959305008584,2.6155532952008564,4.599427049767002,9.702606166512673]" data-tooltips="[[&quot;Runs: 170&quot;,&quot;Strike Rate: 195&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 434&quot;,&quot;Strike Rate: 166&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 153&quot;,&quot;Strike Rate: 146&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 10&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 16&quot;,&quot;Strike Rate: 59&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 38&quot;,&quot;Strike Rate: 88&quot;,&quot;Dismissals: 4&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=SFM+Devine+cricket" target="_blank">SFM Devine</a></td>
+<td style="background-color: #198754FF" class="text-end">41</td><td style="background-color: #198754FF" class="text-end">152</td><td style="background-color: #198754FF" class="text-end">31</td><td style="background-color: #198754FF" class="text-end">22</td><td style="background-color: #1987548D" class="text-end">35</td><td style="background-color: #dc354500" class="text-end">20</td><td style="background-color: #dc354552" class="text-end">10</td><td style="background-color: #dc354559" class="text-end">60</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">10</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="FDM Devonshire
+Teams: Central Districts
+Matches: 19
+Runs: 177
+Overs: 30
+Dismissals: 15" data-filter="Central Districts">
+<td colspan="2" data-text="Devonshire"><a class="chart" data-title="Batting Impact - FDM Devonshire" data-x="[2022,2023,2024]" data-y="[23.95814580673572,4.305694495742886,8.947489306776534]" data-tooltips="[[&quot;Runs: 78&quot;,&quot;Strike Rate: 122&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 21&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 78&quot;,&quot;Strike Rate: 84&quot;,&quot;Dismissals: 8&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=FDM+Devonshire+cricket" target="_blank">FDM Devonshire</a></td>
+<td style="background-color: #19875400" class="text-end">12</td><td style="background-color: #19875424" class="text-end">99</td><td style="background-color: #19875415" class="text-end">12</td><td style="background-color: #19875427" class="text-end">11</td><td style="background-color: #19875400" class="text-end">44</td><td style="background-color: #dc354500" class="text-end">20</td><td style="background-color: #dc354518" class="text-end">7</td><td style="background-color: #dc354500" class="text-end">47</td><td style="background-color: #dc354579" class="text-end">13</td><td style="background-color: #dc354500" class="text-end">7</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="NC Dodd
+Teams: Central Districts
+Matches: 36
+Runs: 965
+Overs: 167
+Dismissals: 32" data-filter="Central Districts">
+<td colspan="2" data-text="Dodd"><a class="chart" data-title="Batting Impact - NC Dodd" data-x="[2019,2020,2021,2022,2023]" data-y="[20.59718239187615,28.230347164552704,21.617152079642306,28.079233717870558,12.428397036281623]" data-tooltips="[[&quot;Runs: 73&quot;,&quot;Strike Rate: 92&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 301&quot;,&quot;Strike Rate: 98&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 171&quot;,&quot;Strike Rate: 87&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 327&quot;,&quot;Strike Rate: 107&quot;,&quot;Dismissals: 9&quot;],[&quot;Runs: 93&quot;,&quot;Strike Rate: 82&quot;,&quot;Dismissals: 6&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=NC+Dodd+cricket" target="_blank">NC Dodd</a></td>
+<td style="background-color: #198754CF" class="text-end">30</td><td style="background-color: #1987540F" class="text-end">96</td><td style="background-color: #198754DE" class="text-end">24</td><td style="background-color: #19875407" class="text-end">10</td><td style="background-color: #1987542B" class="text-end">41</td><td style="background-color: #dc354500" class="text-end">16</td><td style="background-color: #dc354548" class="text-end">9</td><td style="background-color: #dc35452B" class="text-end">53</td><td style="background-color: #dc35456A" class="text-end">12</td><td style="background-color: #dc354500" class="text-end">3</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="LR Down
+Teams: Auckland
+Matches: 42
+Runs: 886
+Overs: 152
+Dismissals: 34" data-filter="Auckland">
+<td colspan="2" data-text="Down"><a class="chart" data-title="Batting Impact - LR Down" data-x="[2019,2020,2021,2022,2024]" data-y="[19.16409086793497,8.565198601376515,18.255850016375394,12.157184752043321,24.95762898625563]" data-tooltips="[[&quot;Runs: 87&quot;,&quot;Strike Rate: 118&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 138&quot;,&quot;Strike Rate: 87&quot;,&quot;Dismissals: 9&quot;],[&quot;Runs: 235&quot;,&quot;Strike Rate: 94&quot;,&quot;Dismissals: 10&quot;],[&quot;Runs: 122&quot;,&quot;Strike Rate: 83&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 304&quot;,&quot;Strike Rate: 108&quot;,&quot;Dismissals: 4&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=LR+Down+cricket" target="_blank">LR Down</a></td>
+<td style="background-color: #19875495" class="text-end">26</td><td style="background-color: #19875416" class="text-end">97</td><td style="background-color: #1987545A" class="text-end">16</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #1987543D" class="text-end">40</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: #dc35450A" class="text-end">6</td><td style="background-color: #dc3545C9" class="text-end">76</td><td style="background-color: #dc354500" class="text-end">3</td><td style="background-color: #dc354500" class="text-end">3</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="MW Downes
+Teams: Northern Districts
+Matches: 11
+Runs: 79
+Overs: 16
+Dismissals: 4" data-filter="Northern Districts">
+<td colspan="2" data-text="Downes"><a class="chart" data-title="Batting Impact - MW Downes" data-x="[2022,2023,2024]" data-y="[10.32145257287752,3.9210935618370315,4.046080639242793]" data-tooltips="[[&quot;Runs: 34&quot;,&quot;Strike Rate: 79&quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 24&quot;,&quot;Strike Rate: 92&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 21&quot;,&quot;Strike Rate: 84&quot;,&quot;Dismissals: 0&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=MW+Downes+cricket" target="_blank">MW Downes</a></td>
+<td style="background-color: #1987543C" class="text-end">20</td><td style="background-color: #19875400" class="text-end">84</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">2</td><td style="background-color: #19875468" class="text-end">37</td><td style="background-color: #dc35451B" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545BF" class="text-end">75</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="KE Ebrahim
+Teams: Canterbury; Otago
+Matches: 38
+Runs: 809
+Overs: 138
+Dismissals: 28" data-filter="Canterbury; Otago">
+<td colspan="2" data-text="Ebrahim"><a class="chart" data-title="Batting Impact - KE Ebrahim" data-x="[2020,2021,2022,2024]" data-y="[23.014938411988147,14.433981696344535,18.149539906467595,10.44628096241922]" data-tooltips="[[&quot;Runs: 292&quot;,&quot;Strike Rate: 101&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 153&quot;,&quot;Strike Rate: 92&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 267&quot;,&quot;Strike Rate: 103&quot;,&quot;Dismissals: 9&quot;],[&quot;Runs: 97&quot;,&quot;Strike Rate: 82&quot;,&quot;Dismissals: 8&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=KE+Ebrahim+cricket" target="_blank">KE Ebrahim</a></td>
+<td style="background-color: #198754BD" class="text-end">29</td><td style="background-color: #19875416" class="text-end">97</td><td style="background-color: #1987545F" class="text-end">17</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #19875446" class="text-end">39</td><td style="background-color: #dc354500" class="text-end">18</td><td style="background-color: #dc354500" class="text-end">4</td><td style="background-color: #dc354516" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35455C" class="text-end">25</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="KJ Gaging
+Teams: Central Districts
+Matches: 16
+Runs: 101
+Overs: 20
+Dismissals: 12" data-filter="Central Districts">
+<td colspan="2" data-text="Gaging"><a class="chart" data-title="Batting Impact - KJ Gaging" data-x="[2020,2021,2022,2023,2024]" data-y="[15.364798624502605,0.4446599157385847,2.1967212742896653,5.019897340405943,5.385836547895219]" data-tooltips="[[&quot;Runs: 39&quot;,&quot;Strike Rate: 98&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 2&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 8&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 12&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 40&quot;,&quot;Strike Rate: 98&quot;,&quot;Dismissals: 6&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=KJ+Gaging+cricket" target="_blank">KJ Gaging</a></td>
+<td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #19875400" class="text-end">86</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875453" class="text-end">38</td><td style="background-color: #dc35456D" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545AA" class="text-end">33</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="ON Gain
+Teams: Otago
+Matches: 34
+Runs: 371
+Overs: 66
+Dismissals: 32" data-filter="Otago">
+<td colspan="2" data-text="Gain"><a class="chart" data-title="Batting Impact - ON Gain" data-x="[2020,2021,2022,2023,2024]" data-y="[2.2234243757159167,11.28550557758291,11.211402954632813,5.914058717029138,13.129318688039726]" data-tooltips="[[&quot;Runs: 15&quot;,&quot;Strike Rate: 45&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 24&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 128&quot;,&quot;Strike Rate: 123&quot;,&quot;Dismissals: 9&quot;],[&quot;Runs: 40&quot;,&quot;Strike Rate: 74&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 164&quot;,&quot;Strike Rate: 87&quot;,&quot;Dismissals: 9&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=ON+Gain+cricket" target="_blank">ON Gain</a></td>
+<td style="background-color: #19875400" class="text-end">12</td><td style="background-color: #19875400" class="text-end">93</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #1987542A" class="text-end">11</td><td style="background-color: #19875400" class="text-end">52</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: #dc354548" class="text-end">9</td><td style="background-color: #dc35452B" class="text-end">53</td><td style="background-color: #dc354533" class="text-end">9</td><td style="background-color: #dc354500" class="text-end">9</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="IC Gaze
+Teams: Auckland
+Matches: 30
+Runs: 316
+Overs: 56
+Dismissals: 27" data-filter="Auckland">
+<td colspan="2" data-text="Gaze"><a class="chart" data-title="Batting Impact - IC Gaze" data-x="[2021,2022,2023,2024]" data-y="[7.297945497768599,8.207192321505184,2.32077466567732,15.452255230127106]" data-tooltips="[[&quot;Runs: 76&quot;,&quot;Strike Rate: 89&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 49&quot;,&quot;Strike Rate: 91&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 30&quot;,&quot;Strike Rate: 48&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 161&quot;,&quot;Strike Rate: 118&quot;,&quot;Dismissals: 9&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=IC+Gaze+cricket" target="_blank">IC Gaze</a></td>
+<td style="background-color: #19875400" class="text-end">12</td><td style="background-color: #19875400" class="text-end">93</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #19875471" class="text-end">13</td><td style="background-color: #19875400" class="text-end">52</td><td style="background-color: #dc354524" class="text-end">26</td><td style="background-color: #dc354525" class="text-end">7</td><td style="background-color: #dc354500" class="text-end">41</td><td style="background-color: #dc354552" class="text-end">11</td><td style="background-color: #dc354500" class="text-end">11</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="AG Gerken
+Teams: Canterbury
+Matches: 21
+Runs: 170
+Overs: 34
+Dismissals: 18" data-filter="Canterbury">
+<td colspan="2" data-text="Gerken"><a class="chart" data-title="Batting Impact - AG Gerken" data-x="[2021,2022,2024]" data-y="[4.835379846121609,6.963074841220862,5.83183862789905]" data-tooltips="[[&quot;Runs: 47&quot;,&quot;Strike Rate: 71&quot;,&quot;Dismissals: 6&quot;],[&quot;Runs: 80&quot;,&quot;Strike Rate: 92&quot;,&quot;Dismissals: 8&quot;],[&quot;Runs: 43&quot;,&quot;Strike Rate: 90&quot;,&quot;Dismissals: 4&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=AG+Gerken+cricket" target="_blank">AG Gerken</a></td>
+<td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #19875400" class="text-end">85</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875409" class="text-end">43</td><td style="background-color: #dc354500" class="text-end">22</td><td style="background-color: #dc354505" class="text-end">6</td><td style="background-color: #dc354500" class="text-end">39</td><td style="background-color: #dc3545B4" class="text-end">17</td><td style="background-color: #dc35450E" class="text-end">17</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="KL Gordon
+Teams: Otago
+Matches: 7
+Runs: 39
+Overs: 6
+Dismissals: 4" data-filter="Otago">
+<td colspan="2" data-text="Gordon"><a class="chart" data-title="Batting Impact - KL Gordon" data-x="[2022,2024]" data-y="[1.0638172337613774,9.27020476889025]" data-tooltips="[[&quot;Runs: 3&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 36&quot;,&quot;Strike Rate: 120&quot;,&quot;Dismissals: 3&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=KL+Gordon+cricket" target="_blank">KL Gordon</a></td>
+<td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #1987548C" class="text-end">115</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #198754FF" class="text-end">24</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545FF" class="text-end">100</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="CL Green
+Teams: Central Districts
+Matches: 26
+Runs: 122
+Overs: 22
+Dismissals: 17" data-filter="Central Districts">
+<td colspan="2" data-text="Green"><a class="chart" data-title="Batting Impact - CL Green" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[0.7199911637448086,2.891656358008635,1.0086201927685399,2.6429699755154594,11.881038734161539,10.495349962842281]" data-tooltips="[[&quot;Runs: 2&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 0&quot;],[&quot;Runs: 14&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 9&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 16&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 32&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 49&quot;,&quot;Strike Rate: 104&quot;,&quot;Dismissals: 7&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=CL+Green+cricket" target="_blank">CL Green</a></td>
+<td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875400" class="text-end">92</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #1987541D" class="text-end">42</td><td style="background-color: #dc3545BA" class="text-end">41</td><td style="background-color: #dc35450A" class="text-end">6</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: #dc3545C5" class="text-end">18</td><td style="background-color: #dc35454E" class="text-end">24</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="ML Green
+Teams: Wellington; Auckland
+Matches: 48
+Runs: 1,209
+Overs: 183
+Dismissals: 38" data-filter="Wellington; Auckland">
+<td colspan="2" data-text="Green"><a class="chart" data-title="Batting Impact - ML Green" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[17.211471387411247,16.498897673635373,15.895381576012165,15.687461796140115,35.581882280795554,23.148455173105756]" data-tooltips="[[&quot;Runs: 84&quot;,&quot;Strike Rate: 112&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 264&quot;,&quot;Strike Rate: 102&quot;,&quot;Dismissals: 9&quot;],[&quot;Runs: 188&quot;,&quot;Strike Rate: 127&quot;,&quot;Dismissals: 9&quot;],[&quot;Runs: 121&quot;,&quot;Strike Rate: 108&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 283&quot;,&quot;Strike Rate: 111&quot;,&quot;Dismissals: 6&quot;],[&quot;Runs: 269&quot;,&quot;Strike Rate: 108&quot;,&quot;Dismissals: 8&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=ML+Green+cricket" target="_blank">ML Green</a></td>
+<td style="background-color: #198754E7" class="text-end">32</td><td style="background-color: #1987546D" class="text-end">110</td><td style="background-color: #198754A3" class="text-end">20</td><td style="background-color: #19875443" class="text-end">12</td><td style="background-color: #1987548F" class="text-end">35</td><td style="background-color: #dc354500" class="text-end">8</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354592" class="text-end">68</td><td style="background-color: #dc354500" class="text-end">5</td><td style="background-color: #dc354500" class="text-end">8</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="MJ Greig
+Teams: Central Districts
+Matches: 42
+Runs: 476
+Overs: 86
+Dismissals: 36" data-filter="Central Districts">
+<td colspan="2" data-text="Greig"><a class="chart" data-title="Batting Impact - MJ Greig" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[4.11475991556005,7.881509836915541,16.949509133448238,9.265138985307493,11.096435780839569,8.54676362874121]" data-tooltips="[[&quot;Runs: 13&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 31&quot;,&quot;Strike Rate: 97&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 182&quot;,&quot;Strike Rate: 88&quot;,&quot;Dismissals: 9&quot;],[&quot;Runs: 83&quot;,&quot;Strike Rate: 85&quot;,&quot;Dismissals: 6&quot;],[&quot;Runs: 111&quot;,&quot;Strike Rate: 108&quot;,&quot;Dismissals: 8&quot;],[&quot;Runs: 56&quot;,&quot;Strike Rate: 98&quot;,&quot;Dismissals: 8&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=MJ+Greig+cricket" target="_blank">MJ Greig</a></td>
+<td style="background-color: #19875400" class="text-end">13</td><td style="background-color: #19875400" class="text-end">93</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: #1987542E" class="text-end">11</td><td style="background-color: #19875400" class="text-end">47</td><td style="background-color: #dc354500" class="text-end">19</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354503" class="text-end">47</td><td style="background-color: #dc3545FF" class="text-end">25</td><td style="background-color: #dc354500" class="text-end">3</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="CA Gurrey
+Teams: Northern Districts
+Matches: 44
+Runs: 1,071
+Overs: 173
+Dismissals: 37" data-filter="Northern Districts">
+<td colspan="2" data-text="Gurrey"><a class="chart" data-title="Batting Impact - CA Gurrey" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[22.626196367618096,23.275864171285534,25.875524885633098,37.755349479698005,20.38356059645378,17.022781389192513]" data-tooltips="[[&quot;Runs: 105&quot;,&quot;Strike Rate: 95&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 246&quot;,&quot;Strike Rate: 100&quot;,&quot;Dismissals: 8&quot;],[&quot;Runs: 188&quot;,&quot;Strike Rate: 101&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 87&quot;,&quot;Strike Rate: 136&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 230&quot;,&quot;Strike Rate: 106&quot;,&quot;Dismissals: 9&quot;],[&quot;Runs: 215&quot;,&quot;Strike Rate: 100&quot;,&quot;Dismissals: 7&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=CA+Gurrey+cricket" target="_blank">CA Gurrey</a></td>
+<td style="background-color: #198754BE" class="text-end">29</td><td style="background-color: #1987543E" class="text-end">103</td><td style="background-color: #198754C9" class="text-end">22</td><td style="background-color: #19875477" class="text-end">13</td><td style="background-color: #19875400" class="text-end">44</td><td style="background-color: #dc354500" class="text-end">19</td><td style="background-color: #dc354502" class="text-end">5</td><td style="background-color: #dc35450D" class="text-end">49</td><td style="background-color: #dc354500" class="text-end">5</td><td style="background-color: #dc354500" class="text-end">11</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="BM Halliday
+Teams: Northern Districts; Auckland
+Matches: 31
+Runs: 510
+Overs: 88
+Dismissals: 30" data-filter="Northern Districts; Auckland">
+<td colspan="2" data-text="Halliday"><a class="chart" data-title="Batting Impact - BM Halliday" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[20.7287675751183,15.695344255246766,13.617263915325154,11.055820043270643,10.941877040356763,20.53616660334135]" data-tooltips="[[&quot;Runs: 63&quot;,&quot;Strike Rate: 115&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 175&quot;,&quot;Strike Rate: 88&quot;,&quot;Dismissals: 9&quot;],[&quot;Runs: 94&quot;,&quot;Strike Rate: 96&quot;,&quot;Dismissals: 8&quot;],[&quot;Runs: 15&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 48&quot;,&quot;Strike Rate: 75&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 115&quot;,&quot;Strike Rate: 116&quot;,&quot;Dismissals: 5&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=BM+Halliday+cricket" target="_blank">BM Halliday</a></td>
+<td style="background-color: #19875415" class="text-end">17</td><td style="background-color: #1987540D" class="text-end">96</td><td style="background-color: #1987544E" class="text-end">16</td><td style="background-color: #1987541E" class="text-end">10</td><td style="background-color: #19875401" class="text-end">43</td><td style="background-color: #dc354500" class="text-end">10</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354570" class="text-end">63</td><td style="background-color: #dc35453E" class="text-end">10</td><td style="background-color: #dc35450E" class="text-end">17</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="AT Hucker
+Teams: Auckland
+Matches: 14
+Runs: 67
+Overs: 13
+Dismissals: 7" data-filter="Auckland">
+<td colspan="2" data-text="Hucker"><a class="chart" data-title="Batting Impact - AT Hucker" data-x="[2021,2022,2023,2024]" data-y="[5.679233273793368,12.61344889194146,1.803034586526123,2.584306065317721]" data-tooltips="[[&quot;Runs: 11&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 40&quot;,&quot;Strike Rate: 83&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 8&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 8&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 0&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=AT+Hucker+cricket" target="_blank">AT Hucker</a></td>
+<td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #19875400" class="text-end">86</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875400" class="text-end">49</td><td style="background-color: #dc3545CB" class="text-end">43</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">43</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">14</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="LEV Hughes
+Teams: Canterbury
+Matches: 34
+Runs: 203
+Overs: 36
+Dismissals: 26" data-filter="Canterbury">
+<td colspan="2" data-text="Hughes"><a class="chart" data-title="Batting Impact - LEV Hughes" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[15.830361614332618,3.017245415814133,3.9678678345232017,9.563871759190656,4.652218186083153,1.0605952132849659]" data-tooltips="[[&quot;Runs: 43&quot;,&quot;Strike Rate: 98&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 14&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 21&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 97&quot;,&quot;Strike Rate: 103&quot;,&quot;Dismissals: 10&quot;],[&quot;Runs: 19&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 9&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=LEV+Hughes+cricket" target="_blank">LEV Hughes</a></td>
+<td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #19875408" class="text-end">95</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875445" class="text-end">12</td><td style="background-color: #19875400" class="text-end">47</td><td style="background-color: #dc354500" class="text-end">15</td><td style="background-color: #dc354500" class="text-end">4</td><td style="background-color: #dc35454A" class="text-end">58</td><td style="background-color: #dc354500" class="text-end">4</td><td style="background-color: #dc354526" class="text-end">19</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="PM Inglis
+Teams: Otago
+Matches: 52
+Runs: 895
+Overs: 160
+Dismissals: 42" data-filter="Otago">
+<td colspan="2" data-text="Inglis"><a class="chart" data-title="Batting Impact - PM Inglis" data-x="[2020,2021,2022,2023,2024]" data-y="[19.461970603661722,16.972526126566084,14.339206546289052,7.487317677662479,14.352236049625894]" data-tooltips="[[&quot;Runs: 217&quot;,&quot;Strike Rate: 92&quot;,&quot;Dismissals: 9&quot;],[&quot;Runs: 227&quot;,&quot;Strike Rate: 96&quot;,&quot;Dismissals: 11&quot;],[&quot;Runs: 198&quot;,&quot;Strike Rate: 89&quot;,&quot;Dismissals: 8&quot;],[&quot;Runs: 81&quot;,&quot;Strike Rate: 94&quot;,&quot;Dismissals: 8&quot;],[&quot;Runs: 172&quot;,&quot;Strike Rate: 98&quot;,&quot;Dismissals: 6&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=PM+Inglis+cricket" target="_blank">PM Inglis</a></td>
+<td style="background-color: #19875452" class="text-end">21</td><td style="background-color: #19875400" class="text-end">94</td><td style="background-color: #1987543E" class="text-end">15</td><td style="background-color: #1987541D" class="text-end">10</td><td style="background-color: #19875400" class="text-end">48</td><td style="background-color: #dc354500" class="text-end">19</td><td style="background-color: #dc354500" class="text-end">5</td><td style="background-color: #dc354546" class="text-end">57</td><td style="background-color: #dc35458A" class="text-end">14</td><td style="background-color: #dc354500" class="text-end">2</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="IR James
+Teams: Otago
+Matches: 45
+Runs: 513
+Overs: 83
+Dismissals: 40" data-filter="Otago">
+<td colspan="2" data-text="James"><a class="chart" data-title="Batting Impact - IR James" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[0.6345704626582904,5.711845543963161,3.3933835522570144,15.165512183392853,15.727414668817625,15.378370027340818]" data-tooltips="[[&quot;Runs: 3&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 51&quot;,&quot;Strike Rate: 68&quot;,&quot;Dismissals: 6&quot;],[&quot;Runs: 33&quot;,&quot;Strike Rate: 87&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 117&quot;,&quot;Strike Rate: 143&quot;,&quot;Dismissals: 8&quot;],[&quot;Runs: 161&quot;,&quot;Strike Rate: 105&quot;,&quot;Dismissals: 10&quot;],[&quot;Runs: 148&quot;,&quot;Strike Rate: 105&quot;,&quot;Dismissals: 10&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=IR+James+cricket" target="_blank">IR James</a></td>
+<td style="background-color: #19875400" class="text-end">13</td><td style="background-color: #1987543C" class="text-end">103</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: #1987548D" class="text-end">14</td><td style="background-color: #19875400" class="text-end">47</td><td style="background-color: #dc354503" class="text-end">22</td><td style="background-color: #dc354500" class="text-end">5</td><td style="background-color: #dc354500" class="text-end">40</td><td style="background-color: #dc354512" class="text-end">8</td><td style="background-color: #dc354544" class="text-end">22</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="AC Jayangani
+Teams: Northern Districts
+Matches: 16
+Runs: 440
+Overs: 56
+Dismissals: 16" data-filter="Northern Districts">
+<td colspan="2" data-text="Jayangani"><a class="chart" data-title="Batting Impact - AC Jayangani" data-x="[2023,2024]" data-y="[26.660545388100935,26.046974876181963]" data-tooltips="[[&quot;Runs: 221&quot;,&quot;Strike Rate: 128&quot;,&quot;Dismissals: 9&quot;],[&quot;Runs: 219&quot;,&quot;Strike Rate: 134&quot;,&quot;Dismissals: 7&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=AC+Jayangani+cricket" target="_blank">AC Jayangani</a></td>
+<td style="background-color: #198754AA" class="text-end">28</td><td style="background-color: #198754FD" class="text-end">131</td><td style="background-color: #198754FF" class="text-end">26</td><td style="background-color: #198754FF" class="text-end">24</td><td style="background-color: #19875400" class="text-end">50</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545E9" class="text-end">81</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">6</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="HNK Jensen
+Teams: Otago
+Matches: 32
+Runs: 431
+Overs: 66
+Dismissals: 24" data-filter="Otago">
+<td colspan="2" data-text="Jensen"><a class="chart" data-title="Batting Impact - HNK Jensen" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[17.829888761655106,19.758484361693867,7.87833094834012,5.701349906566498,8.075080911796954,10.257585801844566]" data-tooltips="[[&quot;Runs: 110&quot;,&quot;Strike Rate: 109&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 125&quot;,&quot;Strike Rate: 129&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 36&quot;,&quot;Strike Rate: 100&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 15&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 58&quot;,&quot;Strike Rate: 83&quot;,&quot;Dismissals: 5&quot;],[&quot;Runs: 87&quot;,&quot;Strike Rate: 110&quot;,&quot;Dismissals: 5&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=HNK+Jensen+cricket" target="_blank">HNK Jensen</a></td>
+<td style="background-color: #19875423" class="text-end">18</td><td style="background-color: #19875460" class="text-end">108</td><td style="background-color: #1987540E" class="text-end">12</td><td style="background-color: #19875447" class="text-end">12</td><td style="background-color: #1987546D" class="text-end">37</td><td style="background-color: #dc35451B" class="text-end">25</td><td style="background-color: #dc354500" class="text-end">4</td><td style="background-color: #dc354500" class="text-end">38</td><td style="background-color: #dc354521" class="text-end">8</td><td style="background-color: #dc35450E" class="text-end">17</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="XA Jetly
+Teams: Wellington
+Matches: 14
+Runs: 39
+Overs: 7
+Dismissals: 6" data-filter="Wellington">
+<td colspan="2" data-text="Jetly"><a class="chart" data-title="Batting Impact - XA Jetly" data-x="[2020,2021,2022,2023,2024]" data-y="[0.29934143678465164,4.10489903245408,1.3315007860567498,2.4175620342061825,4.100821987340955]" data-tooltips="[[&quot;Runs: 1&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 15&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 0&quot;],[&quot;Runs: 7&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 8&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 0&quot;],[&quot;Runs: 8&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=XA+Jetly+cricket" target="_blank">XA Jetly</a></td>
+<td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">91</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875441" class="text-end">40</td><td style="background-color: #dc3545FF" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">17</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545AA" class="text-end">33</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="FC Jonas
+Teams: Auckland
+Matches: 6
+Runs: 13
+Overs: 5
+Dismissals: 3" data-filter="Auckland">
+<td colspan="2" data-text="Jonas"><a class="chart" data-title="Batting Impact - FC Jonas" data-x="[2020,2021,2023]" data-y="[1.5948825881490565,0.3151254283219805,1.4863527317361112]" data-tooltips="[[&quot;Runs: 5&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 1&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 0&quot;],[&quot;Runs: 7&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=FC+Jonas+cricket" target="_blank">FC Jonas</a></td>
+<td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875400" class="text-end">46</td><td style="background-color: #19875400" class="text-end">1</td><td style="background-color: " class="text-end">0</td><td style="background-color: #19875400" class="text-end">61</td><td style="background-color: #dc35456D" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354586" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="LM Kasperek
+Teams: Wellington
+Matches: 31
+Runs: 389
+Overs: 67
+Dismissals: 22" data-filter="Wellington">
+<td colspan="2" data-text="Kasperek"><a class="chart" data-title="Batting Impact - LM Kasperek" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[0.39410727319162736,12.980411780099109,11.607249182886639,11.050763920312745,2.8391079076669334,1.7046656095166046]" data-tooltips="[[&quot;Runs: 2&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 104&quot;,&quot;Strike Rate: 107&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 159&quot;,&quot;Strike Rate: 110&quot;,&quot;Dismissals: 6&quot;],[&quot;Runs: 87&quot;,&quot;Strike Rate: 107&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 26&quot;,&quot;Strike Rate: 55&quot;,&quot;Dismissals: 6&quot;],[&quot;Runs: 11&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=LM+Kasperek+cricket" target="_blank">LM Kasperek</a></td>
+<td style="background-color: #1987541F" class="text-end">18</td><td style="background-color: #19875412" class="text-end">97</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #19875440" class="text-end">40</td><td style="background-color: #dc354505" class="text-end">23</td><td style="background-color: #dc354543" class="text-end">9</td><td style="background-color: #dc354500" class="text-end">32</td><td style="background-color: #dc35452E" class="text-end">9</td><td style="background-color: #dc354546" class="text-end">23</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="AC Kerr
+Teams: Wellington
+Matches: 51
+Runs: 1,869
+Overs: 259
+Dismissals: 37" data-filter="Wellington">
+<td colspan="2" data-text="Kerr"><a class="chart" data-title="Batting Impact - AC Kerr" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[13.208813484118666,27.75797299565753,26.702752475095167,32.31686608257625,38.76127614117954,26.756688910765433]" data-tooltips="[[&quot;Runs: 40&quot;,&quot;Strike Rate: 118&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 361&quot;,&quot;Strike Rate: 135&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 346&quot;,&quot;Strike Rate: 116&quot;,&quot;Dismissals: 10&quot;],[&quot;Runs: 244&quot;,&quot;Strike Rate: 121&quot;,&quot;Dismissals: 5&quot;],[&quot;Runs: 437&quot;,&quot;Strike Rate: 126&quot;,&quot;Dismissals: 6&quot;],[&quot;Runs: 441&quot;,&quot;Strike Rate: 109&quot;,&quot;Dismissals: 7&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=AC+Kerr+cricket" target="_blank">AC Kerr</a></td>
+<td style="background-color: #198754FF" class="text-end">51</td><td style="background-color: #198754B2" class="text-end">120</td><td style="background-color: #198754FF" class="text-end">30</td><td style="background-color: #19875473" class="text-end">13</td><td style="background-color: #198754AF" class="text-end">33</td><td style="background-color: #dc354500" class="text-end">5</td><td style="background-color: #dc354531" class="text-end">8</td><td style="background-color: #dc35458D" class="text-end">68</td><td style="background-color: #dc354500" class="text-end">5</td><td style="background-color: #dc354500" class="text-end">11</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="JM Kerr
+Teams: Wellington
+Matches: 35
+Runs: 556
+Overs: 74
+Dismissals: 27" data-filter="Wellington">
+<td colspan="2" data-text="Kerr"><a class="chart" data-title="Batting Impact - JM Kerr" data-x="[2020,2021,2022,2023,2024]" data-y="[7.565881640538776,16.27480746046657,4.902502510957793,11.929431053546306,28.552680692552023]" data-tooltips="[[&quot;Runs: 35&quot;,&quot;Strike Rate: 130&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 92&quot;,&quot;Strike Rate: 153&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 29&quot;,&quot;Strike Rate: 116&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 74&quot;,&quot;Strike Rate: 130&quot;,&quot;Dismissals: 6&quot;],[&quot;Runs: 326&quot;,&quot;Strike Rate: 119&quot;,&quot;Dismissals: 10&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=JM+Kerr+cricket" target="_blank">JM Kerr</a></td>
+<td style="background-color: #19875448" class="text-end">21</td><td style="background-color: #198754D7" class="text-end">126</td><td style="background-color: #19875451" class="text-end">16</td><td style="background-color: #198754A1" class="text-end">15</td><td style="background-color: #198754BB" class="text-end">32</td><td style="background-color: #dc354500" class="text-end">7</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35456D" class="text-end">63</td><td style="background-color: #dc354510" class="text-end">7</td><td style="background-color: #dc354500" class="text-end">11</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="CR King
+Teams: Wellington
+Matches: 19
+Runs: 110
+Overs: 20
+Dismissals: 10" data-filter="Wellington">
+<td colspan="2" data-text="King"><a class="chart" data-title="Batting Impact - CR King" data-x="[2020,2021,2022,2023,2024]" data-y="[3.606608363385282,2.1458767090662083,3.691094904006869,13.530170528059541,5.051906533078629]" data-tooltips="[[&quot;Runs: 17&quot;,&quot;Strike Rate: 71&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 6&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 0&quot;],[&quot;Runs: 17&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 12&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 58&quot;,&quot;Strike Rate: 91&quot;,&quot;Dismissals: 4&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=CR+King+cricket" target="_blank">CR King</a></td>
+<td style="background-color: #19875400" class="text-end">11</td><td style="background-color: #19875400" class="text-end">90</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #198754A6" class="text-end">34</td><td style="background-color: #dc354500" class="text-end">20</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">20</td><td style="background-color: #dc35453E" class="text-end">10</td><td style="background-color: #dc3545FF" class="text-end">50</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="MBA Lamplough
+Teams: Otago; Northern Districts
+Matches: 20
+Runs: 220
+Overs: 36
+Dismissals: 18" data-filter="Otago; Northern Districts">
+<td colspan="2" data-text="Lamplough"><a class="chart" data-title="Batting Impact - MBA Lamplough" data-x="[2021,2022,2023,2024]" data-y="[1.5263745196105152,22.883994001326624,12.672168283474507,7.8448578189502385]" data-tooltips="[[&quot;Runs: 4&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 47&quot;,&quot;Strike Rate: 84&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 130&quot;,&quot;Strike Rate: 107&quot;,&quot;Dismissals: 9&quot;],[&quot;Runs: 39&quot;,&quot;Strike Rate: 111&quot;,&quot;Dismissals: 5&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=MBA+Lamplough+cricket" target="_blank">MBA Lamplough</a></td>
+<td style="background-color: #19875400" class="text-end">12</td><td style="background-color: #19875431" class="text-end">101</td><td style="background-color: #19875409" class="text-end">12</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #1987544F" class="text-end">39</td><td style="background-color: #dc354537" class="text-end">28</td><td style="background-color: #dc354505" class="text-end">6</td><td style="background-color: #dc354500" class="text-end">39</td><td style="background-color: #dc354500" class="text-end">6</td><td style="background-color: #dc35450E" class="text-end">17</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="FC Leydon-Davis
+Teams: Northern Districts; Otago
+Matches: 35
+Runs: 421
+Overs: 76
+Dismissals: 29" data-filter="Northern Districts; Otago">
+<td colspan="2" data-text="Leydon-Davis"><a class="chart" data-title="Batting Impact - FC Leydon-Davis" data-x="[2019,2020,2022,2023,2024]" data-y="[1.6984337278369868,10.356356033022761,12.08475276834609,12.982590513819991,11.396439873172067]" data-tooltips="[[&quot;Runs: 17&quot;,&quot;Strike Rate: 49&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 97&quot;,&quot;Strike Rate: 92&quot;,&quot;Dismissals: 6&quot;],[&quot;Runs: 84&quot;,&quot;Strike Rate: 111&quot;,&quot;Dismissals: 5&quot;],[&quot;Runs: 127&quot;,&quot;Strike Rate: 98&quot;,&quot;Dismissals: 8&quot;],[&quot;Runs: 96&quot;,&quot;Strike Rate: 91&quot;,&quot;Dismissals: 6&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=FC+Leydon-Davis+cricket" target="_blank">FC Leydon-Davis</a></td>
+<td style="background-color: #19875400" class="text-end">15</td><td style="background-color: #19875400" class="text-end">93</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #19875436" class="text-end">40</td><td style="background-color: #dc354500" class="text-end">10</td><td style="background-color: #dc354558" class="text-end">10</td><td style="background-color: #dc354567" class="text-end">62</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354513" class="text-end">17</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="FL Mackay
+Teams: Canterbury
+Matches: 33
+Runs: 768
+Overs: 144
+Dismissals: 28" data-filter="Canterbury">
+<td colspan="2" data-text="Mackay"><a class="chart" data-title="Batting Impact - FL Mackay" data-x="[2019,2020,2021,2023]" data-y="[16.317991769842862,15.884883220806202,19.994273979551632,24.193301505764794]" data-tooltips="[[&quot;Runs: 96&quot;,&quot;Strike Rate: 64&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 208&quot;,&quot;Strike Rate: 103&quot;,&quot;Dismissals: 9&quot;],[&quot;Runs: 242&quot;,&quot;Strike Rate: 89&quot;,&quot;Dismissals: 8&quot;],[&quot;Runs: 222&quot;,&quot;Strike Rate: 93&quot;,&quot;Dismissals: 8&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=FL+Mackay+cricket" target="_blank">FL Mackay</a></td>
+<td style="background-color: #198754A9" class="text-end">27</td><td style="background-color: #19875400" class="text-end">89</td><td style="background-color: #19875490" class="text-end">19</td><td style="background-color: #1987540C" class="text-end">10</td><td style="background-color: #19875400" class="text-end">45</td><td style="background-color: #dc35451B" class="text-end">25</td><td style="background-color: #dc3545FF" class="text-end">21</td><td style="background-color: #dc354500" class="text-end">36</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354519" class="text-end">18</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="RA Mair
+Teams: Central Districts
+Matches: 33
+Runs: 341
+Overs: 58
+Dismissals: 24" data-filter="Central Districts">
+<td colspan="2" data-text="Mair"><a class="chart" data-title="Batting Impact - RA Mair" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[13.594149409183856,8.896503145985216,10.820497587137824,6.652413187962243,13.55310654694365,13.997740026537553]" data-tooltips="[[&quot;Runs: 55&quot;,&quot;Strike Rate: 89&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 25&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 98&quot;,&quot;Strike Rate: 93&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 43&quot;,&quot;Strike Rate: 100&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 65&quot;,&quot;Strike Rate: 105&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 55&quot;,&quot;Strike Rate: 93&quot;,&quot;Dismissals: 5&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=RA+Mair+cricket" target="_blank">RA Mair</a></td>
+<td style="background-color: #19875400" class="text-end">14</td><td style="background-color: #19875414" class="text-end">97</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #19875453" class="text-end">38</td><td style="background-color: #dc35451B" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354532" class="text-end">54</td><td style="background-color: #dc354500" class="text-end">4</td><td style="background-color: #dc354500" class="text-end">12</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="JT McFadyen
+Teams: Wellington
+Matches: 35
+Runs: 299
+Overs: 58
+Dismissals: 30" data-filter="Wellington">
+<td colspan="2" data-text="McFadyen"><a class="chart" data-title="Batting Impact - JT McFadyen" data-x="[2020,2021,2022,2023,2024]" data-y="[4.620865938130247,2.3653753531966415,7.1079105234289415,10.467245959033816,4.3253516202149]" data-tooltips="[[&quot;Runs: 53&quot;,&quot;Strike Rate: 91&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 7&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 78&quot;,&quot;Strike Rate: 110&quot;,&quot;Dismissals: 6&quot;],[&quot;Runs: 119&quot;,&quot;Strike Rate: 81&quot;,&quot;Dismissals: 9&quot;],[&quot;Runs: 42&quot;,&quot;Strike Rate: 66&quot;,&quot;Dismissals: 6&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=JT+McFadyen+cricket" target="_blank">JT McFadyen</a></td>
+<td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #19875400" class="text-end">85</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875400" class="text-end">45</td><td style="background-color: #dc354500" class="text-end">13</td><td style="background-color: #dc354518" class="text-end">7</td><td style="background-color: #dc354500" class="text-end">40</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545E8" class="text-end">40</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="EMA McLeod
+Teams: Central Districts
+Matches: 3
+Runs: 39
+Overs: 10
+Dismissals: 3" data-filter="Central Districts">
+<td colspan="2" data-text="McLeod"><a class="chart" data-title="Batting Impact - EMA McLeod" data-x="[2023,2024]" data-y="[16.862044441647882,8.049567678175967]" data-tooltips="[[&quot;Runs: 23&quot;,&quot;Strike Rate: 68&quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 16&quot;,&quot;Strike Rate: 67&quot;,&quot;Dismissals: 2&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=EMA+McLeod+cricket" target="_blank">EMA McLeod</a></td>
+<td style="background-color: #19875400" class="text-end">13</td><td style="background-color: #19875400" class="text-end">67</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875400" class="text-end">53</td><td style="background-color: #dc3545FF" class="text-end">67</td><td style="background-color: #dc3545FF" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="S Molineux
+Teams: Canterbury
+Matches: 2
+Runs: 36
+Overs: 6
+Dismissals: 2" data-filter="Canterbury">
+<td colspan="2" data-text="Molineux"><a class="chart" data-title="Batting Impact - S Molineux" data-x="[2023]" data-y="[11.308751560786098]" data-tooltips="[[&quot;Runs: 36&quot;,&quot;Strike Rate: 106&quot;,&quot;Dismissals: 2&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=S+Molineux+cricket" target="_blank">S Molineux</a></td>
+<td style="background-color: #19875423" class="text-end">18</td><td style="background-color: #19875450" class="text-end">106</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: #19875446" class="text-end">12</td><td style="background-color: #19875457" class="text-end">38</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="position: relative; cursor: default;" title="SR Naidu
+Teams: Northern Districts
+Matches: 12
+Runs: 61
+Overs: 16
+Dismissals: 6" data-filter="Northern Districts">
+<td colspan="2" data-text="Naidu"><a class="chart" data-title="Batting Impact - SR Naidu" data-x="[2021,2022,2023]" data-y="[4.368407899952119,5.0339381199193705,0.6160211204249348]" data-tooltips="[[&quot;Runs: 45&quot;,&quot;Strike Rate: 63&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 13&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 3&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 0&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=SR+Naidu+cricket" target="_blank">SR Naidu</a></td>
+<td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #19875400" class="text-end">62</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875400" class="text-end">52</td><td style="background-color: #dc35456D" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">17</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545FF" class="text-end">50</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="TMM Newton
+Teams: Wellington; Central Districts
+Matches: 44
+Runs: 549
+Overs: 106
+Dismissals: 40" data-filter="Wellington; Central Districts">
+<td colspan="2" data-text="Newton"><a class="chart" data-title="Batting Impact - TMM Newton" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[2.902062648047438,7.851827719002143,10.188572882118443,10.018631131261477,10.889295222143078,3.6220199204545427]" data-tooltips="[[&quot;Runs: 6&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 0&quot;],[&quot;Runs: 84&quot;,&quot;Strike Rate: 86&quot;,&quot;Dismissals: 8&quot;],[&quot;Runs: 112&quot;,&quot;Strike Rate: 106&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 148&quot;,&quot;Strike Rate: 95&quot;,&quot;Dismissals: 9&quot;],[&quot;Runs: 158&quot;,&quot;Strike Rate: 80&quot;,&quot;Dismissals: 8&quot;],[&quot;Runs: 41&quot;,&quot;Strike Rate: 59&quot;,&quot;Dismissals: 8&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=TMM+Newton+cricket" target="_blank">TMM Newton</a></td>
+<td style="background-color: #19875400" class="text-end">14</td><td style="background-color: #19875400" class="text-end">86</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875409" class="text-end">43</td><td style="background-color: #dc35451B" class="text-end">25</td><td style="background-color: #dc354552" class="text-end">10</td><td style="background-color: #dc354500" class="text-end">40</td><td style="background-color: #dc35453E" class="text-end">10</td><td style="background-color: #dc354500" class="text-end">12</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="SA Oldershaw
+Teams: Otago
+Matches: 9
+Runs: 16
+Overs: 6
+Dismissals: 7" data-filter="Otago">
+<td colspan="2" data-text="Oldershaw"><a class="chart" data-title="Batting Impact - SA Oldershaw" data-x="[2020,2021,2022,2023]" data-y="[2.0941244245672315,1.0547489070494582,0,1.8971600280800451]" data-tooltips="[[&quot;Runs: 7&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 5&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 0&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 4&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 0&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=SA+Oldershaw+cricket" target="_blank">SA Oldershaw</a></td>
+<td style="background-color: #19875400" class="text-end">2</td><td style="background-color: #19875400" class="text-end">48</td><td style="background-color: #19875400" class="text-end">1</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875400" class="text-end">61</td><td style="background-color: #dc35453E" class="text-end">29</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354546" class="text-end">57</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">14</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="S Pandey
+Teams: Canterbury
+Matches: 9
+Runs: 207
+Overs: 28
+Dismissals: 8" data-filter="Canterbury">
+<td colspan="2" data-text="Pandey"><a class="chart" data-title="Batting Impact - S Pandey" data-x="[2024]" data-y="[21.93423503208614]" data-tooltips="[[&quot;Runs: 207&quot;,&quot;Strike Rate: 121&quot;,&quot;Dismissals: 8&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=S+Pandey+cricket" target="_blank">S Pandey</a></td>
+<td style="background-color: #19875493" class="text-end">26</td><td style="background-color: #198754B7" class="text-end">121</td><td style="background-color: #198754C0" class="text-end">22</td><td style="background-color: #19875498" class="text-end">15</td><td style="background-color: #198754DC" class="text-end">30</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: #dc3545FF" class="text-end">25</td><td style="background-color: #dc3545FF" class="text-end">50</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="NH Patel
+Teams: Northern Districts
+Matches: 43
+Runs: 457
+Overs: 88
+Dismissals: 34" data-filter="Northern Districts">
+<td colspan="2" data-text="Patel"><a class="chart" data-title="Batting Impact - NH Patel" data-x="[2020,2021,2022,2023,2024]" data-y="[9.458956880578842,10.03063183653865,4.276717235970712,9.381615676453208,12.257429476570744]" data-tooltips="[[&quot;Runs: 76&quot;,&quot;Strike Rate: 89&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 105&quot;,&quot;Strike Rate: 76&quot;,&quot;Dismissals: 9&quot;],[&quot;Runs: 42&quot;,&quot;Strike Rate: 66&quot;,&quot;Dismissals: 8&quot;],[&quot;Runs: 118&quot;,&quot;Strike Rate: 94&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 116&quot;,&quot;Strike Rate: 97&quot;,&quot;Dismissals: 6&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=NH+Patel+cricket" target="_blank">NH Patel</a></td>
+<td style="background-color: #19875400" class="text-end">13</td><td style="background-color: #19875400" class="text-end">86</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #19875400" class="text-end">45</td><td style="background-color: #dc354500" class="text-end">21</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354552" class="text-end">59</td><td style="background-color: #dc354500" class="text-end">6</td><td style="background-color: #dc354500" class="text-end">12</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="MM Penfold
+Teams: Auckland
+Matches: 21
+Runs: 96
+Overs: 16
+Dismissals: 14" data-filter="Auckland">
+<td colspan="2" data-text="Penfold"><a class="chart" data-title="Batting Impact - MM Penfold" data-x="[2020,2021,2022,2023,2024]" data-y="[0.1893866500528003,4.766272103369955,2.4467926429739575,6.016453999181946,6.900645138217644]" data-tooltips="[[&quot;Runs: 1&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 11&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 14&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 27&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 43&quot;,&quot;Strike Rate: 116&quot;,&quot;Dismissals: 2&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=MM+Penfold+cricket" target="_blank">MM Penfold</a></td>
+<td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875428" class="text-end">100</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #1987541F" class="text-end">10</td><td style="background-color: #19875400" class="text-end">44</td><td style="background-color: #dc354585" class="text-end">36</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354516" class="text-end">50</td><td style="background-color: #dc35450C" class="text-end">7</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="JO Penfold
+Teams: Auckland
+Matches: 11
+Runs: 64
+Overs: 12
+Dismissals: 7" data-filter="Auckland">
+<td colspan="2" data-text="Penfold"><a class="chart" data-title="Batting Impact - JO Penfold" data-x="[2023,2024]" data-y="[6.647211248587822,3.80117595003308]" data-tooltips="[[&quot;Runs: 48&quot;,&quot;Strike Rate: 98&quot;,&quot;Dismissals: 5&quot;],[&quot;Runs: 16&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=JO+Penfold+cricket" target="_blank">JO Penfold</a></td>
+<td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #19875400" class="text-end">93</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875416" class="text-end">42</td><td style="background-color: #dc35453E" class="text-end">29</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">43</td><td style="background-color: #dc35458A" class="text-end">14</td><td style="background-color: #dc354500" class="text-end">14</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="M Penna
+Teams: Canterbury
+Matches: 10
+Runs: 173
+Overs: 30
+Dismissals: 9" data-filter="Canterbury">
+<td colspan="2" data-text="Penna"><a class="chart" data-title="Batting Impact - M Penna" data-x="[2023,2024]" data-y="[14.404237741107973,14.640351884285543]" data-tooltips="[[&quot;Runs: 58&quot;,&quot;Strike Rate: 91&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 115&quot;,&quot;Strike Rate: 99&quot;,&quot;Dismissals: 5&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=M+Penna+cricket" target="_blank">M Penna</a></td>
+<td style="background-color: #19875435" class="text-end">19</td><td style="background-color: #1987540D" class="text-end">96</td><td style="background-color: #1987543A" class="text-end">15</td><td style="background-color: #19875463" class="text-end">13</td><td style="background-color: #19875400" class="text-end">51</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354566" class="text-end">11</td><td style="background-color: #dc35453C" class="text-end">56</td><td style="background-color: #dc3545FF" class="text-end">22</td><td style="background-color: #dc354500" class="text-end">11</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="EA Perry
+Teams: Wellington
+Matches: 2
+Runs: 22
+Overs: 4
+Dismissals: 2" data-filter="Wellington">
+<td colspan="2" data-text="Perry"><a class="chart" data-title="Batting Impact - EA Perry" data-x="[2024]" data-y="[7.214757892786038]" data-tooltips="[[&quot;Runs: 22&quot;,&quot;Strike Rate: 88&quot;,&quot;Dismissals: 2&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=EA+Perry+cricket" target="_blank">EA Perry</a></td>
+<td style="background-color: #19875400" class="text-end">11</td><td style="background-color: #19875400" class="text-end">88</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #198754BF" class="text-end">16</td><td style="background-color: #19875400" class="text-end">60</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="position: relative; cursor: default;" title="GE Plimmer
+Teams: Wellington
+Matches: 26
+Runs: 373
+Overs: 60
+Dismissals: 20" data-filter="Wellington">
+<td colspan="2" data-text="Plimmer"><a class="chart" data-title="Batting Impact - GE Plimmer" data-x="[2020,2021,2022,2023]" data-y="[1.2421440031565472,9.05995746681329,11.128217512936105,16.29435185241983]" data-tooltips="[[&quot;Runs: 4&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 133&quot;,&quot;Strike Rate: 106&quot;,&quot;Dismissals: 11&quot;],[&quot;Runs: 49&quot;,&quot;Strike Rate: 114&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 187&quot;,&quot;Strike Rate: 102&quot;,&quot;Dismissals: 4&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=GE+Plimmer+cricket" target="_blank">GE Plimmer</a></td>
+<td style="background-color: #1987542D" class="text-end">19</td><td style="background-color: #19875446" class="text-end">104</td><td style="background-color: #19875403" class="text-end">11</td><td style="background-color: #19875416" class="text-end">10</td><td style="background-color: #19875471" class="text-end">37</td><td style="background-color: #dc354500" class="text-end">10</td><td style="background-color: #dc354500" class="text-end">5</td><td style="background-color: #dc35459D" class="text-end">70</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">15</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="JEI Prasad
+Teams: Auckland; Northern Districts
+Matches: 13
+Runs: 101
+Overs: 18
+Dismissals: 8" data-filter="Auckland; Northern Districts">
+<td colspan="2" data-text="Prasad"><a class="chart" data-title="Batting Impact - JEI Prasad" data-x="[2020,2021,2023,2024]" data-y="[7.052204865836443,7.330729125244397,5.434577864939599,14.67916487302387]" data-tooltips="[[&quot;Runs: 23&quot;,&quot;Strike Rate: 96&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 44&quot;,&quot;Strike Rate: 81&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 9&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 25&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=JEI+Prasad+cricket" target="_blank">JEI Prasad</a></td>
+<td style="background-color: #19875400" class="text-end">13</td><td style="background-color: #19875400" class="text-end">94</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #1987549A" class="text-end">34</td><td style="background-color: #dc354596" class="text-end">38</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">25</td><td style="background-color: #dc35456A" class="text-end">12</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="MS Rees
+Teams: Central Districts; Wellington
+Matches: 9
+Runs: 26
+Overs: 6
+Dismissals: 7" data-filter="Central Districts; Wellington">
+<td colspan="2" data-text="Rees"><a class="chart" data-title="Batting Impact - MS Rees" data-x="[2019,2020,2021,2023]" data-y="[6.61491881690543,1.3889260853820844,4.472596463119874,0]" data-tooltips="[[&quot;Runs: 7&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 10&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 9&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 0&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=MS+Rees+cricket" target="_blank">MS Rees</a></td>
+<td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875400" class="text-end">70</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: " class="text-end">0</td><td style="background-color: #19875430" class="text-end">41</td><td style="background-color: #dc354500" class="text-end">14</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">14</td><td style="background-color: #dc35458A" class="text-end">14</td><td style="background-color: #dc3545FF" class="text-end">43</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="EAJ Richardson
+Teams: Northern Districts
+Matches: 31
+Runs: 395
+Overs: 62
+Dismissals: 29" data-filter="Northern Districts">
+<td colspan="2" data-text="Richardson"><a class="chart" data-title="Batting Impact - EAJ Richardson" data-x="[2019,2020,2021,2022,2023]" data-y="[6.673607250928022,16.383716175013895,12.114312791828652,5.474239080007512,13.140596979501996]" data-tooltips="[[&quot;Runs: 24&quot;,&quot;Strike Rate: 100&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 117&quot;,&quot;Strike Rate: 116&quot;,&quot;Dismissals: 8&quot;],[&quot;Runs: 21&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 70&quot;,&quot;Strike Rate: 101&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 163&quot;,&quot;Strike Rate: 101&quot;,&quot;Dismissals: 8&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=EAJ+Richardson+cricket" target="_blank">EAJ Richardson</a></td>
+<td style="background-color: #19875400" class="text-end">14</td><td style="background-color: #19875456" class="text-end">107</td><td style="background-color: #19875404" class="text-end">12</td><td style="background-color: #19875470" class="text-end">13</td><td style="background-color: #19875414" class="text-end">42</td><td style="background-color: #dc354500" class="text-end">7</td><td style="background-color: #dc3545D1" class="text-end">17</td><td style="background-color: #dc35450A" class="text-end">48</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354554" class="text-end">24</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="HM Rowe
+Teams: Central Districts
+Matches: 46
+Runs: 757
+Overs: 130
+Dismissals: 34" data-filter="Central Districts">
+<td colspan="2" data-text="Rowe"><a class="chart" data-title="Batting Impact - HM Rowe" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[9.64221257556347,15.043792265060976,13.259092515629217,20.25130535954443,17.04545809957447,14.8938370668361]" data-tooltips="[[&quot;Runs: 31&quot;,&quot;Strike Rate: 84&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 156&quot;,&quot;Strike Rate: 92&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 137&quot;,&quot;Strike Rate: 103&quot;,&quot;Dismissals: 6&quot;],[&quot;Runs: 123&quot;,&quot;Strike Rate: 119&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 184&quot;,&quot;Strike Rate: 101&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 126&quot;,&quot;Strike Rate: 81&quot;,&quot;Dismissals: 7&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=HM+Rowe+cricket" target="_blank">HM Rowe</a></td>
+<td style="background-color: #19875460" class="text-end">22</td><td style="background-color: #19875415" class="text-end">97</td><td style="background-color: #1987544C" class="text-end">16</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #19875450" class="text-end">39</td><td style="background-color: #dc35459D" class="text-end">38</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">29</td><td style="background-color: #dc35455D" class="text-end">12</td><td style="background-color: #dc354500" class="text-end">15</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="Fatima Sana
+Teams: Canterbury
+Matches: 5
+Runs: 84
+Overs: 12
+Dismissals: 4" data-filter="Canterbury">
+<td colspan="2" data-text="Sana"><a class="chart" data-title="Batting Impact - Fatima Sana" data-x="[2023]" data-y="[23.51026383810414]" data-tooltips="[[&quot;Runs: 84&quot;,&quot;Strike Rate: 114&quot;,&quot;Dismissals: 4&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=Fatima+Sana+cricket" target="_blank">Fatima Sana</a></td>
+<td style="background-color: #1987544E" class="text-end">21</td><td style="background-color: #19875484" class="text-end">114</td><td style="background-color: #198754DC" class="text-end">24</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #198754D0" class="text-end">31</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545BF" class="text-end">75</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35455C" class="text-end">25</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="JL Savage
+Teams: Canterbury
+Matches: 23
+Runs: 225
+Overs: 42
+Dismissals: 22" data-filter="Canterbury">
+<td colspan="2" data-text="Savage"><a class="chart" data-title="Batting Impact - JL Savage" data-x="[2019,2020,2021,2022,2023]" data-y="[16.402841437941387,3.2564886616420488,9.679186093270774,0.8518975850595545,2.607643568979973]" data-tooltips="[[&quot;Runs: 58&quot;,&quot;Strike Rate: 98&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 23&quot;,&quot;Strike Rate: 79&quot;,&quot;Dismissals: 5&quot;],[&quot;Runs: 136&quot;,&quot;Strike Rate: 88&quot;,&quot;Dismissals: 10&quot;],[&quot;Runs: 2&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 6&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=JL+Savage+cricket" target="_blank">JL Savage</a></td>
+<td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #19875400" class="text-end">89</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #19875405" class="text-end">9</td><td style="background-color: #19875400" class="text-end">51</td><td style="background-color: #dc354500" class="text-end">18</td><td style="background-color: #dc354500" class="text-end">5</td><td style="background-color: #dc354500" class="text-end">41</td><td style="background-color: #dc354500" class="text-end">5</td><td style="background-color: #dc354546" class="text-end">23</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="S Shahri
+Teams: Auckland
+Matches: 42
+Runs: 714
+Overs: 121
+Dismissals: 36" data-filter="Auckland">
+<td colspan="2" data-text="Shahri"><a class="chart" data-title="Batting Impact - S Shahri" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[8.435859907855232,15.893902474951759,21.245363861496774,21.093326616208024,13.669707060667276,8.537518013993896]" data-tooltips="[[&quot;Runs: 33&quot;,&quot;Strike Rate: 89&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 100&quot;,&quot;Strike Rate: 92&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 119&quot;,&quot;Strike Rate: 108&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 216&quot;,&quot;Strike Rate: 105&quot;,&quot;Dismissals: 9&quot;],[&quot;Runs: 126&quot;,&quot;Strike Rate: 98&quot;,&quot;Dismissals: 8&quot;],[&quot;Runs: 120&quot;,&quot;Strike Rate: 87&quot;,&quot;Dismissals: 9&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=S+Shahri+cricket" target="_blank">S Shahri</a></td>
+<td style="background-color: #1987543D" class="text-end">20</td><td style="background-color: #1987541C" class="text-end">98</td><td style="background-color: #19875449" class="text-end">15</td><td style="background-color: #1987545C" class="text-end">13</td><td style="background-color: #19875400" class="text-end">46</td><td style="background-color: #dc354500" class="text-end">19</td><td style="background-color: #dc354500" class="text-end">3</td><td style="background-color: #dc3545AC" class="text-end">72</td><td style="background-color: #dc354500" class="text-end">3</td><td style="background-color: #dc354500" class="text-end">3</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="IG Sharp
+Teams: Canterbury
+Matches: 22
+Runs: 248
+Overs: 41
+Dismissals: 21" data-filter="Canterbury">
+<td colspan="2" data-text="Sharp"><a class="chart" data-title="Batting Impact - IG Sharp" data-x="[2022,2023,2024]" data-y="[3.5066522154764224,11.374562054659345,12.317795530822025]" data-tooltips="[[&quot;Runs: 28&quot;,&quot;Strike Rate: 70&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 99&quot;,&quot;Strike Rate: 108&quot;,&quot;Dismissals: 8&quot;],[&quot;Runs: 121&quot;,&quot;Strike Rate: 106&quot;,&quot;Dismissals: 9&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=IG+Sharp+cricket" target="_blank">IG Sharp</a></td>
+<td style="background-color: #19875400" class="text-end">12</td><td style="background-color: #1987542D" class="text-end">101</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #1987545E" class="text-end">13</td><td style="background-color: #19875400" class="text-end">45</td><td style="background-color: #dc354500" class="text-end">19</td><td style="background-color: #dc35454A" class="text-end">10</td><td style="background-color: #dc354526" class="text-end">52</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">14</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="G Sims
+Teams: Central Districts; Wellington
+Matches: 6
+Runs: 17
+Overs: 6
+Dismissals: 5" data-filter="Central Districts; Wellington">
+<td colspan="2" data-text="Sims"><a class="chart" data-title="Batting Impact - G Sims" data-x="[2020,2021,2023,2024]" data-y="[0.7979353088053304,0.2765834306975236,3.0809365497683783,0]" data-tooltips="[[&quot;Runs: 2&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 3&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 12&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 0&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=G+Sims+cricket" target="_blank">G Sims</a></td>
+<td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875400" class="text-end">50</td><td style="background-color: #19875400" class="text-end">2</td><td style="background-color: " class="text-end">0</td><td style="background-color: #19875400" class="text-end">50</td><td style="background-color: #dc354500" class="text-end">20</td><td style="background-color: #dc3545FF" class="text-end">20</td><td style="background-color: #dc354500" class="text-end">20</td><td style="background-color: #dc3545EF" class="text-end">20</td><td style="background-color: #dc35452D" class="text-end">20</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="LCN Smith
+Teams: Otago
+Matches: 6
+Runs: 56
+Overs: 8
+Dismissals: 5" data-filter="Otago">
+<td colspan="2" data-text="Smith"><a class="chart" data-title="Batting Impact - LCN Smith" data-x="[2022,2023]" data-y="[11.959693270244264,7.247113695100614]" data-tooltips="[[&quot;Runs: 36&quot;,&quot;Strike Rate: 129&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 20&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 3&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=LCN+Smith+cricket" target="_blank">LCN Smith</a></td>
+<td style="background-color: #19875400" class="text-end">11</td><td style="background-color: #198754CE" class="text-end">124</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #19875433" class="text-end">11</td><td style="background-color: #198754FF" class="text-end">22</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545E0" class="text-end">80</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="GES Sullivan
+Teams: Canterbury
+Matches: 14
+Runs: 50
+Overs: 11
+Dismissals: 6" data-filter="Canterbury">
+<td colspan="2" data-text="Sullivan"><a class="chart" data-title="Batting Impact - GES Sullivan" data-x="[2019,2020,2022,2023,2024]" data-y="[1.9817947786097712,6.904744779822981,1.2497783204452109,5.725016121017525,2.0377231144889287]" data-tooltips="[[&quot;Runs: 10&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 18&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 8&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 0&quot;],[&quot;Runs: 7&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 7&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=GES+Sullivan+cricket" target="_blank">GES Sullivan</a></td>
+<td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #19875400" class="text-end">76</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">47</td><td style="background-color: #dc354500" class="text-end">17</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">17</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545FF" class="text-end">67</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="LMM Tahuhu
+Teams: Canterbury
+Matches: 30
+Runs: 327
+Overs: 37
+Dismissals: 22" data-filter="Canterbury">
+<td colspan="2" data-text="Tahuhu"><a class="chart" data-title="Batting Impact - LMM Tahuhu" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[8.107845264377902,15.535937590015884,23.95160231942098,10.226746545922161,9.803409461588245,2.6697240081064417]" data-tooltips="[[&quot;Runs: 17&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 54&quot;,&quot;Strike Rate: 154&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 148&quot;,&quot;Strike Rate: 185&quot;,&quot;Dismissals: 6&quot;],[&quot;Runs: 39&quot;,&quot;Strike Rate: 144&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 58&quot;,&quot;Strike Rate: 109&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 11&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=LMM+Tahuhu+cricket" target="_blank">LMM Tahuhu</a></td>
+<td style="background-color: #19875400" class="text-end">15</td><td style="background-color: #198754FF" class="text-end">147</td><td style="background-color: #19875431" class="text-end">14</td><td style="background-color: #198754D0" class="text-end">17</td><td style="background-color: #1987548E" class="text-end">35</td><td style="background-color: #dc354500" class="text-end">18</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354591" class="text-end">68</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">9</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="KA Tomlinson
+Teams: Central Districts
+Matches: 25
+Runs: 362
+Overs: 64
+Dismissals: 24" data-filter="Central Districts">
+<td colspan="2" data-text="Tomlinson"><a class="chart" data-title="Batting Impact - KA Tomlinson" data-x="[2020,2021,2022,2023,2024]" data-y="[9.84553534000322,9.302909767032721,17.387477819146508,0.6634355369769857,16.098365808804463]" data-tooltips="[[&quot;Runs: 33&quot;,&quot;Strike Rate: 118&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 78&quot;,&quot;Strike Rate: 86&quot;,&quot;Dismissals: 6&quot;],[&quot;Runs: 124&quot;,&quot;Strike Rate: 94&quot;,&quot;Dismissals: 6&quot;],[&quot;Runs: 1&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 126&quot;,&quot;Strike Rate: 93&quot;,&quot;Dismissals: 7&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=KA+Tomlinson+cricket" target="_blank">KA Tomlinson</a></td>
+<td style="background-color: #19875400" class="text-end">15</td><td style="background-color: #19875400" class="text-end">94</td><td style="background-color: #1987541D" class="text-end">13</td><td style="background-color: #1987542C" class="text-end">11</td><td style="background-color: #19875400" class="text-end">48</td><td style="background-color: #dc354544" class="text-end">29</td><td style="background-color: #dc35457E" class="text-end">12</td><td style="background-color: #dc354500" class="text-end">33</td><td style="background-color: #dc354500" class="text-end">4</td><td style="background-color: #dc354535" class="text-end">21</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="HE Topp
+Teams: Northern Districts
+Matches: 19
+Runs: 109
+Overs: 24
+Dismissals: 14" data-filter="Northern Districts">
+<td colspan="2" data-text="Topp"><a class="chart" data-title="Batting Impact - HE Topp" data-x="[2021,2022,2023,2024]" data-y="[5.776934028215279,2.1464859117051622,7.607644166828795,3.323727988492569]" data-tooltips="[[&quot;Runs: 46&quot;,&quot;Strike Rate: 64&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 16&quot;,&quot;Strike Rate: 62&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 25&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 22&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 4&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=HE+Topp+cricket" target="_blank">HE Topp</a></td>
+<td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #19875400" class="text-end">76</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875400" class="text-end">50</td><td style="background-color: #dc354500" class="text-end">7</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">43</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545C0" class="text-end">36</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="T Wakelin
+Teams: Northern Districts
+Matches: 5
+Runs: 39
+Overs: 9
+Dismissals: 5" data-filter="Northern Districts">
+<td colspan="2" data-text="Wakelin"><a class="chart" data-title="Batting Impact - T Wakelin" data-x="[2021,2022,2023,2024]" data-y="[0.21073686614512047,5.314035866088236,6.977774674567741,0]" data-tooltips="[[&quot;Runs: 1&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 16&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 13&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 9&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=T+Wakelin+cricket" target="_blank">T Wakelin</a></td>
+<td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #19875400" class="text-end">71</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #19875400" class="text-end">60</td><td style="background-color: #dc354500" class="text-end">20</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">40</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545E8" class="text-end">40</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="JM Watkin
+Teams: Central Districts; Northern Districts
+Matches: 50
+Runs: 774
+Overs: 108
+Dismissals: 47" data-filter="Central Districts; Northern Districts">
+<td colspan="2" data-text="Watkin"><a class="chart" data-title="Batting Impact - JM Watkin" data-x="[2019,2020,2021,2022,2023,2024]" data-y="[18.15894250666537,15.676430971677828,20.15983273342734,7.331386822552675,12.683232998809649,24.78865821031436]" data-tooltips="[[&quot;Runs: 51&quot;,&quot;Strike Rate: 119&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 132&quot;,&quot;Strike Rate: 108&quot;,&quot;Dismissals: 7&quot;],[&quot;Runs: 168&quot;,&quot;Strike Rate: 122&quot;,&quot;Dismissals: 9&quot;],[&quot;Runs: 73&quot;,&quot;Strike Rate: 114&quot;,&quot;Dismissals: 10&quot;],[&quot;Runs: 142&quot;,&quot;Strike Rate: 108&quot;,&quot;Dismissals: 10&quot;],[&quot;Runs: 208&quot;,&quot;Strike Rate: 142&quot;,&quot;Dismissals: 8&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=JM+Watkin+cricket" target="_blank">JM Watkin</a></td>
+<td style="background-color: #1987540E" class="text-end">16</td><td style="background-color: #198754B0" class="text-end">120</td><td style="background-color: #19875450" class="text-end">16</td><td style="background-color: #198754FF" class="text-end">19</td><td style="background-color: #19875400" class="text-end">50</td><td style="background-color: #dc354500" class="text-end">6</td><td style="background-color: #dc354500" class="text-end">4</td><td style="background-color: #dc354590" class="text-end">68</td><td style="background-color: #dc354500" class="text-end">6</td><td style="background-color: #dc354500" class="text-end">11</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="PJ Watkins
+Teams: Otago
+Matches: 4
+Runs: 37
+Overs: 6
+Dismissals: 3" data-filter="Otago">
+<td colspan="2" data-text="Watkins"><a class="chart" data-title="Batting Impact - PJ Watkins" data-x="[2023,2024]" data-y="[4.564386207188098,15.849747863021816]" data-tooltips="[[&quot;Runs: 10&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 27&quot;,&quot;Strike Rate: 96&quot;,&quot;Dismissals: 2&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=PJ+Watkins+cricket" target="_blank">PJ Watkins</a></td>
+<td style="background-color: #19875400" class="text-end">12</td><td style="background-color: #19875405" class="text-end">95</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #19875400" class="text-end">49</td><td style="background-color: #dc35456D" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">33</td><td style="background-color: #dc3545FF" class="text-end">33</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="A Wellington
+Teams: Otago; Northern Districts
+Matches: 13
+Runs: 206
+Overs: 31
+Dismissals: 11" data-filter="Otago; Northern Districts">
+<td colspan="2" data-text="Wellington"><a class="chart" data-title="Batting Impact - A Wellington" data-x="[2019,2022,2024]" data-y="[17.872829400714842,11.516845577479277,17.367141268355095]" data-tooltips="[[&quot;Runs: 78&quot;,&quot;Strike Rate: 111&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 65&quot;,&quot;Strike Rate: 102&quot;,&quot;Dismissals: 5&quot;],[&quot;Runs: 63&quot;,&quot;Strike Rate: 121&quot;,&quot;Dismissals: 4&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=A+Wellington+cricket" target="_blank">A Wellington</a></td>
+<td style="background-color: #1987542E" class="text-end">19</td><td style="background-color: #19875471" class="text-end">111</td><td style="background-color: #19875444" class="text-end">15</td><td style="background-color: #19875476" class="text-end">13</td><td style="background-color: #19875400" class="text-end">44</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545E1" class="text-end">18</td><td style="background-color: #dc3545AF" class="text-end">73</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">9</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="E Wolland
+Teams: Northern Districts
+Matches: 7
+Runs: 68
+Overs: 12
+Dismissals: 3" data-filter="Northern Districts">
+<td colspan="2" data-text="Wolland"><a class="chart" data-title="Batting Impact - E Wolland" data-x="[2022,2023,2024]" data-y="[36.231884057971016,5.228123064651391,3.732851004492875]" data-tooltips="[[&quot;Runs: 26&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 0&quot;],[&quot;Runs: 20&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 22&quot;,&quot;Strike Rate: 76&quot;,&quot;Dismissals: 1&quot;]]" >📊</a>&nbsp;<a href="https://www.google.com/search?q=E+Wolland+cricket" target="_blank">E Wolland</a></td>
+<td style="background-color: #19875465" class="text-end">23</td><td style="background-color: #19875400" class="text-end">93</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #19875426" class="text-end">41</td><td style="background-color: #dc3545FF" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+</tbody>
+</table>
+<script>$(function() {  $('.table-sort').tablesorter();});</script><style>table.table-sort th { cursor: ns-resize; } </style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><style>a.chart { text-decoration: none; cursor: pointer; } </style><div class="modal modal-lg fade" id="pop_chart_modal" tabindex="-1">  <div class="modal-dialog">    <div class="modal-content">      <div class="modal-body">        <canvas id="pop_chart" style="width:600px; max-width: 100%;"></canvas>      </div>    </div>  </div></div><script>const pcm = new bootstrap.Modal('#pop_chart_modal');$('a.chart').on('click', function() {  let existing = Chart.getChart('pop_chart');  if (existing != undefined) {    existing.destroy();  }  new Chart('pop_chart', {    type: 'bar',    data: {      labels: JSON.parse($(this).attr('data-x')),      datasets: [{        backgroundColor: '#4e78a8',        label: $(this).attr('data-label'),        data: JSON.parse($(this).attr('data-y')),        tooltips: $(this).attr('data-tooltips') ? JSON.parse($(this).attr('data-tooltips')) : null,      }]    },    options: {      legend: {display: false},      plugins: {        title: {          display: true,          text: $(this).attr('data-title')        },        tooltip: {          displayColors: false,          callbacks: {            label: function(context) {              if (context.dataset.tooltips) {                return context.dataset.tooltips[context.dataIndex];               }              return context.parsed.y;            }          }        },        legend: {          display: false        }      },      scales: {        y: {          ticks: {             precision: 0          },        }      }    }  });  pcm.show();});</script>
+<div class="m-2 clearfix"><small class="float-start">&copy; 2025 CRICKETher.com/cricsheet.org</small><small class="float-end">Matches: 166; Latest: 02/02/2025</small></div>
+</body>
+</html>
