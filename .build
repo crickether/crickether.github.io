@@ -36,8 +36,6 @@ unzip -q -o /Users/syd/Documents/Cricket/Data/ssm_female_json.zip -d /Users/syd/
 # HTML
 /Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/NewZealand/SuperSmash" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/NewZealand/SuperSmash"
 
-https://cricsheet.org/downloads/wcl_female_json.zip
-
 # CPL
 echo "West Indies > CPL"
 curl -o /Users/syd/Documents/Cricket/Data/wcl_female_json.zip -z /Users/syd/Documents/Cricket/Data/wcl_female_json.zip https://cricsheet.org/downloads/wcl_female_json.zip
