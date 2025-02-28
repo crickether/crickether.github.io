@@ -27,7 +27,7 @@ echo "India > WPL"
 curl -o /Users/syd/Documents/Cricket/Data/wpl_female_json.zip -z /Users/syd/Documents/Cricket/Data/wpl_female_json.zip https://cricsheet.org/downloads/wpl_female_json.zip
 unzip -q -o /Users/syd/Documents/Cricket/Data/wpl_female_json.zip -d /Users/syd/Documents/Cricket/Data/India/WPL 
 # HTML
-/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/India/WPL" -analysis="stats" -by="YEAR" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/India/WPL"
+/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/India/WPL" -analysis="stats" -by="Y" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/India/WPL"
 
 # SS
 echo "New Zealand > Super Smash"
