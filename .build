@@ -61,5 +61,5 @@ echo "ODI"
 /Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/Internationals/ODIs" -teams="CHAMPO" -analysis="stats" -seasons="Y" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/Internationals/ODI"
 
 # git
-# git commit -a -m "Data Update"
-# git push
+git commit -a -m "Data Update"
+git push
