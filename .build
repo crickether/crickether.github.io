@@ -27,7 +27,7 @@ echo "India > WPL"
 curl -o /Users/syd/Documents/Cricket/Data/wpl_female_json.zip -z /Users/syd/Documents/Cricket/Data/wpl_female_json.zip https://cricsheet.org/downloads/wpl_female_json.zip
 unzip -q -o /Users/syd/Documents/Cricket/Data/wpl_female_json.zip -d /Users/syd/Documents/Cricket/Data/India/WPL 
 # HTML
-/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/India/WPL" -analysis="stats" -by="Y" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/India/WPL"
+/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/India/WPL" -analysis="stats" -seasons="Y" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/India/WPL"
 
 # SS
 echo "New Zealand > Super Smash"
@@ -54,12 +54,12 @@ unzip -q -o /Users/syd/Documents/Cricket/Data/t20s_female_json.zip -d /Users/syd
 curl -o /Users/syd/Documents/Cricket/Data/tests_female_json.zip -z /Users/syd/Documents/Cricket/Data/tests_female_json.zip https://cricsheet.org/downloads/tests_female_json.zip
 unzip -q -o /Users/syd/Documents/Cricket/Data/tests_female_json.zip -d /Users/syd/Documents/Cricket/Data/Internationals/Tests
 # HTML
-/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/Internationals" -teams="CHAMPO" -analysis="stats" -by="Y" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/Internationals"
+/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/Internationals" -teams="CHAMPO" -analysis="stats" -seasons="Y" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/Internationals"
 echo "T20"
-/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/Internationals/T20s" -teams="CHAMPO" -analysis="stats" -by="Y" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/Internationals/T20"
+/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/Internationals/T20s" -teams="CHAMPO" -analysis="stats" -seasons="Y" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/Internationals/T20"
 echo "ODI"
-/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/Internationals/ODIs" -teams="CHAMPO" -analysis="stats" -by="Y" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/Internationals/ODI"
+/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/Internationals/ODIs" -teams="CHAMPO" -analysis="stats" -seasons="Y" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/Internationals/ODI"
 
 # git
-git commit -a -m "Data Update"
-git push
+# git commit -a -m "Data Update"
+# git push
