@@ -12,14 +12,14 @@ a.chart { margin-right: 4px; }
 </head>
 <body>
 <h1>The 100 - Batting</h1>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-responsive-tabs@2.0.3/dist/js/jquery.bootstrap-responsive-tabs.min.js"></script><ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><button class="nav-link active" id="t-All-tab" data-bs-toggle="tab" data-bs-target="#t-All" type="button" role="tab" aria-selected="true" aria-controls="t-All">All</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2024-tab" data-bs-toggle="tab" data-bs-target="#t-2024" type="button" role="tab" aria-selected="false" aria-controls="t-2024">2024</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2023-tab" data-bs-toggle="tab" data-bs-target="#t-2023" type="button" role="tab" aria-selected="false" aria-controls="t-2023">2023</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2022-tab" data-bs-toggle="tab" data-bs-target="#t-2022" type="button" role="tab" aria-selected="false" aria-controls="t-2022">2022</button></li></ul>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-responsive-tabs@2.0.3/dist/js/jquery.bootstrap-responsive-tabs.min.js"></script><ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><button class="nav-link active" id="t-All-tab" data-bs-toggle="tab" data-bs-target="#t-All" type="button" role="tab" aria-selected="true" aria-controls="t-All">All</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2024-tab" data-bs-toggle="tab" data-bs-target="#t-2024" type="button" role="tab" aria-selected="false" aria-controls="t-2024">2024</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2023-tab" data-bs-toggle="tab" data-bs-target="#t-2023" type="button" role="tab" aria-selected="false" aria-controls="t-2023">2023</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2022-tab" data-bs-toggle="tab" data-bs-target="#t-2022" type="button" role="tab" aria-selected="false" aria-controls="t-2022">2022</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2021-tab" data-bs-toggle="tab" data-bs-target="#t-2021" type="button" role="tab" aria-selected="false" aria-controls="t-2021">2021</button></li></ul>
 <div class='m-1'><input class='form-control form-control-sm table-filter' type='search' placeholder='Filter...' style='display: none;' /></div><script>$(document).ready(function(){  $('.table-filter').toggle();   $('.table-filter').on('input', function() {    var fors = $(this).val().split(',').map(n => n.trim().toLowerCase()).filter(n => n.length > 0);    $('.table tbody tr').filter(function() {      $(this).toggle(filter_contains(fors, [$(this).text(), $(this).attr('data-filter')]));    });  });});function filter_contains(fors, ins) {  let result = false;  if(fors.length == 0) {    return true;  }  fors.forEach(f => {    if(f.length > 0) {      ins.forEach(i => {        if(i.toLowerCase().indexOf(f) > -1) {          result = true;        }      });    }  });  return result;}</script>
 <div class="tab-content">
 <div class="tab-pane fade show active" id="t-All" role="tabpanel" aria-labelledby="t-All-tab">
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
-<th>Batter</th><th></th><th class="text-end">Average</th><th class="text-end">Strike Rate</th><th class="text-end">Starts</th><th class="text-end">Impact</th><th class="text-end">Boundary %</th><th class="text-end">Dot %</th><th class="text-end">Bowled %</th><th class="text-end">LBW %</th><th class="text-end">Caught %</th><th class="text-end">Stumped %</th><th class="text-end">Run Out %</th>
+<th>Batter</th><th></th><th class="text-end sortInitialOrder-desc">Average</th><th class="text-end sortInitialOrder-desc">Strike Rate</th><th class="text-end sortInitialOrder-desc">Starts</th><th class="text-end sortInitialOrder-desc">Impact</th><th class="text-end sortInitialOrder-desc">Boundary %</th><th class="text-end sortInitialOrder-asc">Dot %</th><th class="text-end sortInitialOrder-desc">Bowled %</th><th class="text-end sortInitialOrder-desc">LBW %</th><th class="text-end sortInitialOrder-desc">Caught %</th><th class="text-end sortInitialOrder-desc">Stumped %</th><th class="text-end sortInitialOrder-desc">Run Out %</th>
 </tr>
 </thead>
 <tbody>
@@ -1065,7 +1065,7 @@ Dismissals: 31" data-filter="Southern Brave">
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
-<th>Batter</th><th></th><th class="text-end">Average</th><th class="text-end">Strike Rate</th><th class="text-end">Starts</th><th class="text-end">Impact</th><th class="text-end">Boundary %</th><th class="text-end">Dot %</th><th class="text-end">Bowled %</th><th class="text-end">LBW %</th><th class="text-end">Caught %</th><th class="text-end">Stumped %</th><th class="text-end">Run Out %</th>
+<th>Batter</th><th></th><th class="text-end sortInitialOrder-desc">Average</th><th class="text-end sortInitialOrder-desc">Strike Rate</th><th class="text-end sortInitialOrder-desc">Starts</th><th class="text-end sortInitialOrder-desc">Impact</th><th class="text-end sortInitialOrder-desc">Boundary %</th><th class="text-end sortInitialOrder-asc">Dot %</th><th class="text-end sortInitialOrder-desc">Bowled %</th><th class="text-end sortInitialOrder-desc">LBW %</th><th class="text-end sortInitialOrder-desc">Caught %</th><th class="text-end sortInitialOrder-desc">Stumped %</th><th class="text-end sortInitialOrder-desc">Run Out %</th>
 </tr>
 </thead>
 <tbody>
@@ -1607,7 +1607,7 @@ Dismissals: 7" data-filter="Southern Brave">
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
-<th>Batter</th><th></th><th class="text-end">Average</th><th class="text-end">Strike Rate</th><th class="text-end">Starts</th><th class="text-end">Impact</th><th class="text-end">Boundary %</th><th class="text-end">Dot %</th><th class="text-end">Bowled %</th><th class="text-end">LBW %</th><th class="text-end">Caught %</th><th class="text-end">Stumped %</th><th class="text-end">Run Out %</th>
+<th>Batter</th><th></th><th class="text-end sortInitialOrder-desc">Average</th><th class="text-end sortInitialOrder-desc">Strike Rate</th><th class="text-end sortInitialOrder-desc">Starts</th><th class="text-end sortInitialOrder-desc">Impact</th><th class="text-end sortInitialOrder-desc">Boundary %</th><th class="text-end sortInitialOrder-asc">Dot %</th><th class="text-end sortInitialOrder-desc">Bowled %</th><th class="text-end sortInitialOrder-desc">LBW %</th><th class="text-end sortInitialOrder-desc">Caught %</th><th class="text-end sortInitialOrder-desc">Stumped %</th><th class="text-end sortInitialOrder-desc">Run Out %</th>
 </tr>
 </thead>
 <tbody>
@@ -2149,7 +2149,7 @@ Dismissals: 9" data-filter="Southern Brave">
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
-<th>Batter</th><th></th><th class="text-end">Average</th><th class="text-end">Strike Rate</th><th class="text-end">Starts</th><th class="text-end">Impact</th><th class="text-end">Boundary %</th><th class="text-end">Dot %</th><th class="text-end">Bowled %</th><th class="text-end">LBW %</th><th class="text-end">Caught %</th><th class="text-end">Stumped %</th><th class="text-end">Run Out %</th>
+<th>Batter</th><th></th><th class="text-end sortInitialOrder-desc">Average</th><th class="text-end sortInitialOrder-desc">Strike Rate</th><th class="text-end sortInitialOrder-desc">Starts</th><th class="text-end sortInitialOrder-desc">Impact</th><th class="text-end sortInitialOrder-desc">Boundary %</th><th class="text-end sortInitialOrder-asc">Dot %</th><th class="text-end sortInitialOrder-desc">Bowled %</th><th class="text-end sortInitialOrder-desc">LBW %</th><th class="text-end sortInitialOrder-desc">Caught %</th><th class="text-end sortInitialOrder-desc">Stumped %</th><th class="text-end sortInitialOrder-desc">Run Out %</th>
 </tr>
 </thead>
 <tbody>
@@ -2674,6 +2674,548 @@ Overs: 21
 Dismissals: 7" data-filter="Southern Brave">
 <td colspan="2" data-text="Wyatt"><a href="https://www.google.com/search?q=DN+Wyatt+cricket" target="_blank">DN Wyatt</a></td>
 <td style="background-color: #19875400" class="text-end">25</td><td style="background-color: #1987546F" class="text-end">138</td><td style="background-color: #1987540F" class="text-end">95</td><td style="background-color: #19875440" class="text-end">10</td><td style="background-color: #198754A9" class="text-end">24</td><td style="background-color: #19875400" class="text-end">40</td><td style="background-color: #dc354500" class="text-end">14</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">29</td><td style="background-color: #dc3545FF" class="text-end">29</td><td style="background-color: #dc354534" class="text-end">14</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tab-pane fade show " id="t-2021" role="tabpanel" aria-labelledby="t-2021-tab">
+<table class="table table-sm table-sort" style="table-layout: fixed;">
+<thead class="sticky-top">
+<tr style="position: relative; top: -1px">
+<th>Batter</th><th></th><th class="text-end sortInitialOrder-desc">Average</th><th class="text-end sortInitialOrder-desc">Strike Rate</th><th class="text-end sortInitialOrder-desc">Starts</th><th class="text-end sortInitialOrder-desc">Impact</th><th class="text-end sortInitialOrder-desc">Boundary %</th><th class="text-end sortInitialOrder-asc">Dot %</th><th class="text-end sortInitialOrder-desc">Bowled %</th><th class="text-end sortInitialOrder-desc">LBW %</th><th class="text-end sortInitialOrder-desc">Caught %</th><th class="text-end sortInitialOrder-desc">Stumped %</th><th class="text-end sortInitialOrder-desc">Run Out %</th>
+</tr>
+</thead>
+<tbody>
+<tr style="position: relative; cursor: default;" title="GL Adams
+Teams: Oval Invincibles
+Matches: 9
+Runs: 133
+Overs: 21
+Dismissals: 8" data-filter="Oval Invincibles">
+<td colspan="2" data-text="Adams"><a href="https://www.google.com/search?q=GL+Adams+cricket" target="_blank">GL Adams</a></td>
+<td style="background-color: #19875400" class="text-end">17</td><td style="background-color: #19875400" class="text-end">106</td><td style="background-color: #19875400" class="text-end">63</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875401" class="text-end">15</td><td style="background-color: #19875400" class="text-end">44</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354569" class="text-end">75</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354519" class="text-end">12</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="EL Arlott
+Teams: Birmingham Phoenix
+Matches: 5
+Runs: 41
+Overs: 6
+Dismissals: 4" data-filter="Birmingham Phoenix">
+<td colspan="2" data-text="Arlott"><a href="https://www.google.com/search?q=EL+Arlott+cricket" target="_blank">EL Arlott</a></td>
+<td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #19875400" class="text-end">105</td><td style="background-color: #19875400" class="text-end">86</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875400" class="text-end">13</td><td style="background-color: #19875400" class="text-end">38</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">50</td><td style="background-color: #dc3545AC" class="text-end">25</td><td style="background-color: #dc354591" class="text-end">25</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="TT Beaumont
+Teams: London Spirit
+Matches: 6
+Runs: 139
+Overs: 22
+Dismissals: 6" data-filter="London Spirit">
+<td colspan="2" data-text="Beaumont"><a href="https://www.google.com/search?q=TT+Beaumont+cricket" target="_blank">TT Beaumont</a></td>
+<td style="background-color: #19875409" class="text-end">23</td><td style="background-color: #19875400" class="text-end">104</td><td style="background-color: #1987544A" class="text-end">110</td><td style="background-color: #19875468" class="text-end">11</td><td style="background-color: #19875400" class="text-end">13</td><td style="background-color: #19875400" class="text-end">40</td><td style="background-color: #dc354517" class="text-end">17</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354541" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354541" class="text-end">17</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="ME Bouchier
+Teams: Southern Brave
+Matches: 7
+Runs: 92
+Overs: 11
+Dismissals: 3" data-filter="Southern Brave">
+<td colspan="2" data-text="Bouchier"><a href="https://www.google.com/search?q=ME+Bouchier+cricket" target="_blank">ME Bouchier</a></td>
+<td style="background-color: #19875461" class="text-end">31</td><td style="background-color: #19875496" class="text-end">144</td><td style="background-color: #19875491" class="text-end">127</td><td style="background-color: #19875428" class="text-end">9</td><td style="background-color: #1987542E" class="text-end">17</td><td style="background-color: #198754AB" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354541" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545E1" class="text-end">33</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="GEB Boyce
+Teams: Manchester Originals
+Matches: 3
+Runs: 37
+Overs: 8
+Dismissals: 3" data-filter="Manchester Originals">
+<td colspan="2" data-text="Boyce"><a href="https://www.google.com/search?q=GEB+Boyce+cricket" target="_blank">GEB Boyce</a></td>
+<td style="background-color: #19875400" class="text-end">12</td><td style="background-color: #19875400" class="text-end">82</td><td style="background-color: #19875400" class="text-end">39</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #19875400" class="text-end">47</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545E1" class="text-end">100</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="KH Brunt
+Teams: Trent Rockets
+Matches: 7
+Runs: 120
+Overs: 22
+Dismissals: 6" data-filter="Trent Rockets">
+<td colspan="2" data-text="Brunt"><a href="https://www.google.com/search?q=KH+Brunt+cricket" target="_blank">KH Brunt</a></td>
+<td style="background-color: #19875400" class="text-end">20</td><td style="background-color: #19875400" class="text-end">91</td><td style="background-color: #19875400" class="text-end">79</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #19875400" class="text-end">38</td><td style="background-color: #dc354517" class="text-end">17</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354541" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354541" class="text-end">17</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="SJ Bryce
+Teams: Oval Invincibles
+Matches: 3
+Runs: 32
+Overs: 6
+Dismissals: 2" data-filter="Oval Invincibles">
+<td colspan="2" data-text="Bryce"><a href="https://www.google.com/search?q=SJ+Bryce+cricket" target="_blank">SJ Bryce</a></td>
+<td style="background-color: #19875400" class="text-end">16</td><td style="background-color: #19875400" class="text-end">84</td><td style="background-color: #19875400" class="text-end">45</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875446" class="text-end">32</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="position: relative; cursor: default;" title="EA Burns
+Teams: Birmingham Phoenix
+Matches: 8
+Runs: 156
+Overs: 21
+Dismissals: 7" data-filter="Birmingham Phoenix">
+<td colspan="2" data-text="Burns"><a href="https://www.google.com/search?q=EA+Burns+cricket" target="_blank">EA Burns</a></td>
+<td style="background-color: #19875400" class="text-end">22</td><td style="background-color: #19875416" class="text-end">122</td><td style="background-color: #19875400" class="text-end">79</td><td style="background-color: #19875420" class="text-end">9</td><td style="background-color: #1987543F" class="text-end">18</td><td style="background-color: #19875400" class="text-end">39</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35451D" class="text-end">14</td><td style="background-color: #dc354558" class="text-end">71</td><td style="background-color: #dc35453E" class="text-end">14</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="A Capsey
+Teams: Oval Invincibles
+Matches: 8
+Runs: 150
+Overs: 20
+Dismissals: 7" data-filter="Oval Invincibles">
+<td colspan="2" data-text="Capsey"><a href="https://www.google.com/search?q=A+Capsey+cricket" target="_blank">A Capsey</a></td>
+<td style="background-color: #19875400" class="text-end">21</td><td style="background-color: #19875435" class="text-end">127</td><td style="background-color: #19875400" class="text-end">81</td><td style="background-color: #19875433" class="text-end">9</td><td style="background-color: #19875460" class="text-end">19</td><td style="background-color: #19875400" class="text-end">37</td><td style="background-color: #dc354576" class="text-end">29</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354513" class="text-end">57</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35452A" class="text-end">14</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="ND Dattani
+Teams: London Spirit
+Matches: 7
+Runs: 72
+Overs: 12
+Dismissals: 7" data-filter="London Spirit">
+<td colspan="2" data-text="Dattani"><a href="https://www.google.com/search?q=ND+Dattani+cricket" target="_blank">ND Dattani</a></td>
+<td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #19875400" class="text-end">99</td><td style="background-color: #19875400" class="text-end">71</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875400" class="text-end">14</td><td style="background-color: #19875400" class="text-end">55</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354558" class="text-end">71</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35452A" class="text-end">14</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="AN Davidson-Richards
+Teams: Northern Superchargers
+Matches: 7
+Runs: 110
+Overs: 18
+Dismissals: 4" data-filter="Northern Superchargers">
+<td colspan="2" data-text="Davidson-Richards"><a href="https://www.google.com/search?q=AN+Davidson-Richards+cricket" target="_blank">AN Davidson-Richards</a></td>
+<td style="background-color: #1987543B" class="text-end">28</td><td style="background-color: #19875400" class="text-end">104</td><td style="background-color: #19875400" class="text-end">71</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #1987543E" class="text-end">32</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354569" class="text-end">75</td><td style="background-color: #dc3545AC" class="text-end">25</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="GM Davies
+Teams: Birmingham Phoenix
+Matches: 5
+Runs: 48
+Overs: 8
+Dismissals: 5" data-filter="Birmingham Phoenix">
+<td colspan="2" data-text="Davies"><a href="https://www.google.com/search?q=GM+Davies+cricket" target="_blank">GM Davies</a></td>
+<td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #19875400" class="text-end">102</td><td style="background-color: #198754C5" class="text-end">140</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875400" class="text-end">15</td><td style="background-color: #19875400" class="text-end">43</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354581" class="text-end">80</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354561" class="text-end">20</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="CE Dean
+Teams: London Spirit
+Matches: 6
+Runs: 44
+Overs: 6
+Dismissals: 4" data-filter="London Spirit">
+<td colspan="2" data-text="Dean"><a href="https://www.google.com/search?q=CE+Dean+cricket" target="_blank">CE Dean</a></td>
+<td style="background-color: #19875400" class="text-end">11</td><td style="background-color: #1987542D" class="text-end">126</td><td style="background-color: #19875430" class="text-end">103</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875400" class="text-end">14</td><td style="background-color: #198754CC" class="text-end">23</td><td style="background-color: #dc3545FF" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545FF" class="text-end">50</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="DJS Dottin
+Teams: London Spirit
+Matches: 8
+Runs: 146
+Overs: 21
+Dismissals: 7" data-filter="London Spirit">
+<td colspan="2" data-text="Dottin"><a href="https://www.google.com/search?q=DJS+Dottin+cricket" target="_blank">DJS Dottin</a></td>
+<td style="background-color: #19875400" class="text-end">21</td><td style="background-color: #19875400" class="text-end">118</td><td style="background-color: #1987542C" class="text-end">102</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #1987545D" class="text-end">19</td><td style="background-color: #19875400" class="text-end">48</td><td style="background-color: #dc354504" class="text-end">14</td><td style="background-color: #dc35451D" class="text-end">14</td><td style="background-color: #dc354513" class="text-end">57</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35452A" class="text-end">14</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="SIR Dunkley
+Teams: Southern Brave
+Matches: 9
+Runs: 244
+Overs: 28
+Dismissals: 6" data-filter="Southern Brave">
+<td colspan="2" data-text="Dunkley"><a href="https://www.google.com/search?q=SIR+Dunkley+cricket" target="_blank">SIR Dunkley</a></td>
+<td style="background-color: #198754D6" class="text-end">41</td><td style="background-color: #19875495" class="text-end">144</td><td style="background-color: #19875454" class="text-end">112</td><td style="background-color: #198754FF" class="text-end">16</td><td style="background-color: #1987545E" class="text-end">19</td><td style="background-color: #19875470" class="text-end">29</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354541" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545E1" class="text-end">33</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="S Ecclestone
+Teams: Manchester Originals
+Matches: 4
+Runs: 74
+Overs: 8
+Dismissals: 2" data-filter="Manchester Originals">
+<td colspan="2" data-text="Ecclestone"><a href="https://www.google.com/search?q=S+Ecclestone+cricket" target="_blank">S Ecclestone</a></td>
+<td style="background-color: #198754AB" class="text-end">37</td><td style="background-color: #1987549E" class="text-end">145</td><td style="background-color: #1987545D" class="text-end">114</td><td style="background-color: #1987543C" class="text-end">9</td><td style="background-color: #19875462" class="text-end">20</td><td style="background-color: #19875467" class="text-end">29</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="position: relative; cursor: default;" title="GA Elwiss
+Teams: Birmingham Phoenix
+Matches: 7
+Runs: 36
+Overs: 6
+Dismissals: 4" data-filter="Birmingham Phoenix">
+<td colspan="2" data-text="Elwiss"><a href="https://www.google.com/search?q=GA+Elwiss+cricket" target="_blank">GA Elwiss</a></td>
+<td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #19875400" class="text-end">92</td><td style="background-color: #19875400" class="text-end">80</td><td style="background-color: #19875400" class="text-end">1</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875479" class="text-end">28</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35456D" class="text-end">25</td><td style="background-color: #dc354500" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="AJ Freeborn
+Teams: Trent Rockets
+Matches: 6
+Runs: 49
+Overs: 8
+Dismissals: 3" data-filter="Trent Rockets">
+<td colspan="2" data-text="Freeborn"><a href="https://www.google.com/search?q=AJ+Freeborn+cricket" target="_blank">AJ Freeborn</a></td>
+<td style="background-color: #19875400" class="text-end">16</td><td style="background-color: #19875400" class="text-end">104</td><td style="background-color: #19875400" class="text-end">86</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: #19875400" class="text-end">38</td><td style="background-color: #dc35459C" class="text-end">33</td><td style="background-color: #dc3545FF" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="GJ Gibbs
+Teams: Oval Invincibles
+Matches: 5
+Runs: 46
+Overs: 7
+Dismissals: 3" data-filter="Oval Invincibles">
+<td colspan="2" data-text="Gibbs"><a href="https://www.google.com/search?q=GJ+Gibbs+cricket" target="_blank">GJ Gibbs</a></td>
+<td style="background-color: #19875400" class="text-end">15</td><td style="background-color: #19875400" class="text-end">115</td><td style="background-color: #19875488" class="text-end">125</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875400" class="text-end">15</td><td style="background-color: #19875400" class="text-end">42</td><td style="background-color: #dc35459C" class="text-end">33</td><td style="background-color: #dc3545FF" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="DR Gibson
+Teams: London Spirit
+Matches: 8
+Runs: 108
+Overs: 10
+Dismissals: 3" data-filter="London Spirit">
+<td colspan="2" data-text="Gibson"><a href="https://www.google.com/search?q=DR+Gibson+cricket" target="_blank">DR Gibson</a></td>
+<td style="background-color: #1987549F" class="text-end">36</td><td style="background-color: #198754FF" class="text-end">183</td><td style="background-color: #198754FF" class="text-end">164</td><td style="background-color: #1987542A" class="text-end">9</td><td style="background-color: #198754FF" class="text-end">31</td><td style="background-color: #198754D8" class="text-end">22</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545FF" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545FF" class="text-end">33</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="S Glenn
+Teams: Trent Rockets
+Matches: 6
+Runs: 47
+Overs: 5
+Dismissals: 4" data-filter="Trent Rockets">
+<td colspan="2" data-text="Glenn"><a href="https://www.google.com/search?q=S+Glenn+cricket" target="_blank">S Glenn</a></td>
+<td style="background-color: #19875400" class="text-end">12</td><td style="background-color: #198754A8" class="text-end">147</td><td style="background-color: #198754CB" class="text-end">142</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #1987540C" class="text-end">16</td><td style="background-color: #198754FF" class="text-end">19</td><td style="background-color: #dc354559" class="text-end">25</td><td style="background-color: #dc35456D" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545AC" class="text-end">25</td><td style="background-color: #dc354591" class="text-end">25</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="H Graham
+Teams: Trent Rockets
+Matches: 7
+Runs: 125
+Overs: 16
+Dismissals: 5" data-filter="Trent Rockets">
+<td colspan="2" data-text="Graham"><a href="https://www.google.com/search?q=H+Graham+cricket" target="_blank">H Graham</a></td>
+<td style="background-color: #1987541E" class="text-end">25</td><td style="background-color: #1987545F" class="text-end">134</td><td style="background-color: #19875400" class="text-end">80</td><td style="background-color: #1987540F" class="text-end">8</td><td style="background-color: #19875417" class="text-end">16</td><td style="background-color: #1987547D" class="text-end">28</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354548" class="text-end">20</td><td style="background-color: #dc354581" class="text-end">80</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="L Harris
+Teams: Northern Superchargers
+Matches: 4
+Runs: 61
+Overs: 6
+Dismissals: 3" data-filter="Northern Superchargers">
+<td colspan="2" data-text="Harris"><a href="https://www.google.com/search?q=L+Harris+cricket" target="_blank">L Harris</a></td>
+<td style="background-color: #19875400" class="text-end">20</td><td style="background-color: #198754FF" class="text-end">174</td><td style="background-color: #198754FF" class="text-end">176</td><td style="background-color: #1987543A" class="text-end">9</td><td style="background-color: #198754FF" class="text-end">31</td><td style="background-color: #198754A0" class="text-end">26</td><td style="background-color: #dc3545FF" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="GM Hennessy
+Teams: Welsh Fire
+Matches: 6
+Runs: 58
+Overs: 12
+Dismissals: 4" data-filter="Welsh Fire">
+<td colspan="2" data-text="Hennessy"><a href="https://www.google.com/search?q=GM+Hennessy+cricket" target="_blank">GM Hennessy</a></td>
+<td style="background-color: #19875400" class="text-end">14</td><td style="background-color: #19875400" class="text-end">77</td><td style="background-color: #19875400" class="text-end">70</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875400" class="text-end">40</td><td style="background-color: #dc3545FF" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545AC" class="text-end">25</td><td style="background-color: #dc354591" class="text-end">25</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="SJ Johnson
+Teams: Trent Rockets
+Matches: 7
+Runs: 120
+Overs: 17
+Dismissals: 7" data-filter="Trent Rockets">
+<td colspan="2" data-text="Johnson"><a href="https://www.google.com/search?q=SJ+Johnson+cricket" target="_blank">SJ Johnson</a></td>
+<td style="background-color: #19875400" class="text-end">17</td><td style="background-color: #19875400" class="text-end">115</td><td style="background-color: #19875400" class="text-end">70</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #1987541C" class="text-end">16</td><td style="background-color: #19875400" class="text-end">44</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354588" class="text-end">29</td><td style="background-color: #dc354513" class="text-end">57</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35452A" class="text-end">14</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="E Jones
+Teams: Birmingham Phoenix
+Matches: 9
+Runs: 233
+Overs: 33
+Dismissals: 8" data-filter="Birmingham Phoenix">
+<td colspan="2" data-text="Jones"><a href="https://www.google.com/search?q=E+Jones+cricket" target="_blank">E Jones</a></td>
+<td style="background-color: #1987544F" class="text-end">29</td><td style="background-color: #19875401" class="text-end">118</td><td style="background-color: #19875400" class="text-end">87</td><td style="background-color: #1987542E" class="text-end">9</td><td style="background-color: #19875450" class="text-end">19</td><td style="background-color: #19875400" class="text-end">42</td><td style="background-color: #dc354559" class="text-end">25</td><td style="background-color: #dc35450F" class="text-end">12</td><td style="background-color: #dc35452D" class="text-end">62</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="AE Jones
+Teams: Birmingham Phoenix
+Matches: 8
+Runs: 176
+Overs: 19
+Dismissals: 7" data-filter="Birmingham Phoenix">
+<td colspan="2" data-text="Jones"><a href="https://www.google.com/search?q=AE+Jones+cricket" target="_blank">AE Jones</a></td>
+<td style="background-color: #19875420" class="text-end">25</td><td style="background-color: #198754E4" class="text-end">157</td><td style="background-color: #198754E9" class="text-end">149</td><td style="background-color: #198754A7" class="text-end">13</td><td style="background-color: #198754C3" class="text-end">24</td><td style="background-color: #1987549D" class="text-end">26</td><td style="background-color: #dc354576" class="text-end">29</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354513" class="text-end">57</td><td style="background-color: #dc35453E" class="text-end">14</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="M Kapp
+Teams: Oval Invincibles
+Matches: 5
+Runs: 150
+Overs: 20
+Dismissals: 4" data-filter="Oval Invincibles">
+<td colspan="2" data-text="Kapp"><a href="https://www.google.com/search?q=M+Kapp+cricket" target="_blank">M Kapp</a></td>
+<td style="background-color: #198754B1" class="text-end">38</td><td style="background-color: #1987541D" class="text-end">123</td><td style="background-color: #19875400" class="text-end">83</td><td style="background-color: #198754FF" class="text-end">16</td><td style="background-color: #1987542F" class="text-end">17</td><td style="background-color: #19875400" class="text-end">39</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354569" class="text-end">75</td><td style="background-color: #dc3545AC" class="text-end">25</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="H Kaur
+Teams: Manchester Originals
+Matches: 3
+Runs: 104
+Overs: 16
+Dismissals: 2" data-filter="Manchester Originals">
+<td colspan="2" data-text="Kaur"><a href="https://www.google.com/search?q=H+Kaur+cricket" target="_blank">H Kaur</a></td>
+<td style="background-color: #198754FF" class="text-end">52</td><td style="background-color: #19875400" class="text-end">109</td><td style="background-color: #19875400" class="text-end">83</td><td style="background-color: #198754F3" class="text-end">15</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: #19875415" class="text-end">35</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="position: relative; cursor: default;" title="HC Knight
+Teams: London Spirit
+Matches: 8
+Runs: 214
+Overs: 27
+Dismissals: 7" data-filter="London Spirit">
+<td colspan="2" data-text="Knight"><a href="https://www.google.com/search?q=HC+Knight+cricket" target="_blank">HC Knight</a></td>
+<td style="background-color: #19875460" class="text-end">31</td><td style="background-color: #19875449" class="text-end">130</td><td style="background-color: #19875402" class="text-end">92</td><td style="background-color: #1987549B" class="text-end">12</td><td style="background-color: #19875453" class="text-end">19</td><td style="background-color: #1987543A" class="text-end">32</td><td style="background-color: #dc354504" class="text-end">14</td><td style="background-color: #dc35451D" class="text-end">14</td><td style="background-color: #dc354513" class="text-end">57</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="EL Lamb
+Teams: Manchester Originals
+Matches: 7
+Runs: 135
+Overs: 18
+Dismissals: 7" data-filter="Manchester Originals">
+<td colspan="2" data-text="Lamb"><a href="https://www.google.com/search?q=EL+Lamb+cricket" target="_blank">EL Lamb</a></td>
+<td style="background-color: #19875400" class="text-end">19</td><td style="background-color: #1987542F" class="text-end">126</td><td style="background-color: #19875400" class="text-end">78</td><td style="background-color: #19875430" class="text-end">9</td><td style="background-color: #19875463" class="text-end">20</td><td style="background-color: #19875400" class="text-end">42</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35451D" class="text-end">14</td><td style="background-color: #dc354513" class="text-end">57</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545B3" class="text-end">29</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="L Lee
+Teams: Manchester Originals
+Matches: 7
+Runs: 215
+Overs: 29
+Dismissals: 5" data-filter="Manchester Originals">
+<td colspan="2" data-text="Lee"><a href="https://www.google.com/search?q=L+Lee+cricket" target="_blank">L Lee</a></td>
+<td style="background-color: #198754F2" class="text-end">43</td><td style="background-color: #19875429" class="text-end">125</td><td style="background-color: #19875400" class="text-end">85</td><td style="background-color: #198754D4" class="text-end">14</td><td style="background-color: #19875466" class="text-end">20</td><td style="background-color: #19875400" class="text-end">41</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354548" class="text-end">20</td><td style="background-color: #dc354521" class="text-end">60</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354561" class="text-end">20</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="SN Luff
+Teams: Welsh Fire
+Matches: 7
+Runs: 79
+Overs: 11
+Dismissals: 6" data-filter="Welsh Fire">
+<td colspan="2" data-text="Luff"><a href="https://www.google.com/search?q=SN+Luff+cricket" target="_blank">SN Luff</a></td>
+<td style="background-color: #19875400" class="text-end">13</td><td style="background-color: #19875400" class="text-end">116</td><td style="background-color: #1987542E" class="text-end">103</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #198754C1" class="text-end">24</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545AB" class="text-end">33</td><td style="background-color: #dc354500" class="text-end">50</td><td style="background-color: #dc354556" class="text-end">17</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="KM Mack
+Teams: Birmingham Phoenix
+Matches: 8
+Runs: 100
+Overs: 16
+Dismissals: 8" data-filter="Birmingham Phoenix">
+<td colspan="2" data-text="Mack"><a href="https://www.google.com/search?q=KM+Mack+cricket" target="_blank">KM Mack</a></td>
+<td style="background-color: #19875400" class="text-end">12</td><td style="background-color: #19875400" class="text-end">103</td><td style="background-color: #19875400" class="text-end">86</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #19875410" class="text-end">35</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: #dc35450F" class="text-end">12</td><td style="background-color: #dc354500" class="text-end">38</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354519" class="text-end">12</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="AJ Macleod
+Teams: Welsh Fire
+Matches: 5
+Runs: 33
+Overs: 6
+Dismissals: 3" data-filter="Welsh Fire">
+<td colspan="2" data-text="Macleod"><a href="https://www.google.com/search?q=AJ+Macleod+cricket" target="_blank">AJ Macleod</a></td>
+<td style="background-color: #19875400" class="text-end">11</td><td style="background-color: #19875400" class="text-end">100</td><td style="background-color: #19875412" class="text-end">96</td><td style="background-color: #19875400" class="text-end">2</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #1987542A" class="text-end">33</td><td style="background-color: #dc35459C" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354541" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="S Mandhana
+Teams: Southern Brave
+Matches: 7
+Runs: 167
+Overs: 21
+Dismissals: 6" data-filter="Southern Brave">
+<td colspan="2" data-text="Mandhana"><a href="https://www.google.com/search?q=S+Mandhana+cricket" target="_blank">S Mandhana</a></td>
+<td style="background-color: #1987543F" class="text-end">28</td><td style="background-color: #19875461" class="text-end">135</td><td style="background-color: #1987540E" class="text-end">95</td><td style="background-color: #1987547D" class="text-end">11</td><td style="background-color: #1987544B" class="text-end">19</td><td style="background-color: #19875400" class="text-end">38</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35452F" class="text-end">17</td><td style="background-color: #dc354541" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354541" class="text-end">17</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="HK Matthews
+Teams: Welsh Fire
+Matches: 8
+Runs: 221
+Overs: 31
+Dismissals: 7" data-filter="Welsh Fire">
+<td colspan="2" data-text="Matthews"><a href="https://www.google.com/search?q=HK+Matthews+cricket" target="_blank">HK Matthews</a></td>
+<td style="background-color: #1987546B" class="text-end">32</td><td style="background-color: #1987540C" class="text-end">120</td><td style="background-color: #1987541B" class="text-end">98</td><td style="background-color: #19875497" class="text-end">12</td><td style="background-color: #1987543E" class="text-end">18</td><td style="background-color: #19875400" class="text-end">38</td><td style="background-color: #dc354576" class="text-end">29</td><td style="background-color: #dc35451D" class="text-end">14</td><td style="background-color: #dc354513" class="text-end">57</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="FMK Morris
+Teams: Southern Brave
+Matches: 2
+Runs: 23
+Overs: 4
+Dismissals: 2" data-filter="Southern Brave">
+<td colspan="2" data-text="Morris"><a href="https://www.google.com/search?q=FMK+Morris+cricket" target="_blank">FMK Morris</a></td>
+<td style="background-color: #19875400" class="text-end">12</td><td style="background-color: #19875400" class="text-end">85</td><td style="background-color: " class="text-end">0</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875400" class="text-end">15</td><td style="background-color: #19875400" class="text-end">59</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="position: relative; cursor: default;" title="D van Niekerk
+Teams: Oval Invincibles
+Matches: 9
+Runs: 259
+Overs: 40
+Dismissals: 6" data-filter="Oval Invincibles">
+<td colspan="2" data-text="Niekerk"><a href="https://www.google.com/search?q=D+van+Niekerk+cricket" target="_blank">D van Niekerk</a></td>
+<td style="background-color: #198754F3" class="text-end">43</td><td style="background-color: #19875400" class="text-end">107</td><td style="background-color: #19875400" class="text-end">74</td><td style="background-color: #1987547F" class="text-end">11</td><td style="background-color: #19875400" class="text-end">14</td><td style="background-color: #19875400" class="text-end">40</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545E1" class="text-end">100</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="M du Preez
+Teams: Manchester Originals
+Matches: 7
+Runs: 118
+Overs: 19
+Dismissals: 4" data-filter="Manchester Originals">
+<td colspan="2" data-text="Preez"><a href="https://www.google.com/search?q=M+du+Preez+cricket" target="_blank">M du Preez</a></td>
+<td style="background-color: #19875453" class="text-end">30</td><td style="background-color: #19875400" class="text-end">102</td><td style="background-color: #19875400" class="text-end">57</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: #19875400" class="text-end">39</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354569" class="text-end">75</td><td style="background-color: #dc3545AC" class="text-end">25</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="RH Priest
+Teams: Trent Rockets
+Matches: 7
+Runs: 138
+Overs: 16
+Dismissals: 7" data-filter="Trent Rockets">
+<td colspan="2" data-text="Priest"><a href="https://www.google.com/search?q=RH+Priest+cricket" target="_blank">RH Priest</a></td>
+<td style="background-color: #19875400" class="text-end">20</td><td style="background-color: #1987547D" class="text-end">139</td><td style="background-color: #1987540F" class="text-end">95</td><td style="background-color: #1987541B" class="text-end">8</td><td style="background-color: #198754DC" class="text-end">25</td><td style="background-color: #19875400" class="text-end">48</td><td style="background-color: #dc354576" class="text-end">29</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354513" class="text-end">57</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="G Redmayne
+Teams: Welsh Fire
+Matches: 8
+Runs: 187
+Overs: 29
+Dismissals: 6" data-filter="Welsh Fire">
+<td colspan="2" data-text="Redmayne"><a href="https://www.google.com/search?q=G+Redmayne+cricket" target="_blank">G Redmayne</a></td>
+<td style="background-color: #19875467" class="text-end">31</td><td style="background-color: #19875400" class="text-end">109</td><td style="background-color: #19875471" class="text-end">119</td><td style="background-color: #1987542D" class="text-end">9</td><td style="background-color: #19875400" class="text-end">12</td><td style="background-color: #1987543F" class="text-end">32</td><td style="background-color: #dc35459C" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545FF" class="text-end">50</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="JI Rodrigues
+Teams: Northern Superchargers
+Matches: 7
+Runs: 249
+Overs: 27
+Dismissals: 6" data-filter="Northern Superchargers">
+<td colspan="2" data-text="Rodrigues"><a href="https://www.google.com/search?q=JI+Rodrigues+cricket" target="_blank">JI Rodrigues</a></td>
+<td style="background-color: #198754E0" class="text-end">42</td><td style="background-color: #198754C5" class="text-end">152</td><td style="background-color: #19875457" class="text-end">113</td><td style="background-color: #198754FF" class="text-end">17</td><td style="background-color: #198754E4" class="text-end">26</td><td style="background-color: #19875444" class="text-end">32</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354591" class="text-end">83</td><td style="background-color: #dc354556" class="text-end">17</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="NR Sciver
+Teams: Trent Rockets
+Matches: 7
+Runs: 220
+Overs: 27
+Dismissals: 7" data-filter="Trent Rockets">
+<td colspan="2" data-text="Sciver"><a href="https://www.google.com/search?q=NR+Sciver+cricket" target="_blank">NR Sciver</a></td>
+<td style="background-color: #1987546A" class="text-end">31</td><td style="background-color: #1987546D" class="text-end">137</td><td style="background-color: #19875400" class="text-end">76</td><td style="background-color: #198754E2" class="text-end">14</td><td style="background-color: #19875483" class="text-end">21</td><td style="background-color: #1987540B" class="text-end">35</td><td style="background-color: #dc354504" class="text-end">14</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">43</td><td style="background-color: #dc35453E" class="text-end">14</td><td style="background-color: #dc35452A" class="text-end">14</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="DB Sharma
+Teams: London Spirit
+Matches: 6
+Runs: 77
+Overs: 11
+Dismissals: 4" data-filter="London Spirit">
+<td colspan="2" data-text="Sharma"><a href="https://www.google.com/search?q=DB+Sharma+cricket" target="_blank">DB Sharma</a></td>
+<td style="background-color: #19875400" class="text-end">19</td><td style="background-color: #19875400" class="text-end">113</td><td style="background-color: #19875400" class="text-end">52</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #1987547E" class="text-end">28</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">50</td><td style="background-color: #dc3545AC" class="text-end">25</td><td style="background-color: #dc354591" class="text-end">25</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="A Shrubsole
+Teams: Southern Brave
+Matches: 3
+Runs: 42
+Overs: 6
+Dismissals: 2" data-filter="Southern Brave">
+<td colspan="2" data-text="Shrubsole"><a href="https://www.google.com/search?q=A+Shrubsole+cricket" target="_blank">A Shrubsole</a></td>
+<td style="background-color: #19875400" class="text-end">21</td><td style="background-color: #19875420" class="text-end">124</td><td style="background-color: #19875400" class="text-end">27</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875438" class="text-end">18</td><td style="background-color: #19875400" class="text-end">38</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="position: relative; cursor: default;" title="BF Smith
+Teams: Welsh Fire
+Matches: 8
+Runs: 137
+Overs: 20
+Dismissals: 8" data-filter="Welsh Fire">
+<td colspan="2" data-text="Smith"><a href="https://www.google.com/search?q=BF+Smith+cricket" target="_blank">BF Smith</a></td>
+<td style="background-color: #19875400" class="text-end">17</td><td style="background-color: #19875400" class="text-end">116</td><td style="background-color: #19875423" class="text-end">100</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875429" class="text-end">17</td><td style="background-color: #19875400" class="text-end">45</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35452D" class="text-end">62</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354591" class="text-end">25</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="LCN Smith
+Teams: Northern Superchargers
+Matches: 5
+Runs: 36
+Overs: 6
+Dismissals: 3" data-filter="Northern Superchargers">
+<td colspan="2" data-text="Smith"><a href="https://www.google.com/search?q=LCN+Smith+cricket" target="_blank">LCN Smith</a></td>
+<td style="background-color: #19875400" class="text-end">12</td><td style="background-color: #19875400" class="text-end">106</td><td style="background-color: #19875400" class="text-end">84</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #19875400" class="text-end">41</td><td style="background-color: #dc35459C" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">33</td><td style="background-color: #dc3545FF" class="text-end">33</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="SJ Taylor
+Teams: Welsh Fire
+Matches: 6
+Runs: 78
+Overs: 11
+Dismissals: 6" data-filter="Welsh Fire">
+<td colspan="2" data-text="Taylor"><a href="https://www.google.com/search?q=SJ+Taylor+cricket" target="_blank">SJ Taylor</a></td>
+<td style="background-color: #19875400" class="text-end">13</td><td style="background-color: #19875400" class="text-end">115</td><td style="background-color: #19875408" class="text-end">93</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">12</td><td style="background-color: #1987547E" class="text-end">28</td><td style="background-color: #dc354517" class="text-end">17</td><td style="background-color: #dc35452F" class="text-end">17</td><td style="background-color: #dc354500" class="text-end">17</td><td style="background-color: #dc3545FF" class="text-end">50</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="SR Taylor
+Teams: Southern Brave
+Matches: 9
+Runs: 182
+Overs: 30
+Dismissals: 4" data-filter="Southern Brave">
+<td colspan="2" data-text="Taylor"><a href="https://www.google.com/search?q=SR+Taylor+cricket" target="_blank">SR Taylor</a></td>
+<td style="background-color: #198754FF" class="text-end">46</td><td style="background-color: #19875400" class="text-end">102</td><td style="background-color: #19875400" class="text-end">41</td><td style="background-color: #1987542F" class="text-end">9</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #19875464" class="text-end">30</td><td style="background-color: #dc354559" class="text-end">25</td><td style="background-color: #dc35456D" class="text-end">25</td><td style="background-color: #dc354500" class="text-end">25</td><td style="background-color: #dc3545AC" class="text-end">25</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="E Threlkeld
+Teams: Manchester Originals
+Matches: 2
+Runs: 29
+Overs: 5
+Dismissals: 2" data-filter="Manchester Originals">
+<td colspan="2" data-text="Threlkeld"><a href="https://www.google.com/search?q=E+Threlkeld+cricket" target="_blank">E Threlkeld</a></td>
+<td style="background-color: #19875400" class="text-end">14</td><td style="background-color: #19875400" class="text-end">104</td><td style="background-color: #19875445" class="text-end">108</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #198754E2" class="text-end">21</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="position: relative; cursor: default;" title="CL Tryon
+Teams: London Spirit
+Matches: 6
+Runs: 41
+Overs: 9
+Dismissals: 6" data-filter="London Spirit">
+<td colspan="2" data-text="Tryon"><a href="https://www.google.com/search?q=CL+Tryon+cricket" target="_blank">CL Tryon</a></td>
+<td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875400" class="text-end">79</td><td style="background-color: #19875401" class="text-end">91</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #19875400" class="text-end">50</td><td style="background-color: #dc354517" class="text-end">17</td><td style="background-color: #dc3545AB" class="text-end">33</td><td style="background-color: #dc354500" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="Shafali Verma
+Teams: Birmingham Phoenix
+Matches: 8
+Runs: 171
+Overs: 20
+Dismissals: 7" data-filter="Birmingham Phoenix">
+<td colspan="2" data-text="Verma"><a href="https://www.google.com/search?q=Shafali+Verma+cricket" target="_blank">Shafali Verma</a></td>
+<td style="background-color: #19875417" class="text-end">24</td><td style="background-color: #1987549D" class="text-end">145</td><td style="background-color: #198754A1" class="text-end">131</td><td style="background-color: #19875443" class="text-end">10</td><td style="background-color: #19875497" class="text-end">22</td><td style="background-color: #19875408" class="text-end">36</td><td style="background-color: #dc354576" class="text-end">29</td><td style="background-color: #dc35451D" class="text-end">14</td><td style="background-color: #dc354513" class="text-end">57</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="MK Villiers
+Teams: Oval Invincibles
+Matches: 7
+Runs: 51
+Overs: 6
+Dismissals: 5" data-filter="Oval Invincibles">
+<td colspan="2" data-text="Villiers"><a href="https://www.google.com/search?q=MK+Villiers+cricket" target="_blank">MK Villiers</a></td>
+<td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #1987545E" class="text-end">134</td><td style="background-color: #198754BB" class="text-end">138</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875400" class="text-end">13</td><td style="background-color: #1987546E" class="text-end">29</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354581" class="text-end">80</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="FC Wilson
+Teams: Oval Invincibles
+Matches: 9
+Runs: 108
+Overs: 20
+Dismissals: 9" data-filter="Oval Invincibles">
+<td colspan="2" data-text="Wilson"><a href="https://www.google.com/search?q=FC+Wilson+cricket" target="_blank">FC Wilson</a></td>
+<td style="background-color: #19875400" class="text-end">12</td><td style="background-color: #19875400" class="text-end">92</td><td style="background-color: #19875400" class="text-end">69</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875400" class="text-end">12</td><td style="background-color: #19875400" class="text-end">44</td><td style="background-color: #dc354500" class="text-end">11</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">44</td><td style="background-color: #dc354590" class="text-end">22</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="L Winfield-Hill
+Teams: Northern Superchargers
+Matches: 7
+Runs: 118
+Overs: 16
+Dismissals: 7" data-filter="Northern Superchargers">
+<td colspan="2" data-text="Winfield-Hill"><a href="https://www.google.com/search?q=L+Winfield-Hill+cricket" target="_blank">L Winfield-Hill</a></td>
+<td style="background-color: #19875400" class="text-end">17</td><td style="background-color: #19875407" class="text-end">119</td><td style="background-color: #19875400" class="text-end">69</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875418" class="text-end">16</td><td style="background-color: #19875400" class="text-end">37</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35459C" class="text-end">86</td><td style="background-color: #dc35453E" class="text-end">14</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="L Wolvaardt
+Teams: Northern Superchargers
+Matches: 7
+Runs: 181
+Overs: 26
+Dismissals: 5" data-filter="Northern Superchargers">
+<td colspan="2" data-text="Wolvaardt"><a href="https://www.google.com/search?q=L+Wolvaardt+cricket" target="_blank">L Wolvaardt</a></td>
+<td style="background-color: #198754A2" class="text-end">36</td><td style="background-color: #19875400" class="text-end">117</td><td style="background-color: #19875404" class="text-end">92</td><td style="background-color: #1987545C" class="text-end">10</td><td style="background-color: #19875417" class="text-end">16</td><td style="background-color: #19875400" class="text-end">39</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354521" class="text-end">60</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354561" class="text-end">20</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="IECM Wong
+Teams: Birmingham Phoenix
+Matches: 7
+Runs: 65
+Overs: 8
+Dismissals: 5" data-filter="Birmingham Phoenix">
+<td colspan="2" data-text="Wong"><a href="https://www.google.com/search?q=IECM+Wong+cricket" target="_blank">IECM Wong</a></td>
+<td style="background-color: #19875400" class="text-end">13</td><td style="background-color: #19875455" class="text-end">133</td><td style="background-color: #19875479" class="text-end">121</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875400" class="text-end">14</td><td style="background-color: #19875474" class="text-end">29</td><td style="background-color: #dc354532" class="text-end">20</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">40</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="DN Wyatt
+Teams: Southern Brave
+Matches: 9
+Runs: 208
+Overs: 27
+Dismissals: 8" data-filter="Southern Brave">
+<td colspan="2" data-text="Wyatt"><a href="https://www.google.com/search?q=DN+Wyatt+cricket" target="_blank">DN Wyatt</a></td>
+<td style="background-color: #1987542A" class="text-end">26</td><td style="background-color: #19875441" class="text-end">129</td><td style="background-color: #19875400" class="text-end">82</td><td style="background-color: #19875453" class="text-end">10</td><td style="background-color: #1987545B" class="text-end">19</td><td style="background-color: #19875400" class="text-end">40</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545A5" class="text-end">88</td><td style="background-color: #dc35452B" class="text-end">12</td><td style="background-color: " class="text-end">0</td>
 </tr>
 </tbody>
 </table>

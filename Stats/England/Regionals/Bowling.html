@@ -12,14 +12,14 @@ a.chart { margin-right: 4px; }
 </head>
 <body>
 <h1>Regionals - Bowling</h1>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-responsive-tabs@2.0.3/dist/js/jquery.bootstrap-responsive-tabs.min.js"></script><ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><button class="nav-link active" id="t-All-tab" data-bs-toggle="tab" data-bs-target="#t-All" type="button" role="tab" aria-selected="true" aria-controls="t-All">All</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2024-tab" data-bs-toggle="tab" data-bs-target="#t-2024" type="button" role="tab" aria-selected="false" aria-controls="t-2024">2024</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2023-tab" data-bs-toggle="tab" data-bs-target="#t-2023" type="button" role="tab" aria-selected="false" aria-controls="t-2023">2023</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2022-tab" data-bs-toggle="tab" data-bs-target="#t-2022" type="button" role="tab" aria-selected="false" aria-controls="t-2022">2022</button></li></ul>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-responsive-tabs@2.0.3/dist/js/jquery.bootstrap-responsive-tabs.min.js"></script><ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><button class="nav-link active" id="t-All-tab" data-bs-toggle="tab" data-bs-target="#t-All" type="button" role="tab" aria-selected="true" aria-controls="t-All">All</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2024-tab" data-bs-toggle="tab" data-bs-target="#t-2024" type="button" role="tab" aria-selected="false" aria-controls="t-2024">2024</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2023-tab" data-bs-toggle="tab" data-bs-target="#t-2023" type="button" role="tab" aria-selected="false" aria-controls="t-2023">2023</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2022-tab" data-bs-toggle="tab" data-bs-target="#t-2022" type="button" role="tab" aria-selected="false" aria-controls="t-2022">2022</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2021-tab" data-bs-toggle="tab" data-bs-target="#t-2021" type="button" role="tab" aria-selected="false" aria-controls="t-2021">2021</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2020-tab" data-bs-toggle="tab" data-bs-target="#t-2020" type="button" role="tab" aria-selected="false" aria-controls="t-2020">2020</button></li></ul>
 <div class='m-1'><input class='form-control form-control-sm table-filter' type='search' placeholder='Filter...' style='display: none;' /></div><script>$(document).ready(function(){  $('.table-filter').toggle();   $('.table-filter').on('input', function() {    var fors = $(this).val().split(',').map(n => n.trim().toLowerCase()).filter(n => n.length > 0);    $('.table tbody tr').filter(function() {      $(this).toggle(filter_contains(fors, [$(this).text(), $(this).attr('data-filter')]));    });  });});function filter_contains(fors, ins) {  let result = false;  if(fors.length == 0) {    return true;  }  fors.forEach(f => {    if(f.length > 0) {      ins.forEach(i => {        if(i.toLowerCase().indexOf(f) > -1) {          result = true;        }      });    }  });  return result;}</script>
 <div class="tab-content">
 <div class="tab-pane fade show active" id="t-All" role="tabpanel" aria-labelledby="t-All-tab">
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
-<th>Bowler</th><th></th><th class="text-end">Average</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Impact</th><th class="text-end">Dot %</th><th class="text-end">Boundary %</th><th class="text-end">LBW %</th><th class="text-end">Bowled %</th><th class="text-end">Stumped %</th><th class="text-end">Caught %</th>
+<th>Bowler</th><th></th><th class="text-end sortInitialOrder-asc">Average</th><th class="text-end sortInitialOrder-asc">Strike Rate</th><th class="text-end sortInitialOrder-asc">Economy</th><th class="text-end sortInitialOrder-desc">Impact</th><th class="text-end sortInitialOrder-desc">Dot %</th><th class="text-end sortInitialOrder-asc">Boundary %</th><th class="text-end sortInitialOrder-desc">LBW %</th><th class="text-end sortInitialOrder-desc">Bowled %</th><th class="text-end sortInitialOrder-descd">Stumped %</th><th class="text-end sortInitialOrder-desc">Caught %</th>
 </tr>
 </thead>
 <tbody>
@@ -1262,7 +1262,7 @@ Wickets: 4" data-filter="Southern Vipers">
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
-<th>Bowler</th><th></th><th class="text-end">Average</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Impact</th><th class="text-end">Dot %</th><th class="text-end">Boundary %</th><th class="text-end">LBW %</th><th class="text-end">Bowled %</th><th class="text-end">Stumped %</th><th class="text-end">Caught %</th>
+<th>Bowler</th><th></th><th class="text-end sortInitialOrder-asc">Average</th><th class="text-end sortInitialOrder-asc">Strike Rate</th><th class="text-end sortInitialOrder-asc">Economy</th><th class="text-end sortInitialOrder-desc">Impact</th><th class="text-end sortInitialOrder-desc">Dot %</th><th class="text-end sortInitialOrder-asc">Boundary %</th><th class="text-end sortInitialOrder-desc">LBW %</th><th class="text-end sortInitialOrder-desc">Bowled %</th><th class="text-end sortInitialOrder-descd">Stumped %</th><th class="text-end sortInitialOrder-desc">Caught %</th>
 </tr>
 </thead>
 <tbody>
@@ -2017,7 +2017,7 @@ Wickets: 3" data-filter="Northern Diamonds">
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
-<th>Bowler</th><th></th><th class="text-end">Average</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Impact</th><th class="text-end">Dot %</th><th class="text-end">Boundary %</th><th class="text-end">LBW %</th><th class="text-end">Bowled %</th><th class="text-end">Stumped %</th><th class="text-end">Caught %</th>
+<th>Bowler</th><th></th><th class="text-end sortInitialOrder-asc">Average</th><th class="text-end sortInitialOrder-asc">Strike Rate</th><th class="text-end sortInitialOrder-asc">Economy</th><th class="text-end sortInitialOrder-desc">Impact</th><th class="text-end sortInitialOrder-desc">Dot %</th><th class="text-end sortInitialOrder-asc">Boundary %</th><th class="text-end sortInitialOrder-desc">LBW %</th><th class="text-end sortInitialOrder-desc">Bowled %</th><th class="text-end sortInitialOrder-descd">Stumped %</th><th class="text-end sortInitialOrder-desc">Caught %</th>
 </tr>
 </thead>
 <tbody>
@@ -2780,7 +2780,7 @@ Wickets: 13" data-filter="Northern Diamonds">
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
-<th>Bowler</th><th></th><th class="text-end">Average</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Impact</th><th class="text-end">Dot %</th><th class="text-end">Boundary %</th><th class="text-end">LBW %</th><th class="text-end">Bowled %</th><th class="text-end">Stumped %</th><th class="text-end">Caught %</th>
+<th>Bowler</th><th></th><th class="text-end sortInitialOrder-asc">Average</th><th class="text-end sortInitialOrder-asc">Strike Rate</th><th class="text-end sortInitialOrder-asc">Economy</th><th class="text-end sortInitialOrder-desc">Impact</th><th class="text-end sortInitialOrder-desc">Dot %</th><th class="text-end sortInitialOrder-asc">Boundary %</th><th class="text-end sortInitialOrder-desc">LBW %</th><th class="text-end sortInitialOrder-desc">Bowled %</th><th class="text-end sortInitialOrder-descd">Stumped %</th><th class="text-end sortInitialOrder-desc">Caught %</th>
 </tr>
 </thead>
 <tbody>
@@ -3455,6 +3455,1292 @@ Overs: 31
 Wickets: 8" data-filter="Central Sparks">
 <td colspan="2" data-text="Wong"><a href="https://www.google.com/search?q=IECM+Wong+cricket" target="_blank">IECM Wong</a></td>
 <td style="background-color: #19875425" class="text-end">24</td><td style="background-color: #1987544B" class="text-end">23</td><td style="background-color: #19875400" class="text-end">6.32</td><td style="background-color: #1987544E" class="text-end">10</td><td style="background-color: #19875414" class="text-end">54</td><td style="background-color: #19875400" class="text-end">14</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35459E" class="text-end">75</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tab-pane fade show " id="t-2021" role="tabpanel" aria-labelledby="t-2021-tab">
+<table class="table table-sm table-sort" style="table-layout: fixed;">
+<thead class="sticky-top">
+<tr style="position: relative; top: -1px">
+<th>Bowler</th><th></th><th class="text-end sortInitialOrder-asc">Average</th><th class="text-end sortInitialOrder-asc">Strike Rate</th><th class="text-end sortInitialOrder-asc">Economy</th><th class="text-end sortInitialOrder-desc">Impact</th><th class="text-end sortInitialOrder-desc">Dot %</th><th class="text-end sortInitialOrder-asc">Boundary %</th><th class="text-end sortInitialOrder-desc">LBW %</th><th class="text-end sortInitialOrder-desc">Bowled %</th><th class="text-end sortInitialOrder-descd">Stumped %</th><th class="text-end sortInitialOrder-desc">Caught %</th>
+</tr>
+</thead>
+<tbody>
+<tr style="cursor: default;" title="GL Adams
+Teams: Southern Vipers
+Matches: 10
+Overs: 43
+Wickets: 14" data-filter="Southern Vipers">
+<td colspan="2" data-text="Adams"><a href="https://www.google.com/search?q=GL+Adams+cricket" target="_blank">GL Adams</a></td>
+<td style="background-color: #19875475" class="text-end">16</td><td style="background-color: #19875494" class="text-end">18</td><td style="background-color: #19875418" class="text-end">5.18</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875400" class="text-end">49</td><td style="background-color: #19875444" class="text-end">8</td><td style="background-color: #dc354503" class="text-end">14</td><td style="background-color: #dc354524" class="text-end">29</td><td style="background-color: #dc354520" class="text-end">7</td><td style="background-color: #dc354500" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="EL Arlott
+Teams: Central Sparks
+Matches: 12
+Overs: 69
+Wickets: 14" data-filter="Central Sparks">
+<td colspan="2" data-text="Arlott"><a href="https://www.google.com/search?q=EL+Arlott+cricket" target="_blank">EL Arlott</a></td>
+<td style="background-color: #1987542F" class="text-end">26</td><td style="background-color: #19875430" class="text-end">30</td><td style="background-color: #19875414" class="text-end">5.22</td><td style="background-color: #19875402" class="text-end">8</td><td style="background-color: #19875459" class="text-end">59</td><td style="background-color: #19875400" class="text-end">13</td><td style="background-color: #dc354543" class="text-end">21</td><td style="background-color: #dc354500" class="text-end">14</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354543" class="text-end">64</td>
+</tr>
+<tr style="cursor: default;" title="HJ Armitage
+Teams: Northern Diamonds
+Matches: 9
+Overs: 32
+Wickets: 5" data-filter="Northern Diamonds">
+<td colspan="2" data-text="Armitage"><a href="https://www.google.com/search?q=HJ+Armitage+cricket" target="_blank">HJ Armitage</a></td>
+<td style="background-color: #19875400" class="text-end">39</td><td style="background-color: #19875400" class="text-end">38</td><td style="background-color: #19875400" class="text-end">6.09</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875400" class="text-end">43</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354583" class="text-end">40</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354528" class="text-end">60</td>
+</tr>
+<tr style="cursor: default;" title="HL Baker
+Teams: Central Sparks
+Matches: 3
+Overs: 7
+Wickets: 1" data-filter="Central Sparks">
+<td colspan="2" data-text="Baker"><a href="https://www.google.com/search?q=HL+Baker+cricket" target="_blank">HL Baker</a></td>
+<td style="background-color: #19875400" class="text-end">76</td><td style="background-color: #19875400" class="text-end">44</td><td style="background-color: #19875400" class="text-end">10.36</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875400" class="text-end">39</td><td style="background-color: #19875400" class="text-end">30</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="G Ballinger
+Teams: Lightning
+Matches: 7
+Overs: 38
+Wickets: 7" data-filter="Lightning">
+<td colspan="2" data-text="Ballinger"><a href="https://www.google.com/search?q=G+Ballinger+cricket" target="_blank">G Ballinger</a></td>
+<td style="background-color: #19875400" class="text-end">35</td><td style="background-color: #19875415" class="text-end">33</td><td style="background-color: #19875400" class="text-end">6.50</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875400" class="text-end">47</td><td style="background-color: #19875400" class="text-end">15</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354524" class="text-end">29</td><td style="background-color: #dc35459A" class="text-end">14</td><td style="background-color: #dc354517" class="text-end">57</td>
+</tr>
+<tr style="cursor: default;" title="LK Bell
+Teams: Southern Vipers
+Matches: 12
+Overs: 76
+Wickets: 14" data-filter="Southern Vipers">
+<td colspan="2" data-text="Bell"><a href="https://www.google.com/search?q=LK+Bell+cricket" target="_blank">LK Bell</a></td>
+<td style="background-color: #19875433" class="text-end">25</td><td style="background-color: #19875415" class="text-end">33</td><td style="background-color: #19875453" class="text-end">4.63</td><td style="background-color: #1987544F" class="text-end">10</td><td style="background-color: #1987549E" class="text-end">63</td><td style="background-color: #1987541C" class="text-end">9</td><td style="background-color: #dc354503" class="text-end">14</td><td style="background-color: #dc3545D6" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">36</td>
+</tr>
+<tr style="cursor: default;" title="ME Bouchier
+Teams: Southern Vipers
+Matches: 2
+Overs: 5
+Wickets: 1" data-filter="Southern Vipers">
+<td colspan="2" data-text="Bouchier"><a href="https://www.google.com/search?q=ME+Bouchier+cricket" target="_blank">ME Bouchier</a></td>
+<td style="background-color: #19875400" class="text-end">33</td><td style="background-color: #1987542C" class="text-end">30</td><td style="background-color: #19875400" class="text-end">6.60</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875402" class="text-end">53</td><td style="background-color: #19875474" class="text-end">7</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="CK Boycott
+Teams: Central Sparks
+Matches: 9
+Overs: 38
+Wickets: 4" data-filter="Central Sparks">
+<td colspan="2" data-text="Boycott"><a href="https://www.google.com/search?q=CK+Boycott+cricket" target="_blank">CK Boycott</a></td>
+<td style="background-color: #19875400" class="text-end">52</td><td style="background-color: #19875400" class="text-end">57</td><td style="background-color: #19875400" class="text-end">5.42</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875400" class="text-end">50</td><td style="background-color: #19875416" class="text-end">10</td><td style="background-color: #dc354562" class="text-end">25</td><td style="background-color: #dc354506" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="N Brown
+Teams: Thunder
+Matches: 5
+Overs: 15
+Wickets: 2" data-filter="Thunder">
+<td colspan="2" data-text="Brown"><a href="https://www.google.com/search?q=N+Brown+cricket" target="_blank">N Brown</a></td>
+<td style="background-color: #19875400" class="text-end">53</td><td style="background-color: #19875400" class="text-end">46</td><td style="background-color: #19875400" class="text-end">6.91</td><td style="background-color: #19875400" class="text-end">2</td><td style="background-color: #19875400" class="text-end">41</td><td style="background-color: #19875400" class="text-end">15</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="KH Brunt
+Teams: Northern Diamonds
+Matches: 3
+Overs: 27
+Wickets: 9" data-filter="Northern Diamonds">
+<td colspan="2" data-text="Brunt"><a href="https://www.google.com/search?q=KH+Brunt+cricket" target="_blank">KH Brunt</a></td>
+<td style="background-color: #198754AA" class="text-end">8</td><td style="background-color: #19875497" class="text-end">18</td><td style="background-color: #198754FF" class="text-end">2.78</td><td style="background-color: #198754FF" class="text-end">22</td><td style="background-color: #198754FF" class="text-end">78</td><td style="background-color: #198754AB" class="text-end">5</td><td style="background-color: #dc35454A" class="text-end">22</td><td style="background-color: #dc35454C" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">33</td>
+</tr>
+<tr style="cursor: default;" title="KE Bryce
+Teams: Lightning
+Matches: 10
+Overs: 73
+Wickets: 15" data-filter="Lightning">
+<td colspan="2" data-text="Bryce"><a href="https://www.google.com/search?q=KE+Bryce+cricket" target="_blank">KE Bryce</a></td>
+<td style="background-color: #19875459" class="text-end">20</td><td style="background-color: #19875434" class="text-end">29</td><td style="background-color: #1987548F" class="text-end">4.08</td><td style="background-color: #1987543F" class="text-end">10</td><td style="background-color: #19875485" class="text-end">62</td><td style="background-color: #19875475" class="text-end">7</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">13</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354552" class="text-end">67</td>
+</tr>
+<tr style="cursor: default;" title="S Butler
+Teams: Central Sparks
+Matches: 5
+Overs: 16
+Wickets: 3" data-filter="Central Sparks">
+<td colspan="2" data-text="Butler"><a href="https://www.google.com/search?q=S+Butler+cricket" target="_blank">S Butler</a></td>
+<td style="background-color: #19875400" class="text-end">36</td><td style="background-color: #1987541A" class="text-end">32</td><td style="background-color: #19875400" class="text-end">6.75</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875400" class="text-end">43</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545FF" class="text-end">100</td>
+</tr>
+<tr style="cursor: default;" title="A Capsey
+Teams: South East Stars
+Matches: 12
+Overs: 52
+Wickets: 12" data-filter="South East Stars">
+<td colspan="2" data-text="Capsey"><a href="https://www.google.com/search?q=A+Capsey+cricket" target="_blank">A Capsey</a></td>
+<td style="background-color: #19875448" class="text-end">22</td><td style="background-color: #19875450" class="text-end">26</td><td style="background-color: #1987541F" class="text-end">5.12</td><td style="background-color: #19875426" class="text-end">9</td><td style="background-color: #19875400" class="text-end">47</td><td style="background-color: #19875472" class="text-end">7</td><td style="background-color: #dc354562" class="text-end">25</td><td style="background-color: #dc354506" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="KS Castle
+Teams: Sunrisers
+Matches: 13
+Overs: 66
+Wickets: 12" data-filter="Sunrisers">
+<td colspan="2" data-text="Castle"><a href="https://www.google.com/search?q=KS+Castle+cricket" target="_blank">KS Castle</a></td>
+<td style="background-color: #19875421" class="text-end">28</td><td style="background-color: #19875411" class="text-end">33</td><td style="background-color: #19875427" class="text-end">5.05</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #19875400" class="text-end">52</td><td style="background-color: #19875487" class="text-end">6</td><td style="background-color: #dc354518" class="text-end">17</td><td style="background-color: #dc354500" class="text-end">17</td><td style="background-color: #dc354534" class="text-end">8</td><td style="background-color: #dc35451E" class="text-end">58</td>
+</tr>
+<tr style="cursor: default;" title="P Cleary
+Teams: Thunder
+Matches: 6
+Overs: 38
+Wickets: 4" data-filter="Thunder">
+<td colspan="2" data-text="Cleary"><a href="https://www.google.com/search?q=P+Cleary+cricket" target="_blank">P Cleary</a></td>
+<td style="background-color: #19875400" class="text-end">52</td><td style="background-color: #19875400" class="text-end">57</td><td style="background-color: #19875400" class="text-end">5.45</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875449" class="text-end">58</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545D6" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="KL Coppack
+Teams: Sunrisers
+Matches: 8
+Overs: 41
+Wickets: 5" data-filter="Sunrisers">
+<td colspan="2" data-text="Coppack"><a href="https://www.google.com/search?q=KL+Coppack+cricket" target="_blank">KL Coppack</a></td>
+<td style="background-color: #19875400" class="text-end">43</td><td style="background-color: #19875400" class="text-end">49</td><td style="background-color: #1987540C" class="text-end">5.29</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #198754A7" class="text-end">64</td><td style="background-color: #19875400" class="text-end">13</td><td style="background-color: #dc354536" class="text-end">20</td><td style="background-color: #dc354500" class="text-end">20</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354528" class="text-end">60</td>
+</tr>
+<tr style="cursor: default;" title="KL Cross
+Teams: Thunder
+Matches: 8
+Overs: 54
+Wickets: 12" data-filter="Thunder">
+<td colspan="2" data-text="Cross"><a href="https://www.google.com/search?q=KL+Cross+cricket" target="_blank">KL Cross</a></td>
+<td style="background-color: #1987544E" class="text-end">21</td><td style="background-color: #19875448" class="text-end">27</td><td style="background-color: #19875444" class="text-end">4.77</td><td style="background-color: #19875469" class="text-end">11</td><td style="background-color: #1987549E" class="text-end">63</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: #dc354518" class="text-end">17</td><td style="background-color: #dc354500" class="text-end">17</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354552" class="text-end">67</td>
+</tr>
+<tr style="cursor: default;" title="ND Dattani
+Teams: Sunrisers
+Matches: 13
+Overs: 51
+Wickets: 6" data-filter="Sunrisers">
+<td colspan="2" data-text="Dattani"><a href="https://www.google.com/search?q=ND+Dattani+cricket" target="_blank">ND Dattani</a></td>
+<td style="background-color: #19875400" class="text-end">57</td><td style="background-color: #19875400" class="text-end">51</td><td style="background-color: #19875400" class="text-end">6.75</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875400" class="text-end">50</td><td style="background-color: #19875400" class="text-end">14</td><td style="background-color: #dc354518" class="text-end">17</td><td style="background-color: #dc35454C" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="AN Davidson-Richards
+Teams: South East Stars
+Matches: 10
+Overs: 42
+Wickets: 7" data-filter="South East Stars">
+<td colspan="2" data-text="Davidson-Richards"><a href="https://www.google.com/search?q=AN+Davidson-Richards+cricket" target="_blank">AN Davidson-Richards</a></td>
+<td style="background-color: #19875400" class="text-end">40</td><td style="background-color: #19875400" class="text-end">36</td><td style="background-color: #19875400" class="text-end">6.80</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875400" class="text-end">43</td><td style="background-color: #19875400" class="text-end">14</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354524" class="text-end">29</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354517" class="text-end">57</td>
+</tr>
+<tr style="cursor: default;" title="FR Davies
+Teams: South East Stars
+Matches: 4
+Overs: 33
+Wickets: 3" data-filter="South East Stars">
+<td colspan="2" data-text="Davies"><a href="https://www.google.com/search?q=FR+Davies+cricket" target="_blank">FR Davies</a></td>
+<td style="background-color: #19875400" class="text-end">51</td><td style="background-color: #19875400" class="text-end">67</td><td style="background-color: #19875458" class="text-end">4.59</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875479" class="text-end">61</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: #dc3545AD" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354552" class="text-end">67</td>
+</tr>
+<tr style="cursor: default;" title="GK Davis
+Teams: Central Sparks
+Matches: 7
+Overs: 52
+Wickets: 17" data-filter="Central Sparks">
+<td colspan="2" data-text="Davis"><a href="https://www.google.com/search?q=GK+Davis+cricket" target="_blank">GK Davis</a></td>
+<td style="background-color: #1987548F" class="text-end">12</td><td style="background-color: #19875494" class="text-end">18</td><td style="background-color: #19875499" class="text-end">3.98</td><td style="background-color: #198754FF" class="text-end">16</td><td style="background-color: #19875491" class="text-end">62</td><td style="background-color: #19875472" class="text-end">7</td><td style="background-color: #dc3545FF" class="text-end">47</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: #dc35456F" class="text-end">12</td><td style="background-color: #dc354500" class="text-end">29</td>
+</tr>
+<tr style="cursor: default;" title="CE Dean
+Teams: Southern Vipers
+Matches: 8
+Overs: 55
+Wickets: 17" data-filter="Southern Vipers">
+<td colspan="2" data-text="Dean"><a href="https://www.google.com/search?q=CE+Dean+cricket" target="_blank">CE Dean</a></td>
+<td style="background-color: #19875486" class="text-end">13</td><td style="background-color: #1987548C" class="text-end">19</td><td style="background-color: #19875483" class="text-end">4.19</td><td style="background-color: #198754FF" class="text-end">16</td><td style="background-color: #1987547E" class="text-end">61</td><td style="background-color: #1987544C" class="text-end">8</td><td style="background-color: #dc354521" class="text-end">18</td><td style="background-color: #dc354500" class="text-end">24</td><td style="background-color: #dc35450B" class="text-end">6</td><td style="background-color: #dc354500" class="text-end">53</td>
+</tr>
+<tr style="cursor: default;" title="AE Dyson
+Teams: Thunder
+Matches: 3
+Overs: 15
+Wickets: 3" data-filter="Thunder">
+<td colspan="2" data-text="Dyson"><a href="https://www.google.com/search?q=AE+Dyson+cricket" target="_blank">AE Dyson</a></td>
+<td style="background-color: #19875407" class="text-end">31</td><td style="background-color: #1987542C" class="text-end">30</td><td style="background-color: #19875400" class="text-end">6.27</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875458" class="text-end">59</td><td style="background-color: #19875400" class="text-end">19</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545FF" class="text-end">100</td>
+</tr>
+<tr style="cursor: default;" title="S Ecclestone
+Teams: Thunder
+Matches: 3
+Overs: 29
+Wickets: 8" data-filter="Thunder">
+<td colspan="2" data-text="Ecclestone"><a href="https://www.google.com/search?q=S+Ecclestone+cricket" target="_blank">S Ecclestone</a></td>
+<td style="background-color: #19875480" class="text-end">14</td><td style="background-color: #19875473" class="text-end">22</td><td style="background-color: #198754A4" class="text-end">3.89</td><td style="background-color: #198754FF" class="text-end">16</td><td style="background-color: #198754FB" class="text-end">69</td><td style="background-color: #1987546F" class="text-end">7</td><td style="background-color: #dc354562" class="text-end">25</td><td style="background-color: #dc35456E" class="text-end">38</td><td style="background-color: #dc35457C" class="text-end">12</td><td style="background-color: #dc354500" class="text-end">25</td>
+</tr>
+<tr style="cursor: default;" title="EM Edgcombe
+Teams: Western Storm
+Matches: 3
+Overs: 7
+Wickets: 1" data-filter="Western Storm">
+<td colspan="2" data-text="Edgcombe"><a href="https://www.google.com/search?q=EM+Edgcombe+cricket" target="_blank">EM Edgcombe</a></td>
+<td style="background-color: #19875400" class="text-end">42</td><td style="background-color: #19875400" class="text-end">42</td><td style="background-color: #19875400" class="text-end">6.00</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875400" class="text-end">48</td><td style="background-color: #19875400" class="text-end">12</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="GA Elwiss
+Teams: Southern Vipers
+Matches: 14
+Overs: 80
+Wickets: 15" data-filter="Southern Vipers">
+<td colspan="2" data-text="Elwiss"><a href="https://www.google.com/search?q=GA+Elwiss+cricket" target="_blank">GA Elwiss</a></td>
+<td style="background-color: #1987541B" class="text-end">29</td><td style="background-color: #19875419" class="text-end">32</td><td style="background-color: #19875408" class="text-end">5.33</td><td style="background-color: #19875407" class="text-end">8</td><td style="background-color: #19875400" class="text-end">51</td><td style="background-color: #19875404" class="text-end">10</td><td style="background-color: #dc354500" class="text-end">13</td><td style="background-color: #dc35454C" class="text-end">33</td><td style="background-color: #dc354518" class="text-end">7</td><td style="background-color: #dc354500" class="text-end">47</td>
+</tr>
+<tr style="cursor: default;" title="RA Fackrell
+Teams: Central Sparks
+Matches: 11
+Overs: 54
+Wickets: 14" data-filter="Central Sparks">
+<td colspan="2" data-text="Fackrell"><a href="https://www.google.com/search?q=RA+Fackrell+cricket" target="_blank">RA Fackrell</a></td>
+<td style="background-color: #19875448" class="text-end">22</td><td style="background-color: #19875469" class="text-end">23</td><td style="background-color: #19875400" class="text-end">5.74</td><td style="background-color: #1987540D" class="text-end">8</td><td style="background-color: #19875400" class="text-end">46</td><td style="background-color: #19875405" class="text-end">10</td><td style="background-color: #dc354503" class="text-end">14</td><td style="background-color: #dc354524" class="text-end">29</td><td style="background-color: #dc354520" class="text-end">7</td><td style="background-color: #dc354500" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="NE Farrant
+Teams: South East Stars
+Matches: 4
+Overs: 31
+Wickets: 11" data-filter="South East Stars">
+<td colspan="2" data-text="Farrant"><a href="https://www.google.com/search?q=NE+Farrant+cricket" target="_blank">NE Farrant</a></td>
+<td style="background-color: #19875486" class="text-end">13</td><td style="background-color: #198754A3" class="text-end">17</td><td style="background-color: #1987543E" class="text-end">4.83</td><td style="background-color: #198754FF" class="text-end">19</td><td style="background-color: #1987544D" class="text-end">58</td><td style="background-color: #19875411" class="text-end">10</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354519" class="text-end">27</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35453F" class="text-end">64</td>
+</tr>
+<tr style="cursor: default;" title="L Filer
+Teams: Western Storm
+Matches: 10
+Overs: 43
+Wickets: 7" data-filter="Western Storm">
+<td colspan="2" data-text="Filer"><a href="https://www.google.com/search?q=L+Filer+cricket" target="_blank">L Filer</a></td>
+<td style="background-color: #19875400" class="text-end">34</td><td style="background-color: #19875400" class="text-end">37</td><td style="background-color: #19875400" class="text-end">5.56</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875453" class="text-end">59</td><td style="background-color: #19875400" class="text-end">12</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545FF" class="text-end">100</td>
+</tr>
+<tr style="cursor: default;" title="PA Franklin
+Teams: South East Stars
+Matches: 5
+Overs: 22
+Wickets: 4" data-filter="South East Stars">
+<td colspan="2" data-text="Franklin"><a href="https://www.google.com/search?q=PA+Franklin+cricket" target="_blank">PA Franklin</a></td>
+<td style="background-color: #19875448" class="text-end">22</td><td style="background-color: #19875411" class="text-end">33</td><td style="background-color: #19875492" class="text-end">4.05</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875438" class="text-end">57</td><td style="background-color: #1987546F" class="text-end">7</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545D6" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="J Gardner
+Teams: Sunrisers
+Matches: 10
+Overs: 32
+Wickets: 2" data-filter="Sunrisers">
+<td colspan="2" data-text="Gardner"><a href="https://www.google.com/search?q=J+Gardner+cricket" target="_blank">J Gardner</a></td>
+<td style="background-color: #19875400" class="text-end">118</td><td style="background-color: #19875400" class="text-end">94</td><td style="background-color: #19875400" class="text-end">7.49</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875400" class="text-end">41</td><td style="background-color: #19875400" class="text-end">15</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="GJ Gibbs
+Teams: South East Stars
+Matches: 11
+Overs: 39
+Wickets: 5" data-filter="South East Stars">
+<td colspan="2" data-text="Gibbs"><a href="https://www.google.com/search?q=GJ+Gibbs+cricket" target="_blank">GJ Gibbs</a></td>
+<td style="background-color: #19875400" class="text-end">44</td><td style="background-color: #19875400" class="text-end">47</td><td style="background-color: #19875400" class="text-end">5.69</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875400" class="text-end">47</td><td style="background-color: #1987542A" class="text-end">9</td><td style="background-color: #dc3545FF" class="text-end">60</td><td style="background-color: #dc354500" class="text-end">20</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">20</td>
+</tr>
+<tr style="cursor: default;" title="DR Gibson
+Teams: Western Storm
+Matches: 13
+Overs: 57
+Wickets: 10" data-filter="Western Storm">
+<td colspan="2" data-text="Gibson"><a href="https://www.google.com/search?q=DR+Gibson+cricket" target="_blank">DR Gibson</a></td>
+<td style="background-color: #19875400" class="text-end">36</td><td style="background-color: #19875407" class="text-end">34</td><td style="background-color: #19875400" class="text-end">6.39</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875400" class="text-end">51</td><td style="background-color: #19875400" class="text-end">14</td><td style="background-color: #dc354500" class="text-end">10</td><td style="background-color: #dc354583" class="text-end">40</td><td style="background-color: #dc3545FC" class="text-end">20</td><td style="background-color: #dc354500" class="text-end">30</td>
+</tr>
+<tr style="cursor: default;" title="S Glenn
+Teams: Central Sparks
+Matches: 4
+Overs: 36
+Wickets: 6" data-filter="Central Sparks">
+<td colspan="2" data-text="Glenn"><a href="https://www.google.com/search?q=S+Glenn+cricket" target="_blank">S Glenn</a></td>
+<td style="background-color: #19875446" class="text-end">22</td><td style="background-color: #19875400" class="text-end">36</td><td style="background-color: #198754B2" class="text-end">3.75</td><td style="background-color: #19875437" class="text-end">9</td><td style="background-color: #1987545E" class="text-end">59</td><td style="background-color: #198754A6" class="text-end">5</td><td style="background-color: #dc3545AD" class="text-end">33</td><td style="background-color: #dc35454C" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">33</td>
+</tr>
+<tr style="cursor: default;" title="GKS Gole
+Teams: Sunrisers
+Matches: 8
+Overs: 34
+Wickets: 3" data-filter="Sunrisers">
+<td colspan="2" data-text="Gole"><a href="https://www.google.com/search?q=GKS+Gole+cricket" target="_blank">GKS Gole</a></td>
+<td style="background-color: #19875400" class="text-end">77</td><td style="background-color: #19875400" class="text-end">69</td><td style="background-color: #19875400" class="text-end">6.73</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875412" class="text-end">54</td><td style="background-color: #19875400" class="text-end">15</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35454C" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354552" class="text-end">67</td>
+</tr>
+<tr style="cursor: default;" title="KL Gordon
+Teams: Lightning
+Matches: 13
+Overs: 93
+Wickets: 19" data-filter="Lightning">
+<td colspan="2" data-text="Gordon"><a href="https://www.google.com/search?q=KL+Gordon+cricket" target="_blank">KL Gordon</a></td>
+<td style="background-color: #1987544F" class="text-end">21</td><td style="background-color: #19875432" class="text-end">29</td><td style="background-color: #19875473" class="text-end">4.33</td><td style="background-color: #19875468" class="text-end">11</td><td style="background-color: #1987546D" class="text-end">60</td><td style="background-color: #19875453" class="text-end">8</td><td style="background-color: #dc35456E" class="text-end">26</td><td style="background-color: #dc354500" class="text-end">21</td><td style="background-color: #dc35455A" class="text-end">11</td><td style="background-color: #dc354500" class="text-end">42</td>
+</tr>
+<tr style="cursor: default;" title="PC Graham
+Teams: Northern Diamonds
+Matches: 10
+Overs: 62
+Wickets: 10" data-filter="Northern Diamonds">
+<td colspan="2" data-text="Graham"><a href="https://www.google.com/search?q=PC+Graham+cricket" target="_blank">PC Graham</a></td>
+<td style="background-color: #19875400" class="text-end">33</td><td style="background-color: #19875400" class="text-end">37</td><td style="background-color: #1987540C" class="text-end">5.29</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #19875447" class="text-end">58</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: #dc354500" class="text-end">10</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354566" class="text-end">70</td>
+</tr>
+<tr style="cursor: default;" title="T Graves
+Teams: Lightning
+Matches: 11
+Overs: 47
+Wickets: 11" data-filter="Lightning">
+<td colspan="2" data-text="Graves"><a href="https://www.google.com/search?q=T+Graves+cricket" target="_blank">T Graves</a></td>
+<td style="background-color: #1987545B" class="text-end">20</td><td style="background-color: #19875453" class="text-end">26</td><td style="background-color: #19875459" class="text-end">4.57</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #1987540B" class="text-end">54</td><td style="background-color: #19875488" class="text-end">6</td><td style="background-color: #dc354500" class="text-end">9</td><td style="background-color: #dc354500" class="text-end">18</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35453F" class="text-end">64</td>
+</tr>
+<tr style="cursor: default;" title="Y Graves
+Teams: Lightning
+Matches: 9
+Overs: 45
+Wickets: 8" data-filter="Lightning">
+<td colspan="2" data-text="Graves"><a href="https://www.google.com/search?q=Y+Graves+cricket" target="_blank">Y Graves</a></td>
+<td style="background-color: #1987541B" class="text-end">28</td><td style="background-color: #1987540B" class="text-end">34</td><td style="background-color: #19875424" class="text-end">5.07</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">47</td><td style="background-color: #19875450" class="text-end">8</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545D6" class="text-end">50</td><td style="background-color: #dc35457C" class="text-end">12</td><td style="background-color: #dc354500" class="text-end">38</td>
+</tr>
+<tr style="cursor: default;" title="D Gregory
+Teams: South East Stars
+Matches: 14
+Overs: 77
+Wickets: 12" data-filter="South East Stars">
+<td colspan="2" data-text="Gregory"><a href="https://www.google.com/search?q=D+Gregory+cricket" target="_blank">D Gregory</a></td>
+<td style="background-color: #1987540B" class="text-end">31</td><td style="background-color: #19875400" class="text-end">38</td><td style="background-color: #19875440" class="text-end">4.81</td><td style="background-color: #1987541A" class="text-end">9</td><td style="background-color: #19875400" class="text-end">47</td><td style="background-color: #19875473" class="text-end">7</td><td style="background-color: #dc354518" class="text-end">17</td><td style="background-color: #dc354506" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35451E" class="text-end">58</td>
+</tr>
+<tr style="cursor: default;" title="A Griffiths
+Teams: Western Storm
+Matches: 3
+Overs: 11
+Wickets: 3" data-filter="Western Storm">
+<td colspan="2" data-text="Griffiths"><a href="https://www.google.com/search?q=A+Griffiths+cricket" target="_blank">A Griffiths</a></td>
+<td style="background-color: #19875440" class="text-end">23</td><td style="background-color: #19875476" class="text-end">22</td><td style="background-color: #19875400" class="text-end">6.46</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">51</td><td style="background-color: #19875400" class="text-end">12</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545FF" class="text-end">100</td>
+</tr>
+<tr style="cursor: default;" title="JL Gunn
+Teams: Northern Diamonds
+Matches: 14
+Overs: 74
+Wickets: 22" data-filter="Northern Diamonds">
+<td colspan="2" data-text="Gunn"><a href="https://www.google.com/search?q=JL+Gunn+cricket" target="_blank">JL Gunn</a></td>
+<td style="background-color: #1987547B" class="text-end">15</td><td style="background-color: #19875485" class="text-end">20</td><td style="background-color: #19875461" class="text-end">4.50</td><td style="background-color: #1987548A" class="text-end">12</td><td style="background-color: #19875436" class="text-end">57</td><td style="background-color: #19875477" class="text-end">7</td><td style="background-color: #dc354500" class="text-end">14</td><td style="background-color: #dc35453F" class="text-end">32</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="A Hartley
+Teams: Thunder
+Matches: 13
+Overs: 87
+Wickets: 12" data-filter="Thunder">
+<td colspan="2" data-text="Hartley"><a href="https://www.google.com/search?q=A+Hartley+cricket" target="_blank">A Hartley</a></td>
+<td style="background-color: #19875400" class="text-end">34</td><td style="background-color: #19875400" class="text-end">44</td><td style="background-color: #1987544B" class="text-end">4.70</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #1987544A" class="text-end">58</td><td style="background-color: #1987541E" class="text-end">9</td><td style="background-color: #dc354518" class="text-end">17</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545B9" class="text-end">83</td>
+</tr>
+<tr style="cursor: default;" title="N Harvey
+Teams: Western Storm
+Matches: 11
+Overs: 63
+Wickets: 18" data-filter="Western Storm">
+<td colspan="2" data-text="Harvey"><a href="https://www.google.com/search?q=N+Harvey+cricket" target="_blank">N Harvey</a></td>
+<td style="background-color: #19875473" class="text-end">16</td><td style="background-color: #1987547B" class="text-end">21</td><td style="background-color: #19875457" class="text-end">4.59</td><td style="background-color: #198754F1" class="text-end">15</td><td style="background-color: #19875400" class="text-end">48</td><td style="background-color: #198754A9" class="text-end">5</td><td style="background-color: #dc354500" class="text-end">6</td><td style="background-color: #dc354500" class="text-end">22</td><td style="background-color: #dc354505" class="text-end">6</td><td style="background-color: #dc35452F" class="text-end">61</td>
+</tr>
+<tr style="cursor: default;" title="L Heap
+Teams: Thunder
+Matches: 1
+Overs: 6
+Wickets: 1" data-filter="Thunder">
+<td colspan="2" data-text="Heap"><a href="https://www.google.com/search?q=L+Heap+cricket" target="_blank">L Heap</a></td>
+<td style="background-color: #19875400" class="text-end">41</td><td style="background-color: #19875400" class="text-end">36</td><td style="background-color: #19875400" class="text-end">6.83</td><td style="background-color: #19875400" class="text-end">2</td><td style="background-color: #19875400" class="text-end">44</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="GM Hennessy
+Teams: Western Storm
+Matches: 12
+Overs: 71
+Wickets: 11" data-filter="Western Storm">
+<td colspan="2" data-text="Hennessy"><a href="https://www.google.com/search?q=GM+Hennessy+cricket" target="_blank">GM Hennessy</a></td>
+<td style="background-color: #19875400" class="text-end">33</td><td style="background-color: #19875400" class="text-end">39</td><td style="background-color: #1987541E" class="text-end">5.13</td><td style="background-color: #19875410" class="text-end">8</td><td style="background-color: #19875400" class="text-end">52</td><td style="background-color: #19875468" class="text-end">7</td><td style="background-color: #dc354500" class="text-end">9</td><td style="background-color: #dc354519" class="text-end">27</td><td style="background-color: #dc3545DD" class="text-end">18</td><td style="background-color: #dc354500" class="text-end">36</td>
+</tr>
+<tr style="cursor: default;" title="LF Higham
+Teams: Lightning
+Matches: 9
+Overs: 44
+Wickets: 7" data-filter="Lightning">
+<td colspan="2" data-text="Higham"><a href="https://www.google.com/search?q=LF+Higham+cricket" target="_blank">LF Higham</a></td>
+<td style="background-color: #19875415" class="text-end">29</td><td style="background-color: #19875400" class="text-end">38</td><td style="background-color: #1987544C" class="text-end">4.70</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875424" class="text-end">56</td><td style="background-color: #19875456" class="text-end">8</td><td style="background-color: #dc354503" class="text-end">14</td><td style="background-color: #dc35459B" class="text-end">43</td><td style="background-color: #dc35459A" class="text-end">14</td><td style="background-color: #dc354500" class="text-end">29</td>
+</tr>
+<tr style="cursor: default;" title="S Hutchins
+Teams: Western Storm
+Matches: 1
+Overs: 5
+Wickets: 2" data-filter="Western Storm">
+<td colspan="2" data-text="Hutchins"><a href="https://www.google.com/search?q=S+Hutchins+cricket" target="_blank">S Hutchins</a></td>
+<td style="background-color: #19875486" class="text-end">14</td><td style="background-color: #198754B2" class="text-end">15</td><td style="background-color: #19875400" class="text-end">5.40</td><td style="background-color: #1987542E" class="text-end">9</td><td style="background-color: #19875400" class="text-end">50</td><td style="background-color: #1987540A" class="text-end">10</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="L Jackson
+Teams: Thunder
+Matches: 9
+Overs: 36
+Wickets: 5" data-filter="Thunder">
+<td colspan="2" data-text="Jackson"><a href="https://www.google.com/search?q=L+Jackson+cricket" target="_blank">L Jackson</a></td>
+<td style="background-color: #19875400" class="text-end">40</td><td style="background-color: #19875400" class="text-end">43</td><td style="background-color: #19875400" class="text-end">5.55</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875454" class="text-end">59</td><td style="background-color: #19875400" class="text-end">13</td><td style="background-color: #dc354536" class="text-end">20</td><td style="background-color: #dc354583" class="text-end">40</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">40</td>
+</tr>
+<tr style="cursor: default;" title="HE Jones
+Teams: Thunder
+Matches: 13
+Overs: 69
+Wickets: 18" data-filter="Thunder">
+<td colspan="2" data-text="Jones"><a href="https://www.google.com/search?q=HE+Jones+cricket" target="_blank">HE Jones</a></td>
+<td style="background-color: #19875464" class="text-end">18</td><td style="background-color: #1987546A" class="text-end">23</td><td style="background-color: #19875447" class="text-end">4.74</td><td style="background-color: #19875422" class="text-end">9</td><td style="background-color: #1987545E" class="text-end">59</td><td style="background-color: #19875406" class="text-end">10</td><td style="background-color: #dc35457B" class="text-end">28</td><td style="background-color: #dc354500" class="text-end">17</td><td style="background-color: #dc354505" class="text-end">6</td><td style="background-color: #dc354500" class="text-end">44</td>
+</tr>
+<tr style="cursor: default;" title="E Jones
+Teams: Central Sparks
+Matches: 11
+Overs: 32
+Wickets: 7" data-filter="Central Sparks">
+<td colspan="2" data-text="Jones"><a href="https://www.google.com/search?q=E+Jones+cricket" target="_blank">E Jones</a></td>
+<td style="background-color: #19875428" class="text-end">27</td><td style="background-color: #19875447" class="text-end">27</td><td style="background-color: #19875400" class="text-end">5.94</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875400" class="text-end">45</td><td style="background-color: #19875400" class="text-end">12</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545C8" class="text-end">86</td>
+</tr>
+<tr style="cursor: default;" title="E Jones
+Teams: South East Stars
+Matches: 8
+Overs: 16
+Wickets: 2" data-filter="South East Stars">
+<td colspan="2" data-text="Jones"><a href="https://www.google.com/search?q=E+Jones+cricket" target="_blank">E Jones</a></td>
+<td style="background-color: #19875400" class="text-end">73</td><td style="background-color: #19875400" class="text-end">50</td><td style="background-color: #19875400" class="text-end">8.85</td><td style="background-color: #19875400" class="text-end">2</td><td style="background-color: #19875400" class="text-end">40</td><td style="background-color: #19875400" class="text-end">21</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="HC Knight
+Teams: Western Storm
+Matches: 3
+Overs: 13
+Wickets: 1" data-filter="Western Storm">
+<td colspan="2" data-text="Knight"><a href="https://www.google.com/search?q=HC+Knight+cricket" target="_blank">HC Knight</a></td>
+<td style="background-color: #19875400" class="text-end">90</td><td style="background-color: #19875400" class="text-end">78</td><td style="background-color: #19875400" class="text-end">6.92</td><td style="background-color: #19875400" class="text-end">2</td><td style="background-color: #19875400" class="text-end">29</td><td style="background-color: #19875401" class="text-end">10</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="EL Lamb
+Teams: Thunder
+Matches: 10
+Overs: 51
+Wickets: 12" data-filter="Thunder">
+<td colspan="2" data-text="Lamb"><a href="https://www.google.com/search?q=EL+Lamb+cricket" target="_blank">EL Lamb</a></td>
+<td style="background-color: #1987545F" class="text-end">19</td><td style="background-color: #19875456" class="text-end">25</td><td style="background-color: #19875463" class="text-end">4.48</td><td style="background-color: #19875449" class="text-end">10</td><td style="background-color: #19875453" class="text-end">59</td><td style="background-color: #19875438" class="text-end">9</td><td style="background-color: #dc354562" class="text-end">25</td><td style="background-color: #dc354500" class="text-end">17</td><td style="background-color: #dc354534" class="text-end">8</td><td style="background-color: #dc354500" class="text-end">33</td>
+</tr>
+<tr style="cursor: default;" title="BA Langston
+Teams: Northern Diamonds
+Matches: 11
+Overs: 80
+Wickets: 17" data-filter="Northern Diamonds">
+<td colspan="2" data-text="Langston"><a href="https://www.google.com/search?q=BA+Langston+cricket" target="_blank">BA Langston</a></td>
+<td style="background-color: #19875460" class="text-end">19</td><td style="background-color: #1987543C" class="text-end">28</td><td style="background-color: #19875498" class="text-end">4.00</td><td style="background-color: #19875439" class="text-end">10</td><td style="background-color: #198754CD" class="text-end">66</td><td style="background-color: #19875459" class="text-end">8</td><td style="background-color: #dc354555" class="text-end">24</td><td style="background-color: #dc35455C" class="text-end">35</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">35</td>
+</tr>
+<tr style="cursor: default;" title="KA Levick
+Teams: Northern Diamonds
+Matches: 16
+Overs: 89
+Wickets: 22" data-filter="Northern Diamonds">
+<td colspan="2" data-text="Levick"><a href="https://www.google.com/search?q=KA+Levick+cricket" target="_blank">KA Levick</a></td>
+<td style="background-color: #19875477" class="text-end">16</td><td style="background-color: #1987545F" class="text-end">24</td><td style="background-color: #198754A8" class="text-end">3.85</td><td style="background-color: #19875467" class="text-end">11</td><td style="background-color: #19875470" class="text-end">60</td><td style="background-color: #198754A8" class="text-end">5</td><td style="background-color: #dc35454E" class="text-end">23</td><td style="background-color: #dc35453F" class="text-end">32</td><td style="background-color: #dc354541" class="text-end">9</td><td style="background-color: #dc354500" class="text-end">36</td>
+</tr>
+<tr style="cursor: default;" title="AL MacDonald
+Teams: Northern Diamonds
+Matches: 8
+Overs: 29
+Wickets: 9" data-filter="Northern Diamonds">
+<td colspan="2" data-text="MacDonald"><a href="https://www.google.com/search?q=AL+MacDonald+cricket" target="_blank">AL MacDonald</a></td>
+<td style="background-color: #19875471" class="text-end">16</td><td style="background-color: #1987548B" class="text-end">19</td><td style="background-color: #19875420" class="text-end">5.10</td><td style="background-color: #19875457" class="text-end">10</td><td style="background-color: #19875400" class="text-end">46</td><td style="background-color: #1987546D" class="text-end">7</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">22</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354552" class="text-end">67</td>
+</tr>
+<tr style="cursor: default;" title="R MacDonald-Gay
+Teams: South East Stars
+Matches: 3
+Overs: 16
+Wickets: 2" data-filter="South East Stars">
+<td colspan="2" data-text="MacDonald-Gay"><a href="https://www.google.com/search?q=R+MacDonald-Gay+cricket" target="_blank">R MacDonald-Gay</a></td>
+<td style="background-color: #19875414" class="text-end">30</td><td style="background-color: #19875400" class="text-end">46</td><td style="background-color: #198754AC" class="text-end">3.81</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #1987547E" class="text-end">61</td><td style="background-color: #1987549D" class="text-end">5</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="AJ Macleod
+Teams: Sunrisers
+Matches: 3
+Overs: 9
+Wickets: 2" data-filter="Sunrisers">
+<td colspan="2" data-text="Macleod"><a href="https://www.google.com/search?q=AJ+Macleod+cricket" target="_blank">AJ Macleod</a></td>
+<td style="background-color: #1987542D" class="text-end">26</td><td style="background-color: #19875447" class="text-end">27</td><td style="background-color: #19875400" class="text-end">5.78</td><td style="background-color: #19875400" class="text-end">2</td><td style="background-color: #19875400" class="text-end">46</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="KL Midwood
+Teams: Sunrisers
+Matches: 1
+Overs: 8
+Wickets: 1" data-filter="Sunrisers">
+<td colspan="2" data-text="Midwood"><a href="https://www.google.com/search?q=KL+Midwood+cricket" target="_blank">KL Midwood</a></td>
+<td style="background-color: #19875400" class="text-end">42</td><td style="background-color: #19875400" class="text-end">48</td><td style="background-color: #19875410" class="text-end">5.25</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #1987540F" class="text-end">54</td><td style="background-color: #19875400" class="text-end">12</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="K Moore
+Teams: South East Stars
+Matches: 10
+Overs: 34
+Wickets: 8" data-filter="South East Stars">
+<td colspan="2" data-text="Moore"><a href="https://www.google.com/search?q=K+Moore+cricket" target="_blank">K Moore</a></td>
+<td style="background-color: #1987543C" class="text-end">24</td><td style="background-color: #19875454" class="text-end">26</td><td style="background-color: #19875400" class="text-end">5.62</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">45</td><td style="background-color: #19875420" class="text-end">9</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: #dc3545D6" class="text-end">50</td><td style="background-color: #dc35457C" class="text-end">12</td><td style="background-color: #dc354500" class="text-end">25</td>
+</tr>
+<tr style="cursor: default;" title="FMK Morris
+Teams: Western Storm
+Matches: 12
+Overs: 55
+Wickets: 12" data-filter="Western Storm">
+<td colspan="2" data-text="Morris"><a href="https://www.google.com/search?q=FMK+Morris+cricket" target="_blank">FMK Morris</a></td>
+<td style="background-color: #1987541F" class="text-end">28</td><td style="background-color: #19875442" class="text-end">28</td><td style="background-color: #19875400" class="text-end">6.09</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875400" class="text-end">48</td><td style="background-color: #19875400" class="text-end">12</td><td style="background-color: #dc354518" class="text-end">17</td><td style="background-color: #dc35454C" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="S Munro
+Teams: Lightning
+Matches: 12
+Overs: 56
+Wickets: 12" data-filter="Lightning">
+<td colspan="2" data-text="Munro"><a href="https://www.google.com/search?q=S+Munro+cricket" target="_blank">S Munro</a></td>
+<td style="background-color: #19875432" class="text-end">25</td><td style="background-color: #1987543C" class="text-end">28</td><td style="background-color: #19875401" class="text-end">5.40</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #1987542F" class="text-end">56</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354506" class="text-end">25</td><td style="background-color: #dc354534" class="text-end">8</td><td style="background-color: #dc35451E" class="text-end">58</td>
+</tr>
+<tr style="cursor: default;" title="C Nicholas
+Teams: Western Storm
+Matches: 4
+Overs: 22
+Wickets: 5" data-filter="Western Storm">
+<td colspan="2" data-text="Nicholas"><a href="https://www.google.com/search?q=C+Nicholas+cricket" target="_blank">C Nicholas</a></td>
+<td style="background-color: #19875436" class="text-end">25</td><td style="background-color: #19875452" class="text-end">26</td><td style="background-color: #19875400" class="text-end">5.77</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875429" class="text-end">56</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: #dc354536" class="text-end">20</td><td style="background-color: #dc354583" class="text-end">40</td><td style="background-color: #dc3545FC" class="text-end">20</td><td style="background-color: #dc354500" class="text-end">20</td>
+</tr>
+<tr style="cursor: default;" title="TG Norris
+Teams: Southern Vipers
+Matches: 15
+Overs: 95
+Wickets: 24" data-filter="Southern Vipers">
+<td colspan="2" data-text="Norris"><a href="https://www.google.com/search?q=TG+Norris+cricket" target="_blank">TG Norris</a></td>
+<td style="background-color: #19875452" class="text-end">21</td><td style="background-color: #19875465" class="text-end">24</td><td style="background-color: #1987540E" class="text-end">5.27</td><td style="background-color: #1987546E" class="text-end">11</td><td style="background-color: #19875400" class="text-end">53</td><td style="background-color: #19875403" class="text-end">10</td><td style="background-color: #dc354518" class="text-end">17</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354538" class="text-end">62</td>
+</tr>
+<tr style="cursor: default;" title="SB Odedra
+Teams: Lightning
+Matches: 8
+Overs: 33
+Wickets: 8" data-filter="Lightning">
+<td colspan="2" data-text="Odedra"><a href="https://www.google.com/search?q=SB+Odedra+cricket" target="_blank">SB Odedra</a></td>
+<td style="background-color: #19875430" class="text-end">26</td><td style="background-color: #1987545B" class="text-end">25</td><td style="background-color: #19875400" class="text-end">6.21</td><td style="background-color: #19875418" class="text-end">8</td><td style="background-color: #19875400" class="text-end">42</td><td style="background-color: #19875400" class="text-end">12</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: #dc354500" class="text-end">12</td><td style="background-color: #dc3545FF" class="text-end">25</td><td style="background-color: #dc354500" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="LA Parfitt
+Teams: Western Storm
+Matches: 7
+Overs: 18
+Wickets: 3" data-filter="Western Storm">
+<td colspan="2" data-text="Parfitt"><a href="https://www.google.com/search?q=LA+Parfitt+cricket" target="_blank">LA Parfitt</a></td>
+<td style="background-color: #19875400" class="text-end">32</td><td style="background-color: #19875400" class="text-end">36</td><td style="background-color: #19875407" class="text-end">5.34</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875400" class="text-end">50</td><td style="background-color: #1987547C" class="text-end">6</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545FF" class="text-end">100</td>
+</tr>
+<tr style="cursor: default;" title="Sonali Patel
+Teams: Sunrisers
+Matches: 7
+Overs: 38
+Wickets: 10" data-filter="Sunrisers">
+<td colspan="2" data-text="Patel"><a href="https://www.google.com/search?q=Sonali+Patel+cricket" target="_blank">Sonali Patel</a></td>
+<td style="background-color: #19875430" class="text-end">26</td><td style="background-color: #1987546C" class="text-end">23</td><td style="background-color: #19875400" class="text-end">6.74</td><td style="background-color: #1987544A" class="text-end">10</td><td style="background-color: #19875400" class="text-end">47</td><td style="background-color: #19875400" class="text-end">12</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354551" class="text-end">10</td><td style="background-color: #dc3545A4" class="text-end">80</td>
+</tr>
+<tr style="cursor: default;" title="A Patel
+Teams: Central Sparks
+Matches: 3
+Overs: 14
+Wickets: 2" data-filter="Central Sparks">
+<td colspan="2" data-text="Patel"><a href="https://www.google.com/search?q=A+Patel+cricket" target="_blank">A Patel</a></td>
+<td style="background-color: #19875400" class="text-end">42</td><td style="background-color: #19875400" class="text-end">42</td><td style="background-color: #19875400" class="text-end">6.07</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875400" class="text-end">43</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="EA Russell
+Teams: Central Sparks
+Matches: 5
+Overs: 31
+Wickets: 4" data-filter="Central Sparks">
+<td colspan="2" data-text="Russell"><a href="https://www.google.com/search?q=EA+Russell+cricket" target="_blank">EA Russell</a></td>
+<td style="background-color: #19875400" class="text-end">42</td><td style="background-color: #19875400" class="text-end">47</td><td style="background-color: #19875400" class="text-end">5.43</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #1987544A" class="text-end">58</td><td style="background-color: #19875400" class="text-end">14</td><td style="background-color: #dc3545FF" class="text-end">75</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">25</td>
+</tr>
+<tr style="cursor: default;" title="PJ Scholfield
+Teams: Southern Vipers
+Matches: 7
+Overs: 31
+Wickets: 6" data-filter="Southern Vipers">
+<td colspan="2" data-text="Scholfield"><a href="https://www.google.com/search?q=PJ+Scholfield+cricket" target="_blank">PJ Scholfield</a></td>
+<td style="background-color: #19875425" class="text-end">27</td><td style="background-color: #19875423" class="text-end">31</td><td style="background-color: #19875410" class="text-end">5.26</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">47</td><td style="background-color: #19875425" class="text-end">9</td><td style="background-color: #dc354518" class="text-end">17</td><td style="background-color: #dc3545D6" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">33</td>
+</tr>
+<tr style="cursor: default;" title="NR Sciver
+Teams: Northern Diamonds
+Matches: 3
+Overs: 23
+Wickets: 2" data-filter="Northern Diamonds">
+<td colspan="2" data-text="Sciver"><a href="https://www.google.com/search?q=NR+Sciver+cricket" target="_blank">NR Sciver</a></td>
+<td style="background-color: #19875400" class="text-end">50</td><td style="background-color: #19875400" class="text-end">70</td><td style="background-color: #19875474" class="text-end">4.33</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #1987543D" class="text-end">57</td><td style="background-color: #1987547B" class="text-end">6</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="G Scrivens
+Teams: Sunrisers
+Matches: 12
+Overs: 67
+Wickets: 9" data-filter="Sunrisers">
+<td colspan="2" data-text="Scrivens"><a href="https://www.google.com/search?q=G+Scrivens+cricket" target="_blank">G Scrivens</a></td>
+<td style="background-color: #19875400" class="text-end">40</td><td style="background-color: #19875400" class="text-end">45</td><td style="background-color: #19875408" class="text-end">5.33</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875400" class="text-end">47</td><td style="background-color: #1987542B" class="text-end">9</td><td style="background-color: #dc354500" class="text-end">11</td><td style="background-color: #dc354500" class="text-end">22</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354552" class="text-end">67</td>
+</tr>
+<tr style="cursor: default;" title="A Shrubsole
+Teams: Western Storm
+Matches: 3
+Overs: 29
+Wickets: 4" data-filter="Western Storm">
+<td colspan="2" data-text="Shrubsole"><a href="https://www.google.com/search?q=A+Shrubsole+cricket" target="_blank">A Shrubsole</a></td>
+<td style="background-color: #19875421" class="text-end">28</td><td style="background-color: #19875400" class="text-end">44</td><td style="background-color: #198754AA" class="text-end">3.83</td><td style="background-color: #198754A3" class="text-end">13</td><td style="background-color: #198754DA" class="text-end">67</td><td style="background-color: #1987545A" class="text-end">7</td><td style="background-color: #dc354562" class="text-end">25</td><td style="background-color: #dc3545D6" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">25</td>
+</tr>
+<tr style="cursor: default;" title="R Slater
+Teams: Northern Diamonds
+Matches: 7
+Overs: 34
+Wickets: 7" data-filter="Northern Diamonds">
+<td colspan="2" data-text="Slater"><a href="https://www.google.com/search?q=R+Slater+cricket" target="_blank">R Slater</a></td>
+<td style="background-color: #19875439" class="text-end">24</td><td style="background-color: #19875434" class="text-end">29</td><td style="background-color: #1987542B" class="text-end">5.00</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #1987546E" class="text-end">60</td><td style="background-color: #19875420" class="text-end">9</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354524" class="text-end">29</td><td style="background-color: #dc35459A" class="text-end">14</td><td style="background-color: #dc354517" class="text-end">57</td>
+</tr>
+<tr style="cursor: default;" title="BF Smith
+Teams: South East Stars
+Matches: 13
+Overs: 78
+Wickets: 26" data-filter="South East Stars">
+<td colspan="2" data-text="Smith"><a href="https://www.google.com/search?q=BF+Smith+cricket" target="_blank">BF Smith</a></td>
+<td style="background-color: #19875481" class="text-end">14</td><td style="background-color: #19875497" class="text-end">18</td><td style="background-color: #1987544B" class="text-end">4.71</td><td style="background-color: #198754D9" class="text-end">15</td><td style="background-color: #19875400" class="text-end">50</td><td style="background-color: #19875454" class="text-end">8</td><td style="background-color: #dc354500" class="text-end">8</td><td style="background-color: #dc354500" class="text-end">19</td><td style="background-color: #dc354529" class="text-end">8</td><td style="background-color: #dc354502" class="text-end">54</td>
+</tr>
+<tr style="cursor: default;" title="LCN Smith
+Teams: Northern Diamonds
+Matches: 16
+Overs: 105
+Wickets: 22" data-filter="Northern Diamonds">
+<td colspan="2" data-text="Smith"><a href="https://www.google.com/search?q=LCN+Smith+cricket" target="_blank">LCN Smith</a></td>
+<td style="background-color: #19875457" class="text-end">20</td><td style="background-color: #19875438" class="text-end">29</td><td style="background-color: #19875481" class="text-end">4.21</td><td style="background-color: #198754AD" class="text-end">13</td><td style="background-color: #1987545D" class="text-end">59</td><td style="background-color: #19875465" class="text-end">7</td><td style="background-color: #dc354526" class="text-end">18</td><td style="background-color: #dc354565" class="text-end">36</td><td style="background-color: #dc354541" class="text-end">9</td><td style="background-color: #dc354500" class="text-end">27</td>
+</tr>
+<tr style="cursor: default;" title="A Stonehouse
+Teams: South East Stars
+Matches: 4
+Overs: 7
+Wickets: 2" data-filter="South East Stars">
+<td colspan="2" data-text="Stonehouse"><a href="https://www.google.com/search?q=A+Stonehouse+cricket" target="_blank">A Stonehouse</a></td>
+<td style="background-color: #19875422" class="text-end">28</td><td style="background-color: #1987547C" class="text-end">21</td><td style="background-color: #19875400" class="text-end">7.86</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875400" class="text-end">45</td><td style="background-color: #19875400" class="text-end">21</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="CM Taylor
+Teams: Southern Vipers
+Matches: 15
+Overs: 100
+Wickets: 22" data-filter="Southern Vipers">
+<td colspan="2" data-text="Taylor"><a href="https://www.google.com/search?q=CM+Taylor+cricket" target="_blank">CM Taylor</a></td>
+<td style="background-color: #19875466" class="text-end">18</td><td style="background-color: #19875444" class="text-end">27</td><td style="background-color: #1987549D" class="text-end">3.95</td><td style="background-color: #198754B8" class="text-end">13</td><td style="background-color: #19875438" class="text-end">57</td><td style="background-color: #1987549E" class="text-end">5</td><td style="background-color: #dc354526" class="text-end">18</td><td style="background-color: #dc354500" class="text-end">9</td><td style="background-color: #dc3545DD" class="text-end">18</td><td style="background-color: #dc354507" class="text-end">55</td>
+</tr>
+<tr style="cursor: default;" title="E Thorpe
+Teams: Sunrisers
+Matches: 3
+Overs: 14
+Wickets: 2" data-filter="Sunrisers">
+<td colspan="2" data-text="Thorpe"><a href="https://www.google.com/search?q=E+Thorpe+cricket" target="_blank">E Thorpe</a></td>
+<td style="background-color: #19875400" class="text-end">48</td><td style="background-color: #19875400" class="text-end">43</td><td style="background-color: #19875400" class="text-end">6.63</td><td style="background-color: #19875435" class="text-end">9</td><td style="background-color: #19875400" class="text-end">43</td><td style="background-color: #19875400" class="text-end">12</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="S Turner
+Teams: Thunder
+Matches: 3
+Overs: 7
+Wickets: 1" data-filter="Thunder">
+<td colspan="2" data-text="Turner"><a href="https://www.google.com/search?q=S+Turner+cricket" target="_blank">S Turner</a></td>
+<td style="background-color: #19875400" class="text-end">37</td><td style="background-color: #19875400" class="text-end">42</td><td style="background-color: #1987540D" class="text-end">5.29</td><td style="background-color: #19875441" class="text-end">10</td><td style="background-color: #19875462" class="text-end">60</td><td style="background-color: #19875400" class="text-end">14</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="MK Villiers
+Teams: Sunrisers
+Matches: 5
+Overs: 37
+Wickets: 6" data-filter="Sunrisers">
+<td colspan="2" data-text="Villiers"><a href="https://www.google.com/search?q=MK+Villiers+cricket" target="_blank">MK Villiers</a></td>
+<td style="background-color: #19875400" class="text-end">34</td><td style="background-color: #19875400" class="text-end">37</td><td style="background-color: #19875400" class="text-end">5.57</td><td style="background-color: #19875436" class="text-end">9</td><td style="background-color: #19875400" class="text-end">50</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545C3" class="text-end">17</td><td style="background-color: #dc3545B9" class="text-end">83</td>
+</tr>
+<tr style="cursor: default;" title="IECM Wong
+Teams: Central Sparks
+Matches: 14
+Overs: 84
+Wickets: 18" data-filter="Central Sparks">
+<td colspan="2" data-text="Wong"><a href="https://www.google.com/search?q=IECM+Wong+cricket" target="_blank">IECM Wong</a></td>
+<td style="background-color: #1987543E" class="text-end">24</td><td style="background-color: #1987543E" class="text-end">28</td><td style="background-color: #19875424" class="text-end">5.07</td><td style="background-color: #1987543A" class="text-end">10</td><td style="background-color: #1987549C" class="text-end">63</td><td style="background-color: #19875400" class="text-end">13</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35457A" class="text-end">39</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35452F" class="text-end">61</td>
+</tr>
+<tr style="cursor: default;" title="DN Wyatt
+Teams: Southern Vipers
+Matches: 3
+Overs: 12
+Wickets: 3" data-filter="Southern Vipers">
+<td colspan="2" data-text="Wyatt"><a href="https://www.google.com/search?q=DN+Wyatt+cricket" target="_blank">DN Wyatt</a></td>
+<td style="background-color: #19875474" class="text-end">16</td><td style="background-color: #19875462" class="text-end">24</td><td style="background-color: #19875497" class="text-end">4.00</td><td style="background-color: #19875407" class="text-end">8</td><td style="background-color: #198754E7" class="text-end">68</td><td style="background-color: #1987546B" class="text-end">7</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35454C" class="text-end">33</td><td style="background-color: #dc3545FF" class="text-end">33</td><td style="background-color: #dc354500" class="text-end">33</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tab-pane fade show " id="t-2020" role="tabpanel" aria-labelledby="t-2020-tab">
+<table class="table table-sm table-sort" style="table-layout: fixed;">
+<thead class="sticky-top">
+<tr style="position: relative; top: -1px">
+<th>Bowler</th><th></th><th class="text-end sortInitialOrder-asc">Average</th><th class="text-end sortInitialOrder-asc">Strike Rate</th><th class="text-end sortInitialOrder-asc">Economy</th><th class="text-end sortInitialOrder-desc">Impact</th><th class="text-end sortInitialOrder-desc">Dot %</th><th class="text-end sortInitialOrder-asc">Boundary %</th><th class="text-end sortInitialOrder-desc">LBW %</th><th class="text-end sortInitialOrder-desc">Bowled %</th><th class="text-end sortInitialOrder-descd">Stumped %</th><th class="text-end sortInitialOrder-desc">Caught %</th>
+</tr>
+</thead>
+<tbody>
+<tr style="cursor: default;" title="GL Adams
+Teams: Southern Vipers
+Matches: 7
+Overs: 38
+Wickets: 7" data-filter="Southern Vipers">
+<td colspan="2" data-text="Adams"><a href="https://www.google.com/search?q=GL+Adams+cricket" target="_blank">GL Adams</a></td>
+<td style="background-color: #1987544A" class="text-end">22</td><td style="background-color: #19875449" class="text-end">32</td><td style="background-color: #19875421" class="text-end">4.09</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875400" class="text-end">53</td><td style="background-color: #1987548B" class="text-end">4</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">14</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545DE" class="text-end">86</td>
+</tr>
+<tr style="cursor: default;" title="EL Arlott
+Teams: Central Sparks
+Matches: 5
+Overs: 45
+Wickets: 3" data-filter="Central Sparks">
+<td colspan="2" data-text="Arlott"><a href="https://www.google.com/search?q=EL+Arlott+cricket" target="_blank">EL Arlott</a></td>
+<td style="background-color: #19875400" class="text-end">63</td><td style="background-color: #19875400" class="text-end">90</td><td style="background-color: #1987540F" class="text-end">4.22</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875400" class="text-end">59</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354519" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354576" class="text-end">67</td>
+</tr>
+<tr style="cursor: default;" title="HJ Armitage
+Teams: Northern Diamonds
+Matches: 5
+Overs: 28
+Wickets: 6" data-filter="Northern Diamonds">
+<td colspan="2" data-text="Armitage"><a href="https://www.google.com/search?q=HJ+Armitage+cricket" target="_blank">HJ Armitage</a></td>
+<td style="background-color: #19875456" class="text-end">20</td><td style="background-color: #1987545B" class="text-end">28</td><td style="background-color: #19875412" class="text-end">4.20</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #19875400" class="text-end">55</td><td style="background-color: #19875453" class="text-end">5</td><td style="background-color: #dc354503" class="text-end">17</td><td style="background-color: #dc354519" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35451B" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="HL Baker
+Teams: Central Sparks
+Matches: 2
+Overs: 20
+Wickets: 4" data-filter="Central Sparks">
+<td colspan="2" data-text="Baker"><a href="https://www.google.com/search?q=HL+Baker+cricket" target="_blank">HL Baker</a></td>
+<td style="background-color: #1987545D" class="text-end">18</td><td style="background-color: #19875454" class="text-end">30</td><td style="background-color: #19875456" class="text-end">3.70</td><td style="background-color: #198754D5" class="text-end">16</td><td style="background-color: #1987543B" class="text-end">63</td><td style="background-color: #1987543C" class="text-end">6</td><td style="background-color: #dc354544" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545F6" class="text-end">25</td><td style="background-color: #dc35451B" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="LK Bell
+Teams: Southern Vipers
+Matches: 4
+Overs: 36
+Wickets: 7" data-filter="Southern Vipers">
+<td colspan="2" data-text="Bell"><a href="https://www.google.com/search?q=LK+Bell+cricket" target="_blank">LK Bell</a></td>
+<td style="background-color: #19875452" class="text-end">21</td><td style="background-color: #19875450" class="text-end">31</td><td style="background-color: #1987542D" class="text-end">4.00</td><td style="background-color: #1987548A" class="text-end">13</td><td style="background-color: #1987543C" class="text-end">63</td><td style="background-color: #19875420" class="text-end">6</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35454C" class="text-end">43</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354542" class="text-end">57</td>
+</tr>
+<tr style="cursor: default;" title="MS Belt
+Teams: South East Stars
+Matches: 2
+Overs: 17
+Wickets: 2" data-filter="South East Stars">
+<td colspan="2" data-text="Belt"><a href="https://www.google.com/search?q=MS+Belt+cricket" target="_blank">MS Belt</a></td>
+<td style="background-color: #19875400" class="text-end">41</td><td style="background-color: #19875400" class="text-end">51</td><td style="background-color: #19875400" class="text-end">4.82</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875400" class="text-end">47</td><td style="background-color: #19875439" class="text-end">6</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="ME Bouchier
+Teams: Southern Vipers
+Matches: 4
+Overs: 18
+Wickets: 1" data-filter="Southern Vipers">
+<td colspan="2" data-text="Bouchier"><a href="https://www.google.com/search?q=ME+Bouchier+cricket" target="_blank">ME Bouchier</a></td>
+<td style="background-color: #19875400" class="text-end">82</td><td style="background-color: #19875400" class="text-end">108</td><td style="background-color: #19875400" class="text-end">4.56</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875400" class="text-end">56</td><td style="background-color: #1987546F" class="text-end">5</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="CK Boycott
+Teams: Central Sparks
+Matches: 4
+Overs: 36
+Wickets: 7" data-filter="Central Sparks">
+<td colspan="2" data-text="Boycott"><a href="https://www.google.com/search?q=CK+Boycott+cricket" target="_blank">CK Boycott</a></td>
+<td style="background-color: #1987544B" class="text-end">22</td><td style="background-color: #19875450" class="text-end">31</td><td style="background-color: #1987540B" class="text-end">4.25</td><td style="background-color: #1987547B" class="text-end">12</td><td style="background-color: #19875400" class="text-end">58</td><td style="background-color: #19875448" class="text-end">6</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35454C" class="text-end">43</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354542" class="text-end">57</td>
+</tr>
+<tr style="cursor: default;" title="C Brewer
+Teams: South East Stars
+Matches: 2
+Overs: 8
+Wickets: 1" data-filter="South East Stars">
+<td colspan="2" data-text="Brewer"><a href="https://www.google.com/search?q=C+Brewer+cricket" target="_blank">C Brewer</a></td>
+<td style="background-color: #19875400" class="text-end">37</td><td style="background-color: #19875403" class="text-end">48</td><td style="background-color: #19875400" class="text-end">4.62</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875493" class="text-end">69</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="TF Brookes
+Teams: Central Sparks
+Matches: 1
+Overs: 10
+Wickets: 2" data-filter="Central Sparks">
+<td colspan="2" data-text="Brookes"><a href="https://www.google.com/search?q=TF+Brookes+cricket" target="_blank">TF Brookes</a></td>
+<td style="background-color: #1987544D" class="text-end">22</td><td style="background-color: #19875454" class="text-end">30</td><td style="background-color: #19875404" class="text-end">4.30</td><td style="background-color: #198754C9" class="text-end">15</td><td style="background-color: #19875400" class="text-end">58</td><td style="background-color: #19875418" class="text-end">7</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="N Brown
+Teams: Thunder
+Matches: 5
+Overs: 35
+Wickets: 3" data-filter="Thunder">
+<td colspan="2" data-text="Brown"><a href="https://www.google.com/search?q=N+Brown+cricket" target="_blank">N Brown</a></td>
+<td style="background-color: #19875400" class="text-end">59</td><td style="background-color: #19875400" class="text-end">69</td><td style="background-color: #19875400" class="text-end">5.13</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875454" class="text-end">65</td><td style="background-color: #19875400" class="text-end">14</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545FF" class="text-end">100</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="cursor: default;" title="KH Brunt
+Teams: Northern Diamonds
+Matches: 1
+Overs: 9
+Wickets: 1" data-filter="Northern Diamonds">
+<td colspan="2" data-text="Brunt"><a href="https://www.google.com/search?q=KH+Brunt+cricket" target="_blank">KH Brunt</a></td>
+<td style="background-color: #1987540F" class="text-end">33</td><td style="background-color: #19875400" class="text-end">54</td><td style="background-color: #1987545B" class="text-end">3.67</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875453" class="text-end">65</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="KE Bryce
+Teams: Lightning
+Matches: 5
+Overs: 49
+Wickets: 14" data-filter="Lightning">
+<td colspan="2" data-text="Bryce"><a href="https://www.google.com/search?q=KE+Bryce+cricket" target="_blank">KE Bryce</a></td>
+<td style="background-color: #19875474" class="text-end">14</td><td style="background-color: #1987547C" class="text-end">21</td><td style="background-color: #19875427" class="text-end">4.05</td><td style="background-color: #198754BD" class="text-end">15</td><td style="background-color: #19875435" class="text-end">63</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #dc35455F" class="text-end">29</td><td style="background-color: #dc354500" class="text-end">29</td><td style="background-color: #dc35456E" class="text-end">14</td><td style="background-color: #dc354500" class="text-end">7</td>
+</tr>
+<tr style="cursor: default;" title="A Capsey
+Teams: South East Stars
+Matches: 5
+Overs: 35
+Wickets: 2" data-filter="South East Stars">
+<td colspan="2" data-text="Capsey"><a href="https://www.google.com/search?q=A+Capsey+cricket" target="_blank">A Capsey</a></td>
+<td style="background-color: #19875400" class="text-end">72</td><td style="background-color: #19875400" class="text-end">105</td><td style="background-color: #1987541A" class="text-end">4.14</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875400" class="text-end">58</td><td style="background-color: #1987542C" class="text-end">6</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="KS Castle
+Teams: Sunrisers
+Matches: 3
+Overs: 12
+Wickets: 1" data-filter="Sunrisers">
+<td colspan="2" data-text="Castle"><a href="https://www.google.com/search?q=KS+Castle+cricket" target="_blank">KS Castle</a></td>
+<td style="background-color: #19875400" class="text-end">94</td><td style="background-color: #19875400" class="text-end">72</td><td style="background-color: #19875400" class="text-end">7.83</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875400" class="text-end">43</td><td style="background-color: #19875400" class="text-end">18</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="E Corney
+Teams: Western Storm
+Matches: 4
+Overs: 20
+Wickets: 2" data-filter="Western Storm">
+<td colspan="2" data-text="Corney"><a href="https://www.google.com/search?q=E+Corney+cricket" target="_blank">E Corney</a></td>
+<td style="background-color: #19875400" class="text-end">44</td><td style="background-color: #19875400" class="text-end">60</td><td style="background-color: #19875400" class="text-end">4.40</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875400" class="text-end">58</td><td style="background-color: #1987545F" class="text-end">5</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="PAC Cowdrill
+Teams: Southern Vipers
+Matches: 3
+Overs: 15
+Wickets: 3" data-filter="Southern Vipers">
+<td colspan="2" data-text="Cowdrill"><a href="https://www.google.com/search?q=PAC+Cowdrill+cricket" target="_blank">PAC Cowdrill</a></td>
+<td style="background-color: #1987543D" class="text-end">24</td><td style="background-color: #19875455" class="text-end">30</td><td style="background-color: #19875400" class="text-end">4.92</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875400" class="text-end">42</td><td style="background-color: #19875415" class="text-end">7</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354519" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354576" class="text-end">67</td>
+</tr>
+<tr style="cursor: default;" title="KL Cross
+Teams: Thunder
+Matches: 1
+Overs: 10
+Wickets: 1" data-filter="Thunder">
+<td colspan="2" data-text="Cross"><a href="https://www.google.com/search?q=KL+Cross+cricket" target="_blank">KL Cross</a></td>
+<td style="background-color: #19875400" class="text-end">50</td><td style="background-color: #19875400" class="text-end">60</td><td style="background-color: #19875400" class="text-end">5.00</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875400" class="text-end">53</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="AN Davidson-Richards
+Teams: South East Stars
+Matches: 3
+Overs: 12
+Wickets: 1" data-filter="South East Stars">
+<td colspan="2" data-text="Davidson-Richards"><a href="https://www.google.com/search?q=AN+Davidson-Richards+cricket" target="_blank">AN Davidson-Richards</a></td>
+<td style="background-color: #19875400" class="text-end">64</td><td style="background-color: #19875400" class="text-end">72</td><td style="background-color: #19875400" class="text-end">5.33</td><td style="background-color: #19875400" class="text-end">2</td><td style="background-color: #19875400" class="text-end">56</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="GK Davis
+Teams: Central Sparks
+Matches: 2
+Overs: 18
+Wickets: 4" data-filter="Central Sparks">
+<td colspan="2" data-text="Davis"><a href="https://www.google.com/search?q=GK+Davis+cricket" target="_blank">GK Davis</a></td>
+<td style="background-color: #19875453" class="text-end">20</td><td style="background-color: #19875460" class="text-end">27</td><td style="background-color: #19875400" class="text-end">4.46</td><td style="background-color: #19875408" class="text-end">8</td><td style="background-color: #19875400" class="text-end">59</td><td style="background-color: #19875422" class="text-end">6</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545A3" class="text-end">75</td>
+</tr>
+<tr style="cursor: default;" title="CE Dean
+Teams: Southern Vipers
+Matches: 7
+Overs: 58
+Wickets: 9" data-filter="Southern Vipers">
+<td colspan="2" data-text="Dean"><a href="https://www.google.com/search?q=CE+Dean+cricket" target="_blank">CE Dean</a></td>
+<td style="background-color: #19875420" class="text-end">30</td><td style="background-color: #1987542D" class="text-end">39</td><td style="background-color: #19875400" class="text-end">4.64</td><td style="background-color: #1987541A" class="text-end">9</td><td style="background-color: #19875400" class="text-end">53</td><td style="background-color: #19875427" class="text-end">6</td><td style="background-color: #dc35452E" class="text-end">22</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545FF" class="text-end">33</td><td style="background-color: #dc354500" class="text-end">33</td>
+</tr>
+<tr style="cursor: default;" title="SIR Dunkley
+Teams: South East Stars
+Matches: 2
+Overs: 15
+Wickets: 3" data-filter="South East Stars">
+<td colspan="2" data-text="Dunkley"><a href="https://www.google.com/search?q=SIR+Dunkley+cricket" target="_blank">SIR Dunkley</a></td>
+<td style="background-color: #19875453" class="text-end">20</td><td style="background-color: #19875454" class="text-end">30</td><td style="background-color: #19875424" class="text-end">4.07</td><td style="background-color: #1987540D" class="text-end">9</td><td style="background-color: #19875404" class="text-end">60</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354576" class="text-end">67</td>
+</tr>
+<tr style="cursor: default;" title="AE Dyson
+Teams: Thunder
+Matches: 4
+Overs: 19
+Wickets: 2" data-filter="Thunder">
+<td colspan="2" data-text="Dyson"><a href="https://www.google.com/search?q=AE+Dyson+cricket" target="_blank">AE Dyson</a></td>
+<td style="background-color: #19875400" class="text-end">53</td><td style="background-color: #19875400" class="text-end">57</td><td style="background-color: #19875400" class="text-end">5.58</td><td style="background-color: #19875400" class="text-end">2</td><td style="background-color: #19875400" class="text-end">59</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="S Ecclestone
+Teams: Thunder
+Matches: 1
+Overs: 10
+Wickets: 2" data-filter="Thunder">
+<td colspan="2" data-text="Ecclestone"><a href="https://www.google.com/search?q=S+Ecclestone+cricket" target="_blank">S Ecclestone</a></td>
+<td style="background-color: #1987549D" class="text-end">6</td><td style="background-color: #19875454" class="text-end">30</td><td style="background-color: #198754FF" class="text-end">1.30</td><td style="background-color: #198754FF" class="text-end">23</td><td style="background-color: #198754FF" class="text-end">85</td><td style="background-color: #198754EE" class="text-end">2</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="EM Edgcombe
+Teams: Western Storm
+Matches: 2
+Overs: 14
+Wickets: 1" data-filter="Western Storm">
+<td colspan="2" data-text="Edgcombe"><a href="https://www.google.com/search?q=EM+Edgcombe+cricket" target="_blank">EM Edgcombe</a></td>
+<td style="background-color: #19875400" class="text-end">71</td><td style="background-color: #19875400" class="text-end">84</td><td style="background-color: #19875400" class="text-end">5.07</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875400" class="text-end">52</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="B Ellis
+Teams: Lightning
+Matches: 5
+Overs: 40
+Wickets: 6" data-filter="Lightning">
+<td colspan="2" data-text="Ellis"><a href="https://www.google.com/search?q=B+Ellis+cricket" target="_blank">B Ellis</a></td>
+<td style="background-color: #1987541E" class="text-end">30</td><td style="background-color: #19875428" class="text-end">40</td><td style="background-color: #19875400" class="text-end">4.54</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875400" class="text-end">55</td><td style="background-color: #19875494" class="text-end">4</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">17</td><td style="background-color: #dc35458C" class="text-end">17</td><td style="background-color: #dc354576" class="text-end">67</td>
+</tr>
+<tr style="cursor: default;" title="NE Farrant
+Teams: South East Stars
+Matches: 6
+Overs: 52
+Wickets: 9" data-filter="South East Stars">
+<td colspan="2" data-text="Farrant"><a href="https://www.google.com/search?q=NE+Farrant+cricket" target="_blank">NE Farrant</a></td>
+<td style="background-color: #19875457" class="text-end">20</td><td style="background-color: #1987543F" class="text-end">35</td><td style="background-color: #19875481" class="text-end">3.38</td><td style="background-color: #19875467" class="text-end">12</td><td style="background-color: #19875467" class="text-end">66</td><td style="background-color: #1987543E" class="text-end">6</td><td style="background-color: #dc354500" class="text-end">11</td><td style="background-color: #dc354592" class="text-end">56</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">33</td>
+</tr>
+<tr style="cursor: default;" title="L Filer
+Teams: Western Storm
+Matches: 3
+Overs: 11
+Wickets: 3" data-filter="Western Storm">
+<td colspan="2" data-text="Filer"><a href="https://www.google.com/search?q=L+Filer+cricket" target="_blank">L Filer</a></td>
+<td style="background-color: #19875448" class="text-end">22</td><td style="background-color: #19875477" class="text-end">22</td><td style="background-color: #19875400" class="text-end">6.09</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875440" class="text-end">64</td><td style="background-color: #19875400" class="text-end">12</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545CE" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">33</td>
+</tr>
+<tr style="cursor: default;" title="J Gardner
+Teams: Sunrisers
+Matches: 6
+Overs: 39
+Wickets: 7" data-filter="Sunrisers">
+<td colspan="2" data-text="Gardner"><a href="https://www.google.com/search?q=J+Gardner+cricket" target="_blank">J Gardner</a></td>
+<td style="background-color: #19875421" class="text-end">30</td><td style="background-color: #19875445" class="text-end">33</td><td style="background-color: #19875400" class="text-end">5.36</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">54</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #dc35455F" class="text-end">29</td><td style="background-color: #dc354500" class="text-end">29</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">43</td>
+</tr>
+<tr style="cursor: default;" title="KL George
+Teams: Western Storm
+Matches: 2
+Overs: 16
+Wickets: 2" data-filter="Western Storm">
+<td colspan="2" data-text="George"><a href="https://www.google.com/search?q=KL+George+cricket" target="_blank">KL George</a></td>
+<td style="background-color: #19875424" class="text-end">29</td><td style="background-color: #19875403" class="text-end">48</td><td style="background-color: #19875460" class="text-end">3.62</td><td style="background-color: #1987540E" class="text-end">9</td><td style="background-color: #1987541C" class="text-end">61</td><td style="background-color: #19875456" class="text-end">5</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="S Glenn
+Teams: Central Sparks
+Matches: 1
+Overs: 10
+Wickets: 1" data-filter="Central Sparks">
+<td colspan="2" data-text="Glenn"><a href="https://www.google.com/search?q=S+Glenn+cricket" target="_blank">S Glenn</a></td>
+<td style="background-color: #19875465" class="text-end">17</td><td style="background-color: #19875400" class="text-end">60</td><td style="background-color: #198754FF" class="text-end">1.70</td><td style="background-color: #19875415" class="text-end">9</td><td style="background-color: #198754FF" class="text-end">78</td><td style="background-color: #198754EE" class="text-end">2</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="KL Gordon
+Teams: Lightning
+Matches: 2
+Overs: 20
+Wickets: 2" data-filter="Lightning">
+<td colspan="2" data-text="Gordon"><a href="https://www.google.com/search?q=KL+Gordon+cricket" target="_blank">KL Gordon</a></td>
+<td style="background-color: #19875402" class="text-end">36</td><td style="background-color: #19875400" class="text-end">60</td><td style="background-color: #1987546B" class="text-end">3.55</td><td style="background-color: #1987541D" class="text-end">9</td><td style="background-color: #19875400" class="text-end">57</td><td style="background-color: #198754A7" class="text-end">3</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="AG Gordon
+Teams: South East Stars
+Matches: 3
+Overs: 17
+Wickets: 1" data-filter="South East Stars">
+<td colspan="2" data-text="Gordon"><a href="https://www.google.com/search?q=AG+Gordon+cricket" target="_blank">AG Gordon</a></td>
+<td style="background-color: #19875400" class="text-end">86</td><td style="background-color: #19875400" class="text-end">103</td><td style="background-color: #19875400" class="text-end">5.01</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875457" class="text-end">65</td><td style="background-color: #19875400" class="text-end">13</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="PC Graham
+Teams: Northern Diamonds
+Matches: 5
+Overs: 38
+Wickets: 2" data-filter="Northern Diamonds">
+<td colspan="2" data-text="Graham"><a href="https://www.google.com/search?q=PC+Graham+cricket" target="_blank">PC Graham</a></td>
+<td style="background-color: #19875400" class="text-end">71</td><td style="background-color: #19875400" class="text-end">113</td><td style="background-color: #1987544D" class="text-end">3.77</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #198754B5" class="text-end">71</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="T Graves
+Teams: Lightning
+Matches: 4
+Overs: 17
+Wickets: 3" data-filter="Lightning">
+<td colspan="2" data-text="Graves"><a href="https://www.google.com/search?q=T+Graves+cricket" target="_blank">T Graves</a></td>
+<td style="background-color: #1987543A" class="text-end">25</td><td style="background-color: #19875442" class="text-end">34</td><td style="background-color: #19875400" class="text-end">4.41</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875400" class="text-end">57</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354519" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354576" class="text-end">67</td>
+</tr>
+<tr style="cursor: default;" title="E Gray
+Teams: South East Stars
+Matches: 2
+Overs: 11
+Wickets: 2" data-filter="South East Stars">
+<td colspan="2" data-text="Gray"><a href="https://www.google.com/search?q=E+Gray+cricket" target="_blank">E Gray</a></td>
+<td style="background-color: #1987542C" class="text-end">28</td><td style="background-color: #19875446" class="text-end">33</td><td style="background-color: #19875400" class="text-end">5.00</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875400" class="text-end">45</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="D Gregory
+Teams: South East Stars
+Matches: 2
+Overs: 20
+Wickets: 5" data-filter="South East Stars">
+<td colspan="2" data-text="Gregory"><a href="https://www.google.com/search?q=D+Gregory+cricket" target="_blank">D Gregory</a></td>
+<td style="background-color: #19875472" class="text-end">15</td><td style="background-color: #1987546E" class="text-end">24</td><td style="background-color: #1987545D" class="text-end">3.65</td><td style="background-color: #198754FF" class="text-end">17</td><td style="background-color: #19875400" class="text-end">57</td><td style="background-color: #198754A7" class="text-end">3</td><td style="background-color: #dc3545FF" class="text-end">60</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">40</td>
+</tr>
+<tr style="cursor: default;" title="A Griffiths
+Teams: Western Storm
+Matches: 6
+Overs: 36
+Wickets: 3" data-filter="Western Storm">
+<td colspan="2" data-text="Griffiths"><a href="https://www.google.com/search?q=A+Griffiths+cricket" target="_blank">A Griffiths</a></td>
+<td style="background-color: #19875400" class="text-end">62</td><td style="background-color: #19875400" class="text-end">72</td><td style="background-color: #19875400" class="text-end">5.19</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875400" class="text-end">55</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354519" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354576" class="text-end">67</td>
+</tr>
+<tr style="cursor: default;" title="JL Gunn
+Teams: Northern Diamonds
+Matches: 6
+Overs: 41
+Wickets: 7" data-filter="Northern Diamonds">
+<td colspan="2" data-text="Gunn"><a href="https://www.google.com/search?q=JL+Gunn+cricket" target="_blank">JL Gunn</a></td>
+<td style="background-color: #1987543F" class="text-end">24</td><td style="background-color: #1987543D" class="text-end">35</td><td style="background-color: #1987541E" class="text-end">4.11</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #19875400" class="text-end">54</td><td style="background-color: #19875487" class="text-end">4</td><td style="background-color: #dc35455F" class="text-end">29</td><td style="background-color: #dc354500" class="text-end">14</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354542" class="text-end">57</td>
+</tr>
+<tr style="cursor: default;" title="N Harman
+Teams: Lightning
+Matches: 3
+Overs: 17
+Wickets: 2" data-filter="Lightning">
+<td colspan="2" data-text="Harman"><a href="https://www.google.com/search?q=N+Harman+cricket" target="_blank">N Harman</a></td>
+<td style="background-color: #19875400" class="text-end">46</td><td style="background-color: #19875400" class="text-end">51</td><td style="background-color: #19875400" class="text-end">5.41</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875400" class="text-end">55</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="A Hartley
+Teams: Thunder
+Matches: 5
+Overs: 48
+Wickets: 9" data-filter="Thunder">
+<td colspan="2" data-text="Hartley"><a href="https://www.google.com/search?q=A+Hartley+cricket" target="_blank">A Hartley</a></td>
+<td style="background-color: #1987546F" class="text-end">15</td><td style="background-color: #1987544B" class="text-end">32</td><td style="background-color: #198754CF" class="text-end">2.81</td><td style="background-color: #198754FF" class="text-end">18</td><td style="background-color: #198754EF" class="text-end">74</td><td style="background-color: #19875456" class="text-end">5</td><td style="background-color: #dc354584" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545FF" class="text-end">33</td><td style="background-color: #dc354500" class="text-end">11</td>
+</tr>
+<tr style="cursor: default;" title="L Heap
+Teams: Thunder
+Matches: 3
+Overs: 19
+Wickets: 5" data-filter="Thunder">
+<td colspan="2" data-text="Heap"><a href="https://www.google.com/search?q=L+Heap+cricket" target="_blank">L Heap</a></td>
+<td style="background-color: #1987545F" class="text-end">18</td><td style="background-color: #19875474" class="text-end">23</td><td style="background-color: #19875400" class="text-end">4.74</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #1987540D" class="text-end">61</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: #dc35451D" class="text-end">20</td><td style="background-color: #dc354500" class="text-end">20</td><td style="background-color: #dc3545B7" class="text-end">20</td><td style="background-color: #dc354500" class="text-end">40</td>
+</tr>
+<tr style="cursor: default;" title="GM Hennessy
+Teams: Western Storm
+Matches: 6
+Overs: 53
+Wickets: 11" data-filter="Western Storm">
+<td colspan="2" data-text="Hennessy"><a href="https://www.google.com/search?q=GM+Hennessy+cricket" target="_blank">GM Hennessy</a></td>
+<td style="background-color: #19875443" class="text-end">23</td><td style="background-color: #19875458" class="text-end">29</td><td style="background-color: #19875400" class="text-end">4.82</td><td style="background-color: #1987547B" class="text-end">13</td><td style="background-color: #19875400" class="text-end">57</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">18</td><td style="background-color: #dc3545A0" class="text-end">18</td><td style="background-color: #dc354565" class="text-end">64</td>
+</tr>
+<tr style="cursor: default;" title="LF Higham
+Teams: Lightning
+Matches: 5
+Overs: 35
+Wickets: 6" data-filter="Lightning">
+<td colspan="2" data-text="Higham"><a href="https://www.google.com/search?q=LF+Higham+cricket" target="_blank">LF Higham</a></td>
+<td style="background-color: #19875440" class="text-end">24</td><td style="background-color: #1987543D" class="text-end">35</td><td style="background-color: #19875422" class="text-end">4.09</td><td style="background-color: #1987540F" class="text-end">9</td><td style="background-color: #19875404" class="text-end">60</td><td style="background-color: #1987542C" class="text-end">6</td><td style="background-color: #dc354503" class="text-end">17</td><td style="background-color: #dc354573" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">33</td>
+</tr>
+<tr style="cursor: default;" title="N Holland
+Teams: Western Storm
+Matches: 2
+Overs: 5
+Wickets: 1" data-filter="Western Storm">
+<td colspan="2" data-text="Holland"><a href="https://www.google.com/search?q=N+Holland+cricket" target="_blank">N Holland</a></td>
+<td style="background-color: #1987540F" class="text-end">33</td><td style="background-color: #19875454" class="text-end">30</td><td style="background-color: #19875400" class="text-end">6.60</td><td style="background-color: #19875400" class="text-end">3</td><td style="background-color: #19875400" class="text-end">43</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="S Hutchins
+Teams: Western Storm
+Matches: 4
+Overs: 31
+Wickets: 3" data-filter="Western Storm">
+<td colspan="2" data-text="Hutchins"><a href="https://www.google.com/search?q=S+Hutchins+cricket" target="_blank">S Hutchins</a></td>
+<td style="background-color: #19875400" class="text-end">43</td><td style="background-color: #19875400" class="text-end">62</td><td style="background-color: #19875417" class="text-end">4.16</td><td style="background-color: #19875400" class="text-end">7</td><td style="background-color: #1987544E" class="text-end">65</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #dc354584" class="text-end">33</td><td style="background-color: #dc3545CE" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="cursor: default;" title="L Jackson
+Teams: Thunder
+Matches: 2
+Overs: 16
+Wickets: 2" data-filter="Thunder">
+<td colspan="2" data-text="Jackson"><a href="https://www.google.com/search?q=L+Jackson+cricket" target="_blank">L Jackson</a></td>
+<td style="background-color: #1987544D" class="text-end">22</td><td style="background-color: #19875403" class="text-end">48</td><td style="background-color: #198754E0" class="text-end">2.69</td><td style="background-color: #19875430" class="text-end">10</td><td style="background-color: #19875471" class="text-end">67</td><td style="background-color: #19875483" class="text-end">4</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="HV Jones
+Teams: South East Stars
+Matches: 6
+Overs: 53
+Wickets: 7" data-filter="South East Stars">
+<td colspan="2" data-text="Jones"><a href="https://www.google.com/search?q=HV+Jones+cricket" target="_blank">HV Jones</a></td>
+<td style="background-color: #1987540F" class="text-end">33</td><td style="background-color: #1987540F" class="text-end">45</td><td style="background-color: #19875400" class="text-end">4.37</td><td style="background-color: #19875406" class="text-end">8</td><td style="background-color: #19875400" class="text-end">57</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #dc354500" class="text-end">14</td><td style="background-color: #dc354500" class="text-end">14</td><td style="background-color: #dc3545FF" class="text-end">29</td><td style="background-color: #dc354500" class="text-end">29</td>
+</tr>
+<tr style="cursor: default;" title="HE Jones
+Teams: Thunder
+Matches: 5
+Overs: 35
+Wickets: 3" data-filter="Thunder">
+<td colspan="2" data-text="Jones"><a href="https://www.google.com/search?q=HE+Jones+cricket" target="_blank">HE Jones</a></td>
+<td style="background-color: #19875400" class="text-end">38</td><td style="background-color: #19875400" class="text-end">71</td><td style="background-color: #19875497" class="text-end">3.23</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #1987548E" class="text-end">68</td><td style="background-color: #19875443" class="text-end">6</td><td style="background-color: #dc354584" class="text-end">33</td><td style="background-color: #dc3545CE" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td>
+</tr>
+<tr style="cursor: default;" title="LG Kellogg
+Teams: Lightning
+Matches: 2
+Overs: 10
+Wickets: 2" data-filter="Lightning">
+<td colspan="2" data-text="Kellogg"><a href="https://www.google.com/search?q=LG+Kellogg+cricket" target="_blank">LG Kellogg</a></td>
+<td style="background-color: #19875447" class="text-end">22</td><td style="background-color: #19875454" class="text-end">30</td><td style="background-color: #19875400" class="text-end">4.50</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #198754A8" class="text-end">70</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="HC Knight
+Teams: Western Storm
+Matches: 1
+Overs: 10
+Wickets: 2" data-filter="Western Storm">
+<td colspan="2" data-text="Knight"><a href="https://www.google.com/search?q=HC+Knight+cricket" target="_blank">HC Knight</a></td>
+<td style="background-color: #1987545F" class="text-end">18</td><td style="background-color: #19875454" class="text-end">30</td><td style="background-color: #19875464" class="text-end">3.60</td><td style="background-color: #198754AE" class="text-end">14</td><td style="background-color: #1987541F" class="text-end">62</td><td style="background-color: #198754A7" class="text-end">3</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="BA Langston
+Teams: Northern Diamonds
+Matches: 6
+Overs: 51
+Wickets: 10" data-filter="Northern Diamonds">
+<td colspan="2" data-text="Langston"><a href="https://www.google.com/search?q=BA+Langston+cricket" target="_blank">BA Langston</a></td>
+<td style="background-color: #19875454" class="text-end">20</td><td style="background-color: #19875451" class="text-end">31</td><td style="background-color: #19875433" class="text-end">3.96</td><td style="background-color: #19875472" class="text-end">12</td><td style="background-color: #19875477" class="text-end">67</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #dc35451D" class="text-end">20</td><td style="background-color: #dc354573" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">30</td>
+</tr>
+<tr style="cursor: default;" title="KA Levick
+Teams: Northern Diamonds
+Matches: 6
+Overs: 50
+Wickets: 10" data-filter="Northern Diamonds">
+<td colspan="2" data-text="Levick"><a href="https://www.google.com/search?q=KA+Levick+cricket" target="_blank">KA Levick</a></td>
+<td style="background-color: #19875454" class="text-end">20</td><td style="background-color: #19875454" class="text-end">30</td><td style="background-color: #1987542B" class="text-end">4.02</td><td style="background-color: #19875437" class="text-end">10</td><td style="background-color: #19875440" class="text-end">64</td><td style="background-color: #1987540A" class="text-end">7</td><td style="background-color: #dc3545FF" class="text-end">50</td><td style="background-color: #dc354500" class="text-end">10</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">30</td>
+</tr>
+<tr style="cursor: default;" title="AL MacDonald
+Teams: Northern Diamonds
+Matches: 3
+Overs: 23
+Wickets: 4" data-filter="Northern Diamonds">
+<td colspan="2" data-text="MacDonald"><a href="https://www.google.com/search?q=AL+MacDonald+cricket" target="_blank">AL MacDonald</a></td>
+<td style="background-color: #19875455" class="text-end">20</td><td style="background-color: #19875442" class="text-end">34</td><td style="background-color: #1987546D" class="text-end">3.53</td><td style="background-color: #19875414" class="text-end">9</td><td style="background-color: #19875400" class="text-end">59</td><td style="background-color: #19875479" class="text-end">4</td><td style="background-color: #dc354544" class="text-end">25</td><td style="background-color: #dc354500" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">25</td>
+</tr>
+<tr style="cursor: default;" title="AJ Macleod
+Teams: Sunrisers
+Matches: 6
+Overs: 37
+Wickets: 4" data-filter="Sunrisers">
+<td colspan="2" data-text="Macleod"><a href="https://www.google.com/search?q=AJ+Macleod+cricket" target="_blank">AJ Macleod</a></td>
+<td style="background-color: #19875400" class="text-end">49</td><td style="background-color: #19875400" class="text-end">56</td><td style="background-color: #19875400" class="text-end">5.30</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875400" class="text-end">46</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #dc354544" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35451B" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="KL Midwood
+Teams: Sunrisers
+Matches: 5
+Overs: 39
+Wickets: 2" data-filter="Sunrisers">
+<td colspan="2" data-text="Midwood"><a href="https://www.google.com/search?q=KL+Midwood+cricket" target="_blank">KL Midwood</a></td>
+<td style="background-color: #19875400" class="text-end">90</td><td style="background-color: #19875400" class="text-end">117</td><td style="background-color: #19875400" class="text-end">4.59</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875400" class="text-end">54</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="FMK Morris
+Teams: Western Storm
+Matches: 6
+Overs: 59
+Wickets: 11" data-filter="Western Storm">
+<td colspan="2" data-text="Morris"><a href="https://www.google.com/search?q=FMK+Morris+cricket" target="_blank">FMK Morris</a></td>
+<td style="background-color: #1987544B" class="text-end">22</td><td style="background-color: #19875449" class="text-end">32</td><td style="background-color: #19875426" class="text-end">4.06</td><td style="background-color: #198754C1" class="text-end">15</td><td style="background-color: #1987540D" class="text-end">61</td><td style="background-color: #19875438" class="text-end">6</td><td style="background-color: #dc354500" class="text-end">9</td><td style="background-color: #dc35455B" class="text-end">45</td><td style="background-color: #dc35452D" class="text-end">9</td><td style="background-color: #dc354500" class="text-end">27</td>
+</tr>
+<tr style="cursor: default;" title="S Munro
+Teams: Lightning
+Matches: 4
+Overs: 28
+Wickets: 1" data-filter="Lightning">
+<td colspan="2" data-text="Munro"><a href="https://www.google.com/search?q=S+Munro+cricket" target="_blank">S Munro</a></td>
+<td style="background-color: #19875400" class="text-end">129</td><td style="background-color: #19875400" class="text-end">168</td><td style="background-color: #19875400" class="text-end">4.61</td><td style="background-color: #19875400" class="text-end">2</td><td style="background-color: #19875419" class="text-end">61</td><td style="background-color: #19875436" class="text-end">6</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="C Nicholas
+Teams: Western Storm
+Matches: 3
+Overs: 24
+Wickets: 2" data-filter="Western Storm">
+<td colspan="2" data-text="Nicholas"><a href="https://www.google.com/search?q=C+Nicholas+cricket" target="_blank">C Nicholas</a></td>
+<td style="background-color: #19875400" class="text-end">44</td><td style="background-color: #19875400" class="text-end">72</td><td style="background-color: #19875455" class="text-end">3.71</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875493" class="text-end">69</td><td style="background-color: #19875448" class="text-end">6</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="TG Norris
+Teams: Southern Vipers
+Matches: 7
+Overs: 45
+Wickets: 12" data-filter="Southern Vipers">
+<td colspan="2" data-text="Norris"><a href="https://www.google.com/search?q=TG+Norris+cricket" target="_blank">TG Norris</a></td>
+<td style="background-color: #19875460" class="text-end">18</td><td style="background-color: #19875476" class="text-end">22</td><td style="background-color: #19875400" class="text-end">4.77</td><td style="background-color: #19875420" class="text-end">9</td><td style="background-color: #19875432" class="text-end">63</td><td style="background-color: #19875400" class="text-end">11</td><td style="background-color: #dc354544" class="text-end">25</td><td style="background-color: #dc354500" class="text-end">8</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354576" class="text-end">67</td>
+</tr>
+<tr style="cursor: default;" title="Sonali Patel
+Teams: Sunrisers
+Matches: 6
+Overs: 32
+Wickets: 7" data-filter="Sunrisers">
+<td colspan="2" data-text="Patel"><a href="https://www.google.com/search?q=Sonali+Patel+cricket" target="_blank">Sonali Patel</a></td>
+<td style="background-color: #19875443" class="text-end">23</td><td style="background-color: #19875460" class="text-end">27</td><td style="background-color: #19875400" class="text-end">5.12</td><td style="background-color: #19875400" class="text-end">6</td><td style="background-color: #19875400" class="text-end">53</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #dc35455F" class="text-end">29</td><td style="background-color: #dc354500" class="text-end">29</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">43</td>
+</tr>
+<tr style="cursor: default;" title="A Patel
+Teams: Central Sparks
+Matches: 4
+Overs: 40
+Wickets: 8" data-filter="Central Sparks">
+<td colspan="2" data-text="Patel"><a href="https://www.google.com/search?q=A+Patel+cricket" target="_blank">A Patel</a></td>
+<td style="background-color: #19875452" class="text-end">20</td><td style="background-color: #19875454" class="text-end">30</td><td style="background-color: #19875420" class="text-end">4.10</td><td style="background-color: #1987548B" class="text-end">13</td><td style="background-color: #1987543B" class="text-end">63</td><td style="background-color: #19875406" class="text-end">7</td><td style="background-color: #dc354544" class="text-end">25</td><td style="background-color: #dc354500" class="text-end">25</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35451B" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="AD Presland
+Teams: Lightning
+Matches: 4
+Overs: 27
+Wickets: 5" data-filter="Lightning">
+<td colspan="2" data-text="Presland"><a href="https://www.google.com/search?q=AD+Presland+cricket" target="_blank">AD Presland</a></td>
+<td style="background-color: #19875446" class="text-end">23</td><td style="background-color: #19875449" class="text-end">32</td><td style="background-color: #1987540F" class="text-end">4.22</td><td style="background-color: #1987541E" class="text-end">9</td><td style="background-color: #19875400" class="text-end">59</td><td style="background-color: #19875462" class="text-end">5</td><td style="background-color: #dc3545FF" class="text-end">60</td><td style="background-color: #dc354500" class="text-end">20</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">20</td>
+</tr>
+<tr style="cursor: default;" title="EA Russell
+Teams: Central Sparks
+Matches: 4
+Overs: 37
+Wickets: 6" data-filter="Central Sparks">
+<td colspan="2" data-text="Russell"><a href="https://www.google.com/search?q=EA+Russell+cricket" target="_blank">EA Russell</a></td>
+<td style="background-color: #1987543B" class="text-end">25</td><td style="background-color: #19875434" class="text-end">37</td><td style="background-color: #1987542A" class="text-end">4.03</td><td style="background-color: #1987546A" class="text-end">12</td><td style="background-color: #19875462" class="text-end">66</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #dc354584" class="text-end">33</td><td style="background-color: #dc354519" class="text-end">33</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">33</td>
+</tr>
+<tr style="cursor: default;" title="PJ Scholfield
+Teams: Southern Vipers
+Matches: 7
+Overs: 51
+Wickets: 9" data-filter="Southern Vipers">
+<td colspan="2" data-text="Scholfield"><a href="https://www.google.com/search?q=PJ+Scholfield+cricket" target="_blank">PJ Scholfield</a></td>
+<td style="background-color: #19875442" class="text-end">23</td><td style="background-color: #19875441" class="text-end">34</td><td style="background-color: #1987541C" class="text-end">4.12</td><td style="background-color: #19875440" class="text-end">10</td><td style="background-color: #19875400" class="text-end">59</td><td style="background-color: #1987541E" class="text-end">7</td><td style="background-color: #dc354500" class="text-end">11</td><td style="background-color: #dc354500" class="text-end">11</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354576" class="text-end">67</td>
+</tr>
+<tr style="cursor: default;" title="NR Sciver
+Teams: Northern Diamonds
+Matches: 1
+Overs: 10
+Wickets: 2" data-filter="Northern Diamonds">
+<td colspan="2" data-text="Sciver"><a href="https://www.google.com/search?q=NR+Sciver+cricket" target="_blank">NR Sciver</a></td>
+<td style="background-color: #1987546F" class="text-end">15</td><td style="background-color: #19875454" class="text-end">30</td><td style="background-color: #198754B6" class="text-end">3.00</td><td style="background-color: #19875497" class="text-end">14</td><td style="background-color: #19875471" class="text-end">67</td><td style="background-color: #1987545F" class="text-end">5</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="G Scrivens
+Teams: Sunrisers
+Matches: 4
+Overs: 28
+Wickets: 3" data-filter="Sunrisers">
+<td colspan="2" data-text="Scrivens"><a href="https://www.google.com/search?q=G+Scrivens+cricket" target="_blank">G Scrivens</a></td>
+<td style="background-color: #19875400" class="text-end">47</td><td style="background-color: #19875400" class="text-end">57</td><td style="background-color: #19875400" class="text-end">5.01</td><td style="background-color: #19875400" class="text-end">4</td><td style="background-color: #19875481" class="text-end">68</td><td style="background-color: #19875400" class="text-end">13</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545FF" class="text-end">100</td>
+</tr>
+<tr style="cursor: default;" title="BF Smith
+Teams: South East Stars
+Matches: 3
+Overs: 12
+Wickets: 4" data-filter="South East Stars">
+<td colspan="2" data-text="Smith"><a href="https://www.google.com/search?q=BF+Smith+cricket" target="_blank">BF Smith</a></td>
+<td style="background-color: #1987547A" class="text-end">13</td><td style="background-color: #1987548A" class="text-end">18</td><td style="background-color: #19875400" class="text-end">4.39</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #19875400" class="text-end">56</td><td style="background-color: #19875444" class="text-end">6</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545F6" class="text-end">25</td><td style="background-color: #dc3545A3" class="text-end">75</td>
+</tr>
+<tr style="cursor: default;" title="LCN Smith
+Teams: Northern Diamonds
+Matches: 3
+Overs: 26
+Wickets: 4" data-filter="Northern Diamonds">
+<td colspan="2" data-text="Smith"><a href="https://www.google.com/search?q=LCN+Smith+cricket" target="_blank">LCN Smith</a></td>
+<td style="background-color: #19875443" class="text-end">23</td><td style="background-color: #1987542B" class="text-end">39</td><td style="background-color: #19875467" class="text-end">3.58</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #19875432" class="text-end">63</td><td style="background-color: #1987543E" class="text-end">6</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354573" class="text-end">50</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35451B" class="text-end">50</td>
+</tr>
+<tr style="cursor: default;" title="CM Taylor
+Teams: Southern Vipers
+Matches: 5
+Overs: 44
+Wickets: 15" data-filter="Southern Vipers">
+<td colspan="2" data-text="Taylor"><a href="https://www.google.com/search?q=CM+Taylor+cricket" target="_blank">CM Taylor</a></td>
+<td style="background-color: #1987548A" class="text-end">10</td><td style="background-color: #1987548B" class="text-end">18</td><td style="background-color: #19875478" class="text-end">3.45</td><td style="background-color: #198754FF" class="text-end">22</td><td style="background-color: #1987547E" class="text-end">67</td><td style="background-color: #19875463" class="text-end">5</td><td style="background-color: #dc35451D" class="text-end">20</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc35450E" class="text-end">7</td><td style="background-color: #dc354576" class="text-end">67</td>
+</tr>
+<tr style="cursor: default;" title="MK Villiers
+Teams: Sunrisers
+Matches: 2
+Overs: 20
+Wickets: 1" data-filter="Sunrisers">
+<td colspan="2" data-text="Villiers"><a href="https://www.google.com/search?q=MK+Villiers+cricket" target="_blank">MK Villiers</a></td>
+<td style="background-color: #19875400" class="text-end">96</td><td style="background-color: #19875400" class="text-end">120</td><td style="background-color: #19875400" class="text-end">4.80</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875400" class="text-end">56</td><td style="background-color: #19875400" class="text-end">10</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
+</tr>
+<tr style="cursor: default;" title="KJ Wolfe
+Teams: Sunrisers
+Matches: 6
+Overs: 44
+Wickets: 7" data-filter="Sunrisers">
+<td colspan="2" data-text="Wolfe"><a href="https://www.google.com/search?q=KJ+Wolfe+cricket" target="_blank">KJ Wolfe</a></td>
+<td style="background-color: #1987541E" class="text-end">30</td><td style="background-color: #19875430" class="text-end">38</td><td style="background-color: #19875400" class="text-end">4.76</td><td style="background-color: #19875400" class="text-end">8</td><td style="background-color: #19875438" class="text-end">63</td><td style="background-color: #19875400" class="text-end">9</td><td style="background-color: #dc354500" class="text-end">14</td><td style="background-color: #dc35459A" class="text-end">57</td><td style="background-color: #dc35456E" class="text-end">14</td><td style="background-color: #dc354500" class="text-end">14</td>
+</tr>
+<tr style="cursor: default;" title="IECM Wong
+Teams: Central Sparks
+Matches: 2
+Overs: 17
+Wickets: 3" data-filter="Central Sparks">
+<td colspan="2" data-text="Wong"><a href="https://www.google.com/search?q=IECM+Wong+cricket" target="_blank">IECM Wong</a></td>
+<td style="background-color: #1987542C" class="text-end">28</td><td style="background-color: #19875442" class="text-end">34</td><td style="background-color: #19875400" class="text-end">4.88</td><td style="background-color: #19875428" class="text-end">9</td><td style="background-color: #19875441" class="text-end">64</td><td style="background-color: #19875400" class="text-end">12</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc3545CE" class="text-end">67</td><td style="background-color: " class="text-end">0</td><td style="background-color: #dc354500" class="text-end">33</td>
+</tr>
+<tr style="cursor: default;" title="DN Wyatt
+Teams: Southern Vipers
+Matches: 2
+Overs: 7
+Wickets: 1" data-filter="Southern Vipers">
+<td colspan="2" data-text="Wyatt"><a href="https://www.google.com/search?q=DN+Wyatt+cricket" target="_blank">DN Wyatt</a></td>
+<td style="background-color: #1987542F" class="text-end">27</td><td style="background-color: #1987541E" class="text-end">42</td><td style="background-color: #19875441" class="text-end">3.86</td><td style="background-color: #19875400" class="text-end">5</td><td style="background-color: #19875400" class="text-end">43</td><td style="background-color: " class="text-end">0</td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td><td style="background-color: " class="text-end"></td>
 </tr>
 </tbody>
 </table>
