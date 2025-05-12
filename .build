@@ -15,6 +15,13 @@ unzip -q -o /Users/syd/Documents/Cricket/Data/hnd_female_json.zip -d /Users/syd/
 # HTML
 /Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/England/100" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/England/The100"
 
+echo "England > ODC"
+# 100
+curl -o /Users/syd/Documents/Cricket/Data/wod_female_json.zip -z /Users/syd/Documents/Cricket/Data/wod_female_json.zip https://cricsheet.org/downloads/wod_female_json.zip
+unzip -q -o /Users/syd/Documents/Cricket/Data/wod_female_json.zip -d /Users/syd/Documents/Cricket/Data/England/OneDayCup
+# HTML
+/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/England/OneDayCup" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/England/OneDayCup"
+
 # WBBL
 echo "Australia > WBBL"
 curl -o /Users/syd/Documents/Cricket/Data/wbb_female_json.zip -z /Users/syd/Documents/Cricket/Data/wbb_female_json.zip https://cricsheet.org/downloads/wbb_female_json.zip
