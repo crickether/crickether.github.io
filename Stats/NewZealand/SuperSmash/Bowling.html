@@ -6,6 +6,7 @@
 <link rel="icon" type="image/png" href="/favicon.png">
 <style>
 table.table tbody tr:hover td { color: var(--bs-primary); cursor: default; }
+table.table-ranked {counter-reset: row-num;}table.table-ranked tbody tr  {counter-increment: row-num;}table.table-ranked tr td:first-child::before {content: counter(row-num) '. ';}
 .table th, .table td { text-wrap: nowrap; overflow: hidden }
 a.chart { margin-right: 4px; }
 </style>
@@ -16,7 +17,7 @@ a.chart { margin-right: 4px; }
 <div class='m-1'><input class='form-control form-control-sm table-filter' type='search' placeholder='Filter...' style='display: none;' /></div><script>$(document).ready(function(){  $('.table-filter').toggle();   $('.table-filter').on('input', function() {    var fors = $(this).val().split(',').map(n => n.trim().toLowerCase()).filter(n => n.length > 0);    $('.table tbody tr').filter(function() {      $(this).toggle(filter_contains(fors, [$(this).text(), $(this).attr('data-filter')]));    });  });});function filter_contains(fors, ins) {  let result = false;  if(fors.length == 0) {    return true;  }  fors.forEach(f => {    if(f.length > 0) {      ins.forEach(i => {        if(i.toLowerCase().indexOf(f) > -1) {          result = true;        }      });    }  });  return result;}</script>
 <div class="tab-content">
 <div class="tab-pane fade show active" id="t-All" role="tabpanel" aria-labelledby="t-All-tab">
-<table class="table table-sm table-sort" style="table-layout: fixed;">
+<table class="table table-sm table-sort table-ranked" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
 <th>Bowler</th><th></th><th class="text-end sortInitialOrder-asc">Average</th><th class="text-end sortInitialOrder-asc">Strike Rate</th><th class="text-end sortInitialOrder-asc">Economy</th><th class="text-end sortInitialOrder-desc">Impact</th><th class="text-end sortInitialOrder-desc">Dot %</th><th class="text-end sortInitialOrder-asc">Boundary %</th><th class="text-end sortInitialOrder-desc">LBW %</th><th class="text-end sortInitialOrder-desc">Bowled %</th><th class="text-end sortInitialOrder-descd">Stumped %</th><th class="text-end sortInitialOrder-desc">Caught %</th>
@@ -747,7 +748,7 @@ Wickets: 15" data-filter="Otago; Northern Districts">
 </table>
 </div>
 <div class="tab-pane fade show " id="t-202425" role="tabpanel" aria-labelledby="t-202425-tab">
-<table class="table table-sm table-sort" style="table-layout: fixed;">
+<table class="table table-sm table-sort table-ranked" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
 <th>Bowler</th><th></th><th class="text-end sortInitialOrder-asc">Average</th><th class="text-end sortInitialOrder-asc">Strike Rate</th><th class="text-end sortInitialOrder-asc">Economy</th><th class="text-end sortInitialOrder-desc">Impact</th><th class="text-end sortInitialOrder-desc">Dot %</th><th class="text-end sortInitialOrder-asc">Boundary %</th><th class="text-end sortInitialOrder-desc">LBW %</th><th class="text-end sortInitialOrder-desc">Bowled %</th><th class="text-end sortInitialOrder-descd">Stumped %</th><th class="text-end sortInitialOrder-desc">Caught %</th>
@@ -1126,7 +1127,7 @@ Wickets: 5" data-filter="Northern Districts">
 </table>
 </div>
 <div class="tab-pane fade show " id="t-202324" role="tabpanel" aria-labelledby="t-202324-tab">
-<table class="table table-sm table-sort" style="table-layout: fixed;">
+<table class="table table-sm table-sort table-ranked" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
 <th>Bowler</th><th></th><th class="text-end sortInitialOrder-asc">Average</th><th class="text-end sortInitialOrder-asc">Strike Rate</th><th class="text-end sortInitialOrder-asc">Economy</th><th class="text-end sortInitialOrder-desc">Impact</th><th class="text-end sortInitialOrder-desc">Dot %</th><th class="text-end sortInitialOrder-asc">Boundary %</th><th class="text-end sortInitialOrder-desc">LBW %</th><th class="text-end sortInitialOrder-desc">Bowled %</th><th class="text-end sortInitialOrder-descd">Stumped %</th><th class="text-end sortInitialOrder-desc">Caught %</th>
@@ -1481,7 +1482,7 @@ Wickets: 8" data-filter="Otago">
 </table>
 </div>
 <div class="tab-pane fade show " id="t-202223" role="tabpanel" aria-labelledby="t-202223-tab">
-<table class="table table-sm table-sort" style="table-layout: fixed;">
+<table class="table table-sm table-sort table-ranked" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
 <th>Bowler</th><th></th><th class="text-end sortInitialOrder-asc">Average</th><th class="text-end sortInitialOrder-asc">Strike Rate</th><th class="text-end sortInitialOrder-asc">Economy</th><th class="text-end sortInitialOrder-desc">Impact</th><th class="text-end sortInitialOrder-desc">Dot %</th><th class="text-end sortInitialOrder-asc">Boundary %</th><th class="text-end sortInitialOrder-desc">LBW %</th><th class="text-end sortInitialOrder-desc">Bowled %</th><th class="text-end sortInitialOrder-descd">Stumped %</th><th class="text-end sortInitialOrder-desc">Caught %</th>
@@ -1868,7 +1869,7 @@ Wickets: 6" data-filter="Northern Districts">
 </table>
 </div>
 <div class="tab-pane fade show " id="t-202122" role="tabpanel" aria-labelledby="t-202122-tab">
-<table class="table table-sm table-sort" style="table-layout: fixed;">
+<table class="table table-sm table-sort table-ranked" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
 <th>Bowler</th><th></th><th class="text-end sortInitialOrder-asc">Average</th><th class="text-end sortInitialOrder-asc">Strike Rate</th><th class="text-end sortInitialOrder-asc">Economy</th><th class="text-end sortInitialOrder-desc">Impact</th><th class="text-end sortInitialOrder-desc">Dot %</th><th class="text-end sortInitialOrder-asc">Boundary %</th><th class="text-end sortInitialOrder-desc">LBW %</th><th class="text-end sortInitialOrder-desc">Bowled %</th><th class="text-end sortInitialOrder-descd">Stumped %</th><th class="text-end sortInitialOrder-desc">Caught %</th>
@@ -2255,7 +2256,7 @@ Wickets: 9" data-filter="Central Districts">
 </table>
 </div>
 <div class="tab-pane fade show " id="t-202021" role="tabpanel" aria-labelledby="t-202021-tab">
-<table class="table table-sm table-sort" style="table-layout: fixed;">
+<table class="table table-sm table-sort table-ranked" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
 <th>Bowler</th><th></th><th class="text-end sortInitialOrder-asc">Average</th><th class="text-end sortInitialOrder-asc">Strike Rate</th><th class="text-end sortInitialOrder-asc">Economy</th><th class="text-end sortInitialOrder-desc">Impact</th><th class="text-end sortInitialOrder-desc">Dot %</th><th class="text-end sortInitialOrder-asc">Boundary %</th><th class="text-end sortInitialOrder-desc">LBW %</th><th class="text-end sortInitialOrder-desc">Bowled %</th><th class="text-end sortInitialOrder-descd">Stumped %</th><th class="text-end sortInitialOrder-desc">Caught %</th>
