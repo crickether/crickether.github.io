@@ -1,4 +1,5 @@
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1"><style>@media (max-width:480px) {table.table { font-size: 50%; } small { font-size: 50% !important; } table.table td:nth-of-type(n+6), table.table th:nth-of-type(n+6) { display: none; } }</style>
 <head>
 <title>T20 - Bowling</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script><script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js" integrity="sha512-qzgd5cYSZcosqpzpn7zF2ZId8f/8CHmFKZ8j7mU4OUXTNRd5g+ZHBPsgKEwoqxCtdQvExE5LprwwPAgoicguNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -14,599 +15,599 @@ table.table tbody tr:hover td { color: var(--bs-primary); cursor: default; }
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
-<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th><th class="text-end">Boundary %</th>
+<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Boundary %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th>
 </tr>
 </thead>
 <tbody>
 <tr><td colspan="2" title="Games: 6
 Runs: 899
-Wickets: 37" style="cursor: default" data-text="1">1.&nbsp;England</td><td class="text-end" style="background-color: #19875484">20</td><td class="text-end" style="background-color: #dc354526">1.20</td><td class="text-end" style="background-color: #19875497">39</td><td class="text-end" style="background-color: #198754FF">32</td><td class="text-end" style="background-color: #1987542D">8</td><td class="text-end" style="background-color: #dc35455F">15</td></tr>
+Wickets: 37" style="cursor: default" data-text="1">1.&nbsp;England</td><td class="text-end" style="background-color: #19875484">20</td><td class="text-end" style="background-color: #dc354526">1.20</td><td class="text-end" style="background-color: #19875497">39</td><td class="text-end" style="background-color: #dc35455F">15</td><td class="text-end" style="background-color: #198754FF">32</td><td class="text-end" style="background-color: #1987542D">8</td></tr>
 <tr><td colspan="2" title="Games: 3
 Runs: 319
-Wickets: 15" style="cursor: default" data-text="2">2.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #1987546C">21</td><td class="text-end" style="background-color: #198754FF">1.02</td><td class="text-end" style="background-color: #198754FF">40</td><td class="text-end" style="background-color: #dc3545FF">37</td><td class="text-end" style="background-color: #dc3545FF">11</td><td class="text-end" style="background-color: #198754FF">9</td></tr>
+Wickets: 15" style="cursor: default" data-text="2">2.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #1987546C">21</td><td class="text-end" style="background-color: #198754FF">1.02</td><td class="text-end" style="background-color: #198754FF">40</td><td class="text-end" style="background-color: #198754FF">9</td><td class="text-end" style="background-color: #dc3545FF">37</td><td class="text-end" style="background-color: #dc3545FF">11</td></tr>
 <tr><td colspan="2" title="Games: 6
 Runs: 719
-Wickets: 25" style="cursor: default" data-text="3">3.&nbsp;West Indies</td><td class="text-end" style="background-color: #dc354549">27</td><td class="text-end" style="background-color: #19875499">1.08</td><td class="text-end" style="background-color: #19875481">39</td><td class="text-end" style="background-color: #dc3545D3">37</td><td class="text-end" style="background-color: #198754FF">6</td><td class="text-end" style="background-color: #19875447">12</td></tr>
+Wickets: 25" style="cursor: default" data-text="3">3.&nbsp;West Indies</td><td class="text-end" style="background-color: #dc354549">27</td><td class="text-end" style="background-color: #19875499">1.08</td><td class="text-end" style="background-color: #19875481">39</td><td class="text-end" style="background-color: #19875447">12</td><td class="text-end" style="background-color: #dc3545D3">37</td><td class="text-end" style="background-color: #198754FF">6</td></tr>
 <tr><td colspan="2" title="Games: 6
 Runs: 830
-Wickets: 41" style="cursor: default" data-text="4">4.&nbsp;Australia</td><td class="text-end" style="background-color: #198754FF">16</td><td class="text-end" style="background-color: #dc35455D">1.24</td><td class="text-end" style="background-color: #19875463">38</td><td class="text-end" style="background-color: #198754C1">33</td><td class="text-end" style="background-color: #dc354543">9</td><td class="text-end" style="background-color: #dc35456F">16</td></tr>
+Wickets: 41" style="cursor: default" data-text="4">4.&nbsp;Australia</td><td class="text-end" style="background-color: #198754FF">16</td><td class="text-end" style="background-color: #dc35455D">1.24</td><td class="text-end" style="background-color: #19875463">38</td><td class="text-end" style="background-color: #dc35456F">16</td><td class="text-end" style="background-color: #198754C1">33</td><td class="text-end" style="background-color: #dc354543">9</td></tr>
 <tr><td colspan="2" title="Games: 3
 Runs: 451
-Wickets: 13" style="cursor: default" data-text="5">5.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #dc354536">26</td><td class="text-end" style="background-color: #dc3545F2">1.33</td><td class="text-end" style="background-color: #dc354531">36</td><td class="text-end" style="background-color: #dc354542">35</td><td class="text-end" style="background-color: #19875423">8</td><td class="text-end" style="background-color: #dc3545A1">17</td></tr>
+Wickets: 13" style="cursor: default" data-text="5">5.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #dc354536">26</td><td class="text-end" style="background-color: #dc3545F2">1.33</td><td class="text-end" style="background-color: #dc354531">36</td><td class="text-end" style="background-color: #dc3545A1">17</td><td class="text-end" style="background-color: #dc354542">35</td><td class="text-end" style="background-color: #19875423">8</td></tr>
 <tr><td colspan="2" title="Games: 5
 Runs: 737
-Wickets: 17" style="cursor: default" data-text="6">6.&nbsp;New Zealand</td><td class="text-end" style="background-color: #dc3545FF">32</td><td class="text-end" style="background-color: #dc3545FF">1.34</td><td class="text-end" style="background-color: #dc3545FF">33</td><td class="text-end" style="background-color: #1987544F">34</td><td class="text-end" style="background-color: #dc354539">9</td><td class="text-end" style="background-color: #dc3545FF">18</td></tr>
+Wickets: 17" style="cursor: default" data-text="6">6.&nbsp;New Zealand</td><td class="text-end" style="background-color: #dc3545FF">32</td><td class="text-end" style="background-color: #dc3545FF">1.34</td><td class="text-end" style="background-color: #dc3545FF">33</td><td class="text-end" style="background-color: #dc3545FF">18</td><td class="text-end" style="background-color: #1987544F">34</td><td class="text-end" style="background-color: #dc354539">9</td></tr>
 </tbody>
 </table>
 <h2>2024</h2>
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
-<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th><th class="text-end">Boundary %</th>
+<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Boundary %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th>
 </tr>
 </thead>
 <tbody>
 <tr><td colspan="2" title="Games: 17
 Runs: 2124
-Wickets: 104" style="cursor: default" data-text="1">1.&nbsp;Australia</td><td class="text-end" style="background-color: #198754BC">20</td><td class="text-end" style="background-color: #198754FF">1.03</td><td class="text-end" style="background-color: #198754FF">43</td><td class="text-end" style="background-color: #19875408">35</td><td class="text-end" style="background-color: #198754FF">6</td><td class="text-end" style="background-color: #198754FF">11</td></tr>
+Wickets: 104" style="cursor: default" data-text="1">1.&nbsp;Australia</td><td class="text-end" style="background-color: #198754BC">20</td><td class="text-end" style="background-color: #198754FF">1.03</td><td class="text-end" style="background-color: #198754FF">43</td><td class="text-end" style="background-color: #198754FF">11</td><td class="text-end" style="background-color: #19875408">35</td><td class="text-end" style="background-color: #198754FF">6</td></tr>
 <tr><td colspan="2" title="Games: 21
 Runs: 2737
-Wickets: 133" style="cursor: default" data-text="2">2.&nbsp;India</td><td class="text-end" style="background-color: #198754FF">19</td><td class="text-end" style="background-color: #1987545B">1.10</td><td class="text-end" style="background-color: #198754D2">42</td><td class="text-end" style="background-color: #198754C9">34</td><td class="text-end" style="background-color: #19875474">7</td><td class="text-end" style="background-color: #19875410">13</td></tr>
+Wickets: 133" style="cursor: default" data-text="2">2.&nbsp;India</td><td class="text-end" style="background-color: #198754FF">19</td><td class="text-end" style="background-color: #1987545B">1.10</td><td class="text-end" style="background-color: #198754D2">42</td><td class="text-end" style="background-color: #19875410">13</td><td class="text-end" style="background-color: #198754C9">34</td><td class="text-end" style="background-color: #19875474">7</td></tr>
 <tr><td colspan="2" title="Games: 22
 Runs: 2765
-Wickets: 136" style="cursor: default" data-text="3">3.&nbsp;England</td><td class="text-end" style="background-color: #198754EC">19</td><td class="text-end" style="background-color: #198754A5">1.07</td><td class="text-end" style="background-color: #198754B0">41</td><td class="text-end" style="background-color: #19875411">35</td><td class="text-end" style="background-color: #198754B4">7</td><td class="text-end" style="background-color: #19875467">12</td></tr>
+Wickets: 136" style="cursor: default" data-text="3">3.&nbsp;England</td><td class="text-end" style="background-color: #198754EC">19</td><td class="text-end" style="background-color: #198754A5">1.07</td><td class="text-end" style="background-color: #198754B0">41</td><td class="text-end" style="background-color: #19875467">12</td><td class="text-end" style="background-color: #19875411">35</td><td class="text-end" style="background-color: #198754B4">7</td></tr>
 <tr><td colspan="2" title="Games: 17
 Runs: 2174
-Wickets: 81" style="cursor: default" data-text="4">4.&nbsp;Pakistan</td><td class="text-end" style="background-color: #dc354565">24</td><td class="text-end" style="background-color: #19875456">1.10</td><td class="text-end" style="background-color: #dc354502">39</td><td class="text-end" style="background-color: #dc354578">37</td><td class="text-end" style="background-color: #1987542E">7</td><td class="text-end" style="background-color: #19875438">13</td></tr>
+Wickets: 81" style="cursor: default" data-text="4">4.&nbsp;Pakistan</td><td class="text-end" style="background-color: #dc354565">24</td><td class="text-end" style="background-color: #19875456">1.10</td><td class="text-end" style="background-color: #dc354502">39</td><td class="text-end" style="background-color: #19875438">13</td><td class="text-end" style="background-color: #dc354578">37</td><td class="text-end" style="background-color: #1987542E">7</td></tr>
 <tr><td colspan="2" title="Games: 16
 Runs: 2121
-Wickets: 86" style="cursor: default" data-text="5">5.&nbsp;West Indies</td><td class="text-end" style="background-color: #19875419">22</td><td class="text-end" style="background-color: #19875453">1.10</td><td class="text-end" style="background-color: #dc354537">38</td><td class="text-end" style="background-color: #dc354527">36</td><td class="text-end" style="background-color: #dc3545E4">9</td><td class="text-end" style="background-color: #19875474">12</td></tr>
+Wickets: 86" style="cursor: default" data-text="5">5.&nbsp;West Indies</td><td class="text-end" style="background-color: #19875419">22</td><td class="text-end" style="background-color: #19875453">1.10</td><td class="text-end" style="background-color: #dc354537">38</td><td class="text-end" style="background-color: #19875474">12</td><td class="text-end" style="background-color: #dc354527">36</td><td class="text-end" style="background-color: #dc3545E4">9</td></tr>
 <tr><td colspan="2" title="Games: 20
 Runs: 2790
-Wickets: 88" style="cursor: default" data-text="6">6.&nbsp;South Africa</td><td class="text-end" style="background-color: #dc3545FF">27</td><td class="text-end" style="background-color: #dc354570">1.18</td><td class="text-end" style="background-color: #dc354526">39</td><td class="text-end" style="background-color: #198754D8">33</td><td class="text-end" style="background-color: #19875485">7</td><td class="text-end" style="background-color: #dc3545AD">15</td></tr>
+Wickets: 88" style="cursor: default" data-text="6">6.&nbsp;South Africa</td><td class="text-end" style="background-color: #dc3545FF">27</td><td class="text-end" style="background-color: #dc354570">1.18</td><td class="text-end" style="background-color: #dc354526">39</td><td class="text-end" style="background-color: #dc3545AD">15</td><td class="text-end" style="background-color: #198754D8">33</td><td class="text-end" style="background-color: #19875485">7</td></tr>
 <tr><td colspan="2" title="Games: 17
 Runs: 2294
-Wickets: 84" style="cursor: default" data-text="7">7.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #dc354542">24</td><td class="text-end" style="background-color: #dc354519">1.15</td><td class="text-end" style="background-color: #dc354568">38</td><td class="text-end" style="background-color: #dc3545D2">38</td><td class="text-end" style="background-color: #19875403">8</td><td class="text-end" style="background-color: #dc354507">13</td></tr>
+Wickets: 84" style="cursor: default" data-text="7">7.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #dc354542">24</td><td class="text-end" style="background-color: #dc354519">1.15</td><td class="text-end" style="background-color: #dc354568">38</td><td class="text-end" style="background-color: #dc354507">13</td><td class="text-end" style="background-color: #dc3545D2">38</td><td class="text-end" style="background-color: #19875403">8</td></tr>
 <tr><td colspan="2" title="Games: 19
 Runs: 2565
-Wickets: 113" style="cursor: default" data-text="8">8.&nbsp;New Zealand</td><td class="text-end" style="background-color: #198754DF">19</td><td class="text-end" style="background-color: #dc35456C">1.18</td><td class="text-end" style="background-color: #dc3545F2">36</td><td class="text-end" style="background-color: #dc354565">37</td><td class="text-end" style="background-color: #dc3545CA">9</td><td class="text-end" style="background-color: #dc354534">14</td></tr>
+Wickets: 113" style="cursor: default" data-text="8">8.&nbsp;New Zealand</td><td class="text-end" style="background-color: #198754DF">19</td><td class="text-end" style="background-color: #dc35456C">1.18</td><td class="text-end" style="background-color: #dc3545F2">36</td><td class="text-end" style="background-color: #dc354534">14</td><td class="text-end" style="background-color: #dc354565">37</td><td class="text-end" style="background-color: #dc3545CA">9</td></tr>
 <tr><td colspan="2" title="Games: 8
 Runs: 1139
-Wickets: 46" style="cursor: default" data-text="9">9.&nbsp;Ireland</td><td class="text-end" style="background-color: #1987548A">21</td><td class="text-end" style="background-color: #dc3545A5">1.21</td><td class="text-end" style="background-color: #dc3545FF">36</td><td class="text-end" style="background-color: #dc354567">37</td><td class="text-end" style="background-color: #dc354559">8</td><td class="text-end" style="background-color: #dc354549">14</td></tr>
+Wickets: 46" style="cursor: default" data-text="9">9.&nbsp;Ireland</td><td class="text-end" style="background-color: #1987548A">21</td><td class="text-end" style="background-color: #dc3545A5">1.21</td><td class="text-end" style="background-color: #dc3545FF">36</td><td class="text-end" style="background-color: #dc354549">14</td><td class="text-end" style="background-color: #dc354567">37</td><td class="text-end" style="background-color: #dc354559">8</td></tr>
 <tr><td colspan="2" title="Games: 17
 Runs: 2090
-Wickets: 68" style="cursor: default" data-text="10">10.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #dc3545C5">26</td><td class="text-end" style="background-color: #dc35457B">1.19</td><td class="text-end" style="background-color: #dc354580">38</td><td class="text-end" style="background-color: #dc3545FF">38</td><td class="text-end" style="background-color: #1987544A">7</td><td class="text-end" style="background-color: #dc354595">15</td></tr>
+Wickets: 68" style="cursor: default" data-text="10">10.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #dc3545C5">26</td><td class="text-end" style="background-color: #dc35457B">1.19</td><td class="text-end" style="background-color: #dc354580">38</td><td class="text-end" style="background-color: #dc354595">15</td><td class="text-end" style="background-color: #dc3545FF">38</td><td class="text-end" style="background-color: #1987544A">7</td></tr>
 <tr><td colspan="2" title="Games: 7
 Runs: 873
-Wickets: 28" style="cursor: default" data-text="11">11.&nbsp;Scotland</td><td class="text-end" style="background-color: #dc354595">25</td><td class="text-end" style="background-color: #dc3545FF">1.24</td><td class="text-end" style="background-color: #dc354594">37</td><td class="text-end" style="background-color: #198754FF">33</td><td class="text-end" style="background-color: #dc3545FF">9</td><td class="text-end" style="background-color: #dc3545FF">16</td></tr>
+Wickets: 28" style="cursor: default" data-text="11">11.&nbsp;Scotland</td><td class="text-end" style="background-color: #dc354595">25</td><td class="text-end" style="background-color: #dc3545FF">1.24</td><td class="text-end" style="background-color: #dc354594">37</td><td class="text-end" style="background-color: #dc3545FF">16</td><td class="text-end" style="background-color: #198754FF">33</td><td class="text-end" style="background-color: #dc3545FF">9</td></tr>
 </tbody>
 </table>
 <h2>2023</h2>
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
-<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th><th class="text-end">Boundary %</th>
+<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Boundary %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th>
 </tr>
 </thead>
 <tbody>
 <tr><td colspan="2" title="Games: 2
 Runs: 209
-Wickets: 10" style="cursor: default" data-text="1">1.&nbsp;Scotland</td><td class="text-end" style="background-color: #1987544D">22</td><td class="text-end" style="background-color: #198754FF">0.94</td><td class="text-end" style="background-color: #198754FF">46</td><td class="text-end" style="background-color: #19875484">35</td><td class="text-end" style="background-color: #198754FF">5</td><td class="text-end" style="background-color: #198754AA">11</td></tr>
+Wickets: 10" style="cursor: default" data-text="1">1.&nbsp;Scotland</td><td class="text-end" style="background-color: #1987544D">22</td><td class="text-end" style="background-color: #198754FF">0.94</td><td class="text-end" style="background-color: #198754FF">46</td><td class="text-end" style="background-color: #198754AA">11</td><td class="text-end" style="background-color: #19875484">35</td><td class="text-end" style="background-color: #198754FF">5</td></tr>
 <tr><td colspan="2" title="Games: 17
 Runs: 1939
-Wickets: 99" style="cursor: default" data-text="2">2.&nbsp;India</td><td class="text-end" style="background-color: #198754C4">20</td><td class="text-end" style="background-color: #1987549C">0.99</td><td class="text-end" style="background-color: #198754BC">45</td><td class="text-end" style="background-color: #198754FF">33</td><td class="text-end" style="background-color: #19875443">6</td><td class="text-end" style="background-color: #198754D7">11</td></tr>
+Wickets: 99" style="cursor: default" data-text="2">2.&nbsp;India</td><td class="text-end" style="background-color: #198754C4">20</td><td class="text-end" style="background-color: #1987549C">0.99</td><td class="text-end" style="background-color: #198754BC">45</td><td class="text-end" style="background-color: #198754D7">11</td><td class="text-end" style="background-color: #198754FF">33</td><td class="text-end" style="background-color: #19875443">6</td></tr>
 <tr><td colspan="2" title="Games: 14
 Runs: 1900
-Wickets: 90" style="cursor: default" data-text="3">3.&nbsp;Australia</td><td class="text-end" style="background-color: #198754FF">19</td><td class="text-end" style="background-color: #dc35458C">1.13</td><td class="text-end" style="background-color: #dc35451B">41</td><td class="text-end" style="background-color: #198754BE">34</td><td class="text-end" style="background-color: #198754DB">5</td><td class="text-end" style="background-color: #dc35459E">14</td></tr>
+Wickets: 90" style="cursor: default" data-text="3">3.&nbsp;Australia</td><td class="text-end" style="background-color: #198754FF">19</td><td class="text-end" style="background-color: #dc35458C">1.13</td><td class="text-end" style="background-color: #dc35451B">41</td><td class="text-end" style="background-color: #dc35459E">14</td><td class="text-end" style="background-color: #198754BE">34</td><td class="text-end" style="background-color: #198754DB">5</td></tr>
 <tr><td colspan="2" title="Games: 17
 Runs: 1926
-Wickets: 77" style="cursor: default" data-text="4">4.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #dc354531">25</td><td class="text-end" style="background-color: #19875475">1.01</td><td class="text-end" style="background-color: #dc35450A">42</td><td class="text-end" style="background-color: #dc35454C">39</td><td class="text-end" style="background-color: #19875415">7</td><td class="text-end" style="background-color: #198754FF">10</td></tr>
+Wickets: 77" style="cursor: default" data-text="4">4.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #dc354531">25</td><td class="text-end" style="background-color: #19875475">1.01</td><td class="text-end" style="background-color: #dc35450A">42</td><td class="text-end" style="background-color: #198754FF">10</td><td class="text-end" style="background-color: #dc35454C">39</td><td class="text-end" style="background-color: #19875415">7</td></tr>
 <tr><td colspan="2" title="Games: 15
 Runs: 1850
-Wickets: 86" style="cursor: default" data-text="5">5.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #1987549D">21</td><td class="text-end" style="background-color: #1987542D">1.04</td><td class="text-end" style="background-color: #dc3545FF">37</td><td class="text-end" style="background-color: #dc3545FF">42</td><td class="text-end" style="background-color: #198754BC">5</td><td class="text-end" style="background-color: #198754F5">11</td></tr>
+Wickets: 86" style="cursor: default" data-text="5">5.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #1987549D">21</td><td class="text-end" style="background-color: #1987542D">1.04</td><td class="text-end" style="background-color: #dc3545FF">37</td><td class="text-end" style="background-color: #198754F5">11</td><td class="text-end" style="background-color: #dc3545FF">42</td><td class="text-end" style="background-color: #198754BC">5</td></tr>
 <tr><td colspan="2" title="Games: 14
 Runs: 1786
-Wickets: 77" style="cursor: default" data-text="6">6.&nbsp;England</td><td class="text-end" style="background-color: #198754AC">20</td><td class="text-end" style="background-color: #dc35459D">1.14</td><td class="text-end" style="background-color: #dc354534">41</td><td class="text-end" style="background-color: #198754CC">34</td><td class="text-end" style="background-color: #19875443">6</td><td class="text-end" style="background-color: #dc354594">14</td></tr>
+Wickets: 77" style="cursor: default" data-text="6">6.&nbsp;England</td><td class="text-end" style="background-color: #198754AC">20</td><td class="text-end" style="background-color: #dc35459D">1.14</td><td class="text-end" style="background-color: #dc354534">41</td><td class="text-end" style="background-color: #dc354594">14</td><td class="text-end" style="background-color: #198754CC">34</td><td class="text-end" style="background-color: #19875443">6</td></tr>
 <tr><td colspan="2" title="Games: 20
 Runs: 2338
-Wickets: 88" style="cursor: default" data-text="7">7.&nbsp;South Africa</td><td class="text-end" style="background-color: #dc354541">25</td><td class="text-end" style="background-color: #19875412">1.05</td><td class="text-end" style="background-color: #dc354575">40</td><td class="text-end" style="background-color: #19875416">37</td><td class="text-end" style="background-color: #19875421">6</td><td class="text-end" style="background-color: #19875493">11</td></tr>
+Wickets: 88" style="cursor: default" data-text="7">7.&nbsp;South Africa</td><td class="text-end" style="background-color: #dc354541">25</td><td class="text-end" style="background-color: #19875412">1.05</td><td class="text-end" style="background-color: #dc354575">40</td><td class="text-end" style="background-color: #19875493">11</td><td class="text-end" style="background-color: #19875416">37</td><td class="text-end" style="background-color: #19875421">6</td></tr>
 <tr><td colspan="2" title="Games: 12
 Runs: 1583
-Wickets: 63" style="cursor: default" data-text="8">8.&nbsp;New Zealand</td><td class="text-end" style="background-color: #19875437">23</td><td class="text-end" style="background-color: #dc354554">1.10</td><td class="text-end" style="background-color: #dc354567">40</td><td class="text-end" style="background-color: #19875485">35</td><td class="text-end" style="background-color: #19875422">6</td><td class="text-end" style="background-color: #dc354525">13</td></tr>
+Wickets: 63" style="cursor: default" data-text="8">8.&nbsp;New Zealand</td><td class="text-end" style="background-color: #19875437">23</td><td class="text-end" style="background-color: #dc354554">1.10</td><td class="text-end" style="background-color: #dc354567">40</td><td class="text-end" style="background-color: #dc354525">13</td><td class="text-end" style="background-color: #19875485">35</td><td class="text-end" style="background-color: #19875422">6</td></tr>
 <tr><td colspan="2" title="Games: 17
 Runs: 2042
-Wickets: 75" style="cursor: default" data-text="9">9.&nbsp;Pakistan</td><td class="text-end" style="background-color: #dc35454F">26</td><td class="text-end" style="background-color: #dc354509">1.07</td><td class="text-end" style="background-color: #dc354563">40</td><td class="text-end" style="background-color: #1987543B">36</td><td class="text-end" style="background-color: #dc3545FF">9</td><td class="text-end" style="background-color: #1987548F">11</td></tr>
+Wickets: 75" style="cursor: default" data-text="9">9.&nbsp;Pakistan</td><td class="text-end" style="background-color: #dc35454F">26</td><td class="text-end" style="background-color: #dc354509">1.07</td><td class="text-end" style="background-color: #dc354563">40</td><td class="text-end" style="background-color: #1987548F">11</td><td class="text-end" style="background-color: #1987543B">36</td><td class="text-end" style="background-color: #dc3545FF">9</td></tr>
 <tr><td colspan="2" title="Games: 9
 Runs: 1126
-Wickets: 36" style="cursor: default" data-text="10">10.&nbsp;Ireland</td><td class="text-end" style="background-color: #dc3545FF">29</td><td class="text-end" style="background-color: #dc354517">1.07</td><td class="text-end" style="background-color: #dc3545EB">38</td><td class="text-end" style="background-color: #dc354537">38</td><td class="text-end" style="background-color: #19875473">6</td><td class="text-end" style="background-color: #19875456">12</td></tr>
+Wickets: 36" style="cursor: default" data-text="10">10.&nbsp;Ireland</td><td class="text-end" style="background-color: #dc3545FF">29</td><td class="text-end" style="background-color: #dc354517">1.07</td><td class="text-end" style="background-color: #dc3545EB">38</td><td class="text-end" style="background-color: #19875456">12</td><td class="text-end" style="background-color: #dc354537">38</td><td class="text-end" style="background-color: #19875473">6</td></tr>
 <tr><td colspan="2" title="Games: 14
 Runs: 1900
-Wickets: 61" style="cursor: default" data-text="11">11.&nbsp;West Indies</td><td class="text-end" style="background-color: #dc354571">26</td><td class="text-end" style="background-color: #dc3545FF">1.19</td><td class="text-end" style="background-color: #dc3545CE">38</td><td class="text-end" style="background-color: #198754A3">34</td><td class="text-end" style="background-color: #dc354528">7</td><td class="text-end" style="background-color: #dc3545FF">15</td></tr>
+Wickets: 61" style="cursor: default" data-text="11">11.&nbsp;West Indies</td><td class="text-end" style="background-color: #dc354571">26</td><td class="text-end" style="background-color: #dc3545FF">1.19</td><td class="text-end" style="background-color: #dc3545CE">38</td><td class="text-end" style="background-color: #dc3545FF">15</td><td class="text-end" style="background-color: #198754A3">34</td><td class="text-end" style="background-color: #dc354528">7</td></tr>
 </tbody>
 </table>
 <h2>2022</h2>
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
-<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th><th class="text-end">Boundary %</th>
+<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Boundary %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th>
 </tr>
 </thead>
 <tbody>
 <tr><td colspan="2" title="Games: 15
 Runs: 1494
-Wickets: 95" style="cursor: default" data-text="1">1.&nbsp;New Zealand</td><td class="text-end" style="background-color: #198754FF">18</td><td class="text-end" style="background-color: #198754FF">0.89</td><td class="text-end" style="background-color: #198754FF">46</td><td class="text-end" style="background-color: #1987548D">33</td><td class="text-end" style="background-color: #198754D3">6</td><td class="text-end" style="background-color: #198754FF">9</td></tr>
+Wickets: 95" style="cursor: default" data-text="1">1.&nbsp;New Zealand</td><td class="text-end" style="background-color: #198754FF">18</td><td class="text-end" style="background-color: #198754FF">0.89</td><td class="text-end" style="background-color: #198754FF">46</td><td class="text-end" style="background-color: #198754FF">9</td><td class="text-end" style="background-color: #1987548D">33</td><td class="text-end" style="background-color: #198754D3">6</td></tr>
 <tr><td colspan="2" title="Games: 17
 Runs: 2055
-Wickets: 102" style="cursor: default" data-text="2">2.&nbsp;England</td><td class="text-end" style="background-color: #198754D9">20</td><td class="text-end" style="background-color: #19875422">1.03</td><td class="text-end" style="background-color: #1987545D">44</td><td class="text-end" style="background-color: #198754E0">31</td><td class="text-end" style="background-color: #dc354524">7</td><td class="text-end" style="background-color: #1987543F">12</td></tr>
+Wickets: 102" style="cursor: default" data-text="2">2.&nbsp;England</td><td class="text-end" style="background-color: #198754D9">20</td><td class="text-end" style="background-color: #19875422">1.03</td><td class="text-end" style="background-color: #1987545D">44</td><td class="text-end" style="background-color: #1987543F">12</td><td class="text-end" style="background-color: #198754E0">31</td><td class="text-end" style="background-color: #dc354524">7</td></tr>
 <tr><td colspan="2" title="Games: 14
 Runs: 1540
-Wickets: 64" style="cursor: default" data-text="3">3.&nbsp;Pakistan</td><td class="text-end" style="background-color: #19875488">24</td><td class="text-end" style="background-color: #19875437">1.02</td><td class="text-end" style="background-color: #dc354536">41</td><td class="text-end" style="background-color: #dc354532">37</td><td class="text-end" style="background-color: #19875409">7</td><td class="text-end" style="background-color: #19875487">11</td></tr>
+Wickets: 64" style="cursor: default" data-text="3">3.&nbsp;Pakistan</td><td class="text-end" style="background-color: #19875488">24</td><td class="text-end" style="background-color: #19875437">1.02</td><td class="text-end" style="background-color: #dc354536">41</td><td class="text-end" style="background-color: #19875487">11</td><td class="text-end" style="background-color: #dc354532">37</td><td class="text-end" style="background-color: #19875409">7</td></tr>
 <tr><td colspan="2" title="Games: 16
 Runs: 1981
-Wickets: 90" style="cursor: default" data-text="4">4.&nbsp;Australia</td><td class="text-end" style="background-color: #198754E2">19</td><td class="text-end" style="background-color: #dc3545A0">1.16</td><td class="text-end" style="background-color: #dc354574">40</td><td class="text-end" style="background-color: #19875442">35</td><td class="text-end" style="background-color: #198754FF">5</td><td class="text-end" style="background-color: #dc354559">14</td></tr>
+Wickets: 90" style="cursor: default" data-text="4">4.&nbsp;Australia</td><td class="text-end" style="background-color: #198754E2">19</td><td class="text-end" style="background-color: #dc3545A0">1.16</td><td class="text-end" style="background-color: #dc354574">40</td><td class="text-end" style="background-color: #dc354559">14</td><td class="text-end" style="background-color: #19875442">35</td><td class="text-end" style="background-color: #198754FF">5</td></tr>
 <tr><td colspan="2" title="Games: 9
 Runs: 1174
-Wickets: 47" style="cursor: default" data-text="5">5.&nbsp;South Africa</td><td class="text-end" style="background-color: #198754A0">22</td><td class="text-end" style="background-color: #dc354563">1.12</td><td class="text-end" style="background-color: #dc35456E">40</td><td class="text-end" style="background-color: #1987543B">35</td><td class="text-end" style="background-color: #198754A5">6</td><td class="text-end" style="background-color: #dc35455C">14</td></tr>
+Wickets: 47" style="cursor: default" data-text="5">5.&nbsp;South Africa</td><td class="text-end" style="background-color: #198754A0">22</td><td class="text-end" style="background-color: #dc354563">1.12</td><td class="text-end" style="background-color: #dc35456E">40</td><td class="text-end" style="background-color: #dc35455C">14</td><td class="text-end" style="background-color: #1987543B">35</td><td class="text-end" style="background-color: #198754A5">6</td></tr>
 <tr><td colspan="2" title="Games: 16
 Runs: 1706
-Wickets: 70" style="cursor: default" data-text="6">6.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #1987548C">23</td><td class="text-end" style="background-color: #19875412">1.04</td><td class="text-end" style="background-color: #dc3545F2">38</td><td class="text-end" style="background-color: #dc3545FF">41</td><td class="text-end" style="background-color: #198754DC">6</td><td class="text-end" style="background-color: #19875478">11</td></tr>
+Wickets: 70" style="cursor: default" data-text="6">6.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #1987548C">23</td><td class="text-end" style="background-color: #19875412">1.04</td><td class="text-end" style="background-color: #dc3545F2">38</td><td class="text-end" style="background-color: #19875478">11</td><td class="text-end" style="background-color: #dc3545FF">41</td><td class="text-end" style="background-color: #198754DC">6</td></tr>
 <tr><td colspan="2" title="Games: 11
 Runs: 1310
-Wickets: 60" style="cursor: default" data-text="7">7.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #198754B9">21</td><td class="text-end" style="background-color: #19875420">1.03</td><td class="text-end" style="background-color: #dc35455B">40</td><td class="text-end" style="background-color: #dc35452F">37</td><td class="text-end" style="background-color: #dc3545FF">9</td><td class="text-end" style="background-color: #1987548D">11</td></tr>
+Wickets: 60" style="cursor: default" data-text="7">7.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #198754B9">21</td><td class="text-end" style="background-color: #19875420">1.03</td><td class="text-end" style="background-color: #dc35455B">40</td><td class="text-end" style="background-color: #1987548D">11</td><td class="text-end" style="background-color: #dc35452F">37</td><td class="text-end" style="background-color: #dc3545FF">9</td></tr>
 <tr><td colspan="2" title="Games: 11
 Runs: 1126
-Wickets: 41" style="cursor: default" data-text="8">8.&nbsp;West Indies</td><td class="text-end" style="background-color: #19875447">27</td><td class="text-end" style="background-color: #19875431">1.02</td><td class="text-end" style="background-color: #dc354582">40</td><td class="text-end" style="background-color: #dc354544">37</td><td class="text-end" style="background-color: #dc3545BF">8</td><td class="text-end" style="background-color: #198754C1">10</td></tr>
+Wickets: 41" style="cursor: default" data-text="8">8.&nbsp;West Indies</td><td class="text-end" style="background-color: #19875447">27</td><td class="text-end" style="background-color: #19875431">1.02</td><td class="text-end" style="background-color: #dc354582">40</td><td class="text-end" style="background-color: #198754C1">10</td><td class="text-end" style="background-color: #dc354544">37</td><td class="text-end" style="background-color: #dc3545BF">8</td></tr>
 <tr><td colspan="2" title="Games: 14
 Runs: 1781
-Wickets: 62" style="cursor: default" data-text="9">9.&nbsp;Ireland</td><td class="text-end" style="background-color: #19875464">25</td><td class="text-end" style="background-color: #dc35457A">1.13</td><td class="text-end" style="background-color: #dc3545FF">38</td><td class="text-end" style="background-color: #dc354530">37</td><td class="text-end" style="background-color: #1987546E">6</td><td class="text-end" style="background-color: #dc35453D">14</td></tr>
+Wickets: 62" style="cursor: default" data-text="9">9.&nbsp;Ireland</td><td class="text-end" style="background-color: #19875464">25</td><td class="text-end" style="background-color: #dc35457A">1.13</td><td class="text-end" style="background-color: #dc3545FF">38</td><td class="text-end" style="background-color: #dc35453D">14</td><td class="text-end" style="background-color: #dc354530">37</td><td class="text-end" style="background-color: #1987546E">6</td></tr>
 <tr><td colspan="2" title="Games: 21
 Runs: 2847
-Wickets: 95" style="cursor: default" data-text="10">10.&nbsp;India</td><td class="text-end" style="background-color: #1987546F">25</td><td class="text-end" style="background-color: #dc3545F2">1.21</td><td class="text-end" style="background-color: #dc3545C3">39</td><td class="text-end" style="background-color: #19875415">36</td><td class="text-end" style="background-color: #19875447">7</td><td class="text-end" style="background-color: #dc3545C7">16</td></tr>
+Wickets: 95" style="cursor: default" data-text="10">10.&nbsp;India</td><td class="text-end" style="background-color: #1987546F">25</td><td class="text-end" style="background-color: #dc3545F2">1.21</td><td class="text-end" style="background-color: #dc3545C3">39</td><td class="text-end" style="background-color: #dc3545C7">16</td><td class="text-end" style="background-color: #19875415">36</td><td class="text-end" style="background-color: #19875447">7</td></tr>
 <tr><td colspan="2" title="Games: 6
 Runs: 683
-Wickets: 13" style="cursor: default" data-text="11">11.&nbsp;Scotland</td><td class="text-end" style="background-color: #dc3545FF">43</td><td class="text-end" style="background-color: #dc3545FF">1.22</td><td class="text-end" style="background-color: #dc354556">41</td><td class="text-end" style="background-color: #198754FF">31</td><td class="text-end" style="background-color: #19875414">7</td><td class="text-end" style="background-color: #dc3545FF">16</td></tr>
+Wickets: 13" style="cursor: default" data-text="11">11.&nbsp;Scotland</td><td class="text-end" style="background-color: #dc3545FF">43</td><td class="text-end" style="background-color: #dc3545FF">1.22</td><td class="text-end" style="background-color: #dc354556">41</td><td class="text-end" style="background-color: #dc3545FF">16</td><td class="text-end" style="background-color: #198754FF">31</td><td class="text-end" style="background-color: #19875414">7</td></tr>
 </tbody>
 </table>
 <h2>2021</h2>
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
-<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th><th class="text-end">Boundary %</th>
+<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Boundary %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th>
 </tr>
 </thead>
 <tbody>
 <tr><td colspan="2" title="Games: 5
 Runs: 447
-Wickets: 38" style="cursor: default" data-text="1">1.&nbsp;Ireland</td><td class="text-end" style="background-color: #198754FF">16</td><td class="text-end" style="background-color: #198754FF">0.75</td><td class="text-end" style="background-color: #198754FF">54</td><td class="text-end" style="background-color: #198754FF">29</td><td class="text-end" style="background-color: #198754B2">5</td><td class="text-end" style="background-color: #198754FF">7</td></tr>
+Wickets: 38" style="cursor: default" data-text="1">1.&nbsp;Ireland</td><td class="text-end" style="background-color: #198754FF">16</td><td class="text-end" style="background-color: #198754FF">0.75</td><td class="text-end" style="background-color: #198754FF">54</td><td class="text-end" style="background-color: #198754FF">7</td><td class="text-end" style="background-color: #198754FF">29</td><td class="text-end" style="background-color: #198754B2">5</td></tr>
 <tr><td colspan="2" title="Games: 5
 Runs: 537
-Wickets: 30" style="cursor: default" data-text="2">2.&nbsp;Scotland</td><td class="text-end" style="background-color: #19875470">19</td><td class="text-end" style="background-color: #19875439">0.92</td><td class="text-end" style="background-color: #1987540B">45</td><td class="text-end" style="background-color: #19875470">33</td><td class="text-end" style="background-color: #dc354577">9</td><td class="text-end" style="background-color: #198754A0">8</td></tr>
+Wickets: 30" style="cursor: default" data-text="2">2.&nbsp;Scotland</td><td class="text-end" style="background-color: #19875470">19</td><td class="text-end" style="background-color: #19875439">0.92</td><td class="text-end" style="background-color: #1987540B">45</td><td class="text-end" style="background-color: #198754A0">8</td><td class="text-end" style="background-color: #19875470">33</td><td class="text-end" style="background-color: #dc354577">9</td></tr>
 <tr><td colspan="2" title="Games: 6
 Runs: 711
-Wickets: 30" style="cursor: default" data-text="3">3.&nbsp;West Indies</td><td class="text-end" style="background-color: #dc35454A">24</td><td class="text-end" style="background-color: #dc354502">0.97</td><td class="text-end" style="background-color: #19875412">45</td><td class="text-end" style="background-color: #19875450">33</td><td class="text-end" style="background-color: #19875456">6</td><td class="text-end" style="background-color: #19875416">10</td></tr>
+Wickets: 30" style="cursor: default" data-text="3">3.&nbsp;West Indies</td><td class="text-end" style="background-color: #dc35454A">24</td><td class="text-end" style="background-color: #dc354502">0.97</td><td class="text-end" style="background-color: #19875412">45</td><td class="text-end" style="background-color: #19875416">10</td><td class="text-end" style="background-color: #19875450">33</td><td class="text-end" style="background-color: #19875456">6</td></tr>
 <tr><td colspan="2" title="Games: 9
 Runs: 1080
-Wickets: 59" style="cursor: default" data-text="4">4.&nbsp;England</td><td class="text-end" style="background-color: #198754C6">17</td><td class="text-end" style="background-color: #dc354576">1.07</td><td class="text-end" style="background-color: #dc354545">42</td><td class="text-end" style="background-color: #19875402">35</td><td class="text-end" style="background-color: #198754A9">5</td><td class="text-end" style="background-color: #dc354575">13</td></tr>
+Wickets: 59" style="cursor: default" data-text="4">4.&nbsp;England</td><td class="text-end" style="background-color: #198754C6">17</td><td class="text-end" style="background-color: #dc354576">1.07</td><td class="text-end" style="background-color: #dc354545">42</td><td class="text-end" style="background-color: #dc354575">13</td><td class="text-end" style="background-color: #19875402">35</td><td class="text-end" style="background-color: #198754A9">5</td></tr>
 <tr><td colspan="2" title="Games: 5
 Runs: 645
-Wickets: 28" style="cursor: default" data-text="5">5.&nbsp;Australia</td><td class="text-end" style="background-color: #19875431">21</td><td class="text-end" style="background-color: #dc354590">1.09</td><td class="text-end" style="background-color: #dc354574">41</td><td class="text-end" style="background-color: #dc354564">38</td><td class="text-end" style="background-color: #198754FF">4</td><td class="text-end" style="background-color: #dc35459D">13</td></tr>
+Wickets: 28" style="cursor: default" data-text="5">5.&nbsp;Australia</td><td class="text-end" style="background-color: #19875431">21</td><td class="text-end" style="background-color: #dc354590">1.09</td><td class="text-end" style="background-color: #dc354574">41</td><td class="text-end" style="background-color: #dc35459D">13</td><td class="text-end" style="background-color: #dc354564">38</td><td class="text-end" style="background-color: #198754FF">4</td></tr>
 <tr><td colspan="2" title="Games: 6
 Runs: 693
-Wickets: 26" style="cursor: default" data-text="6">6.&nbsp;Pakistan</td><td class="text-end" style="background-color: #dc35459C">27</td><td class="text-end" style="background-color: #dc354528">1.00</td><td class="text-end" style="background-color: #dc35452D">43</td><td class="text-end" style="background-color: #1987547E">32</td><td class="text-end" style="background-color: #dc3545FF">11</td><td class="text-end" style="background-color: #19875471">9</td></tr>
+Wickets: 26" style="cursor: default" data-text="6">6.&nbsp;Pakistan</td><td class="text-end" style="background-color: #dc35459C">27</td><td class="text-end" style="background-color: #dc354528">1.00</td><td class="text-end" style="background-color: #dc35452D">43</td><td class="text-end" style="background-color: #19875471">9</td><td class="text-end" style="background-color: #1987547E">32</td><td class="text-end" style="background-color: #dc3545FF">11</td></tr>
 <tr><td colspan="2" title="Games: 9
 Runs: 985
-Wickets: 43" style="cursor: default" data-text="7">7.&nbsp;South Africa</td><td class="text-end" style="background-color: #1987543B">21</td><td class="text-end" style="background-color: #dc354599">1.10</td><td class="text-end" style="background-color: #dc3545A3">39</td><td class="text-end" style="background-color: #dc354566">38</td><td class="text-end" style="background-color: #19875417">7</td><td class="text-end" style="background-color: #dc354562">12</td></tr>
+Wickets: 43" style="cursor: default" data-text="7">7.&nbsp;South Africa</td><td class="text-end" style="background-color: #1987543B">21</td><td class="text-end" style="background-color: #dc354599">1.10</td><td class="text-end" style="background-color: #dc3545A3">39</td><td class="text-end" style="background-color: #dc354562">12</td><td class="text-end" style="background-color: #dc354566">38</td><td class="text-end" style="background-color: #19875417">7</td></tr>
 <tr><td colspan="2" title="Games: 9
 Runs: 1083
-Wickets: 38" style="cursor: default" data-text="8">8.&nbsp;New Zealand</td><td class="text-end" style="background-color: #dc354562">25</td><td class="text-end" style="background-color: #dc3545C8">1.14</td><td class="text-end" style="background-color: #dc3545BC">38</td><td class="text-end" style="background-color: #dc35451D">36</td><td class="text-end" style="background-color: #dc354594">9</td><td class="text-end" style="background-color: #dc354585">13</td></tr>
+Wickets: 38" style="cursor: default" data-text="8">8.&nbsp;New Zealand</td><td class="text-end" style="background-color: #dc354562">25</td><td class="text-end" style="background-color: #dc3545C8">1.14</td><td class="text-end" style="background-color: #dc3545BC">38</td><td class="text-end" style="background-color: #dc354585">13</td><td class="text-end" style="background-color: #dc35451D">36</td><td class="text-end" style="background-color: #dc354594">9</td></tr>
 <tr><td colspan="2" title="Games: 8
 Runs: 1143
-Wickets: 33" style="cursor: default" data-text="9">9.&nbsp;India</td><td class="text-end" style="background-color: #dc3545FF">29</td><td class="text-end" style="background-color: #dc3545FF">1.18</td><td class="text-end" style="background-color: #dc3545FF">36</td><td class="text-end" style="background-color: #dc3545FF">41</td><td class="text-end" style="background-color: #198754B6">5</td><td class="text-end" style="background-color: #dc3545FF">15</td></tr>
+Wickets: 33" style="cursor: default" data-text="9">9.&nbsp;India</td><td class="text-end" style="background-color: #dc3545FF">29</td><td class="text-end" style="background-color: #dc3545FF">1.18</td><td class="text-end" style="background-color: #dc3545FF">36</td><td class="text-end" style="background-color: #dc3545FF">15</td><td class="text-end" style="background-color: #dc3545FF">41</td><td class="text-end" style="background-color: #198754B6">5</td></tr>
 </tbody>
 </table>
 <h2>2020</h2>
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
-<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th><th class="text-end">Boundary %</th>
+<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Boundary %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th>
 </tr>
 </thead>
 <tbody>
 <tr><td colspan="2" title="Games: 13
 Runs: 1423
-Wickets: 73" style="cursor: default" data-text="1">1.&nbsp;England</td><td class="text-end" style="background-color: #198754EE">19</td><td class="text-end" style="background-color: #198754FF">1.03</td><td class="text-end" style="background-color: #198754FF">44</td><td class="text-end" style="background-color: #198754FF">33</td><td class="text-end" style="background-color: #1987547B">6</td><td class="text-end" style="background-color: #198754CF">12</td></tr>
+Wickets: 73" style="cursor: default" data-text="1">1.&nbsp;England</td><td class="text-end" style="background-color: #198754EE">19</td><td class="text-end" style="background-color: #198754FF">1.03</td><td class="text-end" style="background-color: #198754FF">44</td><td class="text-end" style="background-color: #198754CF">12</td><td class="text-end" style="background-color: #198754FF">33</td><td class="text-end" style="background-color: #1987547B">6</td></tr>
 <tr><td colspan="2" title="Games: 11
 Runs: 1370
-Wickets: 68" style="cursor: default" data-text="2">2.&nbsp;New Zealand</td><td class="text-end" style="background-color: #198754D8">19</td><td class="text-end" style="background-color: #198754ED">1.04</td><td class="text-end" style="background-color: #19875475">41</td><td class="text-end" style="background-color: #dc354558">38</td><td class="text-end" style="background-color: #198754FF">4</td><td class="text-end" style="background-color: #198754A4">12</td></tr>
+Wickets: 68" style="cursor: default" data-text="2">2.&nbsp;New Zealand</td><td class="text-end" style="background-color: #198754D8">19</td><td class="text-end" style="background-color: #198754ED">1.04</td><td class="text-end" style="background-color: #19875475">41</td><td class="text-end" style="background-color: #198754A4">12</td><td class="text-end" style="background-color: #dc354558">38</td><td class="text-end" style="background-color: #198754FF">4</td></tr>
 <tr><td colspan="2" title="Games: 15
 Runs: 1779
-Wickets: 91" style="cursor: default" data-text="3">3.&nbsp;Australia</td><td class="text-end" style="background-color: #198754FF">18</td><td class="text-end" style="background-color: #198754BA">1.06</td><td class="text-end" style="background-color: #1987540D">40</td><td class="text-end" style="background-color: #dc3545DB">40</td><td class="text-end" style="background-color: #198754F0">4</td><td class="text-end" style="background-color: #19875474">12</td></tr>
+Wickets: 91" style="cursor: default" data-text="3">3.&nbsp;Australia</td><td class="text-end" style="background-color: #198754FF">18</td><td class="text-end" style="background-color: #198754BA">1.06</td><td class="text-end" style="background-color: #1987540D">40</td><td class="text-end" style="background-color: #19875474">12</td><td class="text-end" style="background-color: #dc3545DB">40</td><td class="text-end" style="background-color: #198754F0">4</td></tr>
 <tr><td colspan="2" title="Games: 4
 Runs: 461
-Wickets: 16" style="cursor: default" data-text="4">4.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #dc354590">28</td><td class="text-end" style="background-color: #198754EB">1.04</td><td class="text-end" style="background-color: #19875415">40</td><td class="text-end" style="background-color: #dc3545FF">40</td><td class="text-end" style="background-color: #19875486">5</td><td class="text-end" style="background-color: #198754FF">11</td></tr>
+Wickets: 16" style="cursor: default" data-text="4">4.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #dc354590">28</td><td class="text-end" style="background-color: #198754EB">1.04</td><td class="text-end" style="background-color: #19875415">40</td><td class="text-end" style="background-color: #198754FF">11</td><td class="text-end" style="background-color: #dc3545FF">40</td><td class="text-end" style="background-color: #19875486">5</td></tr>
 <tr><td colspan="2" title="Games: 3
 Runs: 418
-Wickets: 20" style="cursor: default" data-text="5">5.&nbsp;Pakistan</td><td class="text-end" style="background-color: #198754F5">19</td><td class="text-end" style="background-color: #1987541B">1.12</td><td class="text-end" style="background-color: #dc35453E">38</td><td class="text-end" style="background-color: #dc35451C">37</td><td class="text-end" style="background-color: #dc354542">7</td><td class="text-end" style="background-color: #19875422">13</td></tr>
+Wickets: 20" style="cursor: default" data-text="5">5.&nbsp;Pakistan</td><td class="text-end" style="background-color: #198754F5">19</td><td class="text-end" style="background-color: #1987541B">1.12</td><td class="text-end" style="background-color: #dc35453E">38</td><td class="text-end" style="background-color: #19875422">13</td><td class="text-end" style="background-color: #dc35451C">37</td><td class="text-end" style="background-color: #dc354542">7</td></tr>
 <tr><td colspan="2" title="Games: 10
 Runs: 1369
-Wickets: 62" style="cursor: default" data-text="6">6.&nbsp;India</td><td class="text-end" style="background-color: #198754D9">19</td><td class="text-end" style="background-color: #dc354526">1.14</td><td class="text-end" style="background-color: #1987542B">40</td><td class="text-end" style="background-color: #1987540E">37</td><td class="text-end" style="background-color: #dc354534">7</td><td class="text-end" style="background-color: #dc3545B6">14</td></tr>
+Wickets: 62" style="cursor: default" data-text="6">6.&nbsp;India</td><td class="text-end" style="background-color: #198754D9">19</td><td class="text-end" style="background-color: #dc354526">1.14</td><td class="text-end" style="background-color: #1987542B">40</td><td class="text-end" style="background-color: #dc3545B6">14</td><td class="text-end" style="background-color: #1987540E">37</td><td class="text-end" style="background-color: #dc354534">7</td></tr>
 <tr><td colspan="2" title="Games: 7
 Runs: 937
-Wickets: 27" style="cursor: default" data-text="7">7.&nbsp;South Africa</td><td class="text-end" style="background-color: #dc3545FF">30</td><td class="text-end" style="background-color: #dc354533">1.15</td><td class="text-end" style="background-color: #dc354540">38</td><td class="text-end" style="background-color: #1987544F">36</td><td class="text-end" style="background-color: #dc35455E">7</td><td class="text-end" style="background-color: #19875454">12</td></tr>
+Wickets: 27" style="cursor: default" data-text="7">7.&nbsp;South Africa</td><td class="text-end" style="background-color: #dc3545FF">30</td><td class="text-end" style="background-color: #dc354533">1.15</td><td class="text-end" style="background-color: #dc354540">38</td><td class="text-end" style="background-color: #19875454">12</td><td class="text-end" style="background-color: #1987544F">36</td><td class="text-end" style="background-color: #dc35455E">7</td></tr>
 <tr><td colspan="2" title="Games: 4
 Runs: 514
-Wickets: 15" style="cursor: default" data-text="8">8.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #dc3545FC">30</td><td class="text-end" style="background-color: #dc354512">1.13</td><td class="text-end" style="background-color: #dc35450F">39</td><td class="text-end" style="background-color: #dc354537">38</td><td class="text-end" style="background-color: #19875418">6</td><td class="text-end" style="background-color: #dc354538">13</td></tr>
+Wickets: 15" style="cursor: default" data-text="8">8.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #dc3545FC">30</td><td class="text-end" style="background-color: #dc354512">1.13</td><td class="text-end" style="background-color: #dc35450F">39</td><td class="text-end" style="background-color: #dc354538">13</td><td class="text-end" style="background-color: #dc354537">38</td><td class="text-end" style="background-color: #19875418">6</td></tr>
 <tr><td colspan="2" title="Games: 7
 Runs: 946
-Wickets: 35" style="cursor: default" data-text="9">9.&nbsp;West Indies</td><td class="text-end" style="background-color: #19875461">22</td><td class="text-end" style="background-color: #dc3545FF">1.22</td><td class="text-end" style="background-color: #dc3545FF">35</td><td class="text-end" style="background-color: #1987544C">36</td><td class="text-end" style="background-color: #dc3545FF">9</td><td class="text-end" style="background-color: #dc3545FF">15</td></tr>
+Wickets: 35" style="cursor: default" data-text="9">9.&nbsp;West Indies</td><td class="text-end" style="background-color: #19875461">22</td><td class="text-end" style="background-color: #dc3545FF">1.22</td><td class="text-end" style="background-color: #dc3545FF">35</td><td class="text-end" style="background-color: #dc3545FF">15</td><td class="text-end" style="background-color: #1987544C">36</td><td class="text-end" style="background-color: #dc3545FF">9</td></tr>
 </tbody>
 </table>
 <h2>2019</h2>
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
-<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th><th class="text-end">Boundary %</th>
+<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Boundary %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th>
 </tr>
 </thead>
 <tbody>
 <tr><td colspan="2" title="Games: 3
 Runs: 260
-Wickets: 17" style="cursor: default" data-text="1">1.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #198754FF">17</td><td class="text-end" style="background-color: #198754FF">0.89</td><td class="text-end" style="background-color: #198754FF">50</td><td class="text-end" style="background-color: #198754FF">32</td><td class="text-end" style="background-color: #198754BE">5</td><td class="text-end" style="background-color: #198754D7">10</td></tr>
+Wickets: 17" style="cursor: default" data-text="1">1.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #198754FF">17</td><td class="text-end" style="background-color: #198754FF">0.89</td><td class="text-end" style="background-color: #198754FF">50</td><td class="text-end" style="background-color: #198754D7">10</td><td class="text-end" style="background-color: #198754FF">32</td><td class="text-end" style="background-color: #198754BE">5</td></tr>
 <tr><td colspan="2" title="Games: 9
 Runs: 1031
-Wickets: 57" style="cursor: default" data-text="2">2.&nbsp;Australia</td><td class="text-end" style="background-color: #198754D1">20</td><td class="text-end" style="background-color: #198754DF">0.93</td><td class="text-end" style="background-color: #198754A0">46</td><td class="text-end" style="background-color: #19875466">35</td><td class="text-end" style="background-color: #198754FF">4</td><td class="text-end" style="background-color: #198754F4">10</td></tr>
+Wickets: 57" style="cursor: default" data-text="2">2.&nbsp;Australia</td><td class="text-end" style="background-color: #198754D1">20</td><td class="text-end" style="background-color: #198754DF">0.93</td><td class="text-end" style="background-color: #198754A0">46</td><td class="text-end" style="background-color: #198754F4">10</td><td class="text-end" style="background-color: #19875466">35</td><td class="text-end" style="background-color: #198754FF">4</td></tr>
 <tr><td colspan="2" title="Games: 13
 Runs: 1636
-Wickets: 83" style="cursor: default" data-text="3">3.&nbsp;England</td><td class="text-end" style="background-color: #198754DA">19</td><td class="text-end" style="background-color: #1987547D">1.04</td><td class="text-end" style="background-color: #1987546D">44</td><td class="text-end" style="background-color: #19875463">35</td><td class="text-end" style="background-color: #198754FB">4</td><td class="text-end" style="background-color: #1987548D">12</td></tr>
+Wickets: 83" style="cursor: default" data-text="3">3.&nbsp;England</td><td class="text-end" style="background-color: #198754DA">19</td><td class="text-end" style="background-color: #1987547D">1.04</td><td class="text-end" style="background-color: #1987546D">44</td><td class="text-end" style="background-color: #1987548D">12</td><td class="text-end" style="background-color: #19875463">35</td><td class="text-end" style="background-color: #198754FB">4</td></tr>
 <tr><td colspan="2" title="Games: 11
 Runs: 1337
-Wickets: 64" style="cursor: default" data-text="4">4.&nbsp;South Africa</td><td class="text-end" style="background-color: #198754C2">20</td><td class="text-end" style="background-color: #19875482">1.03</td><td class="text-end" style="background-color: #19875480">45</td><td class="text-end" style="background-color: #198754F0">32</td><td class="text-end" style="background-color: #1987548B">6</td><td class="text-end" style="background-color: #1987545E">13</td></tr>
+Wickets: 64" style="cursor: default" data-text="4">4.&nbsp;South Africa</td><td class="text-end" style="background-color: #198754C2">20</td><td class="text-end" style="background-color: #19875482">1.03</td><td class="text-end" style="background-color: #19875480">45</td><td class="text-end" style="background-color: #1987545E">13</td><td class="text-end" style="background-color: #198754F0">32</td><td class="text-end" style="background-color: #1987548B">6</td></tr>
 <tr><td colspan="2" title="Games: 15
 Runs: 1711
-Wickets: 91" style="cursor: default" data-text="5">5.&nbsp;India</td><td class="text-end" style="background-color: #198754D8">19</td><td class="text-end" style="background-color: #198754AD">0.98</td><td class="text-end" style="background-color: #19875463">44</td><td class="text-end" style="background-color: #19875438">36</td><td class="text-end" style="background-color: #19875493">6</td><td class="text-end" style="background-color: #198754B9">11</td></tr>
+Wickets: 91" style="cursor: default" data-text="5">5.&nbsp;India</td><td class="text-end" style="background-color: #198754D8">19</td><td class="text-end" style="background-color: #198754AD">0.98</td><td class="text-end" style="background-color: #19875463">44</td><td class="text-end" style="background-color: #198754B9">11</td><td class="text-end" style="background-color: #19875438">36</td><td class="text-end" style="background-color: #19875493">6</td></tr>
 <tr><td colspan="2" title="Games: 6
 Runs: 801
-Wickets: 25" style="cursor: default" data-text="6">6.&nbsp;Ireland</td><td class="text-end" style="background-color: #dc354504">30</td><td class="text-end" style="background-color: #1987546A">1.06</td><td class="text-end" style="background-color: #19875448">42</td><td class="text-end" style="background-color: #198754E4">32</td><td class="text-end" style="background-color: #1987542B">7</td><td class="text-end" style="background-color: #198754A0">11</td></tr>
+Wickets: 25" style="cursor: default" data-text="6">6.&nbsp;Ireland</td><td class="text-end" style="background-color: #dc354504">30</td><td class="text-end" style="background-color: #1987546A">1.06</td><td class="text-end" style="background-color: #19875448">42</td><td class="text-end" style="background-color: #198754A0">11</td><td class="text-end" style="background-color: #198754E4">32</td><td class="text-end" style="background-color: #1987542B">7</td></tr>
 <tr><td colspan="2" title="Games: 16
 Runs: 1677
-Wickets: 63" style="cursor: default" data-text="7">7.&nbsp;West Indies</td><td class="text-end" style="background-color: #19875465">25</td><td class="text-end" style="background-color: #19875463">1.06</td><td class="text-end" style="background-color: #19875423">41</td><td class="text-end" style="background-color: #1987546A">35</td><td class="text-end" style="background-color: #dc35451F">8</td><td class="text-end" style="background-color: #19875488">12</td></tr>
+Wickets: 63" style="cursor: default" data-text="7">7.&nbsp;West Indies</td><td class="text-end" style="background-color: #19875465">25</td><td class="text-end" style="background-color: #19875463">1.06</td><td class="text-end" style="background-color: #19875423">41</td><td class="text-end" style="background-color: #19875488">12</td><td class="text-end" style="background-color: #1987546A">35</td><td class="text-end" style="background-color: #dc35451F">8</td></tr>
 <tr><td colspan="2" title="Games: 3
 Runs: 328
-Wickets: 9" style="cursor: default" data-text="8">8.&nbsp;Scotland</td><td class="text-end" style="background-color: #dc354562">35</td><td class="text-end" style="background-color: #1987547B">1.04</td><td class="text-end" style="background-color: #dc354515">38</td><td class="text-end" style="background-color: #19875444">36</td><td class="text-end" style="background-color: #dc3545FF">11</td><td class="text-end" style="background-color: #198754FF">9</td></tr>
+Wickets: 9" style="cursor: default" data-text="8">8.&nbsp;Scotland</td><td class="text-end" style="background-color: #dc354562">35</td><td class="text-end" style="background-color: #1987547B">1.04</td><td class="text-end" style="background-color: #dc354515">38</td><td class="text-end" style="background-color: #198754FF">9</td><td class="text-end" style="background-color: #19875444">36</td><td class="text-end" style="background-color: #dc3545FF">11</td></tr>
 <tr><td colspan="2" title="Games: 13
 Runs: 1756
-Wickets: 51" style="cursor: default" data-text="9">9.&nbsp;Pakistan</td><td class="text-end" style="background-color: #19875422">28</td><td class="text-end" style="background-color: #dc354522">1.21</td><td class="text-end" style="background-color: #dc354517">38</td><td class="text-end" style="background-color: #1987542D">37</td><td class="text-end" style="background-color: #19875458">6</td><td class="text-end" style="background-color: #dc35452D">15</td></tr>
+Wickets: 51" style="cursor: default" data-text="9">9.&nbsp;Pakistan</td><td class="text-end" style="background-color: #19875422">28</td><td class="text-end" style="background-color: #dc354522">1.21</td><td class="text-end" style="background-color: #dc354517">38</td><td class="text-end" style="background-color: #dc35452D">15</td><td class="text-end" style="background-color: #1987542D">37</td><td class="text-end" style="background-color: #19875458">6</td></tr>
 <tr><td colspan="2" title="Games: 3
 Runs: 430
-Wickets: 19" style="cursor: default" data-text="10">10.&nbsp;New Zealand</td><td class="text-end" style="background-color: #198754DA">19</td><td class="text-end" style="background-color: #dc35450C">1.19</td><td class="text-end" style="background-color: #dc354572">34</td><td class="text-end" style="background-color: #dc3545FF">43</td><td class="text-end" style="background-color: #19875489">6</td><td class="text-end" style="background-color: #19875413">14</td></tr>
+Wickets: 19" style="cursor: default" data-text="10">10.&nbsp;New Zealand</td><td class="text-end" style="background-color: #198754DA">19</td><td class="text-end" style="background-color: #dc35450C">1.19</td><td class="text-end" style="background-color: #dc354572">34</td><td class="text-end" style="background-color: #19875413">14</td><td class="text-end" style="background-color: #dc3545FF">43</td><td class="text-end" style="background-color: #19875489">6</td></tr>
 <tr><td colspan="2" title="Games: 8
 Runs: 1195
-Wickets: 19" style="cursor: default" data-text="11">11.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #dc3545FF">43</td><td class="text-end" style="background-color: #dc3545FF">1.46</td><td class="text-end" style="background-color: #dc3545FF">28</td><td class="text-end" style="background-color: #dc35457C">40</td><td class="text-end" style="background-color: #dc354529">8</td><td class="text-end" style="background-color: #dc3545FF">19</td></tr>
+Wickets: 19" style="cursor: default" data-text="11">11.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #dc3545FF">43</td><td class="text-end" style="background-color: #dc3545FF">1.46</td><td class="text-end" style="background-color: #dc3545FF">28</td><td class="text-end" style="background-color: #dc3545FF">19</td><td class="text-end" style="background-color: #dc35457C">40</td><td class="text-end" style="background-color: #dc354529">8</td></tr>
 </tbody>
 </table>
 <h2>2018</h2>
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
-<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th><th class="text-end">Boundary %</th>
+<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Boundary %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th>
 </tr>
 </thead>
 <tbody>
 <tr><td colspan="2" title="Games: 14
 Runs: 1540
-Wickets: 76" style="cursor: default" data-text="1">1.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #198754AA">21</td><td class="text-end" style="background-color: #198754FF">0.97</td><td class="text-end" style="background-color: #198754EA">44</td><td class="text-end" style="background-color: #19875421">36</td><td class="text-end" style="background-color: #19875462">6</td><td class="text-end" style="background-color: #1987541C">11</td></tr>
+Wickets: 76" style="cursor: default" data-text="1">1.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #198754AA">21</td><td class="text-end" style="background-color: #198754FF">0.97</td><td class="text-end" style="background-color: #198754EA">44</td><td class="text-end" style="background-color: #1987541C">11</td><td class="text-end" style="background-color: #19875421">36</td><td class="text-end" style="background-color: #19875462">6</td></tr>
 <tr><td colspan="2" title="Games: 15
 Runs: 1936
-Wickets: 83" style="cursor: default" data-text="2">2.&nbsp;England</td><td class="text-end" style="background-color: #198754AE">21</td><td class="text-end" style="background-color: #dc354553">1.13</td><td class="text-end" style="background-color: #198754FF">44</td><td class="text-end" style="background-color: #198754FF">32</td><td class="text-end" style="background-color: #198754FF">5</td><td class="text-end" style="background-color: #dc3545F5">15</td></tr>
+Wickets: 83" style="cursor: default" data-text="2">2.&nbsp;England</td><td class="text-end" style="background-color: #198754AE">21</td><td class="text-end" style="background-color: #dc354553">1.13</td><td class="text-end" style="background-color: #198754FF">44</td><td class="text-end" style="background-color: #dc3545F5">15</td><td class="text-end" style="background-color: #198754FF">32</td><td class="text-end" style="background-color: #198754FF">5</td></tr>
 <tr><td colspan="2" title="Games: 17
 Runs: 2108
-Wickets: 118" style="cursor: default" data-text="3">3.&nbsp;Australia</td><td class="text-end" style="background-color: #198754FF">17</td><td class="text-end" style="background-color: #1987547E">1.03</td><td class="text-end" style="background-color: #1987542C">41</td><td class="text-end" style="background-color: #dc354550">37</td><td class="text-end" style="background-color: #198754FC">5</td><td class="text-end" style="background-color: #dc354505">11</td></tr>
+Wickets: 118" style="cursor: default" data-text="3">3.&nbsp;Australia</td><td class="text-end" style="background-color: #198754FF">17</td><td class="text-end" style="background-color: #1987547E">1.03</td><td class="text-end" style="background-color: #1987542C">41</td><td class="text-end" style="background-color: #dc354505">11</td><td class="text-end" style="background-color: #dc354550">37</td><td class="text-end" style="background-color: #198754FC">5</td></tr>
 <tr><td colspan="2" title="Games: 12
 Runs: 1505
-Wickets: 70" style="cursor: default" data-text="4">4.&nbsp;West Indies</td><td class="text-end" style="background-color: #198754BD">20</td><td class="text-end" style="background-color: #19875424">1.08</td><td class="text-end" style="background-color: #1987545E">42</td><td class="text-end" style="background-color: #1987540F">36</td><td class="text-end" style="background-color: #198754A9">6</td><td class="text-end" style="background-color: #dc354563">13</td></tr>
+Wickets: 70" style="cursor: default" data-text="4">4.&nbsp;West Indies</td><td class="text-end" style="background-color: #198754BD">20</td><td class="text-end" style="background-color: #19875424">1.08</td><td class="text-end" style="background-color: #1987545E">42</td><td class="text-end" style="background-color: #dc354563">13</td><td class="text-end" style="background-color: #1987540F">36</td><td class="text-end" style="background-color: #198754A9">6</td></tr>
 <tr><td colspan="2" title="Games: 10
 Runs: 1237
-Wickets: 53" style="cursor: default" data-text="5">5.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #19875485">22</td><td class="text-end" style="background-color: #19875465">1.04</td><td class="text-end" style="background-color: #dc354534">40</td><td class="text-end" style="background-color: #dc354536">37</td><td class="text-end" style="background-color: #1987548A">6</td><td class="text-end" style="background-color: #19875405">11</td></tr>
+Wickets: 53" style="cursor: default" data-text="5">5.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #19875485">22</td><td class="text-end" style="background-color: #19875465">1.04</td><td class="text-end" style="background-color: #dc354534">40</td><td class="text-end" style="background-color: #19875405">11</td><td class="text-end" style="background-color: #dc354536">37</td><td class="text-end" style="background-color: #1987548A">6</td></tr>
 <tr><td colspan="2" title="Games: 12
 Runs: 1415
-Wickets: 50" style="cursor: default" data-text="6">6.&nbsp;Pakistan</td><td class="text-end" style="background-color: #1987541B">27</td><td class="text-end" style="background-color: #19875443">1.06</td><td class="text-end" style="background-color: #19875434">41</td><td class="text-end" style="background-color: #19875488">34</td><td class="text-end" style="background-color: #dc354523">8</td><td class="text-end" style="background-color: #dc35452F">12</td></tr>
+Wickets: 50" style="cursor: default" data-text="6">6.&nbsp;Pakistan</td><td class="text-end" style="background-color: #1987541B">27</td><td class="text-end" style="background-color: #19875443">1.06</td><td class="text-end" style="background-color: #19875434">41</td><td class="text-end" style="background-color: #dc35452F">12</td><td class="text-end" style="background-color: #19875488">34</td><td class="text-end" style="background-color: #dc354523">8</td></tr>
 <tr><td colspan="2" title="Games: 17
 Runs: 2321
-Wickets: 93" style="cursor: default" data-text="7">7.&nbsp;New Zealand</td><td class="text-end" style="background-color: #1987549E">21</td><td class="text-end" style="background-color: #dc3545AD">1.17</td><td class="text-end" style="background-color: #dc35458D">39</td><td class="text-end" style="background-color: #19875421">36</td><td class="text-end" style="background-color: #1987548D">6</td><td class="text-end" style="background-color: #dc3545FF">15</td></tr>
+Wickets: 93" style="cursor: default" data-text="7">7.&nbsp;New Zealand</td><td class="text-end" style="background-color: #1987549E">21</td><td class="text-end" style="background-color: #dc3545AD">1.17</td><td class="text-end" style="background-color: #dc35458D">39</td><td class="text-end" style="background-color: #dc3545FF">15</td><td class="text-end" style="background-color: #19875421">36</td><td class="text-end" style="background-color: #1987548D">6</td></tr>
 <tr><td colspan="2" title="Games: 22
 Runs: 2804
-Wickets: 124" style="cursor: default" data-text="8">8.&nbsp;India</td><td class="text-end" style="background-color: #198754B6">20</td><td class="text-end" style="background-color: #dc35452F">1.11</td><td class="text-end" style="background-color: #dc3545E8">38</td><td class="text-end" style="background-color: #dc3545FF">40</td><td class="text-end" style="background-color: #1987548D">6</td><td class="text-end" style="background-color: #dc354561">13</td></tr>
+Wickets: 124" style="cursor: default" data-text="8">8.&nbsp;India</td><td class="text-end" style="background-color: #198754B6">20</td><td class="text-end" style="background-color: #dc35452F">1.11</td><td class="text-end" style="background-color: #dc3545E8">38</td><td class="text-end" style="background-color: #dc354561">13</td><td class="text-end" style="background-color: #dc3545FF">40</td><td class="text-end" style="background-color: #1987548D">6</td></tr>
 <tr><td colspan="2" title="Games: 2
 Runs: 224
-Wickets: 6" style="cursor: default" data-text="9">9.&nbsp;Scotland</td><td class="text-end" style="background-color: #dc3545FF">38</td><td class="text-end" style="background-color: #198754FE">0.97</td><td class="text-end" style="background-color: #dc3545FF">37</td><td class="text-end" style="background-color: #dc354539">37</td><td class="text-end" style="background-color: #dc3545FF">10</td><td class="text-end" style="background-color: #198754FF">7</td></tr>
+Wickets: 6" style="cursor: default" data-text="9">9.&nbsp;Scotland</td><td class="text-end" style="background-color: #dc3545FF">38</td><td class="text-end" style="background-color: #198754FE">0.97</td><td class="text-end" style="background-color: #dc3545FF">37</td><td class="text-end" style="background-color: #198754FF">7</td><td class="text-end" style="background-color: #dc354539">37</td><td class="text-end" style="background-color: #dc3545FF">10</td></tr>
 <tr><td colspan="2" title="Games: 10
 Runs: 1227
-Wickets: 35" style="cursor: default" data-text="10">10.&nbsp;Ireland</td><td class="text-end" style="background-color: #dc35453B">30</td><td class="text-end" style="background-color: #dc354591">1.16</td><td class="text-end" style="background-color: #dc3545A0">39</td><td class="text-end" style="background-color: #19875452">35</td><td class="text-end" style="background-color: #1987547D">6</td><td class="text-end" style="background-color: #dc3545AC">14</td></tr>
+Wickets: 35" style="cursor: default" data-text="10">10.&nbsp;Ireland</td><td class="text-end" style="background-color: #dc35453B">30</td><td class="text-end" style="background-color: #dc354591">1.16</td><td class="text-end" style="background-color: #dc3545A0">39</td><td class="text-end" style="background-color: #dc3545AC">14</td><td class="text-end" style="background-color: #19875452">35</td><td class="text-end" style="background-color: #1987547D">6</td></tr>
 <tr><td colspan="2" title="Games: 17
 Runs: 2330
-Wickets: 68" style="cursor: default" data-text="11">11.&nbsp;South Africa</td><td class="text-end" style="background-color: #dc35450C">28</td><td class="text-end" style="background-color: #dc3545FF">1.21</td><td class="text-end" style="background-color: #dc354588">39</td><td class="text-end" style="background-color: #19875437">35</td><td class="text-end" style="background-color: #19875487">6</td><td class="text-end" style="background-color: #dc3545E7">15</td></tr>
+Wickets: 68" style="cursor: default" data-text="11">11.&nbsp;South Africa</td><td class="text-end" style="background-color: #dc35450C">28</td><td class="text-end" style="background-color: #dc3545FF">1.21</td><td class="text-end" style="background-color: #dc354588">39</td><td class="text-end" style="background-color: #dc3545E7">15</td><td class="text-end" style="background-color: #19875437">35</td><td class="text-end" style="background-color: #19875487">6</td></tr>
 </tbody>
 </table>
 <h2>2017</h2>
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
-<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th><th class="text-end">Boundary %</th>
+<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Boundary %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th>
 </tr>
 </thead>
 <tbody>
 <tr><td colspan="2" title="Games: 6
 Runs: 562
-Wickets: 36" style="cursor: default" data-text="1">1.&nbsp;New Zealand</td><td class="text-end" style="background-color: #198754CE">18</td><td class="text-end" style="background-color: #198754FF">0.85</td><td class="text-end" style="background-color: #198754FF">45</td><td class="text-end" style="background-color: #1987546D">36</td><td class="text-end" style="background-color: #19875433">8</td><td class="text-end" style="background-color: #198754DF">6</td></tr>
+Wickets: 36" style="cursor: default" data-text="1">1.&nbsp;New Zealand</td><td class="text-end" style="background-color: #198754CE">18</td><td class="text-end" style="background-color: #198754FF">0.85</td><td class="text-end" style="background-color: #198754FF">45</td><td class="text-end" style="background-color: #198754DF">6</td><td class="text-end" style="background-color: #1987546D">36</td><td class="text-end" style="background-color: #19875433">8</td></tr>
 <tr><td colspan="2" title="Games: 1
 Runs: 107
-Wickets: 7" style="cursor: default" data-text="2">2.&nbsp;West Indies</td><td class="text-end" style="background-color: #198754FF">17</td><td class="text-end" style="background-color: #198754D9">0.88</td><td class="text-end" style="background-color: #198754BA">43</td><td class="text-end" style="background-color: #198754FF">34</td><td class="text-end" style="background-color: #dc3545FF">11</td><td class="text-end" style="background-color: #198754FF">6</td></tr>
+Wickets: 7" style="cursor: default" data-text="2">2.&nbsp;West Indies</td><td class="text-end" style="background-color: #198754FF">17</td><td class="text-end" style="background-color: #198754D9">0.88</td><td class="text-end" style="background-color: #198754BA">43</td><td class="text-end" style="background-color: #198754FF">6</td><td class="text-end" style="background-color: #198754FF">34</td><td class="text-end" style="background-color: #dc3545FF">11</td></tr>
 <tr><td colspan="2" title="Games: 6
 Runs: 790
-Wickets: 40" style="cursor: default" data-text="3">3.&nbsp;Australia</td><td class="text-end" style="background-color: #198754D8">18</td><td class="text-end" style="background-color: #dc35451E">1.08</td><td class="text-end" style="background-color: #dc35451F">37</td><td class="text-end" style="background-color: #dc354569">40</td><td class="text-end" style="background-color: #19875434">8</td><td class="text-end" style="background-color: #19875420">11</td></tr>
+Wickets: 40" style="cursor: default" data-text="3">3.&nbsp;Australia</td><td class="text-end" style="background-color: #198754D8">18</td><td class="text-end" style="background-color: #dc35451E">1.08</td><td class="text-end" style="background-color: #dc35451F">37</td><td class="text-end" style="background-color: #19875420">11</td><td class="text-end" style="background-color: #dc354569">40</td><td class="text-end" style="background-color: #19875434">8</td></tr>
 <tr><td colspan="2" title="Games: 3
 Runs: 424
-Wickets: 15" style="cursor: default" data-text="4">4.&nbsp;England</td><td class="text-end" style="background-color: #1987541A">22</td><td class="text-end" style="background-color: #dc3545FF">1.27</td><td class="text-end" style="background-color: #dc354544">36</td><td class="text-end" style="background-color: #19875453">37</td><td class="text-end" style="background-color: #198754FF">5</td><td class="text-end" style="background-color: #dc3545FF">17</td></tr>
+Wickets: 15" style="cursor: default" data-text="4">4.&nbsp;England</td><td class="text-end" style="background-color: #1987541A">22</td><td class="text-end" style="background-color: #dc3545FF">1.27</td><td class="text-end" style="background-color: #dc354544">36</td><td class="text-end" style="background-color: #dc3545FF">17</td><td class="text-end" style="background-color: #19875453">37</td><td class="text-end" style="background-color: #198754FF">5</td></tr>
 <tr><td colspan="2" title="Games: 3
 Runs: 369
-Wickets: 11" style="cursor: default" data-text="5">5.&nbsp;Pakistan</td><td class="text-end" style="background-color: #dc3545FF">28</td><td class="text-end" style="background-color: #dc3545A0">1.19</td><td class="text-end" style="background-color: #19875414">39</td><td class="text-end" style="background-color: #1987547E">36</td><td class="text-end" style="background-color: #dc35454D">9</td><td class="text-end" style="background-color: #dc354566">14</td></tr>
+Wickets: 11" style="cursor: default" data-text="5">5.&nbsp;Pakistan</td><td class="text-end" style="background-color: #dc3545FF">28</td><td class="text-end" style="background-color: #dc3545A0">1.19</td><td class="text-end" style="background-color: #19875414">39</td><td class="text-end" style="background-color: #dc354566">14</td><td class="text-end" style="background-color: #1987547E">36</td><td class="text-end" style="background-color: #dc35454D">9</td></tr>
 <tr><td colspan="2" title="Games: 1
 Runs: 154
-Wickets: 5" style="cursor: default" data-text="6">6.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #dc354555">25</td><td class="text-end" style="background-color: #dc3545EA">1.25</td><td class="text-end" style="background-color: #dc3545FF">31</td><td class="text-end" style="background-color: #dc3545FF">42</td><td class="text-end" style="background-color: #198754E6">6</td><td class="text-end" style="background-color: #dc3545AB">15</td></tr>
+Wickets: 5" style="cursor: default" data-text="6">6.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #dc354555">25</td><td class="text-end" style="background-color: #dc3545EA">1.25</td><td class="text-end" style="background-color: #dc3545FF">31</td><td class="text-end" style="background-color: #dc3545AB">15</td><td class="text-end" style="background-color: #dc3545FF">42</td><td class="text-end" style="background-color: #198754E6">6</td></tr>
 </tbody>
 </table>
 <h2>2016</h2>
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
-<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th><th class="text-end">Boundary %</th>
+<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Boundary %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th>
 </tr>
 </thead>
 <tbody>
 <tr><td colspan="2" title="Games: 6
 Runs: 643
-Wickets: 40" style="cursor: default" data-text="1">1.&nbsp;New Zealand</td><td class="text-end" style="background-color: #198754FF">18</td><td class="text-end" style="background-color: #198754FF">0.87</td><td class="text-end" style="background-color: #198754D5">44</td><td class="text-end" style="background-color: #dc354536">40</td><td class="text-end" style="background-color: #198754BB">5</td><td class="text-end" style="background-color: #198754FF">8</td></tr>
+Wickets: 40" style="cursor: default" data-text="1">1.&nbsp;New Zealand</td><td class="text-end" style="background-color: #198754FF">18</td><td class="text-end" style="background-color: #198754FF">0.87</td><td class="text-end" style="background-color: #198754D5">44</td><td class="text-end" style="background-color: #198754FF">8</td><td class="text-end" style="background-color: #dc354536">40</td><td class="text-end" style="background-color: #198754BB">5</td></tr>
 <tr><td colspan="2" title="Games: 7
 Runs: 739
-Wickets: 38" style="cursor: default" data-text="2">2.&nbsp;India</td><td class="text-end" style="background-color: #198754A5">22</td><td class="text-end" style="background-color: #198754C8">0.90</td><td class="text-end" style="background-color: #198754FF">45</td><td class="text-end" style="background-color: #19875470">37</td><td class="text-end" style="background-color: #19875497">6</td><td class="text-end" style="background-color: #1987549E">9</td></tr>
+Wickets: 38" style="cursor: default" data-text="2">2.&nbsp;India</td><td class="text-end" style="background-color: #198754A5">22</td><td class="text-end" style="background-color: #198754C8">0.90</td><td class="text-end" style="background-color: #198754FF">45</td><td class="text-end" style="background-color: #1987549E">9</td><td class="text-end" style="background-color: #19875470">37</td><td class="text-end" style="background-color: #19875497">6</td></tr>
 <tr><td colspan="2" title="Games: 10
 Runs: 1125
-Wickets: 60" style="cursor: default" data-text="3">3.&nbsp;England</td><td class="text-end" style="background-color: #198754CD">20</td><td class="text-end" style="background-color: #1987549E">0.93</td><td class="text-end" style="background-color: #198754ED">45</td><td class="text-end" style="background-color: #19875453">38</td><td class="text-end" style="background-color: #198754FF">4</td><td class="text-end" style="background-color: #dc354518">10</td></tr>
+Wickets: 60" style="cursor: default" data-text="3">3.&nbsp;England</td><td class="text-end" style="background-color: #198754CD">20</td><td class="text-end" style="background-color: #1987549E">0.93</td><td class="text-end" style="background-color: #198754ED">45</td><td class="text-end" style="background-color: #dc354518">10</td><td class="text-end" style="background-color: #19875453">38</td><td class="text-end" style="background-color: #198754FF">4</td></tr>
 <tr><td colspan="2" title="Games: 9
 Runs: 945
-Wickets: 41" style="cursor: default" data-text="4">4.&nbsp;Australia</td><td class="text-end" style="background-color: #1987544A">25</td><td class="text-end" style="background-color: #19875492">0.94</td><td class="text-end" style="background-color: #198754C9">44</td><td class="text-end" style="background-color: #19875462">37</td><td class="text-end" style="background-color: #1987548D">6</td><td class="text-end" style="background-color: #1987545F">9</td></tr>
+Wickets: 41" style="cursor: default" data-text="4">4.&nbsp;Australia</td><td class="text-end" style="background-color: #1987544A">25</td><td class="text-end" style="background-color: #19875492">0.94</td><td class="text-end" style="background-color: #198754C9">44</td><td class="text-end" style="background-color: #1987545F">9</td><td class="text-end" style="background-color: #19875462">37</td><td class="text-end" style="background-color: #1987548D">6</td></tr>
 <tr><td colspan="2" title="Games: 8
 Runs: 917
-Wickets: 45" style="cursor: default" data-text="5">5.&nbsp;South Africa</td><td class="text-end" style="background-color: #198754CC">20</td><td class="text-end" style="background-color: #1987541E">1.01</td><td class="text-end" style="background-color: #198754CF">44</td><td class="text-end" style="background-color: #198754DE">36</td><td class="text-end" style="background-color: #198754CF">5</td><td class="text-end" style="background-color: #dc3545E3">12</td></tr>
+Wickets: 45" style="cursor: default" data-text="5">5.&nbsp;South Africa</td><td class="text-end" style="background-color: #198754CC">20</td><td class="text-end" style="background-color: #1987541E">1.01</td><td class="text-end" style="background-color: #198754CF">44</td><td class="text-end" style="background-color: #dc3545E3">12</td><td class="text-end" style="background-color: #198754DE">36</td><td class="text-end" style="background-color: #198754CF">5</td></tr>
 <tr><td colspan="2" title="Games: 8
 Runs: 947
-Wickets: 47" style="cursor: default" data-text="6">6.&nbsp;West Indies</td><td class="text-end" style="background-color: #198754B3">21</td><td class="text-end" style="background-color: #19875470">0.96</td><td class="text-end" style="background-color: #1987541A">40</td><td class="text-end" style="background-color: #dc3545FF">42</td><td class="text-end" style="background-color: #198754F1">4</td><td class="text-end" style="background-color: #19875479">9</td></tr>
+Wickets: 47" style="cursor: default" data-text="6">6.&nbsp;West Indies</td><td class="text-end" style="background-color: #198754B3">21</td><td class="text-end" style="background-color: #19875470">0.96</td><td class="text-end" style="background-color: #1987541A">40</td><td class="text-end" style="background-color: #19875479">9</td><td class="text-end" style="background-color: #dc3545FF">42</td><td class="text-end" style="background-color: #198754F1">4</td></tr>
 <tr><td colspan="2" title="Games: 5
 Runs: 518
-Wickets: 14" style="cursor: default" data-text="7">7.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #dc3545FF">36</td><td class="text-end" style="background-color: #dc35450D">1.03</td><td class="text-end" style="background-color: #19875493">43</td><td class="text-end" style="background-color: #198754FF">35</td><td class="text-end" style="background-color: #dc354536">8</td><td class="text-end" style="background-color: #dc3545B5">12</td></tr>
+Wickets: 14" style="cursor: default" data-text="7">7.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #dc3545FF">36</td><td class="text-end" style="background-color: #dc35450D">1.03</td><td class="text-end" style="background-color: #19875493">43</td><td class="text-end" style="background-color: #dc3545B5">12</td><td class="text-end" style="background-color: #198754FF">35</td><td class="text-end" style="background-color: #dc354536">8</td></tr>
 <tr><td colspan="2" title="Games: 9
 Runs: 1194
-Wickets: 45" style="cursor: default" data-text="8">8.&nbsp;Pakistan</td><td class="text-end" style="background-color: #1987543F">25</td><td class="text-end" style="background-color: #dc35453A">1.06</td><td class="text-end" style="background-color: #dc35456F">36</td><td class="text-end" style="background-color: #dc3545C9">42</td><td class="text-end" style="background-color: #19875432">7</td><td class="text-end" style="background-color: #dc354540">11</td></tr>
+Wickets: 45" style="cursor: default" data-text="8">8.&nbsp;Pakistan</td><td class="text-end" style="background-color: #1987543F">25</td><td class="text-end" style="background-color: #dc35453A">1.06</td><td class="text-end" style="background-color: #dc35456F">36</td><td class="text-end" style="background-color: #dc354540">11</td><td class="text-end" style="background-color: #dc3545C9">42</td><td class="text-end" style="background-color: #19875432">7</td></tr>
 <tr><td colspan="2" title="Games: 5
 Runs: 602
-Wickets: 21" style="cursor: default" data-text="9">9.&nbsp;Ireland</td><td class="text-end" style="background-color: #19875440">25</td><td class="text-end" style="background-color: #dc3545CA">1.15</td><td class="text-end" style="background-color: #dc35458A">36</td><td class="text-end" style="background-color: #19875436">38</td><td class="text-end" style="background-color: #dc35456D">9</td><td class="text-end" style="background-color: #dc3545FF">12</td></tr>
+Wickets: 21" style="cursor: default" data-text="9">9.&nbsp;Ireland</td><td class="text-end" style="background-color: #19875440">25</td><td class="text-end" style="background-color: #dc3545CA">1.15</td><td class="text-end" style="background-color: #dc35458A">36</td><td class="text-end" style="background-color: #dc3545FF">12</td><td class="text-end" style="background-color: #19875436">38</td><td class="text-end" style="background-color: #dc35456D">9</td></tr>
 <tr><td colspan="2" title="Games: 5
 Runs: 632
-Wickets: 24" style="cursor: default" data-text="10">10.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #1987548F">22</td><td class="text-end" style="background-color: #dc3545FF">1.18</td><td class="text-end" style="background-color: #dc3545FF">33</td><td class="text-end" style="background-color: #dc354573">40</td><td class="text-end" style="background-color: #dc3545FF">11</td><td class="text-end" style="background-color: #dc3545E2">12</td></tr>
+Wickets: 24" style="cursor: default" data-text="10">10.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #1987548F">22</td><td class="text-end" style="background-color: #dc3545FF">1.18</td><td class="text-end" style="background-color: #dc3545FF">33</td><td class="text-end" style="background-color: #dc3545E2">12</td><td class="text-end" style="background-color: #dc354573">40</td><td class="text-end" style="background-color: #dc3545FF">11</td></tr>
 </tbody>
 </table>
 <h2>2015</h2>
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
-<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th><th class="text-end">Boundary %</th>
+<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Boundary %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th>
 </tr>
 </thead>
 <tbody>
 <tr><td colspan="2" title="Games: 4
 Runs: 360
-Wickets: 24" style="cursor: default" data-text="1">1.&nbsp;West Indies</td><td class="text-end" style="background-color: #198754C9">20</td><td class="text-end" style="background-color: #198754FF">0.77</td><td class="text-end" style="background-color: #198754FF">52</td><td class="text-end" style="background-color: #198754CA">33</td><td class="text-end" style="background-color: #198754FF">5</td><td class="text-end" style="background-color: #198754B7">7</td></tr>
+Wickets: 24" style="cursor: default" data-text="1">1.&nbsp;West Indies</td><td class="text-end" style="background-color: #198754C9">20</td><td class="text-end" style="background-color: #198754FF">0.77</td><td class="text-end" style="background-color: #198754FF">52</td><td class="text-end" style="background-color: #198754B7">7</td><td class="text-end" style="background-color: #198754CA">33</td><td class="text-end" style="background-color: #198754FF">5</td></tr>
 <tr><td colspan="2" title="Games: 8
 Runs: 725
-Wickets: 39" style="cursor: default" data-text="2">2.&nbsp;Pakistan</td><td class="text-end" style="background-color: #1987544D">24</td><td class="text-end" style="background-color: #198754F2">0.78</td><td class="text-end" style="background-color: #1987549B">48</td><td class="text-end" style="background-color: #19875416">36</td><td class="text-end" style="background-color: #198754E1">5</td><td class="text-end" style="background-color: #198754FF">6</td></tr>
+Wickets: 39" style="cursor: default" data-text="2">2.&nbsp;Pakistan</td><td class="text-end" style="background-color: #1987544D">24</td><td class="text-end" style="background-color: #198754F2">0.78</td><td class="text-end" style="background-color: #1987549B">48</td><td class="text-end" style="background-color: #198754FF">6</td><td class="text-end" style="background-color: #19875416">36</td><td class="text-end" style="background-color: #198754E1">5</td></tr>
 <tr><td colspan="2" title="Games: 6
 Runs: 604
-Wickets: 30" style="cursor: default" data-text="3">3.&nbsp;Australia</td><td class="text-end" style="background-color: #19875448">24</td><td class="text-end" style="background-color: #1987549E">0.84</td><td class="text-end" style="background-color: #1987549A">48</td><td class="text-end" style="background-color: #1987548C">34</td><td class="text-end" style="background-color: #198754B5">6</td><td class="text-end" style="background-color: #198754A3">7</td></tr>
+Wickets: 30" style="cursor: default" data-text="3">3.&nbsp;Australia</td><td class="text-end" style="background-color: #19875448">24</td><td class="text-end" style="background-color: #1987549E">0.84</td><td class="text-end" style="background-color: #1987549A">48</td><td class="text-end" style="background-color: #198754A3">7</td><td class="text-end" style="background-color: #1987548C">34</td><td class="text-end" style="background-color: #198754B5">6</td></tr>
 <tr><td colspan="2" title="Games: 3
 Runs: 293
-Wickets: 13" style="cursor: default" data-text="4">4.&nbsp;South Africa</td><td class="text-end" style="background-color: #19875401">27</td><td class="text-end" style="background-color: #1987548E">0.85</td><td class="text-end" style="background-color: #198754C3">50</td><td class="text-end" style="background-color: #198754FF">32</td><td class="text-end" style="background-color: #19875439">7</td><td class="text-end" style="background-color: #1987542F">8</td></tr>
+Wickets: 13" style="cursor: default" data-text="4">4.&nbsp;South Africa</td><td class="text-end" style="background-color: #19875401">27</td><td class="text-end" style="background-color: #1987548E">0.85</td><td class="text-end" style="background-color: #198754C3">50</td><td class="text-end" style="background-color: #1987542F">8</td><td class="text-end" style="background-color: #198754FF">32</td><td class="text-end" style="background-color: #19875439">7</td></tr>
 <tr><td colspan="2" title="Games: 3
 Runs: 340
-Wickets: 21" style="cursor: default" data-text="5">5.&nbsp;England</td><td class="text-end" style="background-color: #198754FF">18</td><td class="text-end" style="background-color: #1987542C">0.92</td><td class="text-end" style="background-color: #dc354568">39</td><td class="text-end" style="background-color: #dc3545FF">42</td><td class="text-end" style="background-color: #dc354514">8</td><td class="text-end" style="background-color: #198754BE">7</td></tr>
+Wickets: 21" style="cursor: default" data-text="5">5.&nbsp;England</td><td class="text-end" style="background-color: #198754FF">18</td><td class="text-end" style="background-color: #1987542C">0.92</td><td class="text-end" style="background-color: #dc354568">39</td><td class="text-end" style="background-color: #198754BE">7</td><td class="text-end" style="background-color: #dc3545FF">42</td><td class="text-end" style="background-color: #dc354514">8</td></tr>
 <tr><td colspan="2" title="Games: 5
 Runs: 543
-Wickets: 21" style="cursor: default" data-text="6">6.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #19875402">26</td><td class="text-end" style="background-color: #dc354526">0.98</td><td class="text-end" style="background-color: #dc35457F">39</td><td class="text-end" style="background-color: #dc3545EA">42</td><td class="text-end" style="background-color: #198754D2">5</td><td class="text-end" style="background-color: #dc354562">10</td></tr>
+Wickets: 21" style="cursor: default" data-text="6">6.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #19875402">26</td><td class="text-end" style="background-color: #dc354526">0.98</td><td class="text-end" style="background-color: #dc35457F">39</td><td class="text-end" style="background-color: #dc354562">10</td><td class="text-end" style="background-color: #dc3545EA">42</td><td class="text-end" style="background-color: #198754D2">5</td></tr>
 <tr><td colspan="2" title="Games: 3
 Runs: 344
-Wickets: 13" style="cursor: default" data-text="7">7.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #dc354538">29</td><td class="text-end" style="background-color: #19875420">0.93</td><td class="text-end" style="background-color: #dc35458A">38</td><td class="text-end" style="background-color: #dc3545DF">42</td><td class="text-end" style="background-color: #dc3545FF">11</td><td class="text-end" style="background-color: #198754D7">6</td></tr>
+Wickets: 13" style="cursor: default" data-text="7">7.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #dc354538">29</td><td class="text-end" style="background-color: #19875420">0.93</td><td class="text-end" style="background-color: #dc35458A">38</td><td class="text-end" style="background-color: #198754D7">6</td><td class="text-end" style="background-color: #dc3545DF">42</td><td class="text-end" style="background-color: #dc3545FF">11</td></tr>
 <tr><td colspan="2" title="Games: 4
 Runs: 562
-Wickets: 14" style="cursor: default" data-text="8">8.&nbsp;Ireland</td><td class="text-end" style="background-color: #dc3545FF">36</td><td class="text-end" style="background-color: #dc3545FF">1.13</td><td class="text-end" style="background-color: #dc3545FF">34</td><td class="text-end" style="background-color: #dc3545B6">41</td><td class="text-end" style="background-color: #dc35454A">8</td><td class="text-end" style="background-color: #dc3545FF">12</td></tr>
+Wickets: 14" style="cursor: default" data-text="8">8.&nbsp;Ireland</td><td class="text-end" style="background-color: #dc3545FF">36</td><td class="text-end" style="background-color: #dc3545FF">1.13</td><td class="text-end" style="background-color: #dc3545FF">34</td><td class="text-end" style="background-color: #dc3545FF">12</td><td class="text-end" style="background-color: #dc3545B6">41</td><td class="text-end" style="background-color: #dc35454A">8</td></tr>
 </tbody>
 </table>
 <h2>2014</h2>
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
-<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th><th class="text-end">Boundary %</th>
+<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Boundary %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th>
 </tr>
 </thead>
 <tbody>
 <tr><td colspan="2" title="Games: 5
 Runs: 515
-Wickets: 33" style="cursor: default" data-text="1">1.&nbsp;India</td><td class="text-end" style="background-color: #198754FF">18</td><td class="text-end" style="background-color: #198754FF">0.85</td><td class="text-end" style="background-color: #198754FF">50</td><td class="text-end" style="background-color: #198754FF">31</td><td class="text-end" style="background-color: #dc354519">7</td><td class="text-end" style="background-color: #198754CE">8</td></tr>
+Wickets: 33" style="cursor: default" data-text="1">1.&nbsp;India</td><td class="text-end" style="background-color: #198754FF">18</td><td class="text-end" style="background-color: #198754FF">0.85</td><td class="text-end" style="background-color: #198754FF">50</td><td class="text-end" style="background-color: #198754CE">8</td><td class="text-end" style="background-color: #198754FF">31</td><td class="text-end" style="background-color: #dc354519">7</td></tr>
 <tr><td colspan="2" title="Games: 10
 Runs: 1027
-Wickets: 53" style="cursor: default" data-text="2">2.&nbsp;England</td><td class="text-end" style="background-color: #19875472">22</td><td class="text-end" style="background-color: #198754A7">0.88</td><td class="text-end" style="background-color: #19875449">46</td><td class="text-end" style="background-color: #19875431">36</td><td class="text-end" style="background-color: #198754F5">5</td><td class="text-end" style="background-color: #19875491">9</td></tr>
+Wickets: 53" style="cursor: default" data-text="2">2.&nbsp;England</td><td class="text-end" style="background-color: #19875472">22</td><td class="text-end" style="background-color: #198754A7">0.88</td><td class="text-end" style="background-color: #19875449">46</td><td class="text-end" style="background-color: #19875491">9</td><td class="text-end" style="background-color: #19875431">36</td><td class="text-end" style="background-color: #198754F5">5</td></tr>
 <tr><td colspan="2" title="Games: 12
 Runs: 1298
-Wickets: 77" style="cursor: default" data-text="3">3.&nbsp;Australia</td><td class="text-end" style="background-color: #198754DE">19</td><td class="text-end" style="background-color: #198754B0">0.88</td><td class="text-end" style="background-color: #dc354558">42</td><td class="text-end" style="background-color: #dc3545B1">41</td><td class="text-end" style="background-color: #198754FF">5</td><td class="text-end" style="background-color: #198754FF">8</td></tr>
+Wickets: 77" style="cursor: default" data-text="3">3.&nbsp;Australia</td><td class="text-end" style="background-color: #198754DE">19</td><td class="text-end" style="background-color: #198754B0">0.88</td><td class="text-end" style="background-color: #dc354558">42</td><td class="text-end" style="background-color: #198754FF">8</td><td class="text-end" style="background-color: #dc3545B1">41</td><td class="text-end" style="background-color: #198754FF">5</td></tr>
 <tr><td colspan="2" title="Games: 4
 Runs: 467
-Wickets: 26" style="cursor: default" data-text="4">4.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #198754EE">19</td><td class="text-end" style="background-color: #dc354535">0.96</td><td class="text-end" style="background-color: #19875425">45</td><td class="text-end" style="background-color: #19875462">35</td><td class="text-end" style="background-color: #19875421">6</td><td class="text-end" style="background-color: #dc35455A">10</td></tr>
+Wickets: 26" style="cursor: default" data-text="4">4.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #198754EE">19</td><td class="text-end" style="background-color: #dc354535">0.96</td><td class="text-end" style="background-color: #19875425">45</td><td class="text-end" style="background-color: #dc35455A">10</td><td class="text-end" style="background-color: #19875462">35</td><td class="text-end" style="background-color: #19875421">6</td></tr>
 <tr><td colspan="2" title="Games: 12
 Runs: 1172
-Wickets: 55" style="cursor: default" data-text="5">5.&nbsp;South Africa</td><td class="text-end" style="background-color: #1987545C">23</td><td class="text-end" style="background-color: #dc354510">0.94</td><td class="text-end" style="background-color: #1987544C">46</td><td class="text-end" style="background-color: #19875498">34</td><td class="text-end" style="background-color: #19875414">6</td><td class="text-end" style="background-color: #dc354585">11</td></tr>
+Wickets: 55" style="cursor: default" data-text="5">5.&nbsp;South Africa</td><td class="text-end" style="background-color: #1987545C">23</td><td class="text-end" style="background-color: #dc354510">0.94</td><td class="text-end" style="background-color: #1987544C">46</td><td class="text-end" style="background-color: #dc354585">11</td><td class="text-end" style="background-color: #19875498">34</td><td class="text-end" style="background-color: #19875414">6</td></tr>
 <tr><td colspan="2" title="Games: 7
 Runs: 815
-Wickets: 41" style="cursor: default" data-text="6">6.&nbsp;West Indies</td><td class="text-end" style="background-color: #198754C2">20</td><td class="text-end" style="background-color: #dc3545AF">1.00</td><td class="text-end" style="background-color: #dc354554">43</td><td class="text-end" style="background-color: #19875453">35</td><td class="text-end" style="background-color: #198754A5">5</td><td class="text-end" style="background-color: #dc3545FF">12</td></tr>
+Wickets: 41" style="cursor: default" data-text="6">6.&nbsp;West Indies</td><td class="text-end" style="background-color: #198754C2">20</td><td class="text-end" style="background-color: #dc3545AF">1.00</td><td class="text-end" style="background-color: #dc354554">43</td><td class="text-end" style="background-color: #dc3545FF">12</td><td class="text-end" style="background-color: #19875453">35</td><td class="text-end" style="background-color: #198754A5">5</td></tr>
 <tr><td colspan="2" title="Games: 5
 Runs: 605
-Wickets: 26" style="cursor: default" data-text="7">7.&nbsp;New Zealand</td><td class="text-end" style="background-color: #19875440">23</td><td class="text-end" style="background-color: #dc3545B2">1.00</td><td class="text-end" style="background-color: #dc354581">41</td><td class="text-end" style="background-color: #dc354505">37</td><td class="text-end" style="background-color: #dc3545A1">8</td><td class="text-end" style="background-color: #dc354555">10</td></tr>
+Wickets: 26" style="cursor: default" data-text="7">7.&nbsp;New Zealand</td><td class="text-end" style="background-color: #19875440">23</td><td class="text-end" style="background-color: #dc3545B2">1.00</td><td class="text-end" style="background-color: #dc354581">41</td><td class="text-end" style="background-color: #dc354555">10</td><td class="text-end" style="background-color: #dc354505">37</td><td class="text-end" style="background-color: #dc3545A1">8</td></tr>
 <tr><td colspan="2" title="Games: 12
 Runs: 1371
-Wickets: 54" style="cursor: default" data-text="8">8.&nbsp;Pakistan</td><td class="text-end" style="background-color: #dc354519">26</td><td class="text-end" style="background-color: #dc35459D">0.99</td><td class="text-end" style="background-color: #dc3545EA">39</td><td class="text-end" style="background-color: #dc354568">39</td><td class="text-end" style="background-color: #dc354594">8</td><td class="text-end" style="background-color: #1987544D">9</td></tr>
+Wickets: 54" style="cursor: default" data-text="8">8.&nbsp;Pakistan</td><td class="text-end" style="background-color: #dc354519">26</td><td class="text-end" style="background-color: #dc35459D">0.99</td><td class="text-end" style="background-color: #dc3545EA">39</td><td class="text-end" style="background-color: #1987544D">9</td><td class="text-end" style="background-color: #dc354568">39</td><td class="text-end" style="background-color: #dc354594">8</td></tr>
 <tr><td colspan="2" title="Games: 9
 Runs: 958
-Wickets: 33" style="cursor: default" data-text="9">9.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #dc3545B3">30</td><td class="text-end" style="background-color: #dc35457C">0.98</td><td class="text-end" style="background-color: #dc3545FF">39</td><td class="text-end" style="background-color: #dc3545FF">43</td><td class="text-end" style="background-color: #dc354525">7</td><td class="text-end" style="background-color: #1987544E">9</td></tr>
+Wickets: 33" style="cursor: default" data-text="9">9.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #dc3545B3">30</td><td class="text-end" style="background-color: #dc35457C">0.98</td><td class="text-end" style="background-color: #dc3545FF">39</td><td class="text-end" style="background-color: #1987544E">9</td><td class="text-end" style="background-color: #dc3545FF">43</td><td class="text-end" style="background-color: #dc354525">7</td></tr>
 <tr><td colspan="2" title="Games: 6
 Runs: 777
-Wickets: 24" style="cursor: default" data-text="10">10.&nbsp;Ireland</td><td class="text-end" style="background-color: #dc3545FF">32</td><td class="text-end" style="background-color: #dc3545FF">1.03</td><td class="text-end" style="background-color: #dc3545AA">41</td><td class="text-end" style="background-color: #19875449">35</td><td class="text-end" style="background-color: #dc3545FF">8</td><td class="text-end" style="background-color: #dc354515">10</td></tr>
+Wickets: 24" style="cursor: default" data-text="10">10.&nbsp;Ireland</td><td class="text-end" style="background-color: #dc3545FF">32</td><td class="text-end" style="background-color: #dc3545FF">1.03</td><td class="text-end" style="background-color: #dc3545AA">41</td><td class="text-end" style="background-color: #dc354515">10</td><td class="text-end" style="background-color: #19875449">35</td><td class="text-end" style="background-color: #dc3545FF">8</td></tr>
 </tbody>
 </table>
 <h2>2013</h2>
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
-<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th><th class="text-end">Boundary %</th>
+<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Boundary %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th>
 </tr>
 </thead>
 <tbody>
 <tr><td colspan="2" title="Games: 5
 Runs: 506
-Wickets: 36" style="cursor: default" data-text="1">1.&nbsp;West Indies</td><td class="text-end" style="background-color: #198754F1">17</td><td class="text-end" style="background-color: #198754FF">0.81</td><td class="text-end" style="background-color: #198754FF">47</td><td class="text-end" style="background-color: #198754FF">34</td><td class="text-end" style="background-color: #198754F3">7</td><td class="text-end" style="background-color: #198754F5">6</td></tr>
+Wickets: 36" style="cursor: default" data-text="1">1.&nbsp;West Indies</td><td class="text-end" style="background-color: #198754F1">17</td><td class="text-end" style="background-color: #198754FF">0.81</td><td class="text-end" style="background-color: #198754FF">47</td><td class="text-end" style="background-color: #198754F5">6</td><td class="text-end" style="background-color: #198754FF">34</td><td class="text-end" style="background-color: #198754F3">7</td></tr>
 <tr><td colspan="2" title="Games: 4
 Runs: 435
-Wickets: 29" style="cursor: default" data-text="2">2.&nbsp;Pakistan</td><td class="text-end" style="background-color: #198754FF">17</td><td class="text-end" style="background-color: #1987545C">0.90</td><td class="text-end" style="background-color: #19875450">44</td><td class="text-end" style="background-color: #19875416">37</td><td class="text-end" style="background-color: #198754B3">7</td><td class="text-end" style="background-color: #1987548A">7</td></tr>
+Wickets: 29" style="cursor: default" data-text="2">2.&nbsp;Pakistan</td><td class="text-end" style="background-color: #198754FF">17</td><td class="text-end" style="background-color: #1987545C">0.90</td><td class="text-end" style="background-color: #19875450">44</td><td class="text-end" style="background-color: #1987548A">7</td><td class="text-end" style="background-color: #19875416">37</td><td class="text-end" style="background-color: #198754B3">7</td></tr>
 <tr><td colspan="2" title="Games: 5
 Runs: 540
-Wickets: 26" style="cursor: default" data-text="3">3.&nbsp;England</td><td class="text-end" style="background-color: #1987545F">24</td><td class="text-end" style="background-color: #19875485">0.88</td><td class="text-end" style="background-color: #19875414">42</td><td class="text-end" style="background-color: #dc3545FF">40</td><td class="text-end" style="background-color: #19875498">8</td><td class="text-end" style="background-color: #198754FF">6</td></tr>
+Wickets: 26" style="cursor: default" data-text="3">3.&nbsp;England</td><td class="text-end" style="background-color: #1987545F">24</td><td class="text-end" style="background-color: #19875485">0.88</td><td class="text-end" style="background-color: #19875414">42</td><td class="text-end" style="background-color: #198754FF">6</td><td class="text-end" style="background-color: #dc3545FF">40</td><td class="text-end" style="background-color: #19875498">8</td></tr>
 <tr><td colspan="2" title="Games: 7
 Runs: 767
-Wickets: 25" style="cursor: default" data-text="4">4.&nbsp;South Africa</td><td class="text-end" style="background-color: #dc354586">34</td><td class="text-end" style="background-color: #19875443">0.91</td><td class="text-end" style="background-color: #1987546A">44</td><td class="text-end" style="background-color: #19875453">36</td><td class="text-end" style="background-color: #198754FF">6</td><td class="text-end" style="background-color: #dc354516">9</td></tr>
+Wickets: 25" style="cursor: default" data-text="4">4.&nbsp;South Africa</td><td class="text-end" style="background-color: #dc354586">34</td><td class="text-end" style="background-color: #19875443">0.91</td><td class="text-end" style="background-color: #1987546A">44</td><td class="text-end" style="background-color: #dc354516">9</td><td class="text-end" style="background-color: #19875453">36</td><td class="text-end" style="background-color: #198754FF">6</td></tr>
 <tr><td colspan="2" title="Games: 7
 Runs: 805
-Wickets: 30" style="cursor: default" data-text="5">5.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #19875410">27</td><td class="text-end" style="background-color: #dc354551">0.99</td><td class="text-end" style="background-color: #dc354548">40</td><td class="text-end" style="background-color: #dc35457D">39</td><td class="text-end" style="background-color: #1987546E">8</td><td class="text-end" style="background-color: #dc354500">8</td></tr>
+Wickets: 30" style="cursor: default" data-text="5">5.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #19875410">27</td><td class="text-end" style="background-color: #dc354551">0.99</td><td class="text-end" style="background-color: #dc354548">40</td><td class="text-end" style="background-color: #dc354500">8</td><td class="text-end" style="background-color: #dc35457D">39</td><td class="text-end" style="background-color: #1987546E">8</td></tr>
 <tr><td colspan="2" title="Games: 2
 Runs: 214
-Wickets: 7" style="cursor: default" data-text="6">6.&nbsp;Ireland</td><td class="text-end" style="background-color: #dc354537">30</td><td class="text-end" style="background-color: #dc35457A">1.01</td><td class="text-end" style="background-color: #dc354544">41</td><td class="text-end" style="background-color: #198754E6">34</td><td class="text-end" style="background-color: #dc3545FF">13</td><td class="text-end" style="background-color: #19875431">8</td></tr>
+Wickets: 7" style="cursor: default" data-text="6">6.&nbsp;Ireland</td><td class="text-end" style="background-color: #dc354537">30</td><td class="text-end" style="background-color: #dc35457A">1.01</td><td class="text-end" style="background-color: #dc354544">41</td><td class="text-end" style="background-color: #19875431">8</td><td class="text-end" style="background-color: #198754E6">34</td><td class="text-end" style="background-color: #dc3545FF">13</td></tr>
 <tr><td colspan="2" title="Games: 2
 Runs: 194
-Wickets: 5" style="cursor: default" data-text="7">7.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #dc3545FF">39</td><td class="text-end" style="background-color: #dc35455E">0.99</td><td class="text-end" style="background-color: #dc354513">42</td><td class="text-end" style="background-color: #19875414">37</td><td class="text-end" style="background-color: #1987549F">8</td><td class="text-end" style="background-color: #dc3545FF">11</td></tr>
+Wickets: 5" style="cursor: default" data-text="7">7.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #dc3545FF">39</td><td class="text-end" style="background-color: #dc35455E">0.99</td><td class="text-end" style="background-color: #dc354513">42</td><td class="text-end" style="background-color: #dc3545FF">11</td><td class="text-end" style="background-color: #19875414">37</td><td class="text-end" style="background-color: #1987549F">8</td></tr>
 <tr><td colspan="2" title="Games: 3
 Runs: 366
-Wickets: 10" style="cursor: default" data-text="8">8.&nbsp;Australia</td><td class="text-end" style="background-color: #dc35458A">34</td><td class="text-end" style="background-color: #dc3545FF">1.08</td><td class="text-end" style="background-color: #dc3545FF">37</td><td class="text-end" style="background-color: #dc354564">38</td><td class="text-end" style="background-color: #dc354527">10</td><td class="text-end" style="background-color: #dc3545AD">10</td></tr>
+Wickets: 10" style="cursor: default" data-text="8">8.&nbsp;Australia</td><td class="text-end" style="background-color: #dc35458A">34</td><td class="text-end" style="background-color: #dc3545FF">1.08</td><td class="text-end" style="background-color: #dc3545FF">37</td><td class="text-end" style="background-color: #dc3545AD">10</td><td class="text-end" style="background-color: #dc354564">38</td><td class="text-end" style="background-color: #dc354527">10</td></tr>
 </tbody>
 </table>
 <h2>2012</h2>
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
-<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th><th class="text-end">Boundary %</th>
+<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Boundary %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th>
 </tr>
 </thead>
 <tbody>
 <tr><td colspan="2" title="Games: 2
 Runs: 140
-Wickets: 12" style="cursor: default" data-text="1">1.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #198754D4">19</td><td class="text-end" style="background-color: #198754FF">0.61</td><td class="text-end" style="background-color: #198754FF">58</td><td class="text-end" style="background-color: #198754FF">28</td><td class="text-end" style="background-color: #dc354509">7</td><td class="text-end" style="background-color: #198754FF">3</td></tr>
+Wickets: 12" style="cursor: default" data-text="1">1.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #198754D4">19</td><td class="text-end" style="background-color: #198754FF">0.61</td><td class="text-end" style="background-color: #198754FF">58</td><td class="text-end" style="background-color: #198754FF">3</td><td class="text-end" style="background-color: #198754FF">28</td><td class="text-end" style="background-color: #dc354509">7</td></tr>
 <tr><td colspan="2" title="Games: 5
 Runs: 376
-Wickets: 18" style="cursor: default" data-text="2">2.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #dc35452E">26</td><td class="text-end" style="background-color: #dc354513">0.81</td><td class="text-end" style="background-color: #1987540C">50</td><td class="text-end" style="background-color: #19875495">30</td><td class="text-end" style="background-color: #dc354529">7</td><td class="text-end" style="background-color: #19875427">7</td></tr>
+Wickets: 18" style="cursor: default" data-text="2">2.&nbsp;Sri Lanka</td><td class="text-end" style="background-color: #dc35452E">26</td><td class="text-end" style="background-color: #dc354513">0.81</td><td class="text-end" style="background-color: #1987540C">50</td><td class="text-end" style="background-color: #19875427">7</td><td class="text-end" style="background-color: #19875495">30</td><td class="text-end" style="background-color: #dc354529">7</td></tr>
 <tr><td colspan="2" title="Games: 5
 Runs: 513
-Wickets: 30" style="cursor: default" data-text="3">3.&nbsp;Australia</td><td class="text-end" style="background-color: #198754FF">18</td><td class="text-end" style="background-color: #dc3545D6">0.95</td><td class="text-end" style="background-color: #dc35454B">48</td><td class="text-end" style="background-color: #1987543E">31</td><td class="text-end" style="background-color: #1987547C">6</td><td class="text-end" style="background-color: #dc3545E5">11</td></tr>
+Wickets: 30" style="cursor: default" data-text="3">3.&nbsp;Australia</td><td class="text-end" style="background-color: #198754FF">18</td><td class="text-end" style="background-color: #dc3545D6">0.95</td><td class="text-end" style="background-color: #dc35454B">48</td><td class="text-end" style="background-color: #dc3545E5">11</td><td class="text-end" style="background-color: #1987543E">31</td><td class="text-end" style="background-color: #1987547C">6</td></tr>
 <tr><td colspan="2" title="Games: 17
 Runs: 1755
-Wickets: 107" style="cursor: default" data-text="4">4.&nbsp;England</td><td class="text-end" style="background-color: #198754C5">19</td><td class="text-end" style="background-color: #dc35453F">0.84</td><td class="text-end" style="background-color: #dc35456F">47</td><td class="text-end" style="background-color: #dc3545D2">36</td><td class="text-end" style="background-color: #1987542B">6</td><td class="text-end" style="background-color: #19875426">7</td></tr>
+Wickets: 107" style="cursor: default" data-text="4">4.&nbsp;England</td><td class="text-end" style="background-color: #198754C5">19</td><td class="text-end" style="background-color: #dc35453F">0.84</td><td class="text-end" style="background-color: #dc35456F">47</td><td class="text-end" style="background-color: #19875426">7</td><td class="text-end" style="background-color: #dc3545D2">36</td><td class="text-end" style="background-color: #1987542B">6</td></tr>
 <tr><td colspan="2" title="Games: 3
 Runs: 301
-Wickets: 10" style="cursor: default" data-text="5">5.&nbsp;South Africa</td><td class="text-end" style="background-color: #dc3545FF">31</td><td class="text-end" style="background-color: #dc3545E8">0.96</td><td class="text-end" style="background-color: #dc35452A">49</td><td class="text-end" style="background-color: #19875464">30</td><td class="text-end" style="background-color: #198754FF">4</td><td class="text-end" style="background-color: #dc3545FF">12</td></tr>
+Wickets: 10" style="cursor: default" data-text="5">5.&nbsp;South Africa</td><td class="text-end" style="background-color: #dc3545FF">31</td><td class="text-end" style="background-color: #dc3545E8">0.96</td><td class="text-end" style="background-color: #dc35452A">49</td><td class="text-end" style="background-color: #dc3545FF">12</td><td class="text-end" style="background-color: #19875464">30</td><td class="text-end" style="background-color: #198754FF">4</td></tr>
 <tr><td colspan="2" title="Games: 7
 Runs: 785
-Wickets: 36" style="cursor: default" data-text="6">6.&nbsp;New Zealand</td><td class="text-end" style="background-color: #1987543F">23</td><td class="text-end" style="background-color: #dc3545D4">0.95</td><td class="text-end" style="background-color: #dc3545C1">44</td><td class="text-end" style="background-color: #dc354591">35</td><td class="text-end" style="background-color: #198754A9">5</td><td class="text-end" style="background-color: #dc35458A">10</td></tr>
+Wickets: 36" style="cursor: default" data-text="6">6.&nbsp;New Zealand</td><td class="text-end" style="background-color: #1987543F">23</td><td class="text-end" style="background-color: #dc3545D4">0.95</td><td class="text-end" style="background-color: #dc3545C1">44</td><td class="text-end" style="background-color: #dc35458A">10</td><td class="text-end" style="background-color: #dc354591">35</td><td class="text-end" style="background-color: #198754A9">5</td></tr>
 <tr><td colspan="2" title="Games: 8
 Runs: 831
-Wickets: 35" style="cursor: default" data-text="7">7.&nbsp;India</td><td class="text-end" style="background-color: #dc354546">26</td><td class="text-end" style="background-color: #dc35458E">0.90</td><td class="text-end" style="background-color: #dc354592">45</td><td class="text-end" style="background-color: #dc3545C8">36</td><td class="text-end" style="background-color: #1987546C">6</td><td class="text-end" style="background-color: #dc354564">9</td></tr>
+Wickets: 35" style="cursor: default" data-text="7">7.&nbsp;India</td><td class="text-end" style="background-color: #dc354546">26</td><td class="text-end" style="background-color: #dc35458E">0.90</td><td class="text-end" style="background-color: #dc354592">45</td><td class="text-end" style="background-color: #dc354564">9</td><td class="text-end" style="background-color: #dc3545C8">36</td><td class="text-end" style="background-color: #1987546C">6</td></tr>
 <tr><td colspan="2" title="Games: 8
 Runs: 886
-Wickets: 43" style="cursor: default" data-text="8">8.&nbsp;Pakistan</td><td class="text-end" style="background-color: #19875457">22</td><td class="text-end" style="background-color: #dc3545AE">0.92</td><td class="text-end" style="background-color: #dc3545E9">43</td><td class="text-end" style="background-color: #dc3545FF">37</td><td class="text-end" style="background-color: #dc354556">8</td><td class="text-end" style="background-color: #dc354513">8</td></tr>
+Wickets: 43" style="cursor: default" data-text="8">8.&nbsp;Pakistan</td><td class="text-end" style="background-color: #19875457">22</td><td class="text-end" style="background-color: #dc3545AE">0.92</td><td class="text-end" style="background-color: #dc3545E9">43</td><td class="text-end" style="background-color: #dc354513">8</td><td class="text-end" style="background-color: #dc3545FF">37</td><td class="text-end" style="background-color: #dc354556">8</td></tr>
 <tr><td colspan="2" title="Games: 9
 Runs: 970
-Wickets: 41" style="cursor: default" data-text="9">9.&nbsp;West Indies</td><td class="text-end" style="background-color: #19875413">24</td><td class="text-end" style="background-color: #dc3545FF">0.98</td><td class="text-end" style="background-color: #dc3545FF">42</td><td class="text-end" style="background-color: #dc354577">35</td><td class="text-end" style="background-color: #dc3545FF">10</td><td class="text-end" style="background-color: #dc354565">9</td></tr>
+Wickets: 41" style="cursor: default" data-text="9">9.&nbsp;West Indies</td><td class="text-end" style="background-color: #19875413">24</td><td class="text-end" style="background-color: #dc3545FF">0.98</td><td class="text-end" style="background-color: #dc3545FF">42</td><td class="text-end" style="background-color: #dc354565">9</td><td class="text-end" style="background-color: #dc354577">35</td><td class="text-end" style="background-color: #dc3545FF">10</td></tr>
 </tbody>
 </table>
 <h2>2011</h2>
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
-<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th><th class="text-end">Boundary %</th>
+<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Boundary %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th>
 </tr>
 </thead>
 <tbody>
 <tr><td colspan="2" title="Games: 1
 Runs: 15
-Wickets: 0" style="cursor: default" data-text="1">1.&nbsp;South Africa</td><td class="text-end"></td><td class="text-end" style="background-color: #19875423">0.94</td><td class="text-end" style="background-color: #198754FF">63</td><td class="text-end" style="background-color: #198754FF">0</td><td class="text-end" style="background-color: #198754FF">0</td><td class="text-end" style="background-color: #dc3545FF">19</td></tr>
+Wickets: 0" style="cursor: default" data-text="1">1.&nbsp;South Africa</td><td class="text-end"></td><td class="text-end" style="background-color: #19875423">0.94</td><td class="text-end" style="background-color: #198754FF">63</td><td class="text-end" style="background-color: #dc3545FF">19</td><td class="text-end" style="background-color: #198754FF">0</td><td class="text-end" style="background-color: #198754FF">0</td></tr>
 <tr><td colspan="2" title="Games: 2
 Runs: 198
-Wickets: 13" style="cursor: default" data-text="2">2.&nbsp;England</td><td class="text-end" style="background-color: #dc3545FF">19</td><td class="text-end" style="background-color: #198754FF">0.80</td><td class="text-end" style="background-color: #dc35455C">45</td><td class="text-end" style="background-color: #dc3545FF">39</td><td class="text-end" style="background-color: #1987541C">4</td><td class="text-end" style="background-color: #198754FF">7</td></tr>
+Wickets: 13" style="cursor: default" data-text="2">2.&nbsp;England</td><td class="text-end" style="background-color: #dc3545FF">19</td><td class="text-end" style="background-color: #198754FF">0.80</td><td class="text-end" style="background-color: #dc35455C">45</td><td class="text-end" style="background-color: #198754FF">7</td><td class="text-end" style="background-color: #dc3545FF">39</td><td class="text-end" style="background-color: #1987541C">4</td></tr>
 <tr><td colspan="2" title="Games: 1
 Runs: 134
-Wickets: 9" style="cursor: default" data-text="3">3.&nbsp;India</td><td class="text-end" style="background-color: #198754FF">13</td><td class="text-end" style="background-color: #dc3545FF">1.12</td><td class="text-end" style="background-color: #dc3545FF">37</td><td class="text-end" style="background-color: #dc3545FE">39</td><td class="text-end" style="background-color: #dc3545FF">10</td><td class="text-end" style="background-color: #1987540E">13</td></tr>
+Wickets: 9" style="cursor: default" data-text="3">3.&nbsp;India</td><td class="text-end" style="background-color: #198754FF">13</td><td class="text-end" style="background-color: #dc3545FF">1.12</td><td class="text-end" style="background-color: #dc3545FF">37</td><td class="text-end" style="background-color: #1987540E">13</td><td class="text-end" style="background-color: #dc3545FE">39</td><td class="text-end" style="background-color: #dc3545FF">10</td></tr>
 </tbody>
 </table>
 <h2>2010</h2>
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
-<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th><th class="text-end">Boundary %</th>
+<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Boundary %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th>
 </tr>
 </thead>
 <tbody>
 <tr><td colspan="2" title="Games: 3
 Runs: 353
-Wickets: 19" style="cursor: default" data-text="1">1.&nbsp;New Zealand</td><td class="text-end" style="background-color: #198754FF">20</td><td class="text-end" style="background-color: #198754FF">0.93</td><td class="text-end" style="background-color: #1987547B">38</td><td class="text-end" style="background-color: #dc3545FF">39</td><td class="text-end" style="background-color: #198754FF">10</td><td class="text-end" style="background-color: #198754FF">6</td></tr>
+Wickets: 19" style="cursor: default" data-text="1">1.&nbsp;New Zealand</td><td class="text-end" style="background-color: #198754FF">20</td><td class="text-end" style="background-color: #198754FF">0.93</td><td class="text-end" style="background-color: #1987547B">38</td><td class="text-end" style="background-color: #198754FF">6</td><td class="text-end" style="background-color: #dc3545FF">39</td><td class="text-end" style="background-color: #198754FF">10</td></tr>
 <tr><td colspan="2" title="Games: 3
 Runs: 344
-Wickets: 14" style="cursor: default" data-text="2">2.&nbsp;Australia</td><td class="text-end" style="background-color: #1987547B">26</td><td class="text-end" style="background-color: #198754F2">0.94</td><td class="text-end" style="background-color: #198754FF">42</td><td class="text-end" style="background-color: #dc354586">37</td><td class="text-end" style="background-color: #198754AF">11</td><td class="text-end" style="background-color: #19875488">7</td></tr>
+Wickets: 14" style="cursor: default" data-text="2">2.&nbsp;Australia</td><td class="text-end" style="background-color: #1987547B">26</td><td class="text-end" style="background-color: #198754F2">0.94</td><td class="text-end" style="background-color: #198754FF">42</td><td class="text-end" style="background-color: #19875488">7</td><td class="text-end" style="background-color: #dc354586">37</td><td class="text-end" style="background-color: #198754AF">11</td></tr>
 <tr><td colspan="2" title="Games: 1
 Runs: 123
-Wickets: 3" style="cursor: default" data-text="3">3.&nbsp;India</td><td class="text-end" style="background-color: #dc35458C">38</td><td class="text-end" style="background-color: #19875460">1.07</td><td class="text-end" style="background-color: #198754A1">39</td><td class="text-end" style="background-color: #dc354561">37</td><td class="text-end" style="background-color: #198754DA">10</td><td class="text-end" style="background-color: #dc3545F2">11</td></tr>
+Wickets: 3" style="cursor: default" data-text="3">3.&nbsp;India</td><td class="text-end" style="background-color: #dc35458C">38</td><td class="text-end" style="background-color: #19875460">1.07</td><td class="text-end" style="background-color: #198754A1">39</td><td class="text-end" style="background-color: #dc3545F2">11</td><td class="text-end" style="background-color: #dc354561">37</td><td class="text-end" style="background-color: #198754DA">10</td></tr>
 <tr><td colspan="2" title="Games: 1
 Runs: 180
-Wickets: 3" style="cursor: default" data-text="4">4.&nbsp;West Indies</td><td class="text-end" style="background-color: #dc3545FF">44</td><td class="text-end" style="background-color: #dc3545FF">1.37</td><td class="text-end" style="background-color: #dc3545FF">27</td><td class="text-end" style="background-color: #198754FF">32</td><td class="text-end" style="background-color: #dc3545FF">19</td><td class="text-end" style="background-color: #dc3545FF">11</td></tr>
+Wickets: 3" style="cursor: default" data-text="4">4.&nbsp;West Indies</td><td class="text-end" style="background-color: #dc3545FF">44</td><td class="text-end" style="background-color: #dc3545FF">1.37</td><td class="text-end" style="background-color: #dc3545FF">27</td><td class="text-end" style="background-color: #dc3545FF">11</td><td class="text-end" style="background-color: #198754FF">32</td><td class="text-end" style="background-color: #dc3545FF">19</td></tr>
 </tbody>
 </table>
 <h2>2009</h2>
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
-<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th><th class="text-end">Boundary %</th>
+<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Boundary %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th>
 </tr>
 </thead>
 <tbody>
 <tr><td colspan="2" title="Games: 1
 Runs: 97
-Wickets: 8" style="cursor: default" data-text="1">1.&nbsp;South Africa</td><td class="text-end" style="background-color: #198754FF">15</td><td class="text-end" style="background-color: #198754D2">0.81</td><td class="text-end" style="background-color: #198754FF">62</td><td class="text-end" style="background-color: #198754FF">14</td><td class="text-end" style="background-color: #dc354554">11</td><td class="text-end" style="background-color: #19875429">9</td></tr>
+Wickets: 8" style="cursor: default" data-text="1">1.&nbsp;South Africa</td><td class="text-end" style="background-color: #198754FF">15</td><td class="text-end" style="background-color: #198754D2">0.81</td><td class="text-end" style="background-color: #198754FF">62</td><td class="text-end" style="background-color: #19875429">9</td><td class="text-end" style="background-color: #198754FF">14</td><td class="text-end" style="background-color: #dc354554">11</td></tr>
 <tr><td colspan="2" title="Games: 1
 Runs: 93
-Wickets: 7" style="cursor: default" data-text="2">2.&nbsp;New Zealand</td><td class="text-end" style="background-color: #198754B2">17</td><td class="text-end" style="background-color: #198754FF">0.76</td><td class="text-end" style="background-color: #dc354519">46</td><td class="text-end" style="background-color: #dc3545FF">43</td><td class="text-end" style="background-color: #198754FF">3</td><td class="text-end" style="background-color: #198754D4">6</td></tr>
+Wickets: 7" style="cursor: default" data-text="2">2.&nbsp;New Zealand</td><td class="text-end" style="background-color: #198754B2">17</td><td class="text-end" style="background-color: #198754FF">0.76</td><td class="text-end" style="background-color: #dc354519">46</td><td class="text-end" style="background-color: #198754D4">6</td><td class="text-end" style="background-color: #dc3545FF">43</td><td class="text-end" style="background-color: #198754FF">3</td></tr>
 <tr><td colspan="2" title="Games: 1
 Runs: 95
-Wickets: 5" style="cursor: default" data-text="3">3.&nbsp;West Indies</td><td class="text-end" style="background-color: #dc354533">25</td><td class="text-end" style="background-color: #198754F5">0.77</td><td class="text-end" style="background-color: #1987540C">48</td><td class="text-end" style="background-color: #dc3545A1">37</td><td class="text-end" style="background-color: #1987544A">7</td><td class="text-end" style="background-color: #198754FF">5</td></tr>
+Wickets: 5" style="cursor: default" data-text="3">3.&nbsp;West Indies</td><td class="text-end" style="background-color: #dc354533">25</td><td class="text-end" style="background-color: #198754F5">0.77</td><td class="text-end" style="background-color: #1987540C">48</td><td class="text-end" style="background-color: #198754FF">5</td><td class="text-end" style="background-color: #dc3545A1">37</td><td class="text-end" style="background-color: #1987544A">7</td></tr>
 <tr><td colspan="2" title="Games: 1
 Runs: 145
-Wickets: 4" style="cursor: default" data-text="4">4.&nbsp;India</td><td class="text-end" style="background-color: #dc3545FF">31</td><td class="text-end" style="background-color: #dc354591">1.17</td><td class="text-end" style="background-color: #dc35456D">41</td><td class="text-end" style="background-color: #dc354528">31</td><td class="text-end" style="background-color: #dc35458D">12</td><td class="text-end" style="background-color: #dc354569">12</td></tr>
+Wickets: 4" style="cursor: default" data-text="4">4.&nbsp;India</td><td class="text-end" style="background-color: #dc3545FF">31</td><td class="text-end" style="background-color: #dc354591">1.17</td><td class="text-end" style="background-color: #dc35456D">41</td><td class="text-end" style="background-color: #dc354569">12</td><td class="text-end" style="background-color: #dc354528">31</td><td class="text-end" style="background-color: #dc35458D">12</td></tr>
 <tr><td colspan="2" title="Games: 2
 Runs: 282
-Wickets: 8" style="cursor: default" data-text="5">5.&nbsp;Australia</td><td class="text-end" style="background-color: #dc3545F7">31</td><td class="text-end" style="background-color: #dc35457A">1.15</td><td class="text-end" style="background-color: #dc3545FF">33</td><td class="text-end" style="background-color: #dc354593">37</td><td class="text-end" style="background-color: #dc3545FF">15</td><td class="text-end" style="background-color: #dc35451D">11</td></tr>
+Wickets: 8" style="cursor: default" data-text="5">5.&nbsp;Australia</td><td class="text-end" style="background-color: #dc3545F7">31</td><td class="text-end" style="background-color: #dc35457A">1.15</td><td class="text-end" style="background-color: #dc3545FF">33</td><td class="text-end" style="background-color: #dc35451D">11</td><td class="text-end" style="background-color: #dc354593">37</td><td class="text-end" style="background-color: #dc3545FF">15</td></tr>
 <tr><td colspan="2" title="Games: 2
 Runs: 314
-Wickets: 8" style="cursor: default" data-text="6">6.&nbsp;England</td><td class="text-end" style="background-color: #dc3545F3">31</td><td class="text-end" style="background-color: #dc3545FF">1.28</td><td class="text-end" style="background-color: #dc3545FD">33</td><td class="text-end" style="background-color: #dc35458E">36</td><td class="text-end" style="background-color: #dc3545A6">13</td><td class="text-end" style="background-color: #dc3545FF">15</td></tr>
+Wickets: 8" style="cursor: default" data-text="6">6.&nbsp;England</td><td class="text-end" style="background-color: #dc3545F3">31</td><td class="text-end" style="background-color: #dc3545FF">1.28</td><td class="text-end" style="background-color: #dc3545FD">33</td><td class="text-end" style="background-color: #dc3545FF">15</td><td class="text-end" style="background-color: #dc35458E">36</td><td class="text-end" style="background-color: #dc3545A6">13</td></tr>
 </tbody>
 </table>
 <script>$(function() {  $('.table-sort').tablesorter();  $(document).ready(function() {     const query = new URLSearchParams(window.location.search);	    if(query.get('Sort')) {      var index = $('th:contains("' + query.get('Sort') + '")')?.index();      if(index > 1) {        $('.table-sort').trigger('sorton', [[[index, (query.get('Direction') ?? query.get('Order'))?.toLowerCase()]]]);       }    }	  });});</script><style>table.table-sort th { cursor: ns-resize; } </style>
