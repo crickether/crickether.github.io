@@ -19,6 +19,12 @@ echo "England > ODC"
 # 100
 curl -o /Users/syd/Documents/Cricket/Data/wod_female_json.zip -z /Users/syd/Documents/Cricket/Data/wod_female_json.zip https://cricsheet.org/downloads/wod_female_json.zip
 unzip -q -o /Users/syd/Documents/Cricket/Data/wod_female_json.zip -d /Users/syd/Documents/Cricket/Data/England/OneDayCup
+# Fix Esmae/Beth MacGregor
+sed -i '' "s/\"E MacGregor\": \"672aff32\"/\"EI MacGregor\": \"c812dfa3\"/g" /Users/syd/Documents/Cricket/Data/England/OneDayCup/1462343.json
+sed -i '' "s/\"E MacGregor\": \"672aff32\"/\"EI MacGregor\": \"c812dfa3\"/g" /Users/syd/Documents/Cricket/Data/England/OneDayCup/1462352.json
+sed -i '' "s/\"E MacGregor\": \"672aff32\"/\"EI MacGregor\": \"c812dfa3\"/g" /Users/syd/Documents/Cricket/Data/England/OneDayCup/1462359.json
+sed -i '' "s/\"E MacGregor\": \"672aff32\"/\"EI MacGregor\": \"c812dfa3\"/g" /Users/syd/Documents/Cricket/Data/England/OneDayCup/1462364.json
+sed -i '' "s/\"E MacGregor\": \"672aff32\"/\"EI MacGregor\": \"c812dfa3\"/g" /Users/syd/Documents/Cricket/Data/England/OneDayCup/1462368.json
 # HTML
 /Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/England/OneDayCup" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/England/OneDayCup"
 
