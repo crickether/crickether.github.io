@@ -26,14 +26,27 @@
             a.toggle+ul {
                 display: none;
             }
+
+            a.navbar-brand.brand-title::before {
+                content: '🏏';
+            }
+
+            @media (max-width:480px) {
+                a.navbar-brand {
+                    font-size: medium !important;
+                }
+                a.navbar-brand.brand-link {
+                    display: none;
+                }
+            }
         </style>
     </head>
     <body class="m-1 p-1">
         <nav class="navbar navbar-dark bg-secondary p-2">
-            <a class="navbar-brand" href="#">
-                🏏&nbsp;The Numbers - Women's Cricket Stats
+            <a class="navbar-brand brand-title" href="#">
+                The Numbers - Women's Cricket Stats
             </a>
-            <a class="navbar-brand" href="https://crickether.com/">
+            <a class="navbar-brand brand-link" href="https://crickether.com/">
                 CRICKETher.com
             </a>
         </nav>
