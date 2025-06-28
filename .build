@@ -16,7 +16,7 @@ unzip -q -o /Users/syd/Documents/Cricket/Data/hnd_female_json.zip -d /Users/syd/
 /Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/England/100" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/England/The100"
 
 echo "England > ODC"
-# 100
+# ODC
 curl -o /Users/syd/Documents/Cricket/Data/wod_female_json.zip -z /Users/syd/Documents/Cricket/Data/wod_female_json.zip https://cricsheet.org/downloads/wod_female_json.zip
 unzip -q -o /Users/syd/Documents/Cricket/Data/wod_female_json.zip -d /Users/syd/Documents/Cricket/Data/England/OneDayCup
 # Fix Esmae/Beth MacGregor
@@ -29,7 +29,7 @@ sed -i '' "s/\"E MacGregor\": \"672aff32\"/\"E MacGregor\": \"c812dfa3\"/g" /Use
 /Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/England/OneDayCup" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/England/OneDayCup"
 
 echo "England > Blast"
-# 100
+# BLAST
 curl -o /Users/syd/Documents/Cricket/Data/wtb_female_json.zip -z /Users/syd/Documents/Cricket/Data/wtb_female_json.zip https://cricsheet.org/downloads/wtb_female_json.zip
 unzip -q -o /Users/syd/Documents/Cricket/Data/wtb_female_json.zip -d /Users/syd/Documents/Cricket/Data/England/Blast
 # HTML
