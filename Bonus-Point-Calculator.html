@@ -1,0 +1,81 @@
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1"><style>@media (max-width:480px) {table.table { font-size: 50%; } small { font-size: 50% !important; } table.table td:nth-of-type(n+6), table.table th:nth-of-type(n+6) { display: none; } }</style>
+    <head>
+    <title>Bonus Point Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>    
+    </head>
+    <body class="m-2"">
+        <h1>Bonus Point Calculator</h1>
+        <label for="format">Format</label>        
+        <select class="form-select" name="format" id="format">
+            <option value="T20">T20</option>
+            <option value="OD">OD</option>
+        </select>
+        <label for="overs1">Team 1 Overs</label>
+        <input type="number" class="form-control" name="overs1" id="overs1" value="20" />
+        <label for="score">Team 1 Score</label>
+        <input type="number" class="form-control" name="score" id="score" value="120" required />
+        <label for="overs2">Team 2 Overs</label>
+        <input type="number" class="form-control" name="overs2" id="overs2" value="20" />
+        <label for="target">Team 2 Target</label>
+        <input type="number" class="form-control" name="target" id="target" value="140" />
+        <div class="my-2">
+            <button type="button" class="btn btn-primary" onclick="calc()">Calculate</button>
+        </div>        
+        <label for="brs">Team 1 Bonus Target (Max Runs)</label>
+        <input type="number" class="form-control" name="brs" id="brs" value="" />
+        <label for="bos">Team 2 Bonus Target (Max Overs)</label>
+        <input type="number" class="form-control" name="bos" id="bos" value="" />
+    </body>
+    <script>
+        function calc()
+        {
+            const s = parseFloat($('#score').val());
+            const o1 = $('#overs1').val();
+            const b1 = balls(o1);
+            var rr1 = s / b1 * 6;
+            $('#rr1').val(rr1.toFixed(2));
+            const o2 = $('#overs2').val();
+            const b2 = balls(o2);
+            var brr = rr1 * 1.25;
+            var target = parseInt($('#target').val());
+            console.log(brr);
+            console.log(target);
+            var bbs = target / brr;
+            console.log(bbs);
+            $('#bos').val(overs(balls(bbs)));
+            var brs = rr1 / 1.25;            
+            $('#brs').val(Math.floor(brs * o2) - 1);
+        }
+
+        function balls(overs)
+        {
+            const o = Math.floor(overs);
+            const b = (overs - o) * 10;
+            return parseFloat(parseInt((o * 6) + b));
+        }
+
+        function overs(balls)
+        {
+            const o = Math.floor(balls / 6);
+            const b = balls % 6;
+            return o + "." + b;
+        }
+
+        $( "#format" ).on( "change", function() {
+            var o = 20;
+            if($(this).val() == 'OD') {
+                o = 50;
+            }
+            $('#overs1').val(o);
+            $('#overs2').val(o);
+        } );
+
+        $( "#score" ).on( "change", function() {
+            var s = parseInt($(this).val());
+            $('#target').val(s + 1);
+        } );
+    </script>
+</html>
