@@ -32,10 +32,10 @@
     <script>
         function calc()
         {
-            const s = parseFloat($('#score').val());
+            const score = parseFloat($('#score').val());
             const o1 = $('#overs1').val();
             const b1 = balls(o1);
-            var rr1 = s / b1 * 6;
+            var rr1 = score / b1 * 6;
             $('#rr1').val(rr1.toFixed(2));
             const o2 = $('#overs2').val();
             const b2 = balls(o2);
