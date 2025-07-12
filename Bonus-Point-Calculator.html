@@ -16,7 +16,7 @@
         <label for="overs1">Team 1 Overs</label>
         <input type="number" class="form-control" name="overs1" id="overs1" value="20" />
         <label for="score">Team 1 Score</label>
-        <input type="number" class="form-control" name="score" id="score" value="" required />
+        <input type="number" class="form-control required border-danger" name="score" id="score" value="" placeholder="Enter Score..." />
         <label for="overs2">Team 2 Overs</label>
         <input type="number" class="form-control" name="overs2" id="overs2" value="20" />
         <label for="target">Team 2 Target</label>
@@ -30,7 +30,7 @@
         <input type="number" class="form-control" name="bos" id="bos" value="" />
     </body>
     <script>
-        
+
         function calc()
         {
             const score = parseFloat($('#score').val());
@@ -78,5 +78,17 @@
             var s = parseInt($(this).val());
             $('#target').val(s + 1);
         } );
-    </script>
+
+        $( ".required" ).on( "change keyup", function() {
+            var v = parseInt($(this).val());
+            console.log(v);
+            if(v > 0) {
+                $(this).removeClass('border-danger');
+            }
+            else {
+                $(this).addClass('border-danger');
+            }
+        } );
+
+</script>
 </html>
