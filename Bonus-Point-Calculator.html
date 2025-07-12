@@ -30,6 +30,7 @@
         <input type="number" class="form-control" name="bos" id="bos" value="" />
     </body>
     <script>
+        
         function calc()
         {
             const score = parseFloat($('#score').val());
@@ -45,7 +46,7 @@
             console.log(target);
             var bbs = target / brr;
             console.log(bbs);
-            $('#bos').val(overs(balls(bbs)));
+            $('#bos').val(overs(balls(bbs) - 1));
             var brs = rr1 / 1.25;            
             $('#brs').val(Math.floor(brs * o2) - 1);
         }
