@@ -6,28 +6,42 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>    
     </head>
-    <body class="m-2"">
-        <h1>Bonus Point Calculator</h1>
-        <label for="format">Format</label>        
-        <select class="form-select" name="format" id="format">
-            <option value="T20">T20</option>
-            <option value="OD">OD</option>
-        </select>
-        <label for="overs1">Team 1 Overs</label>
-        <input type="number" class="form-control" name="overs1" id="overs1" value="20" />
-        <label for="score">Team 1 Score</label>
-        <input type="number" class="form-control required border-danger" name="score" id="score" value="" placeholder="Enter Score..." />
-        <label for="overs2">Team 2 Overs</label>
-        <input type="number" class="form-control" name="overs2" id="overs2" value="20" />
-        <label for="target">Team 2 Target</label>
-        <input type="number" class="form-control" name="target" id="target" value="" />
-        <div class="my-2">
-            <button type="button" class="btn btn-primary" onclick="calc()">Calculate</button>
-        </div>        
-        <label for="brs">Team 1 Bonus Target (Max Runs)</label>
-        <input type="number" class="form-control" name="brs" id="brs" value="" />
-        <label for="bos">Team 2 Bonus Target (Max Overs)</label>
-        <input type="number" class="form-control" name="bos" id="bos" value="" />
+    <body>
+        <div class="mx-auto m-4 p-4 border rounded bg-light" style="max-width: 500px;">
+            <h2>Bonus Point Calculator</h2>
+            <h5>For English Domestic Cricket</h5>
+            <label for="format">Format</label>        
+            <select class="form-select" name="format" id="format">
+                <option value="T20">T20</option>
+                <option value="OD">OD</option>
+            </select>
+            <label for="overs1">Team 1 Overs</label>
+            <input type="number" class="form-control" name="overs1" id="overs1" value="20" />
+            <label for="score">Team 1 Score</label>
+            <input type="number" class="form-control required border-danger" name="score" id="score" value="" placeholder="Enter Score..." />
+            <label for="overs2">Team 2 Overs</label>
+            <input type="number" class="form-control" name="overs2" id="overs2" value="20" />
+            <label for="target">Team 2 Target</label>
+            <input type="number" class="form-control" name="target" id="target" value="" />
+            <div class="my-2 text-end">
+                <button type="button" class="btn btn-primary" onclick="calc()">Calculate</button>
+            </div>        
+            <div id="calcs" style="display: none;">
+                <h5>Bowling</h5>
+                <div>
+                    The bowling team need to restrict the batting team to <span class="fw-bold text-success" id="brs"></span>.
+                </div>
+                <h5 class="mt-2">Batting</h5>
+                <div>
+                    The batting team need to reach <span id="bos-target"></span> in <span id="bos" class="fw-bold text-success"></span> overs.
+                </div>
+                <div class="fst-italic text-muted small">
+                    <div>
+                        Or <span id="bos-target-6"></span> in <span id="bos-6" class="fw-bold"></span> overs.
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
     <script>
 
@@ -40,15 +54,29 @@
             $('#rr1').val(rr1.toFixed(2));
             const o2 = $('#overs2').val();
             const b2 = balls(o2);
+            // Bonus Runs
+            var brs = rr1 / 1.25;            
+            $('#brs').text(Math.floor(brs * o2) - 1);
             var brr = rr1 * 1.25;
             var target = parseInt($('#target').val());
-            console.log(brr);
-            console.log(target);
             var bbs = target / brr;
+            $('#bos-target').text(target);
+            $('#bos').text(overs(dballs(bbs)));
+            // Plus...
+            target += 5;
             console.log(bbs);
-            $('#bos').val(overs(balls(bbs) - 1));
-            var brs = rr1 / 1.25;            
-            $('#brs').val(Math.floor(brs * o2) - 1);
+            bbs = target / brr;
+            console.log(bbs);
+            $('#bos-target-6').text(target);
+            $('#bos-6').text(overs(dballs(bbs)));
+            $('#calcs').toggle(true);
+        }
+
+        function dballs(overs) {
+            const o = Math.floor(overs);
+            const db = (overs - o);
+            const b = Math.floor(db * 6);
+            return parseFloat(parseInt((o * 6) + b));
         }
 
         function balls(overs)
@@ -89,6 +117,15 @@
                 $(this).addClass('border-danger');
             }
         } );
+
+        $(document).ready(function() {
+            const query = new URLSearchParams(window.location.search);
+            if(query.get('Score')) {
+                $( "#score" ).val(query.get('Score'));
+                $( "#score" ).trigger('change');
+                calc();
+            }
+        });
 
 </script>
 </html>
