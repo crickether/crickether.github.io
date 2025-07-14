@@ -59,7 +59,9 @@
             const b2 = balls(o2);
             // Bonus Runs
             var brs = rr1 / 1.25;
-            $('#brs').text(Math.ceil(brs * o2) - 1);
+            $('#brs').text(Math.ceil(brs * o2));
+            // Bonus Overs
+            var rr2 = brs / b2 * 6;
             var brr = rr1 * 1.25;
             var target = parseInt($('#target').val());
             var bbs = target / brr;
@@ -115,7 +117,6 @@
 
         $( ".required" ).on( "change keyup", function() {
             var v = parseInt($(this).val());
-            console.log(v);
             if(v > 0) {
                 $(this).removeClass('border-danger');
             }
