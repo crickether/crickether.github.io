@@ -33,12 +33,12 @@
                 <div>
                     The batting team need to reach <span id="bos-target"></span> in <span id="bos" class="fw-bold text-success"></span> overs
                 </div>
-                <div class="fst-italic text-muted small">
+                <div class="fst-italic text-muted small mt-2">
                     <div>
-                        Or <span id="bos-target-4"></span> in <span id="bos-4" class="fw-bold"></span> overs with a 4
+                        Once the above overs have passed, you can NOT achieve a bonus point by hitting a 4 or 6 off the final delivery!
                     </div>
-                    <div>
-                        Or <span id="bos-target-6"></span> in <span id="bos-6" class="fw-bold"></span> overs with a 6
+                    <div class="fst-italic mt-2" style="font-size: xx-small;">
+                        "Whenever a target, or revised target, is set, the exact number of overs/balls within which the side batting second must achieve this target in order to gain the bonus point should be announced. Once these overs/balls have been bowled, if the target has not then been achieved the bonus point cannot be gained by any subsequent event, e.g. a multiple scoring shot, or extras."
                     </div>
                 </div>
             </div>
@@ -62,20 +62,17 @@
             var rr2 = brs / b2;
             var brr = rr1 * 1.25;
             var target = parseInt($('#target').val());
-            var bbs = Math.floor(target / brr);
             $('#bos-target').text(target);
-            $('#bos').text(overs((bbs)));
-            // Plus... 4
-            target += 3;
-            bbs = Math.floor(target / brr);
-            $('#bos-target-4').text(target);
-            $('#bos-4').text(overs((bbs)));
-            // Plus... 6
-            target += 2;
-            bbs = Math.floor(target / brr);
-            $('#bos-target-6').text(target);
-            $('#bos-6').text(overs((bbs)));
+            $('#bos').text(overs(getBonusBalls(target, brr)));
             $('#calcs').toggle(true);
+        }
+
+        function getBonusBalls(target, brr) {
+            var b = 0;
+            while(target / (b + 1) >= brr) {
+                b++;
+            }
+            return b;
         }
 
         function balls(overs)
