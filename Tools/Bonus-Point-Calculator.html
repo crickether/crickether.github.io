@@ -12,14 +12,14 @@
             <h2>Bonus Point Calculator</h2>
             <h5 class="text-secondary fst-italic">For English Domestic Cricket</h5>
             <label for="format">Format</label>        
-            <select class="form-select" name="format" id="format">
+            <select class="form-select recalc" name="format" id="format">
                 <option value="T20">T20</option>
                 <option value="OD">OD</option>
             </select>
             <label for="overs1">Team 1 Overs</label>
             <input type="number" class="form-control" name="overs1" id="overs1" value="20" />
             <label for="score">Team 1 Score</label>
-            <input type="number" class="form-control required border-danger" name="score" id="score" value="" placeholder="Enter Score..." />
+            <input type="number" class="form-control required border-danger recalc" name="score" id="score" value="" placeholder="Enter Score..." />
             <label for="overs2">Team 2 Overs</label>
             <input type="number" class="form-control" name="overs2" id="overs2" value="20" />
             <label for="target">Team 2 Target</label>
@@ -59,32 +59,23 @@
             var brs = rr1 / 1.25;
             $('#brs').text(Math.floor(brs * b2));
             // Bonus Overs
-            var rr2 = brs / b2;
             var brr = rr1 * 1.25;
             var target = parseInt($('#target').val());
-            $('#bos').text(overs(getBonusBalls(target, brr)));
+            $('#bos').text(overs((target / brr)));
             $('#calcs').toggle(true);
-        }
-
-        function getBonusBalls(target, brr) {
-            var b = 0;
-            while(target / (b + 1) >= brr) {
-                b++;
-            }
-            return b;
         }
 
         function balls(overs)
         {
             const o = Math.floor(overs);
-            const b = (overs - o) * 10;
+            const b = Math.floor((overs - o) * 10);
             return parseFloat(parseInt((o * 6) + b));
         }
 
         function overs(balls)
         {
             const o = Math.floor(balls / 6);
-            const b = balls % 6;
+            const b = Math.floor(balls % 6);
             return o + "." + b;
         }
 
@@ -97,8 +88,8 @@
             $('#overs2').val(o);
         } );
 
-        $( "#score" ).on( "change keyup", function() {
-            var s = parseInt($(this).val());
+        $('.recalc').on( 'change keyup', function() {
+            var s = parseInt($('#score').val());
             if(s > 0) {
                 $('#target').val(s + 1);
                 calc();
