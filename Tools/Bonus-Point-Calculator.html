@@ -8,8 +8,9 @@
     </head>
     <body>
         <div class="mx-auto m-4 p-4 border rounded bg-light" style="max-width: 500px;">
+            <div style="color: #0086cc">CRICKETher.com</div>
             <h2>Bonus Point Calculator</h2>
-            <h5>For English Domestic Cricket</h5>
+            <h5 class="text-secondary fst-italic">For English Domestic Cricket</h5>
             <label for="format">Format</label>        
             <select class="form-select" name="format" id="format">
                 <option value="T20">T20</option>
@@ -23,24 +24,21 @@
             <input type="number" class="form-control" name="overs2" id="overs2" value="20" />
             <label for="target">Team 2 Target</label>
             <input type="number" class="form-control" name="target" id="target" value="" />
-            <div class="my-2 text-end">
-                <button type="button" class="btn btn-primary" onclick="calc()">Calculate</button>
-            </div>        
             <div id="calcs" style="display: none;">
-                <h5>Bowling</h5>
+                <h5 class="mt-2">Bowling</h5>
                 <div>
-                    The bowling team need to restrict the batting team to <span class="fw-bold text-success" id="brs"></span>.
+                    The bowling team need to restrict the batting team to <span class="fw-bold text-success" id="brs"></span>
                 </div>
                 <h5 class="mt-2">Batting</h5>
                 <div>
-                    The batting team need to reach <span id="bos-target"></span> in <span id="bos" class="fw-bold text-success"></span> overs.
+                    The batting team need to reach <span id="bos-target"></span> in <span id="bos" class="fw-bold text-success"></span> overs
                 </div>
                 <div class="fst-italic text-muted small">
                     <div>
-                        Or <span id="bos-target-4"></span> in <span id="bos-4" class="fw-bold"></span> overs with a 4.
+                        Or <span id="bos-target-4"></span> in <span id="bos-4" class="fw-bold"></span> overs with a 4
                     </div>
                     <div>
-                        Or <span id="bos-target-6"></span> in <span id="bos-6" class="fw-bold"></span> overs with a 6.
+                        Or <span id="bos-target-6"></span> in <span id="bos-6" class="fw-bold"></span> overs with a 6
                     </div>
                 </div>
             </div>
@@ -87,6 +85,7 @@
             return parseFloat(parseInt((o * 6) + b));
         }
 
+
         function balls(overs)
         {
             const o = Math.floor(overs);
@@ -110,9 +109,15 @@
             $('#overs2').val(o);
         } );
 
-        $( "#score" ).on( "change", function() {
+        $( "#score" ).on( "change keyup", function() {
             var s = parseInt($(this).val());
-            $('#target').val(s + 1);
+            if(s > 0) {
+                $('#target').val(s + 1);
+                calc();
+            }
+            else {
+                $('#calcs').toggle(false);
+            }
         } );
 
         $( ".required" ).on( "change keyup", function() {
@@ -127,10 +132,13 @@
 
         $(document).ready(function() {
             const query = new URLSearchParams(window.location.search);
+            if(query.get('Format')) {
+                $( "#format" ).val(query.get('Format'));
+                $( "#format" ).trigger('change');
+            }
             if(query.get('Score')) {
                 $( "#score" ).val(query.get('Score'));
                 $( "#score" ).trigger('change');
-                calc();
             }
         });
 
