@@ -37,7 +37,10 @@
                 </div>
                 <div class="fst-italic text-muted small">
                     <div>
-                        Or <span id="bos-target-6"></span> in <span id="bos-6" class="fw-bold"></span> overs.
+                        Or <span id="bos-target-4"></span> in <span id="bos-4" class="fw-bold"></span> overs with a 4.
+                    </div>
+                    <div>
+                        Or <span id="bos-target-6"></span> in <span id="bos-6" class="fw-bold"></span> overs with a 6.
                     </div>
                 </div>
             </div>
@@ -55,18 +58,21 @@
             const o2 = $('#overs2').val();
             const b2 = balls(o2);
             // Bonus Runs
-            var brs = rr1 / 1.25;            
-            $('#brs').text(Math.floor(brs * o2) - 1);
+            var brs = rr1 / 1.25;
+            $('#brs').text(Math.ceil(brs * o2) - 1);
             var brr = rr1 * 1.25;
             var target = parseInt($('#target').val());
             var bbs = target / brr;
             $('#bos-target').text(target);
             $('#bos').text(overs(dballs(bbs)));
-            // Plus...
-            target += 5;
-            console.log(bbs);
+            // Plus... 4
+            target += 3;
             bbs = target / brr;
-            console.log(bbs);
+            $('#bos-target-4').text(target);
+            $('#bos-4').text(overs(dballs(bbs)));
+            // Plus... 6
+            target += 2;
+            bbs = target / brr;
             $('#bos-target-6').text(target);
             $('#bos-6').text(overs(dballs(bbs)));
             $('#calcs').toggle(true);
