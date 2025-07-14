@@ -31,7 +31,7 @@
                 </div>
                 <h5 class="mt-2">Batting</h5>
                 <div>
-                    The batting team need to reach <span id="bos-target"></span> in <span id="bos" class="fw-bold text-success"></span> overs
+                    The batting team need to get the runs in <span id="bos" class="fw-bold text-success"></span> overs
                 </div>
                 <div class="fst-italic text-muted small mt-2">
                     <div>
@@ -62,7 +62,6 @@
             var rr2 = brs / b2;
             var brr = rr1 * 1.25;
             var target = parseInt($('#target').val());
-            $('#bos-target').text(target);
             $('#bos').text(overs(getBonusBalls(target, brr)));
             $('#calcs').toggle(true);
         }
