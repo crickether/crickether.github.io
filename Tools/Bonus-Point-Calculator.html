@@ -20,13 +20,13 @@
                 <option value="OD">OD</option>
             </select>
             <label for="overs1">Team 1 Overs</label>
-            <input type="number" class="form-control" name="overs1" id="overs1" value="20" />
+            <input type="number" class="form-control recalc" name="overs1" id="overs1" value="20" />
             <label for="score">Team 1 Score</label>
-            <input type="number" class="form-control required border-danger recalc" name="score" id="score" value="" placeholder="Enter Score..." />
+            <input type="number" class="form-control required border-danger recalc retarget" name="score" id="score" value="" placeholder="Enter Score..." />
             <label for="overs2">Team 2 Overs</label>
-            <input type="number" class="form-control" name="overs2" id="overs2" value="20" />
+            <input type="number" class="form-control recalc" name="overs2" id="overs2" value="20" />
             <label for="target">Team 2 Target</label>
-            <input type="number" class="form-control" name="target" id="target" value="" />
+            <input type="number" class="form-control recalc" name="target" id="target" value="" />
             <div id="calcs" style="display: none;">
                 <h5 class="mt-2">Bowling</h5>
                 <div>
@@ -81,7 +81,7 @@
             return o + "." + b;
         }
 
-        $( "#format" ).on( "change", function() {
+        $( '#format' ).on('change', function() {
             var o = 20;
             if($(this).val() == 'OD') {
                 o = 50;
@@ -90,10 +90,9 @@
             $('#overs2').val(o);
         } );
 
-        $('.recalc').on( 'change keyup', function() {
+        $('.recalc').on('change keyup', function() {
             var s = parseInt($('#score').val());
             if(s > 0) {
-                $('#target').val(s + 1);
                 calc();
             }
             else {
@@ -101,7 +100,14 @@
             }
         } );
 
-        $( ".required" ).on( "change keyup", function() {
+        $('.retarget').on('change keyup', function() {
+            var s = parseInt($('#score').val());
+            if(s > 0) {
+                $('#target').val(s + 1);
+            }
+        } );
+
+        $('.required').on('change keyup', function() {
             var v = parseInt($(this).val());
             if(v > 0) {
                 $(this).removeClass('border-danger');
@@ -114,12 +120,12 @@
         $(document).ready(function() {
             const query = new URLSearchParams(window.location.search);
             if(query.get('Format')) {
-                $( "#format" ).val(query.get('Format'));
-                $( "#format" ).trigger('change');
+                $('#format').val(query.get('Format'));
+                $('#format').trigger('change');
             }
             if(query.get('Score')) {
-                $( "#score" ).val(query.get('Score'));
-                $( "#score" ).trigger('change');
+                $('#score').val(query.get('Score'));
+                $('#score').trigger('change');
             }
         });
 
