@@ -19,14 +19,11 @@
                 <option value="T20">T20</option>
                 <option value="OD">OD</option>
             </select>
-            <label for="overs1">Team 1 Overs</label>
-            <input type="number" class="form-control recalc" name="overs1" id="overs1" value="20" />
-            <label for="score">Team 1 Score</label>
-            <input type="number" class="form-control required border-danger recalc retarget" name="score" id="score" value="" placeholder="Enter Score..." />
             <label for="overs2">Team 2 Overs</label>
-            <input type="number" class="form-control recalc" name="overs2" id="overs2" value="20" />
+            <input type="number" class="form-control recalc" name="overs2" id="overs" value="20" />
             <label for="target">Team 2 Target</label>
-            <input type="number" class="form-control recalc" name="target" id="target" value="" />
+            <div class="small fst-italic text-muted">Normally <b><u>one more</u></b> than Team 1's score!</small>
+            <input type="number" class="form-control required border-danger recalc" name="target" id="target" value="" />
             <div id="calcs" style="display: none;">
                 <h5 class="mt-2">Bowling</h5>
                 <div>
@@ -36,13 +33,12 @@
                 <div>
                     The batting team need to get the runs in <span id="bos" class="fw-bold text-success"></span> overs
                 </div>
+                <hr />
                 <div class="fst-italic text-muted small mt-2">
-                    <div>
-                        Once the above overs have passed, you can <u>not</u> achieve a bonus point by hitting a 4 or 6 off the final delivery!
-                    </div>
-                    <div class="fst-italic mt-2" style="font-size: xx-small;">
-                        "Whenever a target, or revised target, is set, the exact number of overs/balls within which the side batting second must achieve this target in order to gain the bonus point should be announced. Once these overs/balls have been bowled, if the target has not then been achieved the bonus point cannot be gained by any subsequent event, e.g. a multiple scoring shot, or extras."
-                    </div>
+                    Once the above overs have passed, you can <u>not</u> achieve a bonus point by hitting a 4 or 6 off the final delivery!
+                </div>
+                <div class="fst-italic text-muted small mt-2">
+                    Some notes on <a href="https://crickether.com/2025/09/14/one-day-cup-the-trouble-with-bonus-points-tldr-the-playing-conditions-are-wrong/">why the Playing Conditions are wrong</a>!
                 </div>
             </div>
         </div>
@@ -51,19 +47,10 @@
 
         function calc()
         {
-            const score = parseFloat($('#score').val());
-            const o1 = $('#overs1').val();
-            const b1 = balls(o1);
-            var rr1 = score / b1;
-            const o2 = $('#overs2').val();
-            const b2 = balls(o2);
-            // Bonus Runs
-            var brs = rr1 / 1.25;
-            $('#brs').text(Math.floor(brs * b2));
-            // Bonus Overs
-            var brr = rr1 * 1.25;
-            var target = parseInt($('#target').val());
-            $('#bos').text(overs((target / brr)));
+            var t = parseInt($('#target').val());
+            var b = balls($('#overs').val());
+            $('#bos').text(overs(Math.floor(b * 0.8)));
+            $('#brs').text(Math.floor(t * 0.8));
             $('#calcs').toggle(true);
         }
 
@@ -86,24 +73,16 @@
             if($(this).val() == 'OD') {
                 o = 50;
             }
-            $('#overs1').val(o);
-            $('#overs2').val(o);
+            $('#overs').val(o);
         } );
 
         $('.recalc').on('change keyup', function() {
-            var s = parseInt($('#score').val());
+            var s = parseInt($('#target').val());
             if(s > 0) {
                 calc();
             }
             else {
                 $('#calcs').toggle(false);
-            }
-        } );
-
-        $('.retarget').on('change keyup', function() {
-            var s = parseInt($('#score').val());
-            if(s > 0) {
-                $('#target').val(s + 1);
             }
         } );
 
@@ -123,9 +102,13 @@
                 $('#format').val(query.get('Format'));
                 $('#format').trigger('change');
             }
-            if(query.get('Score')) {
-                $('#score').val(query.get('Score'));
-                $('#score').trigger('change');
+            if(query.get('Overs')) {
+                $('#overs').val(query.get('Overs'));
+                $('#overs').trigger('change');
+            }
+            if(query.get('Target')) {
+                $('#target').val(query.get('Target'));
+                $('#target').trigger('change');
             }
         });
 
