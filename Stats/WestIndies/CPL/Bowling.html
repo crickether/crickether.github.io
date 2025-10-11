@@ -14,10 +14,237 @@ a.chart { margin-right: 4px; }
 </head>
 <body>
 <h1>CPL - Bowling</h1>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-responsive-tabs@2.0.3/dist/js/jquery.bootstrap-responsive-tabs.min.js"></script><ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><button class="nav-link active" id="t-All-tab" data-bs-toggle="tab" data-bs-target="#t-All" type="button" role="tab" aria-selected="true" aria-controls="t-All">All</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2025-tab" data-bs-toggle="tab" data-bs-target="#t-2025" type="button" role="tab" aria-selected="false" aria-controls="t-2025">2025</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2024-tab" data-bs-toggle="tab" data-bs-target="#t-2024" type="button" role="tab" aria-selected="false" aria-controls="t-2024">2024</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2023-tab" data-bs-toggle="tab" data-bs-target="#t-2023" type="button" role="tab" aria-selected="false" aria-controls="t-2023">2023</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2022-tab" data-bs-toggle="tab" data-bs-target="#t-2022" type="button" role="tab" aria-selected="false" aria-controls="t-2022">2022</button></li></ul>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-responsive-tabs@2.0.3/dist/js/jquery.bootstrap-responsive-tabs.min.js"></script><ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><button class="nav-link active" id="t-Active-tab" data-bs-toggle="tab" data-bs-target="#t-Active" type="button" role="tab" aria-selected="true" aria-controls="t-Active">Active</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-All-tab" data-bs-toggle="tab" data-bs-target="#t-All" type="button" role="tab" aria-selected="false" aria-controls="t-All">All</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2025-tab" data-bs-toggle="tab" data-bs-target="#t-2025" type="button" role="tab" aria-selected="false" aria-controls="t-2025">2025</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2024-tab" data-bs-toggle="tab" data-bs-target="#t-2024" type="button" role="tab" aria-selected="false" aria-controls="t-2024">2024</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2023-tab" data-bs-toggle="tab" data-bs-target="#t-2023" type="button" role="tab" aria-selected="false" aria-controls="t-2023">2023</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2022-tab" data-bs-toggle="tab" data-bs-target="#t-2022" type="button" role="tab" aria-selected="false" aria-controls="t-2022">2022</button></li></ul><script>$(document).ready(function(){  const query = new URLSearchParams(window.location.search);	  if(query.get('Tab')) {    $('button.nav-link').each(function(i, el) {      var jel = $(el);      if(jel.text() === query.get('Tab')) {        jel.trigger('click');      }    });   }	});</script>
 <div class='m-1'><input class='form-control form-control-sm table-filter' type='search' placeholder='Filter...' style='display: none;' /></div><script>$(document).ready(function(){  $('.table-filter').toggle();   $('.table-filter').on('input', function() {    var fors = $(this).val().split(',').map(n => n.trim().toLowerCase()).filter(n => n.length > 0);    $('.table tbody tr').filter(function() {      $(this).toggle(filter_contains(fors, [$(this).text(), $(this).attr('data-filter')]));    });  });  const query = new URLSearchParams(window.location.search);	  if(query.get('Filter')) {    var el = $('input.table-filter').val(query.get('Filter'));     $('input.table-filter').trigger('input');   }	});function filter_contains(fors, ins) {  let result = false;  if(fors.length == 0) {    return true;  }  fors.forEach(f => {    if(f.length > 0) {      ins.forEach(i => {        if(i.toLowerCase().indexOf(f) > -1) {          result = true;        }      });    }  });  return result;}</script>
 <div class="tab-content">
-<div class="tab-pane fade show active" id="t-All" role="tabpanel" aria-labelledby="t-All-tab">
+<div class="tab-pane fade show active" id="t-Active" role="tabpanel" aria-labelledby="t-Active-tab">
+<table class="table table-sm table-sort table-ranked" style="table-layout: fixed;">
+<thead class="sticky-top">
+<tr style="position: relative; top: -1px">
+<th>Bowler</th><th></th><th class="text-end sortInitialOrder-desc">Impact</th><th class="text-end sortInitialOrder-asc">Average</th><th class="text-end sortInitialOrder-asc">Strike Rate</th><th class="text-end sortInitialOrder-asc">Economy</th><th class="text-end sortInitialOrder-desc">Dot %</th><th class="text-end sortInitialOrder-asc">Boundary %</th><th class="text-end sortInitialOrder-desc">LBW %</th><th class="text-end sortInitialOrder-desc">Bowled %</th><th class="text-end sortInitialOrder-descd">Stumped %</th><th class="text-end sortInitialOrder-desc">Caught %</th>
+</tr>
+</thead>
+<tbody>
+<tr style="cursor: default;" title="AA Alleyne
+Teams: Barbados Royals
+Matches: 15
+Overs: 43
+Wickets: 15
+" data-filter="Barbados Royals">
+<td colspan="2" data-text="Alleyne"><a class="chart" data-title="Bowling Impact - AA Alleyne" data-x="[&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[3.8194173782092684,11.513786741991376,6.601617897813552]" data-tooltips="[[&quot;Overs: 11&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 8.00&quot;,&quot;Average: 88.00&quot;],[&quot;Overs: 17&quot;,&quot;Wickets: 9&quot;,&quot;Economy: 5.94&quot;,&quot;Average: 11.22&quot;],[&quot;Overs: 15&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 8.27&quot;,&quot;Average: 24.80&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=AA+Alleyne+cricket" target="_blank">AA Alleyne</a></td>
+<td style="background-color: #19875404" class="text-end" data-text="7.3116" >7</td><td style="background-color: #1987544A" class="text-end" data-text="20.8667" >21</td><td style="background-color: #19875469" class="text-end" data-text="17.2" >17</td><td style="background-color: #19875400" class="text-end" data-text="7.2791" >7.28</td><td style="background-color: #19875400" class="text-end" data-text="41.8605" >42</td><td style="background-color: #19875412" class="text-end" data-text="13.1783" >13</td><td style="background-color: #dc354500" class="text-end" data-text="6.6667" >7</td><td style="background-color: #dc354599" class="text-end" data-text="53.3333" >53</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354500" class="text-end" data-text="40" >40</td>
+</tr>
+<tr style="cursor: default;" title="JKC Claxton
+Teams: Barbados Royals; Trinbago Knight Riders
+Matches: 4
+Overs: 10
+Wickets: 3
+" data-filter="Barbados Royals; Trinbago Knight Riders">
+<td colspan="2" data-text="Claxton"><a class="chart" data-title="Bowling Impact - JKC Claxton" data-x="[&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[null,null,4.442222086054046]" data-tooltips="[[&quot;Overs: 3&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 7.12&quot;,&quot;Average: 19.00&quot;],[&quot;Overs: 1&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 9.00&quot;,&quot;Average: &quot;],[&quot;Overs: 6&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 8.17&quot;,&quot;Average: 24.50&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=JKC+Claxton+cricket" target="_blank">JKC Claxton</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="4.3652" >4</td><td style="background-color: #19875413" class="text-end" data-text="25.6667" >26</td><td style="background-color: #19875448" class="text-end" data-text="19.3333" >19</td><td style="background-color: #19875400" class="text-end" data-text="7.9655" >7.97</td><td style="background-color: #19875414" class="text-end" data-text="46.5517" >47</td><td style="background-color: #19875400" class="text-end" data-text="18.9655" >19</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354519" class="text-end" data-text="33.3333" >33</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc35453C" class="text-end" data-text="66.6667" >67</td>
+</tr>
+<tr style="cursor: default;" title="SS Connell
+Teams: Guyana Amazon Warriors; Trinbago Knight Riders; Barbados Royals
+Matches: 13
+Overs: 36
+Wickets: 11
+" data-filter="Guyana Amazon Warriors; Trinbago Knight Riders; Barbados Royals">
+<td colspan="2" data-text="Connell"><a class="chart" data-title="Bowling Impact - SS Connell" data-x="[&quot;2022&quot;,&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[null,2.8392882729012423,8.037202477168547,8.053920392388111]" data-tooltips="[[&quot;Overs: 8&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 2.38&quot;,&quot;Average: 6.33&quot;],[&quot;Overs: 8&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 6.75&quot;,&quot;Average: 54.00&quot;],[&quot;Overs: 5&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 8.00&quot;,&quot;Average: 20.00&quot;],[&quot;Overs: 16&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 6.77&quot;,&quot;Average: 21.00&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=SS+Connell+cricket" target="_blank">SS Connell</a></td>
+<td style="background-color: #19875422" class="text-end" data-text="8.0533" >8</td><td style="background-color: #19875457" class="text-end" data-text="19.8182" >20</td><td style="background-color: #1987543F" class="text-end" data-text="19.9091" >20</td><td style="background-color: #19875460" class="text-end" data-text="5.9726" >5.97</td><td style="background-color: #19875460" class="text-end" data-text="50.6849" >51</td><td style="background-color: #19875434" class="text-end" data-text="11.8721" >12</td><td style="background-color: #dc35451B" class="text-end" data-text="9.0909" >9</td><td style="background-color: #dc354500" class="text-end" data-text="18.1818" >18</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354564" class="text-end" data-text="72.7273" >73</td>
+</tr>
+<tr style="cursor: default;" title="SL Dangore
+Teams: Trinbago Knight Riders
+Matches: 4
+Overs: 9
+Wickets: 2
+" data-filter="Trinbago Knight Riders">
+<td colspan="2" data-text="Dangore"><a class="chart" data-title="Bowling Impact - SL Dangore" data-x="[&quot;2025&quot;]" data-y="[4.362629285900067]" data-tooltips="[[&quot;Overs: 9&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 7.00&quot;,&quot;Average: 31.50&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=SL+Dangore+cricket" target="_blank">SL Dangore</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="4.3626" >4</td><td style="background-color: #19875400" class="text-end" data-text="31.5" >32</td><td style="background-color: #19875400" class="text-end" data-text="27" >27</td><td style="background-color: #19875400" class="text-end" data-text="7" >7.00</td><td style="background-color: #19875400" class="text-end" data-text="33.3333" >33</td><td style="background-color: #19875418" class="text-end" data-text="12.963" >13</td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td>
+</tr>
+<tr style="cursor: default;" title="DJS Dottin
+Teams: Trinbago Knight Riders
+Matches: 10
+Overs: 20
+Wickets: 5
+" data-filter="Trinbago Knight Riders">
+<td colspan="2" data-text="Dottin"><a class="chart" data-title="Bowling Impact - DJS Dottin" data-x="[&quot;2022&quot;,&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[1.6259589937679308,1.6040240591840473,1.3567008523296384,6.05860211454839]" data-tooltips="[[&quot;Overs: 2&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 9.00&quot;,&quot;Average: 18.00&quot;],[&quot;Overs: 2&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 9.00&quot;,&quot;Average: 18.00&quot;],[&quot;Overs: 3&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 12.00&quot;,&quot;Average: &quot;],[&quot;Overs: 13&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 5.92&quot;,&quot;Average: 25.67&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=DJS+Dottin+cricket" target="_blank">DJS Dottin</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="3.3408" >3</td><td style="background-color: #19875400" class="text-end" data-text="29.8" >30</td><td style="background-color: #19875400" class="text-end" data-text="24" >24</td><td style="background-color: #19875400" class="text-end" data-text="7.45" >7.45</td><td style="background-color: #19875400" class="text-end" data-text="44.1667" >44</td><td style="background-color: #19875400" class="text-end" data-text="17.5" >18</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc3545FF" class="text-end" data-text="80" >80</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354500" class="text-end" data-text="20" >20</td>
+</tr>
+<tr style="cursor: default;" title="ASS Fletcher
+Teams: Barbados Royals
+Matches: 15
+Overs: 47
+Wickets: 7
+" data-filter="Barbados Royals">
+<td colspan="2" data-text="Fletcher"><a class="chart" data-title="Bowling Impact - ASS Fletcher" data-x="[&quot;2022&quot;,&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[5.710167739624674,6.19888015386137,2.03502313065181,6.659652997892841]" data-tooltips="[[&quot;Overs: 9&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 4.44&quot;,&quot;Average: 20.00&quot;],[&quot;Overs: 14&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 5.49&quot;,&quot;Average: 75.00&quot;],[&quot;Overs: 9&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 6.78&quot;,&quot;Average: &quot;],[&quot;Overs: 15&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 7.53&quot;,&quot;Average: 28.25&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=ASS+Fletcher+cricket" target="_blank">ASS Fletcher</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="5.1136" >5</td><td style="background-color: #19875400" class="text-end" data-text="41.2857" >41</td><td style="background-color: #19875400" class="text-end" data-text="40" >40</td><td style="background-color: #19875446" class="text-end" data-text="6.1929" >6.19</td><td style="background-color: #19875400" class="text-end" data-text="35.7143" >36</td><td style="background-color: #19875482" class="text-end" data-text="8.9286" >9</td><td style="background-color: #dc354566" class="text-end" data-text="14.2857" >14</td><td style="background-color: #dc354500" class="text-end" data-text="14.2857" >14</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc35455B" class="text-end" data-text="71.4286" >71</td>
+</tr>
+<tr style="cursor: default;" title="CS Fraser
+Teams: Guyana Amazon Warriors; Barbados Royals
+Matches: 9
+Overs: 24
+Wickets: 6
+" data-filter="Guyana Amazon Warriors; Barbados Royals">
+<td colspan="2" data-text="Fraser"><a class="chart" data-title="Bowling Impact - CS Fraser" data-x="[&quot;2022&quot;,&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[null,2.8378171936816416,1.392213515514348,3.8936377632156507]" data-tooltips="[[&quot;Overs: 8&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 6.50&quot;,&quot;Average: 13.00&quot;],[&quot;Overs: 4&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 14.50&quot;,&quot;Average: 58.00&quot;],[&quot;Overs: 2&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 10.50&quot;,&quot;Average: &quot;],[&quot;Overs: 10&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 8.20&quot;,&quot;Average: 82.00&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=CS+Fraser+cricket" target="_blank">CS Fraser</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="3.0427" >3</td><td style="background-color: #19875400" class="text-end" data-text="35.5" >36</td><td style="background-color: #19875400" class="text-end" data-text="24" >24</td><td style="background-color: #19875400" class="text-end" data-text="8.875" >8.88</td><td style="background-color: #19875400" class="text-end" data-text="45.1389" >45</td><td style="background-color: #19875400" class="text-end" data-text="22.2222" >22</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354519" class="text-end" data-text="33.3333" >33</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc35453C" class="text-end" data-text="66.6667" >67</td>
+</tr>
+<tr style="cursor: default;" title="J Glasgow
+Teams: Barbados Royals; Trinbago Knight Riders
+Matches: 4
+Overs: 6
+Wickets: 1
+" data-filter="Barbados Royals; Trinbago Knight Riders">
+<td colspan="2" data-text="Glasgow"><a class="chart" data-title="Bowling Impact - J Glasgow" data-x="[&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[null,null,1.4861474146663016]" data-tooltips="[[&quot;Overs: 1&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 9.00&quot;,&quot;Average: &quot;],[&quot;Overs: 2&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 9.00&quot;,&quot;Average: 18.00&quot;],[&quot;Overs: 3&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 10.67&quot;,&quot;Average: &quot;]]">&#128202;</a><a href="https://www.google.com/search?q=J+Glasgow+cricket" target="_blank">J Glasgow</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="2.036" >2</td><td style="background-color: #19875400" class="text-end" data-text="59" >59</td><td style="background-color: #19875400" class="text-end" data-text="36" >36</td><td style="background-color: #19875400" class="text-end" data-text="9.8333" >9.83</td><td style="background-color: #19875420" class="text-end" data-text="47.2222" >47</td><td style="background-color: #19875400" class="text-end" data-text="25" >25</td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td>
+</tr>
+<tr style="cursor: default;" title="SS Grimmond
+Teams: Trinbago Knight Riders; Guyana Amazon Warriors; Barbados Royals
+Matches: 14
+Overs: 35
+Wickets: 9
+" data-filter="Trinbago Knight Riders; Guyana Amazon Warriors; Barbados Royals">
+<td colspan="2" data-text="Grimmond"><a class="chart" data-title="Bowling Impact - SS Grimmond" data-x="[&quot;2022&quot;,&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[6.955898416332392,3.5358977112772636,2.8465618754405426,6.49012105499416]" data-tooltips="[[&quot;Overs: 8&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 6.00&quot;,&quot;Average: 16.00&quot;],[&quot;Overs: 7&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 7.14&quot;,&quot;Average: 25.00&quot;],[&quot;Overs: 7&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 6.14&quot;,&quot;Average: 43.00&quot;],[&quot;Overs: 13&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 5.92&quot;,&quot;Average: 25.67&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=SS+Grimmond+cricket" target="_blank">SS Grimmond</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="5.0392" >5</td><td style="background-color: #19875423" class="text-end" data-text="24.2222" >24</td><td style="background-color: #19875409" class="text-end" data-text="23.3333" >23</td><td style="background-color: #19875442" class="text-end" data-text="6.2286" >6.23</td><td style="background-color: #1987545C" class="text-end" data-text="50.4762" >50</td><td style="background-color: #19875427" class="text-end" data-text="12.381" >12</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354500" class="text-end" data-text="11.1111" >11</td><td style="background-color: #dc3545F7" class="text-end" data-text="22.2222" >22</td><td style="background-color: #dc35453C" class="text-end" data-text="66.6667" >67</td>
+</tr>
+<tr style="cursor: default;" title="L Harris
+Teams: Guyana Amazon Warriors
+Matches: 5
+Overs: 18
+Wickets: 8
+" data-filter="Guyana Amazon Warriors">
+<td colspan="2" data-text="Harris"><a class="chart" data-title="Bowling Impact - L Harris" data-x="[&quot;2025&quot;]" data-y="[9.676088070859878]" data-tooltips="[[&quot;Overs: 18&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 7.17&quot;,&quot;Average: 16.12&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=L+Harris+cricket" target="_blank">L Harris</a></td>
+<td style="background-color: #19875463" class="text-end" data-text="9.6761" >10</td><td style="background-color: #19875481" class="text-end" data-text="16.125" >16</td><td style="background-color: #198754A3" class="text-end" data-text="13.5" >14</td><td style="background-color: #19875400" class="text-end" data-text="7.1667" >7.17</td><td style="background-color: #19875400" class="text-end" data-text="38.8889" >39</td><td style="background-color: #19875448" class="text-end" data-text="11.1111" >11</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354500" class="text-end" data-text="25" >25</td><td style="background-color: #dc35456C" class="text-end" data-text="12.5" >12</td><td style="background-color: #dc354522" class="text-end" data-text="62.5" >62</td>
+</tr>
+<tr style="cursor: default;" title="CA Henry
+Teams: Barbados Royals
+Matches: 13
+Overs: 32
+Wickets: 7
+" data-filter="Barbados Royals">
+<td colspan="2" data-text="Henry"><a class="chart" data-title="Bowling Impact - CA Henry" data-x="[&quot;2022&quot;,&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[3.9913628220013657,3.253446427663257,6.300115181261163,13.511023326548917]" data-tooltips="[[&quot;Overs: 9&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 5.89&quot;,&quot;Average: 53.00&quot;],[&quot;Overs: 8&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 7.38&quot;,&quot;Average: &quot;],[&quot;Overs: 7&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 5.14&quot;,&quot;Average: 12.00&quot;],[&quot;Overs: 8&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 5.00&quot;,&quot;Average: 13.33&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=CA+Henry+cricket" target="_blank">CA Henry</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="6.4939" >6</td><td style="background-color: #19875405" class="text-end" data-text="26.8571" >27</td><td style="background-color: #19875400" class="text-end" data-text="27.4286" >27</td><td style="background-color: #1987546C" class="text-end" data-text="5.875" >5.88</td><td style="background-color: #198754AA" class="text-end" data-text="54.6875" >55</td><td style="background-color: #19875408" class="text-end" data-text="13.5417" >14</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354500" class="text-end" data-text="28.5714" >29</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc35455B" class="text-end" data-text="71.4286" >71</td>
+</tr>
+<tr style="cursor: default;" title="Z James
+Teams: Trinbago Knight Riders
+Matches: 9
+Overs: 21
+Wickets: 4
+" data-filter="Trinbago Knight Riders">
+<td colspan="2" data-text="James"><a class="chart" data-title="Bowling Impact - Z James" data-x="[&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[6.681220382668633,3.2967657266984656,1.5701449073736171]" data-tooltips="[[&quot;Overs: 9&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 7.78&quot;,&quot;Average: 23.33&quot;],[&quot;Overs: 9&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 7.33&quot;,&quot;Average: 66.00&quot;],[&quot;Overs: 3&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 11.00&quot;,&quot;Average: &quot;]]">&#128202;</a><a href="https://www.google.com/search?q=Z+James+cricket" target="_blank">Z James</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="4.0412" >4</td><td style="background-color: #19875400" class="text-end" data-text="42.25" >42</td><td style="background-color: #19875400" class="text-end" data-text="31.5" >32</td><td style="background-color: #19875400" class="text-end" data-text="8.0476" >8.05</td><td style="background-color: #19875400" class="text-end" data-text="37.3016" >37</td><td style="background-color: #19875400" class="text-end" data-text="19.0476" >19</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc3545FF" class="text-end" data-text="100" >100</td>
+</tr>
+<tr style="cursor: default;" title="AC Jayangani
+Teams: Barbados Royals
+Matches: 8
+Overs: 23
+Wickets: 10
+" data-filter="Barbados Royals">
+<td colspan="2" data-text="Jayangani"><a class="chart" data-title="Bowling Impact - AC Jayangani" data-x="[&quot;2024&quot;,&quot;2025&quot;]" data-y="[8.621497204898136,15.057008316500495]" data-tooltips="[[&quot;Overs: 11&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 5.09&quot;,&quot;Average: 18.67&quot;],[&quot;Overs: 12&quot;,&quot;Wickets: 7&quot;,&quot;Economy: 5.50&quot;,&quot;Average: 9.43&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=AC+Jayangani+cricket" target="_blank">AC Jayangani</a></td>
+<td style="background-color: #198754DB" class="text-end" data-text="12.6437" >13</td><td style="background-color: #198754AF" class="text-end" data-text="12.2" >12</td><td style="background-color: #1987549F" class="text-end" data-text="13.8" >14</td><td style="background-color: #198754AF" class="text-end" data-text="5.3043" >5.30</td><td style="background-color: #1987546E" class="text-end" data-text="51.4493" >51</td><td style="background-color: #1987544F" class="text-end" data-text="10.8696" >11</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc3545FF" class="text-end" data-text="70" >70</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354500" class="text-end" data-text="30" >30</td>
+</tr>
+<tr style="cursor: default;" title="JL Jonassen
+Teams: Trinbago Knight Riders
+Matches: 9
+Overs: 35
+Wickets: 9
+" data-filter="Trinbago Knight Riders">
+<td colspan="2" data-text="Jonassen"><a class="chart" data-title="Bowling Impact - JL Jonassen" data-x="[&quot;2024&quot;,&quot;2025&quot;]" data-y="[9.524830729238627,9.212128283139311]" data-tooltips="[[&quot;Overs: 19&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 5.26&quot;,&quot;Average: 20.00&quot;],[&quot;Overs: 16&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 5.38&quot;,&quot;Average: 21.50&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=JL+Jonassen+cricket" target="_blank">JL Jonassen</a></td>
+<td style="background-color: #19875457" class="text-end" data-text="9.3859" >9</td><td style="background-color: #1987544D" class="text-end" data-text="20.6667" >21</td><td style="background-color: #19875409" class="text-end" data-text="23.3333" >23</td><td style="background-color: #198754AE" class="text-end" data-text="5.3143" >5.31</td><td style="background-color: #1987545C" class="text-end" data-text="50.4762" >50</td><td style="background-color: #1987544D" class="text-end" data-text="10.9524" >11</td><td style="background-color: #dc3545D9" class="text-end" data-text="22.2222" >22</td><td style="background-color: #dc354560" class="text-end" data-text="44.4444" >44</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354500" class="text-end" data-text="33.3333" >33</td>
+</tr>
+<tr style="cursor: default;" title="Q Joseph
+Teams: Barbados Royals
+Matches: 11
+Overs: 33
+Wickets: 10
+" data-filter="Barbados Royals">
+<td colspan="2" data-text="Joseph"><a class="chart" data-title="Bowling Impact - Q Joseph" data-x="[&quot;2022&quot;,&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[5.560333167063504,5.874398470010071,9.23483670377955,null]" data-tooltips="[[&quot;Overs: 10&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 3.90&quot;,&quot;Average: 39.00&quot;],[&quot;Overs: 6&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 10.00&quot;,&quot;Average: 30.00&quot;],[&quot;Overs: 16&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 4.75&quot;,&quot;Average: 12.67&quot;],[&quot;Overs: 1&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 1.00&quot;,&quot;Average: 1.00&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=Q+Joseph+cricket" target="_blank">Q Joseph</a></td>
+<td style="background-color: #1987543D" class="text-end" data-text="8.7245" >9</td><td style="background-color: #19875470" class="text-end" data-text="17.6" >18</td><td style="background-color: #19875441" class="text-end" data-text="19.8" >20</td><td style="background-color: #198754AC" class="text-end" data-text="5.3333" >5.33</td><td style="background-color: #19875425" class="text-end" data-text="47.4747" >47</td><td style="background-color: #198754B3" class="text-end" data-text="7.0707" >7</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354500" class="text-end" data-text="20" >20</td><td style="background-color: #dc3545D8" class="text-end" data-text="20" >20</td><td style="background-color: #dc354511" class="text-end" data-text="60" >60</td>
+</tr>
+<tr style="cursor: default;" title="N Latchman
+Teams: Guyana Amazon Warriors
+Matches: 5
+Overs: 15
+Wickets: 5
+" data-filter="Guyana Amazon Warriors">
+<td colspan="2" data-text="Latchman"><a class="chart" data-title="Bowling Impact - N Latchman" data-x="[&quot;2024&quot;,&quot;2025&quot;]" data-y="[4.408393869951964,9.929473597759959]" data-tooltips="[[&quot;Overs: 7&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 5.85&quot;,&quot;Average: 20.00&quot;],[&quot;Overs: 8&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 6.88&quot;,&quot;Average: 18.33&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=N+Latchman+cricket" target="_blank">N Latchman</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="6.6168" >7</td><td style="background-color: #19875460" class="text-end" data-text="19" >19</td><td style="background-color: #19875460" class="text-end" data-text="17.8" >18</td><td style="background-color: #1987542D" class="text-end" data-text="6.4045" >6.40</td><td style="background-color: #19875400" class="text-end" data-text="43.8202" >44</td><td style="background-color: #19875445" class="text-end" data-text="11.236" >11</td><td style="background-color: #dc3545B8" class="text-end" data-text="20" >20</td><td style="background-color: #dc354500" class="text-end" data-text="20" >20</td><td style="background-color: #dc3545D8" class="text-end" data-text="20" >20</td><td style="background-color: #dc354500" class="text-end" data-text="40" >40</td>
+</tr>
+<tr style="cursor: default;" title="PO Millington
+Teams: Guyana Amazon Warriors
+Matches: 1
+Overs: 3
+Wickets: 1
+" data-filter="Guyana Amazon Warriors">
+<td colspan="2" data-text="Millington"><a class="chart" data-title="Bowling Impact - PO Millington" data-x="[&quot;2025&quot;]" data-y="[null]" data-tooltips="[[&quot;Overs: 3&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 7.00&quot;,&quot;Average: 21.00&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=PO+Millington+cricket" target="_blank">PO Millington</a></td>
+<td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: #19875449" class="text-end" data-text="21" >21</td><td style="background-color: #1987545D" class="text-end" data-text="18" >18</td><td style="background-color: #19875400" class="text-end" data-text="7" >7.00</td><td style="background-color: #198754FF" class="text-end" data-text="61.1111" >61</td><td style="background-color: #19875400" class="text-end" data-text="22.2222" >22</td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td>
+</tr>
+<tr style="cursor: default;" title="A Munisar
+Teams: Guyana Amazon Warriors
+Matches: 6
+Overs: 21
+Wickets: 8
+" data-filter="Guyana Amazon Warriors">
+<td colspan="2" data-text="Munisar"><a class="chart" data-title="Bowling Impact - A Munisar" data-x="[&quot;2024&quot;,&quot;2025&quot;]" data-y="[null,16.99997433702236]" data-tooltips="[[&quot;Overs: 1&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 14.00&quot;,&quot;Average: &quot;],[&quot;Overs: 20&quot;,&quot;Wickets: 8&quot;,&quot;Economy: 5.90&quot;,&quot;Average: 14.75&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=A+Munisar+cricket" target="_blank">A Munisar</a></td>
+<td style="background-color: #198754FF" class="text-end" data-text="14.3062" >14</td><td style="background-color: #1987547D" class="text-end" data-text="16.5" >16</td><td style="background-color: #19875480" class="text-end" data-text="15.75" >16</td><td style="background-color: #1987543B" class="text-end" data-text="6.2857" >6.29</td><td style="background-color: #19875454" class="text-end" data-text="50" >50</td><td style="background-color: #19875400" class="text-end" data-text="14.2857" >14</td><td style="background-color: #dc35454C" class="text-end" data-text="12.5" >12</td><td style="background-color: #dc354500" class="text-end" data-text="12.5" >12</td><td style="background-color: #dc3545FF" class="text-end" data-text="25" >25</td><td style="background-color: #dc354500" class="text-end" data-text="50" >50</td>
+</tr>
+<tr style="cursor: default;" title="S Pandey
+Teams: Trinbago Knight Riders
+Matches: 9
+Overs: 32
+Wickets: 9
+" data-filter="Trinbago Knight Riders">
+<td colspan="2" data-text="Pandey"><a class="chart" data-title="Bowling Impact - S Pandey" data-x="[&quot;2024&quot;,&quot;2025&quot;]" data-y="[6.548730157072685,9.574169227074211]" data-tooltips="[[&quot;Overs: 18&quot;,&quot;Wickets: 4&quot;,&quot;Economy: 6.80&quot;,&quot;Average: 29.75&quot;],[&quot;Overs: 15&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 6.73&quot;,&quot;Average: 20.20&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=S+Pandey+cricket" target="_blank">S Pandey</a></td>
+<td style="background-color: #1987541B" class="text-end" data-text="7.8934" >8</td><td style="background-color: #19875421" class="text-end" data-text="24.4444" >24</td><td style="background-color: #19875423" class="text-end" data-text="21.6667" >22</td><td style="background-color: #19875401" class="text-end" data-text="6.7692" >6.77</td><td style="background-color: #19875432" class="text-end" data-text="48.2051" >48</td><td style="background-color: #19875400" class="text-end" data-text="14.359" >14</td><td style="background-color: #dc3545D9" class="text-end" data-text="22.2222" >22</td><td style="background-color: #dc354519" class="text-end" data-text="33.3333" >33</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354500" class="text-end" data-text="44.4444" >44</td>
+</tr>
+<tr style="cursor: default;" title="SR Patil
+Teams: Guyana Amazon Warriors; Barbados Royals
+Matches: 10
+Overs: 34
+Wickets: 10
+" data-filter="Guyana Amazon Warriors; Barbados Royals">
+<td colspan="2" data-text="Patil"><a class="chart" data-title="Bowling Impact - SR Patil" data-x="[&quot;2023&quot;,&quot;2025&quot;]" data-y="[16.094401514229837,3.578460492043594]" data-tooltips="[[&quot;Overs: 18&quot;,&quot;Wickets: 9&quot;,&quot;Economy: 5.83&quot;,&quot;Average: 11.67&quot;],[&quot;Overs: 16&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 7.19&quot;,&quot;Average: 115.00&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=SR+Patil+cricket" target="_blank">SR Patil</a></td>
+<td style="background-color: #1987546A" class="text-end" data-text="9.8364" >10</td><td style="background-color: #1987543D" class="text-end" data-text="22" >22</td><td style="background-color: #19875437" class="text-end" data-text="20.4" >20</td><td style="background-color: #19875425" class="text-end" data-text="6.4706" >6.47</td><td style="background-color: #19875454" class="text-end" data-text="50" >50</td><td style="background-color: #19875404" class="text-end" data-text="13.7255" >14</td><td style="background-color: #dc3545B8" class="text-end" data-text="20" >20</td><td style="background-color: #dc354504" class="text-end" data-text="30" >30</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354500" class="text-end" data-text="50" >50</td>
+</tr>
+<tr style="cursor: default;" title="MM Penfold
+Teams: Guyana Amazon Warriors
+Matches: 4
+Overs: 15
+Wickets: 5
+" data-filter="Guyana Amazon Warriors">
+<td colspan="2" data-text="Penfold"><a class="chart" data-title="Bowling Impact - MM Penfold" data-x="[&quot;2025&quot;]" data-y="[12.295504527215698]" data-tooltips="[[&quot;Overs: 15&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 7.13&quot;,&quot;Average: 21.40&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=MM+Penfold+cricket" target="_blank">MM Penfold</a></td>
+<td style="background-color: #198754CD" class="text-end" data-text="12.2955" >12</td><td style="background-color: #19875444" class="text-end" data-text="21.4" >21</td><td style="background-color: #1987545D" class="text-end" data-text="18" >18</td><td style="background-color: #19875400" class="text-end" data-text="7.1333" >7.13</td><td style="background-color: #1987543F" class="text-end" data-text="48.8889" >49</td><td style="background-color: #19875400" class="text-end" data-text="15.5556" >16</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354544" class="text-end" data-text="40" >40</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354500" class="text-end" data-text="40" >40</td>
+</tr>
+<tr style="cursor: default;" title="K Ramharack
+Teams: Guyana Amazon Warriors
+Matches: 14
+Overs: 52
+Wickets: 11
+" data-filter="Guyana Amazon Warriors">
+<td colspan="2" data-text="Ramharack"><a class="chart" data-title="Bowling Impact - K Ramharack" data-x="[&quot;2022&quot;,&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[null,12.978136738102497,7.041236758446377,7.802203619343135]" data-tooltips="[[&quot;Overs: 8&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 7.75&quot;,&quot;Average: &quot;],[&quot;Overs: 17&quot;,&quot;Wickets: 6&quot;,&quot;Economy: 7.24&quot;,&quot;Average: 20.50&quot;],[&quot;Overs: 11&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 5.82&quot;,&quot;Average: 32.00&quot;],[&quot;Overs: 16&quot;,&quot;Wickets: 3&quot;,&quot;Economy: 5.69&quot;,&quot;Average: 30.33&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=K+Ramharack+cricket" target="_blank">K Ramharack</a></td>
+<td style="background-color: #1987544F" class="text-end" data-text="9.1841" >9</td><td style="background-color: #19875400" class="text-end" data-text="30.9091" >31</td><td style="background-color: #19875400" class="text-end" data-text="28.3636" >28</td><td style="background-color: #1987541D" class="text-end" data-text="6.5385" >6.54</td><td style="background-color: #19875400" class="text-end" data-text="44.8718" >45</td><td style="background-color: #19875424" class="text-end" data-text="12.5" >12</td><td style="background-color: #dc35459E" class="text-end" data-text="18.1818" >18</td><td style="background-color: #dc354500" class="text-end" data-text="9.0909" >9</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354564" class="text-end" data-text="72.7273" >73</td>
+</tr>
+<tr style="cursor: default;" title="S Ramnath
+Teams: Trinbago Knight Riders
+Matches: 11
+Overs: 35
+Wickets: 8
+" data-filter="Trinbago Knight Riders">
+<td colspan="2" data-text="Ramnath"><a class="chart" data-title="Bowling Impact - S Ramnath" data-x="[&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[3.938383067176726,9.581918725640886,5.089772712643453]" data-tooltips="[[&quot;Overs: 3&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 9.33&quot;,&quot;Average: 28.00&quot;],[&quot;Overs: 19&quot;,&quot;Wickets: 5&quot;,&quot;Economy: 5.79&quot;,&quot;Average: 22.00&quot;],[&quot;Overs: 13&quot;,&quot;Wickets: 2&quot;,&quot;Economy: 6.00&quot;,&quot;Average: 39.00&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=S+Ramnath+cricket" target="_blank">S Ramnath</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="6.9223" >7</td><td style="background-color: #19875403" class="text-end" data-text="27" >27</td><td style="background-color: #19875400" class="text-end" data-text="26.25" >26</td><td style="background-color: #19875448" class="text-end" data-text="6.1714" >6.17</td><td style="background-color: #19875400" class="text-end" data-text="38.0952" >38</td><td style="background-color: #1987547F" class="text-end" data-text="9.0476" >9</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354500" class="text-end" data-text="12.5" >12</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc3545C3" class="text-end" data-text="87.5" >88</td>
+</tr>
+<tr style="cursor: default;" title="SR Taylor
+Teams: Guyana Amazon Warriors
+Matches: 2
+Overs: 8
+Wickets: 1
+" data-filter="Guyana Amazon Warriors">
+<td colspan="2" data-text="Taylor"><a class="chart" data-title="Bowling Impact - SR Taylor" data-x="[&quot;2024&quot;,&quot;2025&quot;]" data-y="[null,null]" data-tooltips="[[&quot;Overs: 4&quot;,&quot;Wickets: 0&quot;,&quot;Economy: 6.25&quot;,&quot;Average: &quot;],[&quot;Overs: 4&quot;,&quot;Wickets: 1&quot;,&quot;Economy: 6.00&quot;,&quot;Average: 24.00&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=SR+Taylor+cricket" target="_blank">SR Taylor</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="5.3535" >5</td><td style="background-color: #19875400" class="text-end" data-text="49" >49</td><td style="background-color: #19875400" class="text-end" data-text="48" >48</td><td style="background-color: #1987544E" class="text-end" data-text="6.125" >6.12</td><td style="background-color: #19875400" class="text-end" data-text="31.25" >31</td><td style="background-color: #198754FF" class="text-end" data-text="4.1667" >4</td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tab-pane fade show " id="t-All" role="tabpanel" aria-labelledby="t-All-tab">
 <table class="table table-sm table-sort table-ranked" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">

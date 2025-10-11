@@ -14,10 +14,291 @@ a.chart { margin-right: 4px; }
 </head>
 <body>
 <h1>CPL - Batting</h1>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-responsive-tabs@2.0.3/dist/js/jquery.bootstrap-responsive-tabs.min.js"></script><ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><button class="nav-link active" id="t-All-tab" data-bs-toggle="tab" data-bs-target="#t-All" type="button" role="tab" aria-selected="true" aria-controls="t-All">All</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2025-tab" data-bs-toggle="tab" data-bs-target="#t-2025" type="button" role="tab" aria-selected="false" aria-controls="t-2025">2025</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2024-tab" data-bs-toggle="tab" data-bs-target="#t-2024" type="button" role="tab" aria-selected="false" aria-controls="t-2024">2024</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2023-tab" data-bs-toggle="tab" data-bs-target="#t-2023" type="button" role="tab" aria-selected="false" aria-controls="t-2023">2023</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2022-tab" data-bs-toggle="tab" data-bs-target="#t-2022" type="button" role="tab" aria-selected="false" aria-controls="t-2022">2022</button></li></ul>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-responsive-tabs@2.0.3/dist/js/jquery.bootstrap-responsive-tabs.min.js"></script><ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><button class="nav-link active" id="t-Active-tab" data-bs-toggle="tab" data-bs-target="#t-Active" type="button" role="tab" aria-selected="true" aria-controls="t-Active">Active</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-All-tab" data-bs-toggle="tab" data-bs-target="#t-All" type="button" role="tab" aria-selected="false" aria-controls="t-All">All</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2025-tab" data-bs-toggle="tab" data-bs-target="#t-2025" type="button" role="tab" aria-selected="false" aria-controls="t-2025">2025</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2024-tab" data-bs-toggle="tab" data-bs-target="#t-2024" type="button" role="tab" aria-selected="false" aria-controls="t-2024">2024</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2023-tab" data-bs-toggle="tab" data-bs-target="#t-2023" type="button" role="tab" aria-selected="false" aria-controls="t-2023">2023</button></li><li class="nav-item" role="presentation"><button class="nav-link " id="t-2022-tab" data-bs-toggle="tab" data-bs-target="#t-2022" type="button" role="tab" aria-selected="false" aria-controls="t-2022">2022</button></li></ul><script>$(document).ready(function(){  const query = new URLSearchParams(window.location.search);	  if(query.get('Tab')) {    $('button.nav-link').each(function(i, el) {      var jel = $(el);      if(jel.text() === query.get('Tab')) {        jel.trigger('click');      }    });   }	});</script>
 <div class='m-1'><input class='form-control form-control-sm table-filter' type='search' placeholder='Filter...' style='display: none;' /></div><script>$(document).ready(function(){  $('.table-filter').toggle();   $('.table-filter').on('input', function() {    var fors = $(this).val().split(',').map(n => n.trim().toLowerCase()).filter(n => n.length > 0);    $('.table tbody tr').filter(function() {      $(this).toggle(filter_contains(fors, [$(this).text(), $(this).attr('data-filter')]));    });  });  const query = new URLSearchParams(window.location.search);	  if(query.get('Filter')) {    var el = $('input.table-filter').val(query.get('Filter'));     $('input.table-filter').trigger('input');   }	});function filter_contains(fors, ins) {  let result = false;  if(fors.length == 0) {    return true;  }  fors.forEach(f => {    if(f.length > 0) {      ins.forEach(i => {        if(i.toLowerCase().indexOf(f) > -1) {          result = true;        }      });    }  });  return result;}</script>
 <div class="tab-content">
-<div class="tab-pane fade show active" id="t-All" role="tabpanel" aria-labelledby="t-All-tab">
+<div class="tab-pane fade show active" id="t-Active" role="tabpanel" aria-labelledby="t-Active-tab">
+<table class="table table-sm table-sort table-ranked" style="table-layout: fixed;">
+<thead class="sticky-top">
+<tr style="position: relative; top: -1px">
+<th>Batter</th><th></th><th class="text-end sortInitialOrder-desc">Impact</th><th class="text-end sortInitialOrder-desc">Average</th><th class="text-end sortInitialOrder-desc">Strike Rate</th><th class="text-end sortInitialOrder-desc">Boundary %</th><th class="text-end sortInitialOrder-asc">Dot %</th><th class="text-end sortInitialOrder-desc">Starts<sup class="text-primary" style="cursor: help; " title="Strike Rate in first 6 balls faced.">?</sup></th><th class="text-end sortInitialOrder-desc">Bowled %</th><th class="text-end sortInitialOrder-desc">LBW %</th><th class="text-end sortInitialOrder-desc">Caught %</th><th class="text-end sortInitialOrder-desc">Stumped %</th><th class="text-end sortInitialOrder-desc">Run Out %</th>
+</tr>
+</thead>
+<tbody>
+<tr style="position: relative; cursor: default;" title="AA Alleyne
+Teams: Barbados Royals
+Matches: 14
+Runs: 115
+Overs: 26
+Dismissals: 13" data-filter="Barbados Royals">
+<td colspan="2" data-text="Alleyne"><a class="chart" data-title="Batting Impact - AA Alleyne" data-x="[&quot;2022&quot;,&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[4.1815743305677975,1.0840080480411876,2.770238675810506,4.275966521052035]" data-tooltips="[[&quot;Runs: 36&quot;,&quot;Strike Rate: 64&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 16&quot;,&quot;Strike Rate: 67&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 36&quot;,&quot;Strike Rate: 67&quot;,&quot;Dismissals: 5&quot;],[&quot;Runs: 27&quot;,&quot;Strike Rate: 108&quot;,&quot;Dismissals: 2&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=AA+Alleyne+cricket" target="_blank">AA Alleyne</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="3.034" >3</td><td style="background-color: #19875400" class="text-end" data-text="8.8462" >9</td><td style="background-color: #19875400" class="text-end" data-text="72.327" >72</td><td style="background-color: #19875400" class="text-end" data-text="5.0314" >5</td><td style="background-color: #19875400" class="text-end" data-text="53.4591" >53</td><td style="background-color: #19875400" class="text-end" data-text="73.6111" >74</td><td style="background-color: #dc354502" class="text-end" data-text="30.7692" >31</td><td style="background-color: #dc354500" class="text-end" data-text="7.6923" >8</td><td style="background-color: #dc35451D" class="text-end" data-text="46.1538" >46</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354531" class="text-end" data-text="15.3846" >15</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="SA Campbelle
+Teams: Guyana Amazon Warriors
+Matches: 12
+Runs: 216
+Overs: 37
+Dismissals: 9" data-filter="Guyana Amazon Warriors">
+<td colspan="2" data-text="Campbelle"><a class="chart" data-title="Batting Impact - SA Campbelle" data-x="[&quot;2022&quot;,&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[null,7.808703814765418,4.486831244299205,6.113647199445034]" data-tooltips="[[&quot;Runs: 16&quot;,&quot;Strike Rate: 64&quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 73&quot;,&quot;Strike Rate: 126&quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 43&quot;,&quot;Strike Rate: 77&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 84&quot;,&quot;Strike Rate: 100&quot;,&quot;Dismissals: 4&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=SA+Campbelle+cricket" target="_blank">SA Campbelle</a></td>
+<td style="background-color: #19875414" class="text-end" data-text="6.0888" >6</td><td style="background-color: #19875449" class="text-end" data-text="24" >24</td><td style="background-color: #19875416" class="text-end" data-text="96.861" >97</td><td style="background-color: #19875400" class="text-end" data-text="8.0717" >8</td><td style="background-color: #19875496" class="text-end" data-text="38.1166" >38</td><td style="background-color: #19875400" class="text-end" data-text="82.8571" >83</td><td style="background-color: #dc35456C" class="text-end" data-text="44.4444" >44</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354512" class="text-end" data-text="44.4444" >44</td><td style="background-color: #dc35453D" class="text-end" data-text="11.1111" >11</td><td style="background-color: " class="text-end" data-text="0" >0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="JKC Claxton
+Teams: Trinbago Knight Riders
+Matches: 5
+Runs: 35
+Overs: 5
+Dismissals: 4" data-filter="Trinbago Knight Riders">
+<td colspan="2" data-text="Claxton"><a class="chart" data-title="Batting Impact - JKC Claxton" data-x="[&quot;2024&quot;,&quot;2025&quot;]" data-y="[null,4.24502184609101]" data-tooltips="[[&quot;Runs: 1&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 34&quot;,&quot;Strike Rate: 131&quot;,&quot;Dismissals: 3&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=JKC+Claxton+cricket" target="_blank">JKC Claxton</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="3.423" >3</td><td style="background-color: #19875400" class="text-end" data-text="8.75" >9</td><td style="background-color: #19875480" class="text-end" data-text="120.6897" >121</td><td style="background-color: #1987548C" class="text-end" data-text="17.2414" >17</td><td style="background-color: #19875412" class="text-end" data-text="48.2759" >48</td><td style="background-color: #1987548F" class="text-end" data-text="122.2222" >122</td><td style="background-color: #dc3545FF" class="text-end" data-text="75" >75</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354500" class="text-end" data-text="25" >25</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: " class="text-end" data-text="0" >0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="B Cooper
+Teams: Barbados Royals; Trinbago Knight Riders; Guyana Amazon Warriors
+Matches: 6
+Runs: 16
+Overs: 5
+Dismissals: 6" data-filter="Barbados Royals; Trinbago Knight Riders; Guyana Amazon Warriors">
+<td colspan="2" data-text="Cooper"><a class="chart" data-title="Batting Impact - B Cooper" data-x="[&quot;2022&quot;,&quot;2023&quot;,&quot;2025&quot;]" data-y="[0.40059233717493137,2.458109555971849,null]" data-tooltips="[[&quot;Runs: 4&quot;,&quot;Strike Rate: 33&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 9&quot;,&quot;Strike Rate: 100&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 3&quot;,&quot;Strike Rate: 43&quot;,&quot;Dismissals: 1&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=B+Cooper+cricket" target="_blank">B Cooper</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="1.0958" >1</td><td style="background-color: #19875400" class="text-end" data-text="2.6667" >3</td><td style="background-color: #19875400" class="text-end" data-text="57.1429" >57</td><td style="background-color: #19875400" class="text-end" data-text="3.5714" >4</td><td style="background-color: #19875400" class="text-end" data-text="64.2857" >64</td><td style="background-color: #19875400" class="text-end" data-text="59.2593" >59</td><td style="background-color: #dc354516" class="text-end" data-text="33.3333" >33</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354536" class="text-end" data-text="50" >50</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc35453E" class="text-end" data-text="16.6667" >17</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="SL Dangore
+Teams: Trinbago Knight Riders
+Matches: 3
+Runs: 15
+Overs: 4
+Dismissals: 1" data-filter="Trinbago Knight Riders">
+<td colspan="2" data-text="Dangore"><a class="chart" data-title="Batting Impact - SL Dangore" data-x="[&quot;2025&quot;]" data-y="[2.4177056766700082]" data-tooltips="[[&quot;Runs: 15&quot;,&quot;Strike Rate: 71&quot;,&quot;Dismissals: 1&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=SL+Dangore+cricket" target="_blank">SL Dangore</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="2.4177" >2</td><td style="background-color: #19875400" class="text-end" data-text="15" >15</td><td style="background-color: #19875400" class="text-end" data-text="71.4286" >71</td><td style="background-color: #19875400" class="text-end" data-text="4.7619" >5</td><td style="background-color: #19875400" class="text-end" data-text="52.381" >52</td><td style="background-color: #1987541E" class="text-end" data-text="91.6667" >92</td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td>
+</tr>
+<tr style="position: relative; cursor: default;" title="DJS Dottin
+Teams: Trinbago Knight Riders
+Matches: 15
+Runs: 390
+Overs: 58
+Dismissals: 15" data-filter="Trinbago Knight Riders">
+<td colspan="2" data-text="Dottin"><a class="chart" data-title="Batting Impact - DJS Dottin" data-x="[&quot;2022&quot;,&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[25.864275741205287,17.22851781664293,11.724440828617084,6.218083143129572]" data-tooltips="[[&quot;Runs: 100&quot;,&quot;Strike Rate: 105&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 107&quot;,&quot;Strike Rate: 120&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 132&quot;,&quot;Strike Rate: 117&quot;,&quot;Dismissals: 5&quot;],[&quot;Runs: 51&quot;,&quot;Strike Rate: 102&quot;,&quot;Dismissals: 4&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=DJS+Dottin+cricket" target="_blank">DJS Dottin</a></td>
+<td style="background-color: #198754FF" class="text-end" data-text="13.3506" >13</td><td style="background-color: #1987545E" class="text-end" data-text="26" >26</td><td style="background-color: #1987545B" class="text-end" data-text="112.3919" >112</td><td style="background-color: #19875453" class="text-end" data-text="14.4092" >14</td><td style="background-color: #19875414" class="text-end" data-text="48.1268" >48</td><td style="background-color: #19875484" class="text-end" data-text="119.1011" >119</td><td style="background-color: #dc354516" class="text-end" data-text="33.3333" >33</td><td style="background-color: #dc354520" class="text-end" data-text="13.3333" >13</td><td style="background-color: #dc35454C" class="text-end" data-text="53.3333" >53</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: " class="text-end" data-text="0" >0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="ASS Fletcher
+Teams: Barbados Royals
+Matches: 9
+Runs: 27
+Overs: 6
+Dismissals: 5" data-filter="Barbados Royals">
+<td colspan="2" data-text="Fletcher"><a class="chart" data-title="Batting Impact - ASS Fletcher" data-x="[&quot;2022&quot;,&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[1.109332626022887,null,3.4549305533807275,0.2890252751068542]" data-tooltips="[[&quot;Runs: 8&quot;,&quot;Strike Rate: 53&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 1&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 0&quot;],[&quot;Runs: 14&quot;,&quot;Strike Rate: 117&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 4&quot;,&quot;Strike Rate: 40&quot;,&quot;Dismissals: 1&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=ASS+Fletcher+cricket" target="_blank">ASS Fletcher</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="1.5193" >2</td><td style="background-color: #19875400" class="text-end" data-text="5.4" >5</td><td style="background-color: #19875400" class="text-end" data-text="71.0526" >71</td><td style="background-color: #19875400" class="text-end" data-text="2.6316" >3</td><td style="background-color: #19875400" class="text-end" data-text="50" >50</td><td style="background-color: #19875400" class="text-end" data-text="65.5172" >66</td><td style="background-color: #dc3545E6" class="text-end" data-text="60" >60</td><td style="background-color: #dc354563" class="text-end" data-text="20" >20</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc3545A1" class="text-end" data-text="20" >20</td><td style="background-color: " class="text-end" data-text="0" >0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="S Gajnabi
+Teams: Guyana Amazon Warriors; Barbados Royals; Trinbago Knight Riders
+Matches: 8
+Runs: 21
+Overs: 6
+Dismissals: 8" data-filter="Guyana Amazon Warriors; Barbados Royals; Trinbago Knight Riders">
+<td colspan="2" data-text="Gajnabi"><a class="chart" data-title="Batting Impact - S Gajnabi" data-x="[&quot;2022&quot;,&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[null,0.3982427750176946,0,1.8488280067149863]" data-tooltips="[[&quot;Runs: 0&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 6&quot;,&quot;Strike Rate: 55&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 0&quot;,&quot;Strike Rate: 0&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 15&quot;,&quot;Strike Rate: 88&quot;,&quot;Dismissals: 3&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=S+Gajnabi+cricket" target="_blank">S Gajnabi</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="0.8427" >1</td><td style="background-color: #19875400" class="text-end" data-text="2.625" >3</td><td style="background-color: #19875400" class="text-end" data-text="56.7568" >57</td><td style="background-color: #19875400" class="text-end" data-text="2.7027" >3</td><td style="background-color: #19875400" class="text-end" data-text="59.4595" >59</td><td style="background-color: #19875400" class="text-end" data-text="54.5455" >55</td><td style="background-color: #dc354500" class="text-end" data-text="25" >25</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354500" class="text-end" data-text="37.5" >38</td><td style="background-color: #dc35454C" class="text-end" data-text="12.5" >12</td><td style="background-color: #dc354594" class="text-end" data-text="25" >25</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="J Glasgow
+Teams: Trinbago Knight Riders
+Matches: 7
+Runs: 35
+Overs: 9
+Dismissals: 6" data-filter="Trinbago Knight Riders">
+<td colspan="2" data-text="Glasgow"><a class="chart" data-title="Batting Impact - J Glasgow" data-x="[&quot;2022&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[null,5.158473697852993,0.8021959050155283]" data-tooltips="[[&quot;Runs: 0&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 24&quot;,&quot;Strike Rate: 73&quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 11&quot;,&quot;Strike Rate: 55&quot;,&quot;Dismissals: 4&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=J+Glasgow+cricket" target="_blank">J Glasgow</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="1.9322" >2</td><td style="background-color: #19875400" class="text-end" data-text="5.8333" >6</td><td style="background-color: #19875400" class="text-end" data-text="64.8148" >65</td><td style="background-color: #19875400" class="text-end" data-text="5.5556" >6</td><td style="background-color: #19875400" class="text-end" data-text="59.2593" >59</td><td style="background-color: #19875400" class="text-end" data-text="42.3077" >42</td><td style="background-color: #dc354516" class="text-end" data-text="33.3333" >33</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354536" class="text-end" data-text="50" >50</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: " class="text-end" data-text="0" >0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="RMAU Grimmond
+Teams: Guyana Amazon Warriors
+Matches: 5
+Runs: 116
+Overs: 21
+Dismissals: 4" data-filter="Guyana Amazon Warriors">
+<td colspan="2" data-text="Grimmond"><a class="chart" data-title="Batting Impact - RMAU Grimmond" data-x="[&quot;2025&quot;]" data-y="[6.678580049407858]" data-tooltips="[[&quot;Runs: 116&quot;,&quot;Strike Rate: 92&quot;,&quot;Dismissals: 4&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=RMAU+Grimmond+cricket" target="_blank">RMAU Grimmond</a></td>
+<td style="background-color: #19875428" class="text-end" data-text="6.6786" >7</td><td style="background-color: #1987547F" class="text-end" data-text="29" >29</td><td style="background-color: #19875401" class="text-end" data-text="92.0635" >92</td><td style="background-color: #19875421" class="text-end" data-text="11.9048" >12</td><td style="background-color: #19875400" class="text-end" data-text="53.9683" >54</td><td style="background-color: #19875400" class="text-end" data-text="43.3333" >43</td><td style="background-color: #dc354500" class="text-end" data-text="25" >25</td><td style="background-color: #dc354596" class="text-end" data-text="25" >25</td><td style="background-color: #dc354536" class="text-end" data-text="50" >50</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: " class="text-end" data-text="0" >0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="L Harris
+Teams: Barbados Royals; Guyana Amazon Warriors
+Matches: 15
+Runs: 176
+Overs: 15
+Dismissals: 14" data-filter="Barbados Royals; Guyana Amazon Warriors">
+<td colspan="2" data-text="Harris"><a class="chart" data-title="Batting Impact - L Harris" data-x="[&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[6.511744301498966,10.069320861223934,11.573446110475476]" data-tooltips="[[&quot;Runs: 53&quot;,&quot;Strike Rate: 177&quot;,&quot;Dismissals: 5&quot;],[&quot;Runs: 47&quot;,&quot;Strike Rate: 196&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 76&quot;,&quot;Strike Rate: 211&quot;,&quot;Dismissals: 5&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=L+Harris+cricket" target="_blank">L Harris</a></td>
+<td style="background-color: #19875482" class="text-end" data-text="9.3848" >9</td><td style="background-color: #19875400" class="text-end" data-text="12.5714" >13</td><td style="background-color: #198754FF" class="text-end" data-text="195.5556" >196</td><td style="background-color: #198754FF" class="text-end" data-text="33.3333" >33</td><td style="background-color: #19875452" class="text-end" data-text="43.3333" >43</td><td style="background-color: #198754FF" class="text-end" data-text="217.1429" >217</td><td style="background-color: #dc354560" class="text-end" data-text="42.8571" >43</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354565" class="text-end" data-text="57.1429" >57</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: " class="text-end" data-text="0" >0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="CA Henry
+Teams: Barbados Royals
+Matches: 13
+Runs: 154
+Overs: 25
+Dismissals: 9" data-filter="Barbados Royals">
+<td colspan="2" data-text="Henry"><a class="chart" data-title="Batting Impact - CA Henry" data-x="[&quot;2022&quot;,&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[2.117813158310812,6.27887865635877,1.0579461153425698,10.311645890377264]" data-tooltips="[[&quot;Runs: 21&quot;,&quot;Strike Rate: 44&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 39&quot;,&quot;Strike Rate: 122&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 5&quot;,&quot;Strike Rate: 71&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 89&quot;,&quot;Strike Rate: 144&quot;,&quot;Dismissals: 2&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=CA+Henry+cricket" target="_blank">CA Henry</a></td>
+<td style="background-color: #19875409" class="text-end" data-text="5.7563" >6</td><td style="background-color: #19875400" class="text-end" data-text="17.1111" >17</td><td style="background-color: #19875433" class="text-end" data-text="103.3557" >103</td><td style="background-color: #1987544D" class="text-end" data-text="14.094" >14</td><td style="background-color: #19875400" class="text-end" data-text="54.3624" >54</td><td style="background-color: #19875400" class="text-end" data-text="74.2424" >74</td><td style="background-color: #dc354516" class="text-end" data-text="33.3333" >33</td><td style="background-color: #dc354509" class="text-end" data-text="11.1111" >11</td><td style="background-color: #dc354512" class="text-end" data-text="44.4444" >44</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354504" class="text-end" data-text="11.1111" >11</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="A Hunter
+Teams: Guyana Amazon Warriors
+Matches: 5
+Runs: 156
+Overs: 25
+Dismissals: 5" data-filter="Guyana Amazon Warriors">
+<td colspan="2" data-text="Hunter"><a class="chart" data-title="Batting Impact - A Hunter" data-x="[&quot;2025&quot;]" data-y="[11.657715740051316]" data-tooltips="[[&quot;Runs: 156&quot;,&quot;Strike Rate: 105&quot;,&quot;Dismissals: 5&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=A+Hunter+cricket" target="_blank">A Hunter</a></td>
+<td style="background-color: #198754CE" class="text-end" data-text="11.6577" >12</td><td style="background-color: #19875497" class="text-end" data-text="31.2" >31</td><td style="background-color: #19875439" class="text-end" data-text="104.698" >105</td><td style="background-color: #19875432" class="text-end" data-text="12.7517" >13</td><td style="background-color: #19875468" class="text-end" data-text="41.6107" >42</td><td style="background-color: #19875449" class="text-end" data-text="103.3333" >103</td><td style="background-color: #dc354500" class="text-end" data-text="20" >20</td><td style="background-color: #dc3545FF" class="text-end" data-text="40" >40</td><td style="background-color: #dc354500" class="text-end" data-text="40" >40</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: " class="text-end" data-text="0" >0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="Z James
+Teams: Trinbago Knight Riders
+Matches: 10
+Runs: 74
+Overs: 17
+Dismissals: 9" data-filter="Trinbago Knight Riders">
+<td colspan="2" data-text="James"><a class="chart" data-title="Batting Impact - Z James" data-x="[&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[0.2827494422376129,3.3756148567825726,4.248895817220212]" data-tooltips="[[&quot;Runs: 7&quot;,&quot;Strike Rate: 27&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 35&quot;,&quot;Strike Rate: 117&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 32&quot;,&quot;Strike Rate: 71&quot;,&quot;Dismissals: 3&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=Z+James+cricket" target="_blank">Z James</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="2.6224" >3</td><td style="background-color: #19875400" class="text-end" data-text="8.2222" >8</td><td style="background-color: #19875400" class="text-end" data-text="73.2673" >73</td><td style="background-color: #19875400" class="text-end" data-text="8.9109" >9</td><td style="background-color: #19875400" class="text-end" data-text="59.4059" >59</td><td style="background-color: #19875412" class="text-end" data-text="88.3721" >88</td><td style="background-color: #dc35456C" class="text-end" data-text="44.4444" >44</td><td style="background-color: #dc35457A" class="text-end" data-text="22.2222" >22</td><td style="background-color: #dc354500" class="text-end" data-text="22.2222" >22</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354504" class="text-end" data-text="11.1111" >11</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="AC Jayangani
+Teams: Guyana Amazon Warriors; Barbados Royals
+Matches: 11
+Runs: 344
+Overs: 56
+Dismissals: 9" data-filter="Guyana Amazon Warriors; Barbados Royals">
+<td colspan="2" data-text="Jayangani"><a class="chart" data-title="Batting Impact - AC Jayangani" data-x="[&quot;2022&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[null,13.9414192516867,13.967698236300413]" data-tooltips="[[&quot;Runs: 21&quot;,&quot;Strike Rate: 91&quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 129&quot;,&quot;Strike Rate: 90&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 194&quot;,&quot;Strike Rate: 115&quot;,&quot;Dismissals: 5&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=AC+Jayangani+cricket" target="_blank">AC Jayangani</a></td>
+<td style="background-color: #198754FF" class="text-end" data-text="13.6592" >14</td><td style="background-color: #198754E3" class="text-end" data-text="38.2222" >38</td><td style="background-color: #19875431" class="text-end" data-text="102.994" >103</td><td style="background-color: #1987547C" class="text-end" data-text="16.4671" >16</td><td style="background-color: #19875400" class="text-end" data-text="54.1916" >54</td><td style="background-color: #19875437" class="text-end" data-text="98.4615" >98</td><td style="background-color: #dc354500" class="text-end" data-text="22.2222" >22</td><td style="background-color: #dc3545EA" class="text-end" data-text="33.3333" >33</td><td style="background-color: #dc354500" class="text-end" data-text="33.3333" >33</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354504" class="text-end" data-text="11.1111" >11</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="JL Jonassen
+Teams: Trinbago Knight Riders
+Matches: 9
+Runs: 200
+Overs: 30
+Dismissals: 9" data-filter="Trinbago Knight Riders">
+<td colspan="2" data-text="Jonassen"><a class="chart" data-title="Batting Impact - JL Jonassen" data-x="[&quot;2024&quot;,&quot;2025&quot;]" data-y="[3.862066021295676,16.633558845805783]" data-tooltips="[[&quot;Runs: 46&quot;,&quot;Strike Rate: 98&quot;,&quot;Dismissals: 5&quot;],[&quot;Runs: 154&quot;,&quot;Strike Rate: 113&quot;,&quot;Dismissals: 4&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=JL+Jonassen+cricket" target="_blank">JL Jonassen</a></td>
+<td style="background-color: #19875487" class="text-end" data-text="9.5383" >10</td><td style="background-color: #19875435" class="text-end" data-text="22.2222" >22</td><td style="background-color: #1987544D" class="text-end" data-text="109.2896" >109</td><td style="background-color: #19875439" class="text-end" data-text="13.1148" >13</td><td style="background-color: #19875462" class="text-end" data-text="42.0765" >42</td><td style="background-color: #19875400" class="text-end" data-text="76" >76</td><td style="background-color: #dc354500" class="text-end" data-text="11.1111" >11</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc3545A4" class="text-end" data-text="66.6667" >67</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354577" class="text-end" data-text="22.2222" >22</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="Q Joseph
+Teams: Barbados Royals
+Matches: 12
+Runs: 222
+Overs: 34
+Dismissals: 10" data-filter="Barbados Royals">
+<td colspan="2" data-text="Joseph"><a class="chart" data-title="Batting Impact - Q Joseph" data-x="[&quot;2022&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[10.9978874798109,8.125959613682424,11.662840007670574]" data-tooltips="[[&quot;Runs: 41&quot;,&quot;Strike Rate: 141&quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 84&quot;,&quot;Strike Rate: 94&quot;,&quot;Dismissals: 5&quot;],[&quot;Runs: 97&quot;,&quot;Strike Rate: 115&quot;,&quot;Dismissals: 4&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=Q+Joseph+cricket" target="_blank">Q Joseph</a></td>
+<td style="background-color: #19875498" class="text-end" data-text="10.0229" >10</td><td style="background-color: #19875435" class="text-end" data-text="22.2" >22</td><td style="background-color: #19875450" class="text-end" data-text="109.901" >110</td><td style="background-color: #19875470" class="text-end" data-text="15.8416" >16</td><td style="background-color: #19875400" class="text-end" data-text="50.9901" >51</td><td style="background-color: #19875448" class="text-end" data-text="102.9412" >103</td><td style="background-color: #dc354500" class="text-end" data-text="20" >20</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc3545FB" class="text-end" data-text="80" >80</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: " class="text-end" data-text="0" >0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="D Joseph
+Teams: Barbados Royals
+Matches: 4
+Runs: 25
+Overs: 4
+Dismissals: 3" data-filter="Barbados Royals">
+<td colspan="2" data-text="Joseph"><a class="chart" data-title="Batting Impact - D Joseph" data-x="[&quot;2024&quot;,&quot;2025&quot;]" data-y="[5.2520592242672395,1.506827112199438]" data-tooltips="[[&quot;Runs: 18&quot;,&quot;Strike Rate: 95&quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 7&quot;,&quot;Strike Rate: 117&quot;,&quot;Dismissals: 2&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=D+Joseph+cricket" target="_blank">D Joseph</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="3.3794" >3</td><td style="background-color: #19875400" class="text-end" data-text="8.3333" >8</td><td style="background-color: #19875424" class="text-end" data-text="100" >100</td><td style="background-color: #19875400" class="text-end" data-text="8" >8</td><td style="background-color: #198754B1" class="text-end" data-text="36" >36</td><td style="background-color: #19875466" class="text-end" data-text="111.1111" >111</td><td style="background-color: #dc354516" class="text-end" data-text="33.3333" >33</td><td style="background-color: #dc3545EA" class="text-end" data-text="33.3333" >33</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc3545FF" class="text-end" data-text="33.3333" >33</td><td style="background-color: " class="text-end" data-text="0" >0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="Kycia A Knight
+Teams: Trinbago Knight Riders; Barbados Royals
+Matches: 13
+Runs: 207
+Overs: 40
+Dismissals: 11" data-filter="Trinbago Knight Riders; Barbados Royals">
+<td colspan="2" data-text="Knight"><a class="chart" data-title="Batting Impact - Kycia A Knight" data-x="[&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[6.531895165425711,3.8106791515012106,8.819181730067053]" data-tooltips="[[&quot;Runs: 77&quot;,&quot;Strike Rate: 81&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 50&quot;,&quot;Strike Rate: 79&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 80&quot;,&quot;Strike Rate: 96&quot;,&quot;Dismissals: 3&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=Kycia+A+Knight+cricket" target="_blank">Kycia A Knight</a></td>
+<td style="background-color: #19875418" class="text-end" data-text="6.1891" >6</td><td style="background-color: #19875410" class="text-end" data-text="18.8182" >19</td><td style="background-color: #19875400" class="text-end" data-text="85.8921" >86</td><td style="background-color: #19875400" class="text-end" data-text="7.4689" >7</td><td style="background-color: #1987541F" class="text-end" data-text="47.3029" >47</td><td style="background-color: #19875400" class="text-end" data-text="80" >80</td><td style="background-color: #dc354500" class="text-end" data-text="18.1818" >18</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc3545FF" class="text-end" data-text="81.8182" >82</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: " class="text-end" data-text="0" >0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="L Lee
+Teams: Trinbago Knight Riders
+Matches: 3
+Runs: 77
+Overs: 13
+Dismissals: 2" data-filter="Trinbago Knight Riders">
+<td colspan="2" data-text="Lee"><a class="chart" data-title="Batting Impact - L Lee" data-x="[&quot;2025&quot;]" data-y="[10.751814469161461]" data-tooltips="[[&quot;Runs: 77&quot;,&quot;Strike Rate: 99&quot;,&quot;Dismissals: 2&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=L+Lee+cricket" target="_blank">L Lee</a></td>
+<td style="background-color: #198754B0" class="text-end" data-text="10.7518" >11</td><td style="background-color: #198754E6" class="text-end" data-text="38.5" >38</td><td style="background-color: #1987541E" class="text-end" data-text="98.7179" >99</td><td style="background-color: #19875480" class="text-end" data-text="16.6667" >17</td><td style="background-color: #19875400" class="text-end" data-text="57.6923" >58</td><td style="background-color: #19875400" class="text-end" data-text="40" >40</td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td>
+</tr>
+<tr style="position: relative; cursor: default;" title="A Munisar
+Teams: Guyana Amazon Warriors
+Matches: 4
+Runs: 30
+Overs: 8
+Dismissals: 3" data-filter="Guyana Amazon Warriors">
+<td colspan="2" data-text="Munisar"><a class="chart" data-title="Batting Impact - A Munisar" data-x="[&quot;2024&quot;,&quot;2025&quot;]" data-y="[3.3904681690479057,1.8939029599162691]" data-tooltips="[[&quot;Runs: 21&quot;,&quot;Strike Rate: 55&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 9&quot;,&quot;Strike Rate: 90&quot;,&quot;Dismissals: 1&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=A+Munisar+cricket" target="_blank">A Munisar</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="2.6422" >3</td><td style="background-color: #19875400" class="text-end" data-text="10" >10</td><td style="background-color: #19875400" class="text-end" data-text="62.5" >62</td><td style="background-color: #19875400" class="text-end" data-text="2.0833" >2</td><td style="background-color: #19875400" class="text-end" data-text="56.25" >56</td><td style="background-color: #19875400" class="text-end" data-text="77.2727" >77</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354500" class="text-end" data-text="33.3333" >33</td><td style="background-color: #dc3545FF" class="text-end" data-text="33.3333" >33</td><td style="background-color: #dc3545EA" class="text-end" data-text="33.3333" >33</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="CN Nation
+Teams: Guyana Amazon Warriors; Barbados Royals; Trinbago Knight Riders
+Matches: 10
+Runs: 72
+Overs: 13
+Dismissals: 6" data-filter="Guyana Amazon Warriors; Barbados Royals; Trinbago Knight Riders">
+<td colspan="2" data-text="Nation"><a class="chart" data-title="Batting Impact - CN Nation" data-x="[&quot;2022&quot;,&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[null,2.5184643234792947,1.770907450848187,5.632169891265856]" data-tooltips="[[&quot;Runs: 11&quot;,&quot;Strike Rate: 85&quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 12&quot;,&quot;Strike Rate: 133&quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 28&quot;,&quot;Strike Rate: 74&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 21&quot;,&quot;Strike Rate: 131&quot;,&quot;Dismissals: 0&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=CN+Nation+cricket" target="_blank">CN Nation</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="3.0255" >3</td><td style="background-color: #19875400" class="text-end" data-text="12" >12</td><td style="background-color: #1987540D" class="text-end" data-text="94.7368" >95</td><td style="background-color: #19875405" class="text-end" data-text="10.5263" >11</td><td style="background-color: #1987541E" class="text-end" data-text="47.3684" >47</td><td style="background-color: #1987540B" class="text-end" data-text="86.3636" >86</td><td style="background-color: #dc354516" class="text-end" data-text="33.3333" >33</td><td style="background-color: #dc354541" class="text-end" data-text="16.6667" >17</td><td style="background-color: #dc354500" class="text-end" data-text="16.6667" >17</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc3545EA" class="text-end" data-text="33.3333" >33</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="D van Niekerk
+Teams: Guyana Amazon Warriors
+Matches: 4
+Runs: 50
+Overs: 9
+Dismissals: 1" data-filter="Guyana Amazon Warriors">
+<td colspan="2" data-text="Niekerk"><a class="chart" data-title="Batting Impact - D van Niekerk" data-x="[&quot;2025&quot;]" data-y="[4.28441010633776]" data-tooltips="[[&quot;Runs: 50&quot;,&quot;Strike Rate: 94&quot;,&quot;Dismissals: 1&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=D+van+Niekerk+cricket" target="_blank">D van Niekerk</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="4.2844" >4</td><td style="background-color: #198754FF" class="text-end" data-text="50" >50</td><td style="background-color: #1987540B" class="text-end" data-text="94.3396" >94</td><td style="background-color: #19875415" class="text-end" data-text="11.3208" >11</td><td style="background-color: #19875451" class="text-end" data-text="43.3962" >43</td><td style="background-color: #19875400" class="text-end" data-text="68.1818" >68</td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td>
+</tr>
+<tr style="position: relative; cursor: default;" title="S Pandey
+Teams: Trinbago Knight Riders
+Matches: 9
+Runs: 128
+Overs: 22
+Dismissals: 9" data-filter="Trinbago Knight Riders">
+<td colspan="2" data-text="Pandey"><a class="chart" data-title="Batting Impact - S Pandey" data-x="[&quot;2024&quot;,&quot;2025&quot;]" data-y="[7.113900347023867,3.544845895293741]" data-tooltips="[[&quot;Runs: 90&quot;,&quot;Strike Rate: 93&quot;,&quot;Dismissals: 5&quot;],[&quot;Runs: 38&quot;,&quot;Strike Rate: 103&quot;,&quot;Dismissals: 4&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=S+Pandey+cricket" target="_blank">S Pandey</a></td>
+<td style="background-color: #19875402" class="text-end" data-text="5.5277" >6</td><td style="background-color: #19875400" class="text-end" data-text="14.2222" >14</td><td style="background-color: #19875410" class="text-end" data-text="95.5224" >96</td><td style="background-color: #19875400" class="text-end" data-text="8.209" >8</td><td style="background-color: #1987548D" class="text-end" data-text="38.806" >39</td><td style="background-color: #19875400" class="text-end" data-text="82.2222" >82</td><td style="background-color: #dc354500" class="text-end" data-text="22.2222" >22</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354512" class="text-end" data-text="44.4444" >44</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc3545EA" class="text-end" data-text="33.3333" >33</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="SR Patil
+Teams: Guyana Amazon Warriors; Barbados Royals
+Matches: 3
+Runs: 14
+Overs: 2
+Dismissals: 2" data-filter="Guyana Amazon Warriors; Barbados Royals">
+<td colspan="2" data-text="Patil"><a class="chart" data-title="Batting Impact - SR Patil" data-x="[&quot;2023&quot;,&quot;2025&quot;]" data-y="[0.4467824851960611,null]" data-tooltips="[[&quot;Runs: 4&quot;,&quot;Strike Rate: 57&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 10&quot;,&quot;Strike Rate: 167&quot;,&quot;Dismissals: 0&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=SR+Patil+cricket" target="_blank">SR Patil</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="2.0063" >2</td><td style="background-color: #19875400" class="text-end" data-text="7" >7</td><td style="background-color: #19875446" class="text-end" data-text="107.6923" >108</td><td style="background-color: #19875467" class="text-end" data-text="15.3846" >15</td><td style="background-color: #1987542E" class="text-end" data-text="46.1538" >46</td><td style="background-color: #1987545A" class="text-end" data-text="107.6923" >108</td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td>
+</tr>
+<tr style="position: relative; cursor: default;" title="S Ramnath
+Teams: Trinbago Knight Riders
+Matches: 4
+Runs: 2
+Overs: 2
+Dismissals: 2" data-filter="Trinbago Knight Riders">
+<td colspan="2" data-text="Ramnath"><a class="chart" data-title="Batting Impact - S Ramnath" data-x="[&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[null,null,0.19157040446482504]" data-tooltips="[[&quot;Runs: 0&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 1&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 0&quot;],[&quot;Runs: 1&quot;,&quot;Strike Rate: &quot;,&quot;Dismissals: 1&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=S+Ramnath+cricket" target="_blank">S Ramnath</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="0.1211" >0</td><td style="background-color: #19875400" class="text-end" data-text="1" >1</td><td style="background-color: #19875400" class="text-end" data-text="20" >20</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #19875400" class="text-end" data-text="80" >80</td><td style="background-color: #19875400" class="text-end" data-text="20" >20</td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td><td style="background-color: " class="text-end" data-text="" ></td>
+</tr>
+<tr style="position: relative; cursor: default;" title="G Redmayne
+Teams: Barbados Royals
+Matches: 4
+Runs: 51
+Overs: 9
+Dismissals: 3" data-filter="Barbados Royals">
+<td colspan="2" data-text="Redmayne"><a class="chart" data-title="Batting Impact - G Redmayne" data-x="[&quot;2024&quot;,&quot;2025&quot;]" data-y="[null,4.479780100145103]" data-tooltips="[[&quot;Runs: 6&quot;,&quot;Strike Rate: 55&quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 45&quot;,&quot;Strike Rate: 102&quot;,&quot;Dismissals: 2&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=G+Redmayne+cricket" target="_blank">G Redmayne</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="3.7548" >4</td><td style="background-color: #19875400" class="text-end" data-text="17" >17</td><td style="background-color: #19875404" class="text-end" data-text="92.7273" >93</td><td style="background-color: #19875400" class="text-end" data-text="9.0909" >9</td><td style="background-color: #1987544E" class="text-end" data-text="43.6364" >44</td><td style="background-color: #1987541E" class="text-end" data-text="91.6667" >92</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354500" class="text-end" data-text="33.3333" >33</td><td style="background-color: #dc3545FF" class="text-end" data-text="33.3333" >33</td><td style="background-color: #dc3545EA" class="text-end" data-text="33.3333" >33</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="SR Taylor
+Teams: Guyana Amazon Warriors
+Matches: 12
+Runs: 275
+Overs: 44
+Dismissals: 10" data-filter="Guyana Amazon Warriors">
+<td colspan="2" data-text="Taylor"><a class="chart" data-title="Batting Impact - SR Taylor" data-x="[&quot;2022&quot;,&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[null,7.789301478285623,10.399987531948806,11.788295565580052]" data-tooltips="[[&quot;Runs: 32&quot;,&quot;Strike Rate: 94&quot;,&quot;Dismissals: 0&quot;],[&quot;Runs: 85&quot;,&quot;Strike Rate: 108&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 44&quot;,&quot;Strike Rate: 100&quot;,&quot;Dismissals: 2&quot;],[&quot;Runs: 114&quot;,&quot;Strike Rate: 106&quot;,&quot;Dismissals: 4&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=SR+Taylor+cricket" target="_blank">SR Taylor</a></td>
+<td style="background-color: #198754A0" class="text-end" data-text="10.2834" >10</td><td style="background-color: #1987546F" class="text-end" data-text="27.5" >28</td><td style="background-color: #19875435" class="text-end" data-text="103.7736" >104</td><td style="background-color: #19875415" class="text-end" data-text="11.3208" >11</td><td style="background-color: #19875491" class="text-end" data-text="38.4906" >38</td><td style="background-color: #1987542D" class="text-end" data-text="95.6522" >96</td><td style="background-color: #dc354500" class="text-end" data-text="30" >30</td><td style="background-color: #dc354500" class="text-end" data-text="10" >10</td><td style="background-color: #dc354500" class="text-end" data-text="40" >40</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354500" class="text-end" data-text="10" >10</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="C Webb
+Teams: Barbados Royals
+Matches: 5
+Runs: 93
+Overs: 15
+Dismissals: 4" data-filter="Barbados Royals">
+<td colspan="2" data-text="Webb"><a class="chart" data-title="Batting Impact - C Webb" data-x="[&quot;2025&quot;]" data-y="[6.138844022980094]" data-tooltips="[[&quot;Runs: 93&quot;,&quot;Strike Rate: 104&quot;,&quot;Dismissals: 4&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=C+Webb+cricket" target="_blank">C Webb</a></td>
+<td style="background-color: #19875416" class="text-end" data-text="6.1388" >6</td><td style="background-color: #19875440" class="text-end" data-text="23.25" >23</td><td style="background-color: #19875438" class="text-end" data-text="104.4944" >104</td><td style="background-color: #19875400" class="text-end" data-text="7.8652" >8</td><td style="background-color: #198754FF" class="text-end" data-text="28.0899" >28</td><td style="background-color: #19875400" class="text-end" data-text="61.5385" >62</td><td style="background-color: #dc354598" class="text-end" data-text="50" >50</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354536" class="text-end" data-text="50" >50</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: " class="text-end" data-text="0" >0</td>
+</tr>
+<tr style="position: relative; cursor: default;" title="RS Williams
+Teams: Guyana Amazon Warriors; Barbados Royals; Trinbago Knight Riders
+Matches: 11
+Runs: 109
+Overs: 22
+Dismissals: 9" data-filter="Guyana Amazon Warriors; Barbados Royals; Trinbago Knight Riders">
+<td colspan="2" data-text="Williams"><a class="chart" data-title="Batting Impact - RS Williams" data-x="[&quot;2022&quot;,&quot;2023&quot;,&quot;2024&quot;,&quot;2025&quot;]" data-y="[null,4.9200199954625194,1.5693695338293814,null]" data-tooltips="[[&quot;Runs: 23&quot;,&quot;Strike Rate: 68&quot;,&quot;Dismissals: 1&quot;],[&quot;Runs: 67&quot;,&quot;Strike Rate: 114&quot;,&quot;Dismissals: 4&quot;],[&quot;Runs: 18&quot;,&quot;Strike Rate: 67&quot;,&quot;Dismissals: 3&quot;],[&quot;Runs: 1&quot;,&quot;Strike Rate: 7&quot;,&quot;Dismissals: 1&quot;]]">&#128202;</a><a href="https://www.google.com/search?q=RS+Williams+cricket" target="_blank">RS Williams</a></td>
+<td style="background-color: #19875400" class="text-end" data-text="3.118" >3</td><td style="background-color: #19875400" class="text-end" data-text="12.1111" >12</td><td style="background-color: #19875400" class="text-end" data-text="81.3433" >81</td><td style="background-color: #19875400" class="text-end" data-text="9.7015" >10</td><td style="background-color: #19875400" class="text-end" data-text="54.4776" >54</td><td style="background-color: #19875400" class="text-end" data-text="68.9655" >69</td><td style="background-color: #dc354500" class="text-end" data-text="22.2222" >22</td><td style="background-color: #dc35457A" class="text-end" data-text="22.2222" >22</td><td style="background-color: #dc354512" class="text-end" data-text="44.4444" >44</td><td style="background-color: " class="text-end" data-text="0" >0</td><td style="background-color: #dc354504" class="text-end" data-text="11.1111" >11</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tab-pane fade show " id="t-All" role="tabpanel" aria-labelledby="t-All-tab">
 <table class="table table-sm table-sort table-ranked" style="table-layout: fixed;">
 <thead class="sticky-top">
 <tr style="position: relative; top: -1px">
