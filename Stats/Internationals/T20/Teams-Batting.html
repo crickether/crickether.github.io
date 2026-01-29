@@ -20,11 +20,14 @@ table.table tbody tr:hover td { color: var(--bs-primary); cursor: default; }
 </thead>
 <tbody>
 <tr><td colspan="2" title="Games: 1
-Runs: 153
-Wickets: 7" style="cursor: default" data-text="1">1.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #198754FF">121</td><td class="text-end" style="background-color: #198754FF">34</td><td class="text-end" style="background-color: #dc3545FF">6</td><td class="text-end" style="background-color: #dc3545FF">14</td><td class="text-end" style="background-color: #dc3545FF">39</td><td class="text-end" style="background-color: #198754FF">6</td></tr>
+Runs: 160
+Wickets: 5" style="cursor: default" data-text="1">1.&nbsp;Scotland</td><td class="text-end" style="background-color: #198754FF">131</td><td class="text-end" style="background-color: #19875484">35</td><td class="text-end" style="background-color: #198754FF">4</td><td class="text-end" style="background-color: #198754FF">19</td><td class="text-end" style="background-color: #dc3545FF">38</td><td class="text-end" style="background-color: #1987542E">5</td></tr>
 <tr><td colspan="2" title="Games: 1
-Runs: 144
-Wickets: 4" style="cursor: default" data-text="2">2.&nbsp;Ireland</td><td class="text-end" style="background-color: #dc3545FF">117</td><td class="text-end" style="background-color: #dc3545FF">37</td><td class="text-end" style="background-color: #198754FF">3</td><td class="text-end" style="background-color: #198754FF">15</td><td class="text-end" style="background-color: #198754FF">41</td><td class="text-end" style="background-color: #dc3545FF">3</td></tr>
+Runs: 153
+Wickets: 7" style="cursor: default" data-text="2">2.&nbsp;Bangladesh</td><td class="text-end" style="background-color: #19875427">121</td><td class="text-end" style="background-color: #198754FF">34</td><td class="text-end" style="background-color: #dc3545CD">6</td><td class="text-end" style="background-color: #dc354593">14</td><td class="text-end" style="background-color: #dc35453D">39</td><td class="text-end" style="background-color: #198754FF">6</td></tr>
+<tr><td colspan="2" title="Games: 2
+Runs: 265
+Wickets: 14" style="cursor: default" data-text="3">3.&nbsp;Ireland</td><td class="text-end" style="background-color: #dc3545FF">108</td><td class="text-end" style="background-color: #dc3545FF">39</td><td class="text-end" style="background-color: #dc3545FF">6</td><td class="text-end" style="background-color: #dc3545FF">13</td><td class="text-end" style="background-color: #198754FF">41</td><td class="text-end" style="background-color: #dc3545FF">3</td></tr>
 </tbody>
 </table>
 <h2>2025</h2>
@@ -640,6 +643,6 @@ Wickets: 10" style="cursor: default" data-text="6">6.&nbsp;West Indies</td><td c
 </table>
 <script>$(function() {  $('.table-sort').tablesorter();  $(document).ready(function() {     const query = new URLSearchParams(window.location.search);	    if(query.get('Sort')) {      var el = $('th:contains("' + query.get('Sort') + '")');       var index = el?.index();       if(index > 1) {        const defaultOrder = el.hasClass('sortInitialOrder-desc') ? 'desc' : el.hasClass('sortInitialOrder-asc') ? 'asc' : null;         $('.table-sort').trigger('sorton', [[[index, (query.get('Direction') ?? query.get('Order') ?? defaultOrder)?.toLowerCase()]]]);       }    }	  });});</script><style>table.table-sort th { cursor: ns-resize; } </style>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script><style>a.chart { text-decoration: none; cursor: pointer; } </style><div class="modal modal-lg fade" id="pop_chart_modal" tabindex="-1">  <div class="modal-dialog">    <div class="modal-content">      <div class="modal-body">        <canvas id="pop_chart" style="width:600px; max-width: 100%;"></canvas>      </div>    </div>  </div></div><script>const pcm = new bootstrap.Modal('#pop_chart_modal');$('a.chart').on('click', function() {  let existing = Chart.getChart('pop_chart');  if (existing != undefined) {    existing.destroy();  }  new Chart('pop_chart', {    type: 'bar',    data: {      labels: JSON.parse($(this).attr('data-x')),      datasets: [{        backgroundColor: '#4e78a8',        label: $(this).attr('data-label'),        data: JSON.parse($(this).attr('data-y')),        tooltips: $(this).attr('data-tooltips') ? JSON.parse($(this).attr('data-tooltips')) : null,      }]    },    options: {      legend: {display: false},      plugins: {        title: {          display: true,          text: $(this).attr('data-title')        },        tooltip: {          displayColors: false,          callbacks: {            label: function(context) {              if (context.dataset.tooltips) {                return context.dataset.tooltips[context.dataIndex];               }              return context.parsed.y;            }          }        },        legend: {          display: false        }      },      scales: {        y: {          ticks: {             precision: 0          },        }      }    }  });  pcm.show();});</script>
-<div class="m-2 clearfix"><small class="float-start">&copy; 2026 CRICKETher.com/cricsheet.org</small><small class="float-end">Matches: 633; Latest: 24/01/2026</small></div>
+<div class="m-2 clearfix"><small class="float-start">&copy; 2026 CRICKETher.com/cricsheet.org</small><small class="float-end">Matches: 634; Latest: 28/01/2026</small></div>
 </body>
 </html>
