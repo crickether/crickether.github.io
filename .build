@@ -84,6 +84,9 @@ echo "T20"
 echo "ODI"
 /Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/Internationals/ODIs" -teams="CHAMPO" -analysis="stats" -seasons="Y" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/Internationals/ODI"
 
+# All
+/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/" -analysis="stats" -seasons="Y" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/" 
+
 # git
 git commit -a -m "Data Update"
 git push
