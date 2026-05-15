@@ -6,14 +6,14 @@ unzip -q -o /Users/syd/Documents/Cricket/Data/cec_female_json.zip -d /Users/syd/
 curl -o /Users/syd/Documents/Cricket/Data/rhf_female_json.zip -z /Users/syd/Documents/Cricket/Data/rhf_female_json.zip https://cricsheet.org/downloads/rhf_female_json.zip
 unzip -q -o /Users/syd/Documents/Cricket/Data/rhf_female_json.zip -d /Users/syd/Documents/Cricket/Data/England/Regionals/RHF 
 # HTML
-/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/England/Regionals" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/England/Regionals"
+/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net10.0/BBB -data="/Users/syd/Documents/Cricket/Data/England/Regionals" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/England/Regionals"
 
 echo "England > 100"
 # 100
 curl -o /Users/syd/Documents/Cricket/Data/hnd_female_json.zip -z /Users/syd/Documents/Cricket/Data/hnd_female_json.zip https://cricsheet.org/downloads/hnd_female_json.zip
 unzip -q -o /Users/syd/Documents/Cricket/Data/hnd_female_json.zip -d /Users/syd/Documents/Cricket/Data/England/100
 # HTML
-/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/England/100" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/England/The100"
+/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net10.0/BBB -data="/Users/syd/Documents/Cricket/Data/England/100" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/England/The100"
 
 echo "England > ODC"
 # ODC
@@ -26,46 +26,46 @@ sed -i '' "s/\"E MacGregor\": \"672aff32\"/\"E MacGregor\": \"c812dfa3\"/g" /Use
 sed -i '' "s/\"E MacGregor\": \"672aff32\"/\"E MacGregor\": \"c812dfa3\"/g" /Users/syd/Documents/Cricket/Data/England/OneDayCup/1462364.json
 sed -i '' "s/\"E MacGregor\": \"672aff32\"/\"E MacGregor\": \"c812dfa3\"/g" /Users/syd/Documents/Cricket/Data/England/OneDayCup/1462368.json
 # HTML
-/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/England/OneDayCup" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/England/OneDayCup"
+/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net10.0/BBB -data="/Users/syd/Documents/Cricket/Data/England/OneDayCup" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/England/OneDayCup"
 
 echo "England > Blast"
 # BLAST
 curl -o /Users/syd/Documents/Cricket/Data/wtb_female_json.zip -z /Users/syd/Documents/Cricket/Data/wtb_female_json.zip https://cricsheet.org/downloads/wtb_female_json.zip
 unzip -q -o /Users/syd/Documents/Cricket/Data/wtb_female_json.zip -d /Users/syd/Documents/Cricket/Data/England/Blast
 # HTML
-/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/England/Blast" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/England/Blast"
+/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net10.0/BBB -data="/Users/syd/Documents/Cricket/Data/England/Blast" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/England/Blast"
 
 echo "England"
 # HTML
-/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/England" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/England"
+/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net10.0/BBB -data="/Users/syd/Documents/Cricket/Data/England" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/England"
 
 # WBBL
 echo "Australia > WBBL"
 curl -o /Users/syd/Documents/Cricket/Data/wbb_female_json.zip -z /Users/syd/Documents/Cricket/Data/wbb_female_json.zip https://cricsheet.org/downloads/wbb_female_json.zip
 unzip -q -o /Users/syd/Documents/Cricket/Data/wbb_female_json.zip -d /Users/syd/Documents/Cricket/Data/Australia/WBBL 
 # HTML
-/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/Australia/WBBL" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/Australia/WBBL"
+/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net10.0/BBB -data="/Users/syd/Documents/Cricket/Data/Australia/WBBL" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/Australia/WBBL"
 
 # WPL
 echo "India > WPL"
 curl -o /Users/syd/Documents/Cricket/Data/wpl_female_json.zip -z /Users/syd/Documents/Cricket/Data/wpl_female_json.zip https://cricsheet.org/downloads/wpl_female_json.zip
 unzip -q -o /Users/syd/Documents/Cricket/Data/wpl_female_json.zip -d /Users/syd/Documents/Cricket/Data/India/WPL 
 # HTML
-/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/India/WPL" -analysis="stats" -seasons="Y" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/India/WPL"
+/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net10.0/BBB -data="/Users/syd/Documents/Cricket/Data/India/WPL" -analysis="stats" -seasons="Y" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/India/WPL"
 
 # SS
 echo "New Zealand > Super Smash"
 curl -o /Users/syd/Documents/Cricket/Data/ssm_female_json.zip -z /Users/syd/Documents/Cricket/Data/ssm_female_json.zip https://cricsheet.org/downloads/ssm_female_json.zip
 unzip -q -o /Users/syd/Documents/Cricket/Data/ssm_female_json.zip -d /Users/syd/Documents/Cricket/Data/NewZealand/SuperSmash 
 # HTML
-/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/NewZealand/SuperSmash" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/NewZealand/SuperSmash"
+/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net10.0/BBB -data="/Users/syd/Documents/Cricket/Data/NewZealand/SuperSmash" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/NewZealand/SuperSmash"
 
 # CPL
 echo "West Indies > CPL"
 curl -o /Users/syd/Documents/Cricket/Data/wcl_female_json.zip -z /Users/syd/Documents/Cricket/Data/wcl_female_json.zip https://cricsheet.org/downloads/wcl_female_json.zip
 unzip -q -o /Users/syd/Documents/Cricket/Data/wcl_female_json.zip -d /Users/syd/Documents/Cricket/Data/WestIndies/CPL 
 # HTML
-/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/WestIndies/CPL" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/WestIndies/CPL"
+/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net10.0/BBB -data="/Users/syd/Documents/Cricket/Data/WestIndies/CPL" -analysis="stats" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/WestIndies/CPL"
 
 # ODI
 echo "Internationals"
@@ -78,14 +78,14 @@ unzip -q -o /Users/syd/Documents/Cricket/Data/t20s_female_json.zip -d /Users/syd
 curl -o /Users/syd/Documents/Cricket/Data/tests_female_json.zip -z /Users/syd/Documents/Cricket/Data/tests_female_json.zip https://cricsheet.org/downloads/tests_female_json.zip
 unzip -q -o /Users/syd/Documents/Cricket/Data/tests_female_json.zip -d /Users/syd/Documents/Cricket/Data/Internationals/Tests
 # HTML
-/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/Internationals" -teams="CHAMPO" -analysis="stats" -seasons="Y" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/Internationals"
+/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net10.0/BBB -data="/Users/syd/Documents/Cricket/Data/Internationals" -teams="CHAMPO" -analysis="stats" -seasons="Y" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/Internationals"
 echo "T20"
-/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/Internationals/T20s" -teams="CHAMPO" -analysis="stats" -seasons="Y" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/Internationals/T20"
+/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net10.0/BBB -data="/Users/syd/Documents/Cricket/Data/Internationals/T20s" -teams="CHAMPO" -analysis="stats" -seasons="Y" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/Internationals/T20"
 echo "ODI"
-/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/Internationals/ODIs" -teams="CHAMPO" -analysis="stats" -seasons="Y" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/Internationals/ODI"
+/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net10.0/BBB -data="/Users/syd/Documents/Cricket/Data/Internationals/ODIs" -teams="CHAMPO" -analysis="stats" -seasons="Y" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/Internationals/ODI"
 
 # All
-/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net8.0/BBB -data="/Users/syd/Documents/Cricket/Data/" -analysis="stats" -seasons="Y" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/" 
+/Users/syd/Documents/Src/BBB/BBB/bin/Debug/net10.0/BBB -data="/Users/syd/Documents/Cricket/Data/" -analysis="stats" -seasons="Y" -out="/Users/syd/Documents/Src/crickether.github.io/Stats/" 
 
 # git
 cd /Users/syd/Documents/Src/crickether.github.io
