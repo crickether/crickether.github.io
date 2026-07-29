@@ -11,6 +11,40 @@ table.table tbody tr:hover td { color: var(--bs-primary); cursor: default; }
 </head>
 <body>
 <h1>The 100 - Bowling</h1>
+<h2>2026</h2>
+<table class="table table-sm table-sort" style="table-layout: fixed;">
+<thead class="sticky-top">
+<tr style="position: relative; top: -1px">
+<th colspan="2">Bowling</th><th class="text-end">Strike Rate</th><th class="text-end">Economy</th><th class="text-end">Dot %</th><th class="text-end">Boundary %</th><th class="text-end">Single %</th><th class="text-end">2/3 %</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="2" title="Games: 2
+Runs: 222
+Wickets: 11" style="cursor: default" data-text="1">1.&nbsp;Manchester Super Giants</td><td class="text-end" style="background-color: #19875474">18</td><td class="text-end" style="background-color: #198754E3">1.12</td><td class="text-end" style="background-color: #198754FF">43</td><td class="text-end" style="background-color: #198754B8">15</td><td class="text-end" style="background-color: #198754FF">29</td><td class="text-end" style="background-color: #dc35454C">7</td></tr>
+<tr><td colspan="2" title="Games: 2
+Runs: 210
+Wickets: 15" style="cursor: default" data-text="2">2.&nbsp;Trent Rockets</td><td class="text-end" style="background-color: #198754EC">13</td><td class="text-end" style="background-color: #198754FF">1.07</td><td class="text-end" style="background-color: #198754F9">43</td><td class="text-end" style="background-color: #198754FF">11</td><td class="text-end" style="background-color: #dc35452D">36</td><td class="text-end" style="background-color: #dc354536">7</td></tr>
+<tr><td colspan="2" title="Games: 2
+Runs: 243
+Wickets: 16" style="cursor: default" data-text="3">3.&nbsp;Welsh Fire</td><td class="text-end" style="background-color: #198754FF">12</td><td class="text-end" style="background-color: #198754AC">1.23</td><td class="text-end" style="background-color: #1987547A">37</td><td class="text-end" style="background-color: #198754C1">14</td><td class="text-end" style="background-color: #dc354551">37</td><td class="text-end" style="background-color: #dc3545C2">10</td></tr>
+<tr><td colspan="2" title="Games: 3
+Runs: 371
+Wickets: 16" style="cursor: default" data-text="4">4.&nbsp;Sunrisers Leeds</td><td class="text-end" style="background-color: #1987545D">19</td><td class="text-end" style="background-color: #198754AE">1.22</td><td class="text-end" style="background-color: #19875476">37</td><td class="text-end" style="background-color: #198754D8">13</td><td class="text-end" style="background-color: #19875411">35</td><td class="text-end" style="background-color: #dc3545FF">11</td></tr>
+<tr><td colspan="2" title="Games: 2
+Runs: 228
+Wickets: 9" style="cursor: default" data-text="5">5.&nbsp;London Spirit</td><td class="text-end" style="background-color: #19875466">19</td><td class="text-end" style="background-color: #19875466">1.37</td><td class="text-end" style="background-color: #1987541F">32</td><td class="text-end" style="background-color: #1987547D">18</td><td class="text-end" style="background-color: #dc354542">37</td><td class="text-end" style="background-color: #19875403">5</td></tr>
+<tr><td colspan="2" title="Games: 3
+Runs: 359
+Wickets: 17" style="cursor: default" data-text="6">6.&nbsp;Southern Brave</td><td class="text-end" style="background-color: #19875470">18</td><td class="text-end" style="background-color: #198754CE">1.16</td><td class="text-end" style="background-color: #1987543A">34</td><td class="text-end" style="background-color: #198754DC">13</td><td class="text-end" style="background-color: #dc3545FF">41</td><td class="text-end" style="background-color: #dc3545C8">10</td></tr>
+<tr><td colspan="2" title="Games: 3
+Runs: 412
+Wickets: 12" style="cursor: default" data-text="7">7.&nbsp;MI London</td><td class="text-end" style="background-color: #dc354510">23</td><td class="text-end" style="background-color: #1987542F">1.47</td><td class="text-end" style="background-color: #dc354526">29</td><td class="text-end" style="background-color: #19875460">20</td><td class="text-end" style="background-color: #dc3545AD">39</td><td class="text-end" style="background-color: #dc354592">9</td></tr>
+<tr><td colspan="2" title="Games: 1
+Runs: 68
+Wickets: 1" style="cursor: default" data-text="8">8.&nbsp;Birmingham Phoenix</td><td class="text-end" style="background-color: #dc3545FF">33</td><td class="text-end" style="background-color: #dc3545FF">2.06</td><td class="text-end" style="background-color: #dc3545FF">18</td><td class="text-end" style="background-color: #dc3545FF">39</td><td class="text-end" style="background-color: #dc35453B">36</td><td class="text-end" style="background-color: #198754FF">0</td></tr>
+</tbody>
+</table>
 <h2>2025</h2>
 <table class="table table-sm table-sort" style="table-layout: fixed;">
 <thead class="sticky-top">
@@ -183,6 +217,6 @@ Wickets: 30" style="cursor: default" data-text="8">8.&nbsp;Welsh Fire</td><td cl
 </table>
 <script>$(function() {  $('.table-sort').tablesorter();  $(document).ready(function() {     const query = new URLSearchParams(window.location.search);	    if(query.get('Sort')) {      try {        $('.table-sort').trigger('sorton', [JSON.parse(query.get('Sort'))]);      }      catch {        var el = $('th:contains("' + query.get('Sort') + '")');         var index = el?.index();         if(index > 1) {          const defaultOrder = el.hasClass('sortInitialOrder-desc') ? 'desc' : el.hasClass('sortInitialOrder-asc') ? 'asc' : null;           $('.table-sort').trigger('sorton', [[[index, (query.get('Direction') ?? query.get('Order') ?? defaultOrder)?.toLowerCase()]]]);         }      }    }	  });});</script><style>table.table-sort th { cursor: ns-resize; } </style>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script><style>a.chart { text-decoration: none; cursor: pointer; } </style><div class="modal modal-lg fade" id="pop_chart_modal" tabindex="-1">  <div class="modal-dialog">    <div class="modal-content">      <div class="modal-body">        <canvas id="pop_chart" style="width:600px; max-width: 100%;"></canvas>      </div>    </div>  </div></div><script>const pcm = new bootstrap.Modal('#pop_chart_modal');$('a.chart').on('click', function() {  let existing = Chart.getChart('pop_chart');  if (existing != undefined) {    existing.destroy();  }  new Chart('pop_chart', {    type: 'bar',    data: {      labels: JSON.parse($(this).attr('data-x')),      datasets: [{        backgroundColor: '#4e78a8',        label: $(this).attr('data-label'),        data: JSON.parse($(this).attr('data-y')),        tooltips: $(this).attr('data-tooltips') ? JSON.parse($(this).attr('data-tooltips')) : null,      }]    },    options: {      legend: {display: false},      plugins: {        title: {          display: true,          text: $(this).attr('data-title')        },        tooltip: {          displayColors: false,          callbacks: {            label: function(context) {              if (context.dataset.tooltips) {                return context.dataset.tooltips[context.dataIndex];               }              return context.parsed.y;            }          }        },        legend: {          display: false        }      },      scales: {        y: {          ticks: {             precision: 0          },        }      }    }  });  pcm.show();});</script>
-<div class="m-2 clearfix"><small class="float-start">&copy; 2026 CRICKETher.com/cricsheet.org</small><small class="float-end">Matches: 155; Latest: 31/08/2025</small></div>
+<div class="m-2 clearfix"><small class="float-start">&copy; 2026 CRICKETher.com/cricsheet.org</small><small class="float-end">Matches: 164; Latest: 28/07/2026</small></div>
 </body>
 </html>
